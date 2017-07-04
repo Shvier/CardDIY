@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RESideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let centerVC = SHHomeViewController()
+        let naviVC = UINavigationController(rootViewController: centerVC)
+        let leftVC = UIViewController()
+        let rightVC = UIViewController()
+        
+        let sideMenuVC = RESideMenu(contentViewController: naviVC, leftMenuViewController: leftVC, rightMenuViewController: rightVC)
+        window?.rootViewController = sideMenuVC
+        
         return true
     }
 
