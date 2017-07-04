@@ -8,6 +8,12 @@
 
 import UIKit
 
+let cardMadeViewMargin: CGFloat = 80
+let cardMadeViewBottomMargin: CGFloat = 150
+let hintLabelBottomMargin: CGFloat = 50
+let nextButtonTopMargin: CGFloat = 50
+let ratio: CGFloat = 1.4576
+
 class SHYGOConfiguration: NSObject {
     
     var type: String?

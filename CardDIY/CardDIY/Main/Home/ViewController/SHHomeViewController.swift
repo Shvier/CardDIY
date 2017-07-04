@@ -12,11 +12,6 @@ import SnapKit
 class SHHomeViewController: UIViewController {
     
     let backgroundAlpha: CGFloat = 0.5
-    let cardMadeViewMargin: CGFloat = 80
-    let cardMadeViewBottomMargin: CGFloat = 150
-    let hintLabelBottomMargin: CGFloat = 50
-    let nextButtonTopMargin: CGFloat = 50
-    let ratio: CGFloat = 1.4576
     
     lazy var cards: Array<String> = {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
