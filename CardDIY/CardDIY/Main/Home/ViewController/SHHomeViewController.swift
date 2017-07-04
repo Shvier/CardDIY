@@ -12,8 +12,17 @@ import SnapKit
 class SHHomeViewController: UIViewController {
     
     let backgroundAlpha: CGFloat = 0.5
+    let cardMadeViewMargin: CGFloat = 80
+    let cardMadeViewBottomMargin: CGFloat = 150
+    let ratio: CGFloat = 1.4576
+    
+    lazy var cards: Array<String> = {
+        return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
+    }()
     
     var backgroundImageView: UIImageView?
+    var hintLabel: UILabel?
+    var cardMadeView: UICollectionView?
     
     func leftBarItemAction(sender: UIBarButtonItem) {
         sideMenuViewController.presentLeftMenuViewController()
@@ -35,6 +44,33 @@ class SHHomeViewController: UIViewController {
             make.left.right.bottom.equalTo(view)
             make.top.equalTo(view).offset(kNavigationAndStatusBarHeight)
         })
+        
+        let flowLayout: UICollectionViewFlowLayout = ({
+            let layout = UICollectionViewFlowLayout()
+            layout.minimumLineSpacing = 0
+            layout.minimumInteritemSpacing = 0
+            layout.scrollDirection = .horizontal
+            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
+            return layout
+        })()
+        
+        cardMadeView = ({
+            let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
+            collectionView.register(SHYGOCardCell.self, forCellWithReuseIdentifier: SHYGOCardCellReuseIdentifier)
+            collectionView.isPagingEnabled = true
+            collectionView.bounces = false
+            collectionView.delegate = self
+            collectionView.dataSource = self
+            return collectionView
+        })()
+        view.addSubview(cardMadeView!)
+        
+        cardMadeView?.snp.makeConstraints({ (make) in
+            make.left.equalTo(view).offset(cardMadeViewMargin)
+            make.right.equalTo(view).offset(-cardMadeViewMargin)
+            make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
+            make.height.equalTo((cardMadeView?.snp.width)!).multipliedBy(ratio)
+        })
     }
     
     func configNavi() {
@@ -55,5 +91,19 @@ class SHHomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension SHHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cards.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: SHYGOCardCellReuseIdentifier, for: indexPath) as! SHYGOCardCell
+        collectionViewCell.imageView?.image = UIImage(named: cards[indexPath.row])
+        return collectionViewCell
+    }
+    
 }
 
