@@ -13,6 +13,7 @@
 		C053DFB11F0B750B00EA9A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAF1F0B750B00EA9A93 /* LaunchScreen.storyboard */; };
 		C053DFBC1F0B753A00EA9A93 /* SHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFBB1F0B753A00EA9A93 /* SHHomeViewController.swift */; };
 		C053DFBF1F0B754400EA9A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFBE1F0B754400EA9A93 /* AppDelegate.swift */; };
+		C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFC41F0B7CE000EA9A93 /* CommonMacro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C053DFB21F0B750B00EA9A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C053DFBB1F0B753A00EA9A93 /* SHHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHHomeViewController.swift; sourceTree = "<group>"; };
 		C053DFBE1F0B754400EA9A93 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C053DFC41F0B7CE000EA9A93 /* CommonMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		C053DFA51F0B750B00EA9A93 /* CardDIY */ = {
 			isa = PBXGroup;
 			children = (
+				C053DFC21F0B7CD500EA9A93 /* Global */,
 				C053DFBD1F0B754400EA9A93 /* AppDelegate */,
 				C053DFB81F0B753A00EA9A93 /* Main */,
 				C053DFC01F0B754800EA9A93 /* SupportingFiles */,
@@ -134,6 +137,22 @@
 				C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		C053DFC21F0B7CD500EA9A93 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				C053DFC31F0B7CD500EA9A93 /* Const */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		C053DFC31F0B7CD500EA9A93 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				C053DFC41F0B7CE000EA9A93 /* CommonMacro.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,
 				C053DFBF1F0B754400EA9A93 /* AppDelegate.swift in Sources */,
 				C053DFBC1F0B753A00EA9A93 /* SHHomeViewController.swift in Sources */,
 			);
@@ -432,6 +452,7 @@
 				C053DFB71F0B750B00EA9A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
