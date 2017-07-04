@@ -14,6 +14,8 @@ class SHHomeViewController: UIViewController {
     let backgroundAlpha: CGFloat = 0.5
     let cardMadeViewMargin: CGFloat = 80
     let cardMadeViewBottomMargin: CGFloat = 150
+    let hintLabelBottomMargin: CGFloat = 50
+    let nextButtonTopMargin: CGFloat = 50
     let ratio: CGFloat = 1.4576
     
     lazy var cards: Array<String> = {
@@ -23,9 +25,20 @@ class SHHomeViewController: UIViewController {
     var backgroundImageView: UIImageView?
     var hintLabel: UILabel?
     var cardMadeView: UICollectionView?
+    var nextButton: UIButton?
+    
+    func selectedIndex() -> NSInteger {
+        return NSInteger((cardMadeView?.contentOffset.x)!/(cardMadeView?.bounds.size.width)!)
+    }
     
     func leftBarItemAction(sender: UIBarButtonItem) {
         sideMenuViewController.presentLeftMenuViewController()
+    }
+    
+    func nextButtonAction(sender: UIButton) {
+        SHYGOConfiguration.sharedInstance.type = cards[selectedIndex()]
+        let attributeVC = SHAttributeViewController()
+        navigationController?.pushViewController(attributeVC, animated: true)
     }
     
     func initUI() {
@@ -44,6 +57,21 @@ class SHHomeViewController: UIViewController {
             make.left.right.bottom.equalTo(view)
             make.top.equalTo(view).offset(kNavigationAndStatusBarHeight)
         })
+        
+        hintLabel = ({
+            let label = UILabel()
+            label.text = "提示"
+            return label
+        })()
+        view.addSubview(hintLabel!)
+        
+        nextButton = ({
+            let button = UIButton(type: .system)
+            button.setTitle("下一步", for: .normal)
+            button.addTarget(self, action: #selector(self.nextButtonAction(sender:)), for: .touchUpInside)
+            return button;
+        })()
+        view.addSubview(nextButton!)
         
         let flowLayout: UICollectionViewFlowLayout = ({
             let layout = UICollectionViewFlowLayout()
@@ -64,6 +92,16 @@ class SHHomeViewController: UIViewController {
             return collectionView
         })()
         view.addSubview(cardMadeView!)
+        
+        hintLabel?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            make.bottom.equalTo((cardMadeView?.snp.top)!).offset(-hintLabelBottomMargin)
+        })
+        
+        nextButton?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo((cardMadeView?.snp.bottom)!).offset(nextButtonTopMargin)
+        })
         
         cardMadeView?.snp.makeConstraints({ (make) in
             make.left.equalTo(view).offset(cardMadeViewMargin)

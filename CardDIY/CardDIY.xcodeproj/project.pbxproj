@@ -16,6 +16,8 @@
 		C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFC41F0B7CE000EA9A93 /* CommonMacro.swift */; };
 		C053DFCB1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFCA1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift */; };
 		C053DFCD1F0B822C00EA9A93 /* SHYGOCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFCC1F0B822C00EA9A93 /* SHYGOCardCell.swift */; };
+		C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */; };
+		C053DFD21F0B8E6600EA9A93 /* SHYGOConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFD11F0B8E6600EA9A93 /* SHYGOConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C053DFC41F0B7CE000EA9A93 /* CommonMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMacro.swift; sourceTree = "<group>"; };
 		C053DFCA1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C053DFCC1F0B822C00EA9A93 /* SHYGOCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOCardCell.swift; sourceTree = "<group>"; };
+		C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHAttributeViewController.swift; sourceTree = "<group>"; };
+		C053DFD11F0B8E6600EA9A93 /* SHYGOConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		C053DFA51F0B750B00EA9A93 /* CardDIY */ = {
 			isa = PBXGroup;
 			children = (
+				C053DFD01F0B8E5100EA9A93 /* Utility */,
 				C053DFC71F0B820100EA9A93 /* Base */,
 				C053DFC21F0B7CD500EA9A93 /* Global */,
 				C053DFBD1F0B754400EA9A93 /* AppDelegate */,
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C053DFBB1F0B753A00EA9A93 /* SHHomeViewController.swift */,
+				C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -191,6 +197,14 @@
 			children = (
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C053DFD01F0B8E5100EA9A93 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C053DFD11F0B8E6600EA9A93 /* SHYGOConfiguration.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +334,8 @@
 			files = (
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,
 				C053DFBF1F0B754400EA9A93 /* AppDelegate.swift in Sources */,
+				C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */,
+				C053DFD21F0B8E6600EA9A93 /* SHYGOConfiguration.swift in Sources */,
 				C053DFCB1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift in Sources */,
 				C053DFCD1F0B822C00EA9A93 /* SHYGOCardCell.swift in Sources */,
 				C053DFBC1F0B753A00EA9A93 /* SHHomeViewController.swift in Sources */,
