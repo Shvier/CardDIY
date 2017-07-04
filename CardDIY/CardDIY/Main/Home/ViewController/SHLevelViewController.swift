@@ -1,5 +1,5 @@
 //
-//  SHAttributeViewController.swift
+//  SHLevelViewController.swift
 //  CardDIY
 //
 //  Created by shvier on 04/07/2017.
@@ -8,27 +8,31 @@
 
 import UIKit
 
-class SHAttributeViewController: SHBaseViewController {
+class SHLevelViewController: SHBaseViewController {
     
     var cardImageView: UIImageView?
-    var attributeView: SHYGOAttributeView?
-    var attributeHint: UIImageView?
+    var monsterAttrHint: UIImageView?
+    var monsterLevelView: SHMonsterLevelView?
     
     var nextButton: UIButton?
-    var selectedAttribute: String = "a0"
     
     func nextButtonAction(sender: UIButton) {
-        SHYGOConfiguration.sharedInstance.attribute = selectedAttribute
-        let levelVC = SHLevelViewController()
-        navigationController?.pushViewController(levelVC, animated: true)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if SHYGOConfiguration.sharedInstance.isMonster() {
-            attributeView?.isHidden = false
+        if SHYGOConfiguration.sharedInstance.isBlackMonster() {
+            monsterLevelView?.configLevelType(isBlack: true)
+            monsterAttrHint?.isHidden = false
+            monsterLevelView?.isHidden = false
+        } else if SHYGOConfiguration.sharedInstance.isMonster() {
+            monsterLevelView?.configLevelType(isBlack: false)
+            monsterLevelView?.isHidden = false
+            monsterAttrHint?.isHidden = false
         } else {
-            attributeView?.isHidden = true
+            monsterLevelView?.isHidden = true
+            monsterAttrHint?.isHidden = true
         }
     }
     
@@ -41,17 +45,12 @@ class SHAttributeViewController: SHBaseViewController {
         })()
         view.addSubview(cardImageView!)
         
-        attributeView = ({
-            let view = SHYGOAttributeView()
-            return view
-        })()
-        view.addSubview(attributeView!)
-        
-        attributeHint = ({
+        monsterAttrHint = ({
             let imageView = UIImageView()
+            imageView.image = UIImage(named: SHYGOConfiguration.sharedInstance.attribute!)
             return imageView
         })()
-        view.addSubview(attributeHint!)
+        view.addSubview(monsterAttrHint!)
         
         nextButton = ({
             let button = UIButton(type: .system)
@@ -60,6 +59,12 @@ class SHAttributeViewController: SHBaseViewController {
             return button;
         })()
         view.addSubview(nextButton!)
+        
+        monsterLevelView = ({
+            let view = SHMonsterLevelView()
+            return view
+        })()
+        view.addSubview(monsterLevelView!)
     }
     
     func makeConstraints() {
@@ -70,18 +75,18 @@ class SHAttributeViewController: SHBaseViewController {
             make.height.equalTo((cardImageView?.snp.width)!).multipliedBy(ratio)
         })
         
-        attributeView?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.bottom.equalTo(view).offset(-120)
-        })
-        
-        attributeHint?.snp.makeConstraints({ (make) in
+        monsterAttrHint?.snp.makeConstraints({ (make) in
             
         })
         
         nextButton?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
             make.top.equalTo((cardImageView?.snp.bottom)!).offset(nextButtonTopMargin)
+        })
+        
+        monsterLevelView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(cardImageView!)
+            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
         })
     }
 

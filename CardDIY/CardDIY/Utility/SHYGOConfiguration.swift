@@ -28,5 +28,21 @@ class SHYGOConfiguration: NSObject {
     static let sharedInstance = {
         return SHYGOConfiguration()
     }()
+    
+    func isMonster() -> Bool {
+        return type! < "b6"
+    }
+    
+    func isMagic() -> Bool {
+        return type! == "b6"
+    }
+    
+    func isTrap() -> Bool {
+        return type! == "b7"
+    }
+    
+    func isBlackMonster() -> Bool {
+        return type! == "b5"
+    }
 
 }
