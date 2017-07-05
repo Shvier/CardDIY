@@ -87,6 +87,7 @@ class SHAttributeViewController: SHBaseViewController {
         
         attributeView = ({
             let view = SHYGOAttributeView()
+            view.delegate = self
             return view
         })()
         view.addSubview(attributeView!)
@@ -184,4 +185,36 @@ class SHAttributeViewController: SHBaseViewController {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+extension SHAttributeViewController: SHYGOAttributeViewDelegate {
+    
+    func attributeView(attributeView: SHYGOAttributeView, buttonClicked sender: UIButton) {
+        switch sender {
+        case attributeView.darkButton!:
+            attributeHint?.image = UIImage(named: "a0")
+            break
+        case attributeView.lightButton!:
+            attributeHint?.image = UIImage(named: "a1")
+            break
+        case attributeView.earthButton!:
+            attributeHint?.image = UIImage(named: "a2")
+            break
+        case attributeView.windButton!:
+            attributeHint?.image = UIImage(named: "a3")
+            break
+        case attributeView.waterButton!:
+            attributeHint?.image = UIImage(named: "a4")
+            break
+        case attributeView.fireButton!:
+            attributeHint?.image = UIImage(named: "a5")
+            break
+        case attributeView.godButton!:
+            attributeHint?.image = UIImage(named: "a6")
+            break
+        default:
+            break
+        }
+    }
+    
 }

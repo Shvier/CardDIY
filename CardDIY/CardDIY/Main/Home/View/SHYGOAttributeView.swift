@@ -22,12 +22,19 @@ class SHYGOAttributeView: SHBaseView {
     var fireButton: UIButton?
     var godButton: UIButton?
     
+    weak var delegate: SHYGOAttributeViewDelegate?
+    
+    func buttonAction(sender: UIButton) {
+        delegate?.attributeView(attributeView: self, buttonClicked: sender)
+    }
+    
     func initUI() {
         darkButton = ({
             let button = UIButton(type: .custom)
             button.setImage(UIImage(named: "a0"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(darkButton!)
@@ -37,6 +44,7 @@ class SHYGOAttributeView: SHBaseView {
             button.setImage(UIImage(named: "a1"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(lightButton!)
@@ -46,6 +54,7 @@ class SHYGOAttributeView: SHBaseView {
             button.setImage(UIImage(named: "a2"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(earthButton!)
@@ -55,6 +64,7 @@ class SHYGOAttributeView: SHBaseView {
             button.setImage(UIImage(named: "a3"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(windButton!)
@@ -64,6 +74,7 @@ class SHYGOAttributeView: SHBaseView {
             button.setImage(UIImage(named: "a4"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(waterButton!)
@@ -73,6 +84,7 @@ class SHYGOAttributeView: SHBaseView {
             button.setImage(UIImage(named: "a5"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(fireButton!)
@@ -82,6 +94,7 @@ class SHYGOAttributeView: SHBaseView {
             button.setImage(UIImage(named: "a6"), for: .normal)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(godButton!)
