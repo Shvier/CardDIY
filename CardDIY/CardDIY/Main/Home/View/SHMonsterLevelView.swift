@@ -40,6 +40,12 @@ class SHMonsterLevelView: SHBaseView {
     }
     
     func hideLevel() {
+        if selectedLevel == 0 {
+            for button in levelButtons {
+                button.isHidden = true
+            }
+            return
+        }
         if isBlack {
             for index in 0...(selectedLevel - 1) {
                 let button = levelButtons[index]

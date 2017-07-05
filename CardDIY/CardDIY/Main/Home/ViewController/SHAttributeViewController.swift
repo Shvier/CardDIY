@@ -21,6 +21,9 @@ class SHAttributeViewController: SHBaseViewController {
     var monsterLevelView: SHMonsterLevelView?
     var magicTypeView: SHMagicTypeView?
     var trapTypeView: SHTrapTypeView?
+    var magicTypeWordHint: UIImageView?
+    var advMagicTypeWordHint: UIImageView?
+    var advMagicTypeHint: UIImageView?
     
     var nextButton: UIButton?
     var selectedAttribute: String = "a0"
@@ -42,6 +45,9 @@ class SHAttributeViewController: SHBaseViewController {
             attributeHint?.isHidden = false
             monsterLevelView?.isHidden = false
             magicTypeView?.isHidden = true
+            magicTypeWordHint?.isHidden = true
+            advMagicTypeWordHint?.isHidden = true
+            advMagicTypeHint?.isHidden = true
             trapTypeView?.isHidden = true
         } else if SHYGOConfiguration.sharedInstance.isMonster() {
             monsterLevelView?.configLevelType(isBlack: false)
@@ -50,6 +56,9 @@ class SHAttributeViewController: SHBaseViewController {
             monsterLevelView?.isHidden = false
             attributeHint?.isHidden = false
             magicTypeView?.isHidden = true
+            magicTypeWordHint?.isHidden = true
+            advMagicTypeWordHint?.isHidden = true
+            advMagicTypeHint?.isHidden = true
             trapTypeView?.isHidden = true
         } else if SHYGOConfiguration.sharedInstance.isMagic() {
             attributeView?.isHidden = true
@@ -62,6 +71,9 @@ class SHAttributeViewController: SHBaseViewController {
             monsterLevelView?.isHidden = true
             attributeHint?.isHidden = true
             magicTypeView?.isHidden = true
+            magicTypeWordHint?.isHidden = true
+            advMagicTypeWordHint?.isHidden = true
+            advMagicTypeHint?.isHidden = true
             trapTypeView?.isHidden = false
         }
     }
@@ -119,9 +131,32 @@ class SHAttributeViewController: SHBaseViewController {
         
         magicTypeView = ({
             let view = SHMagicTypeView()
+            view.delegate = self
             return view
         })()
         view.addSubview(magicTypeView!)
+        
+        magicTypeWordHint = ({
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: "magic")
+            return imageView
+        })()
+        cardContentView!.addSubview(magicTypeWordHint!)
+        
+        advMagicTypeWordHint = ({
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: "magic_plus")
+            imageView.isHidden = true
+            return imageView
+        })()
+        cardContentView!.addSubview(advMagicTypeWordHint!)
+        
+        advMagicTypeHint = ({
+            let imageView = UIImageView()
+            imageView.isHidden = true
+            return imageView
+        })()
+        cardContentView!.addSubview(advMagicTypeHint!)
         
         trapTypeView = ({
             let view = SHTrapTypeView()
@@ -171,6 +206,26 @@ class SHAttributeViewController: SHBaseViewController {
         magicTypeView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardImageView!)
             make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
+        })
+        
+        magicTypeWordHint?.snp.makeConstraints({ (make) in
+            make.top.equalTo(cardImageView!).offset(57)
+            make.right.equalTo(cardImageView!).offset(-30)
+            make.width.equalTo(60)
+            make.height.equalTo(15)
+        })
+        
+        advMagicTypeWordHint?.snp.makeConstraints({ (make) in
+            make.top.equalTo(cardImageView!).offset(57)
+            make.right.equalTo(cardImageView!).offset(-30)
+            make.width.equalTo(80)
+            make.height.equalTo(15)
+        })
+        
+        advMagicTypeHint?.snp.makeConstraints({ (make) in
+            make.top.equalTo(cardImageView!).offset(57)
+            make.right.equalTo(cardImageView!).offset(-30)
+            make.width.height.equalTo(15)
         })
         
         trapTypeView?.snp.makeConstraints({ (make) in
@@ -262,6 +317,43 @@ extension SHAttributeViewController: SHYGOMonsterLevelViewDelegate {
             break
         case monsterLevelView.level12!:
             monsterLevelView.configLevel(level: 12)
+            break
+        default:
+            break
+        }
+    }
+    
+}
+
+extension SHAttributeViewController: SHYGOMagicTypeViewDelegate {
+    
+    func magicTypeView(magicTypeView: SHMagicTypeView, buttonClicked sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+            magicTypeWordHint?.isHidden = false
+            advMagicTypeWordHint?.isHidden = true
+            advMagicTypeHint?.isHidden = true
+        } else {
+            magicTypeWordHint?.isHidden = true
+            advMagicTypeWordHint?.isHidden = false
+            advMagicTypeHint?.isHidden = false
+            magicTypeView.unselectButton(exclude: sender)
+        }
+        switch sender {
+        case magicTypeView.infButton!:
+            advMagicTypeHint?.image = UIImage(named: "inf_selected")
+            break
+        case magicTypeView.thunderButton!:
+            advMagicTypeHint?.image = UIImage(named: "thunder_selected")
+            break
+        case magicTypeView.crossButton!:
+            advMagicTypeHint?.image = UIImage(named: "cross_selected")
+            break
+        case magicTypeView.compassButton!:
+            advMagicTypeHint?.image = UIImage(named: "compass_selected")
+            break
+        case magicTypeView.fireButton!:
+            advMagicTypeHint?.image = UIImage(named: "fire_selected")
             break
         default:
             break

@@ -14,57 +14,92 @@ class SHMagicTypeView: SHBaseView {
     let buttonLength: CGFloat = 24
     let buttonCorner: CGFloat = 12
 
+    lazy var buttons: [UIButton] = {
+        return Array<UIButton>()
+    }()
+    
     var infButton: UIButton?
     var thunderButton: UIButton?
     var crossButton: UIButton?
     var compassButton: UIButton?
     var fireButton: UIButton?
     
+    weak var delegate: SHYGOMagicTypeViewDelegate?
+    
+    func unselectButton(exclude: UIButton) {
+        for button in buttons {
+            if button.isEqual(exclude) {
+                button.isSelected = true
+            } else {
+                button.isSelected = false
+            }
+        }
+    }
+    
+    func buttonAction(sender: UIButton) {
+        delegate?.magicTypeView(magicTypeView: self, buttonClicked: sender)
+    }
+    
     func initUI() {
         infButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "inf"), for: .normal)
+            button.setImage(UIImage(named: "inf_normal"), for: .normal)
+            button.setImage(UIImage(named: "inf_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(infButton!)
+        buttons.append(infButton!)
         
         thunderButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "thunder"), for: .normal)
+            button.setImage(UIImage(named: "thunder_normal"), for: .normal)
+            button.setImage(UIImage(named: "thunder_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(thunderButton!)
+        buttons.append(thunderButton!)
         
         crossButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "cross"), for: .normal)
+            button.setImage(UIImage(named: "cross_normal"), for: .normal)
+            button.setImage(UIImage(named: "cross_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(crossButton!)
+        buttons.append(crossButton!)
         
         compassButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "compass"), for: .normal)
+            button.setImage(UIImage(named: "compass_normal"), for: .normal)
+            button.setImage(UIImage(named: "compass_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(compassButton!)
+        buttons.append(compassButton!)
         
         fireButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "fire"), for: .normal)
+            button.setImage(UIImage(named: "fire_normal"), for: .normal)
+            button.setImage(UIImage(named: "fire_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(fireButton!)
+        buttons.append(fireButton!)
     }
     
     func makeConstraints() {

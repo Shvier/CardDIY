@@ -20,7 +20,8 @@ class SHTrapTypeView: SHBaseView {
     func initUI() {
         antiButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "anti"), for: .normal)
+            button.setImage(UIImage(named: "anti_normal"), for: .normal)
+            button.setImage(UIImage(named: "anti_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
             return button
@@ -29,7 +30,8 @@ class SHTrapTypeView: SHBaseView {
         
         infButton = ({
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "inf"), for: .normal)
+            button.setImage(UIImage(named: "inf_normal"), for: .normal)
+            button.setImage(UIImage(named: "inf_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
             return button
