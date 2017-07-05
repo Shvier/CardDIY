@@ -13,22 +13,48 @@ class SHAttributeViewController: SHBaseViewController {
     var cardImageView: UIImageView?
     var attributeView: SHYGOAttributeView?
     var attributeHint: UIImageView?
+    var monsterLevelView: SHMonsterLevelView?
+    var magicTypeView: SHMagicTypeView?
+    var trapTypeView: SHTrapTypeView?
+    var monsterAttrHint: UIImageView?
     
     var nextButton: UIButton?
     var selectedAttribute: String = "a0"
     
     func nextButtonAction(sender: UIButton) {
         SHYGOConfiguration.sharedInstance.attribute = selectedAttribute
-        let levelVC = SHLevelViewController()
-        navigationController?.pushViewController(levelVC, animated: true)
+        let effectVC = SHEffectViewController()
+        navigationController?.pushViewController(effectVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if SHYGOConfiguration.sharedInstance.isMonster() {
+        if SHYGOConfiguration.sharedInstance.isBlackMonster() {
+            monsterLevelView?.configLevelType(isBlack: true)
             attributeView?.isHidden = false
-        } else {
+            monsterAttrHint?.isHidden = false
+            monsterLevelView?.isHidden = false
+            magicTypeView?.isHidden = true
+            trapTypeView?.isHidden = true
+        } else if SHYGOConfiguration.sharedInstance.isMonster() {
+            monsterLevelView?.configLevelType(isBlack: false)
+            attributeView?.isHidden = false
+            monsterLevelView?.isHidden = false
+            monsterAttrHint?.isHidden = false
+            magicTypeView?.isHidden = true
+            trapTypeView?.isHidden = true
+        } else if SHYGOConfiguration.sharedInstance.isMagic() {
             attributeView?.isHidden = true
+            monsterLevelView?.isHidden = true
+            monsterAttrHint?.isHidden = true
+            magicTypeView?.isHidden = false
+            trapTypeView?.isHidden = true
+        } else if SHYGOConfiguration.sharedInstance.isTrap() {
+            attributeView?.isHidden = true
+            monsterLevelView?.isHidden = true
+            monsterAttrHint?.isHidden = true
+            magicTypeView?.isHidden = true
+            trapTypeView?.isHidden = false
         }
     }
     
@@ -60,6 +86,24 @@ class SHAttributeViewController: SHBaseViewController {
             return button;
         })()
         view.addSubview(nextButton!)
+        
+        monsterLevelView = ({
+            let view = SHMonsterLevelView()
+            return view
+        })()
+        view.addSubview(monsterLevelView!)
+        
+        magicTypeView = ({
+            let view = SHMagicTypeView()
+            return view
+        })()
+        view.addSubview(magicTypeView!)
+        
+        trapTypeView = ({
+            let view = SHTrapTypeView()
+            return view
+        })()
+        view.addSubview(trapTypeView!)
     }
     
     func makeConstraints() {
@@ -82,6 +126,21 @@ class SHAttributeViewController: SHBaseViewController {
         nextButton?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
             make.top.equalTo((cardImageView?.snp.bottom)!).offset(nextButtonTopMargin)
+        })
+        
+        monsterLevelView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(cardImageView!)
+            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
+        })
+        
+        magicTypeView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(cardImageView!)
+            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
+        })
+        
+        trapTypeView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(cardImageView!)
+            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
         })
     }
 
