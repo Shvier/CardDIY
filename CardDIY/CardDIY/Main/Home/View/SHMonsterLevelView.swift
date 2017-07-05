@@ -19,6 +19,7 @@ class SHMonsterLevelView: SHBaseView {
     }()
     
     var isBlack: Bool = false
+    var selectedLevel: NSInteger = 0
     weak var delegate: SHYGOMonsterLevelViewDelegate?
     
     var level1: UIButton?
@@ -38,7 +39,36 @@ class SHMonsterLevelView: SHBaseView {
         delegate?.monsterLevelView(monsterLevelView: self, buttonClicked: sender)
     }
     
+    func hideLevel() {
+        if isBlack {
+            for index in 0...(selectedLevel - 1) {
+                let button = levelButtons[index]
+                button.isHidden = false
+            }
+            for index in selectedLevel..<levelButtons.count {
+                let button = levelButtons[index]
+                button.isHidden = true
+            }
+        } else {
+            for index in (selectedLevel - 1)..<levelButtons.count {
+                let button = levelButtons[index]
+                button.isHidden = false
+            }
+            for index in 0..<(selectedLevel - 1) {
+                let button = levelButtons[index]
+                button.isHidden = true
+            }
+        }
+    }
+    
+    func showAllLevel() {
+        for button in levelButtons {
+            button.isHidden = false
+        }
+    }
+    
     func configLevel(level: NSInteger) {
+        selectedLevel = level
         if isBlack {
             for index in 0...(level - 1) {
                 let button = levelButtons[index]

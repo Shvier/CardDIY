@@ -26,6 +26,7 @@ class SHAttributeViewController: SHBaseViewController {
     var selectedAttribute: String = "a0"
     
     func nextButtonAction(sender: UIButton) {
+        monsterLevelView?.hideLevel()
         SHYGOConfiguration.sharedInstance.attribute = selectedAttribute
         let effectVC = SHEffectViewController()
         effectVC.cardImage = cardContentView?.currentImage()
@@ -36,6 +37,7 @@ class SHAttributeViewController: SHBaseViewController {
         super.viewWillAppear(animated)
         if SHYGOConfiguration.sharedInstance.isBlackMonster() {
             monsterLevelView?.configLevelType(isBlack: true)
+            monsterLevelView?.showAllLevel()
             attributeView?.isHidden = false
             attributeHint?.isHidden = false
             monsterLevelView?.isHidden = false
@@ -43,6 +45,7 @@ class SHAttributeViewController: SHBaseViewController {
             trapTypeView?.isHidden = true
         } else if SHYGOConfiguration.sharedInstance.isMonster() {
             monsterLevelView?.configLevelType(isBlack: false)
+            monsterLevelView?.showAllLevel()
             attributeView?.isHidden = false
             monsterLevelView?.isHidden = false
             attributeHint?.isHidden = false
