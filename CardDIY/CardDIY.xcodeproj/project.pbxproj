@@ -11,6 +11,7 @@
 		C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */; };
 		C02CB2F71F0CAD67009C9A7A /* Book Antiqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02CB2F51F0CAD67009C9A7A /* Book Antiqua.ttf */; };
 		C02CB2F81F0CAD67009C9A7A /* HYXiaoLiShuF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02CB2F61F0CAD67009C9A7A /* HYXiaoLiShuF.ttf */; };
+		C02CB2FA1F0CB1DA009C9A7A /* SHAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2F91F0CB1DA009C9A7A /* SHAvatarViewController.swift */; };
 		C053DFAC1F0B750B00EA9A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAA1F0B750B00EA9A93 /* Main.storyboard */; };
 		C053DFAE1F0B750B00EA9A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */; };
 		C053DFB11F0B750B00EA9A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAF1F0B750B00EA9A93 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 		C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ScreenShot.swift"; sourceTree = "<group>"; };
 		C02CB2F51F0CAD67009C9A7A /* Book Antiqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Book Antiqua.ttf"; sourceTree = "<group>"; };
 		C02CB2F61F0CAD67009C9A7A /* HYXiaoLiShuF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYXiaoLiShuF.ttf; sourceTree = "<group>"; };
+		C02CB2F91F0CB1DA009C9A7A /* SHAvatarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHAvatarViewController.swift; sourceTree = "<group>"; };
 		C053DFA31F0B750B00EA9A93 /* CardDIY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDIY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C053DFAB1F0B750B00EA9A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				C053DFBB1F0B753A00EA9A93 /* SHHomeViewController.swift */,
 				C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */,
 				C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */,
+				C02CB2F91F0CB1DA009C9A7A /* SHAvatarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02CB2FA1F0CB1DA009C9A7A /* SHAvatarViewController.swift in Sources */,
 				C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */,
 				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,

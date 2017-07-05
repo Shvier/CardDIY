@@ -13,6 +13,7 @@ class SHAttributeViewController: SHBaseViewController {
     let atrributeMargin: CGFloat = 24
     let attributeLength: CGFloat = 25
     
+    var hintLabel: UILabel?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
     var attributeView: SHYGOAttributeView?
@@ -64,6 +65,13 @@ class SHAttributeViewController: SHBaseViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.white
+        hintLabel = ({
+            let label = UILabel()
+            label.text = "请补充卡牌信息"
+            return label
+        })()
+        view.addSubview(hintLabel!)
+        
         cardContentView = ({
             let view = UIView()
             return view
@@ -118,6 +126,11 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
+        hintLabel?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            make.bottom.equalTo((cardContentView?.snp.top)!).offset(-hintLabelBottomMargin)
+        })
+        
         cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(view).offset(cardMadeViewMargin)
             make.right.equalTo(view).offset(-cardMadeViewMargin)

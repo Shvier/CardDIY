@@ -55,7 +55,7 @@ class SHHomeViewController: UIViewController {
         
         hintLabel = ({
             let label = UILabel()
-            label.text = "提示"
+            label.text = "请选择卡牌类型"
             return label
         })()
         view.addSubview(hintLabel!)
