@@ -10,15 +10,16 @@ import UIKit
 
 class SHMonsterLevelView: SHBaseView {
     
-    let buttonMargin: CGFloat = 10
-    let buttonLength: CGFloat = 24
-    let buttonCorner: CGFloat = 12
+    let buttonMargin: CGFloat = 1
+    let buttonLength: CGFloat = 16
+    let buttonCorner: CGFloat = 8
 
     lazy var levelButtons: [UIButton] = {
         return Array<UIButton>()
     }()
     
     var isBlack: Bool = false
+    weak var delegate: SHYGOMonsterLevelViewDelegate?
     
     var level1: UIButton?
     var level2: UIButton?
@@ -33,15 +34,43 @@ class SHMonsterLevelView: SHBaseView {
     var level11: UIButton?
     var level12: UIButton?
     
+    func buttonAction(sender: UIButton) {
+        delegate?.monsterLevelView(monsterLevelView: self, buttonClicked: sender)
+    }
+    
+    func configLevel(level: NSInteger) {
+        if isBlack {
+            for index in 0...(level - 1) {
+                let button = levelButtons[index]
+                button.isSelected = true
+            }
+            for index in level..<levelButtons.count {
+                let button = levelButtons[index]
+                button.isSelected = false
+            }
+        } else {
+            for index in (level - 1)..<levelButtons.count {
+                let button = levelButtons[index]
+                button.isSelected = true
+            }
+            for index in 0..<(level - 1) {
+                let button = levelButtons[index]
+                button.isSelected = false
+            }
+        }
+    }
+    
     func configLevelType(isBlack: Bool) {
         self.isBlack = isBlack
         if isBlack {
             for button in levelButtons {
-                button.setImage(UIImage(named: "ds"), for: .normal)
+                button.setImage(UIImage(named: "ds_normal"), for: .normal)
+                button.setImage(UIImage(named: "ds_selected"), for: .selected)
             }
         } else {
             for button in levelButtons {
-                button.setImage(UIImage(named: "level"), for: .normal)
+                button.setImage(UIImage(named: "level_normal"), for: .normal)
+                button.setImage(UIImage(named: "level_selected"), for: .selected)
             }
         }
     }
@@ -51,6 +80,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level1!)
@@ -60,6 +90,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level2!)
@@ -69,6 +100,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level3!)
@@ -78,6 +110,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level4!)
@@ -87,6 +120,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level5!)
@@ -96,6 +130,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level6!)
@@ -105,6 +140,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level7!)
@@ -114,6 +150,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level8!)
@@ -123,6 +160,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level9!)
@@ -132,6 +170,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level10!)
@@ -141,6 +180,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level11!)
@@ -150,6 +190,7 @@ class SHMonsterLevelView: SHBaseView {
             let button = UIButton(type: .custom)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(level12!)

@@ -109,9 +109,10 @@ class SHAttributeViewController: SHBaseViewController {
         
         monsterLevelView = ({
             let view = SHMonsterLevelView()
+            view.delegate = self
             return view
         })()
-        view.addSubview(monsterLevelView!)
+        cardContentView!.addSubview(monsterLevelView!)
         
         magicTypeView = ({
             let view = SHMagicTypeView()
@@ -160,8 +161,8 @@ class SHAttributeViewController: SHBaseViewController {
         })
         
         monsterLevelView?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(cardImageView!)
-            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
+            make.centerX.equalTo(cardContentView!)
+            make.top.equalTo(cardImageView!).offset(57)
         })
         
         magicTypeView?.snp.makeConstraints({ (make) in
@@ -211,6 +212,53 @@ extension SHAttributeViewController: SHYGOAttributeViewDelegate {
             break
         case attributeView.godButton!:
             attributeHint?.image = UIImage(named: "a6")
+            break
+        default:
+            break
+        }
+    }
+    
+}
+
+extension SHAttributeViewController: SHYGOMonsterLevelViewDelegate {
+    
+    func monsterLevelView(monsterLevelView: SHMonsterLevelView, buttonClicked sender: UIButton) {
+        switch sender {
+        case monsterLevelView.level1!:
+            monsterLevelView.configLevel(level: 1)
+            break
+        case monsterLevelView.level2!:
+            monsterLevelView.configLevel(level: 2)
+            break
+        case monsterLevelView.level3!:
+            monsterLevelView.configLevel(level: 3)
+            break
+        case monsterLevelView.level4!:
+            monsterLevelView.configLevel(level: 4)
+            break
+        case monsterLevelView.level5!:
+            monsterLevelView.configLevel(level: 5)
+            break
+        case monsterLevelView.level6!:
+            monsterLevelView.configLevel(level: 6)
+            break
+        case monsterLevelView.level7!:
+            monsterLevelView.configLevel(level: 7)
+            break
+        case monsterLevelView.level8!:
+            monsterLevelView.configLevel(level: 8)
+            break
+        case monsterLevelView.level9!:
+            monsterLevelView.configLevel(level: 9)
+            break
+        case monsterLevelView.level10!:
+            monsterLevelView.configLevel(level: 10)
+            break
+        case monsterLevelView.level11!:
+            monsterLevelView.configLevel(level: 11)
+            break
+        case monsterLevelView.level12!:
+            monsterLevelView.configLevel(level: 12)
             break
         default:
             break
