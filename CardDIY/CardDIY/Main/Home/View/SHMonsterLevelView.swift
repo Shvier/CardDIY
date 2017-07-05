@@ -49,20 +49,8 @@ class SHMonsterLevelView: SHBaseView {
     func initUI() {
         level1 = ({
             let button = UIButton(type: .custom)
-            return button
-        })()
-        addSubview(level1!)
-        levelButtons.append(level1!)
-        
-        level1 = ({
-            let button = UIButton(type: .custom)
-            return button
-        })()
-        addSubview(level1!)
-        levelButtons.append(level1!)
-        
-        level1 = ({
-            let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level1!)
@@ -70,6 +58,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level2 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level2!)
@@ -77,6 +67,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level3 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level3!)
@@ -84,6 +76,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level4 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level4!)
@@ -91,6 +85,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level5 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level5!)
@@ -98,6 +94,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level6 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level6!)
@@ -105,6 +103,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level7 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level7!)
@@ -112,6 +112,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level8 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level8!)
@@ -119,6 +121,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level9 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level9!)
@@ -126,6 +130,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level10 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level10!)
@@ -133,6 +139,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level11 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level11!)
@@ -140,6 +148,8 @@ class SHMonsterLevelView: SHBaseView {
         
         level12 = ({
             let button = UIButton(type: .custom)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonCorner
             return button
         })()
         addSubview(level12!)
@@ -229,4 +239,5 @@ class SHMonsterLevelView: SHBaseView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
 }

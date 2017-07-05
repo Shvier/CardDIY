@@ -23,6 +23,9 @@
 		C053DFD81F0B929900EA9A93 /* SHBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFD71F0B929900EA9A93 /* SHBaseView.swift */; };
 		C053DFDA1F0BAD0900EA9A93 /* SHLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFD91F0BAD0900EA9A93 /* SHLevelViewController.swift */; };
 		C053DFDC1F0BB0A300EA9A93 /* SHMonsterLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFDB1F0BB0A300EA9A93 /* SHMonsterLevelView.swift */; };
+		C053DFDE1F0BB58E00EA9A93 /* SHEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */; };
+		C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */; };
+		C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		C053DFD71F0B929900EA9A93 /* SHBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHBaseView.swift; sourceTree = "<group>"; };
 		C053DFD91F0BAD0900EA9A93 /* SHLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHLevelViewController.swift; sourceTree = "<group>"; };
 		C053DFDB1F0BB0A300EA9A93 /* SHMonsterLevelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMonsterLevelView.swift; sourceTree = "<group>"; };
+		C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHEffectViewController.swift; sourceTree = "<group>"; };
+		C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMagicTypeView.swift; sourceTree = "<group>"; };
+		C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTrapTypeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				C053DFBB1F0B753A00EA9A93 /* SHHomeViewController.swift */,
 				C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */,
 				C053DFD91F0BAD0900EA9A93 /* SHLevelViewController.swift */,
+				C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 				C053DFCC1F0B822C00EA9A93 /* SHYGOCardCell.swift */,
 				C053DFD51F0B91E000EA9A93 /* SHYGOAttributeView.swift */,
 				C053DFDB1F0BB0A300EA9A93 /* SHMonsterLevelView.swift */,
+				C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */,
+				C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,14 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,
 				C053DFDC1F0BB0A300EA9A93 /* SHMonsterLevelView.swift in Sources */,
 				C053DFBF1F0B754400EA9A93 /* AppDelegate.swift in Sources */,
 				C053DFDA1F0BAD0900EA9A93 /* SHLevelViewController.swift in Sources */,
 				C053DFD81F0B929900EA9A93 /* SHBaseView.swift in Sources */,
 				C053DFD41F0B900300EA9A93 /* SHBaseViewController.swift in Sources */,
+				C053DFDE1F0BB58E00EA9A93 /* SHEffectViewController.swift in Sources */,
 				C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */,
 				C053DFD21F0B8E6600EA9A93 /* SHYGOConfiguration.swift in Sources */,
+				C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */,
 				C053DFCB1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift in Sources */,
 				C053DFD61F0B91E000EA9A93 /* SHYGOAttributeView.swift in Sources */,
 				C053DFCD1F0B822C00EA9A93 /* SHYGOCardCell.swift in Sources */,
