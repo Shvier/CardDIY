@@ -24,6 +24,9 @@ class SHAttributeViewController: SHBaseViewController {
     var magicTypeWordHint: UIImageView?
     var advMagicTypeWordHint: UIImageView?
     var advMagicTypeHint: UIImageView?
+    var trapTypeWordHint: UIImageView?
+    var advTrapTypeWordHint: UIImageView?
+    var advTrapTypeHint: UIImageView?
     
     var nextButton: UIButton?
     var selectedAttribute: String = "a0"
@@ -36,45 +39,53 @@ class SHAttributeViewController: SHBaseViewController {
         navigationController?.pushViewController(effectVC, animated: true)
     }
     
+    func hideTrapTypeHint(hide: Bool) {
+        if hide {
+            trapTypeView?.isHidden = true
+            trapTypeWordHint?.isHidden = true
+        } else {
+            trapTypeView?.isHidden = false
+            trapTypeWordHint?.isHidden = false
+        }
+    }
+    
+    func hideMagicTypeHint(hide: Bool) {
+        if hide {
+            magicTypeView?.isHidden = true
+            magicTypeWordHint?.isHidden = true
+        } else {
+            magicTypeView?.isHidden = false
+            magicTypeWordHint?.isHidden = false
+        }
+    }
+    
+    func hideMonsterHint(hide: Bool) {
+        if hide {
+            attributeView?.isHidden = true
+            monsterLevelView?.isHidden = true
+            attributeHint?.isHidden = true
+        } else {
+            monsterLevelView?.showAllLevel()
+            attributeView?.isHidden = false
+            monsterLevelView?.isHidden = false
+            attributeHint?.isHidden = false
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if SHYGOConfiguration.sharedInstance.isBlackMonster() {
             monsterLevelView?.configLevelType(isBlack: true)
-            monsterLevelView?.showAllLevel()
-            attributeView?.isHidden = false
-            attributeHint?.isHidden = false
-            monsterLevelView?.isHidden = false
-            magicTypeView?.isHidden = true
-            magicTypeWordHint?.isHidden = true
-            advMagicTypeWordHint?.isHidden = true
-            advMagicTypeHint?.isHidden = true
-            trapTypeView?.isHidden = true
+            
+            hideMonsterHint(hide: false)
+            hideMagicTypeHint(hide: true)
+            hideTrapTypeHint(hide: true)
         } else if SHYGOConfiguration.sharedInstance.isMonster() {
             monsterLevelView?.configLevelType(isBlack: false)
-            monsterLevelView?.showAllLevel()
-            attributeView?.isHidden = false
-            monsterLevelView?.isHidden = false
-            attributeHint?.isHidden = false
-            magicTypeView?.isHidden = true
-            magicTypeWordHint?.isHidden = true
-            advMagicTypeWordHint?.isHidden = true
-            advMagicTypeHint?.isHidden = true
-            trapTypeView?.isHidden = true
-        } else if SHYGOConfiguration.sharedInstance.isMagic() {
-            attributeView?.isHidden = true
-            monsterLevelView?.isHidden = true
-            attributeHint?.isHidden = true
-            magicTypeView?.isHidden = false
-            trapTypeView?.isHidden = true
-        } else if SHYGOConfiguration.sharedInstance.isTrap() {
-            attributeView?.isHidden = true
-            monsterLevelView?.isHidden = true
-            attributeHint?.isHidden = true
-            magicTypeView?.isHidden = true
-            magicTypeWordHint?.isHidden = true
-            advMagicTypeWordHint?.isHidden = true
-            advMagicTypeHint?.isHidden = true
-            trapTypeView?.isHidden = false
+
+            hideMonsterHint(hide: false)
+            hideMagicTypeHint(hide: true)
+            hideTrapTypeHint(hide: true)
         }
     }
     
@@ -160,9 +171,32 @@ class SHAttributeViewController: SHBaseViewController {
         
         trapTypeView = ({
             let view = SHTrapTypeView()
+            view.delegate = self
             return view
         })()
         view.addSubview(trapTypeView!)
+        
+        trapTypeWordHint = ({
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: "trap")
+            return imageView
+        })()
+        cardContentView!.addSubview(trapTypeWordHint!)
+        
+        advTrapTypeWordHint = ({
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: "trap_plus")
+            imageView.isHidden = true
+            return imageView
+        })()
+        cardContentView!.addSubview(advTrapTypeWordHint!)
+        
+        advTrapTypeHint = ({
+            let imageView = UIImageView()
+            imageView.isHidden = true
+            return imageView
+        })()
+        cardContentView!.addSubview(advTrapTypeHint!)
     }
     
     func makeConstraints() {
@@ -232,6 +266,36 @@ class SHAttributeViewController: SHBaseViewController {
             make.centerX.equalTo(cardImageView!)
             make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
         })
+        
+        trapTypeWordHint?.snp.makeConstraints({ (make) in
+            make.top.equalTo(cardImageView!).offset(57)
+            make.right.equalTo(cardImageView!).offset(-30)
+            make.width.equalTo(60)
+            make.height.equalTo(15)
+        })
+        
+        advTrapTypeWordHint?.snp.makeConstraints({ (make) in
+            make.top.equalTo(cardImageView!).offset(57)
+            make.right.equalTo(cardImageView!).offset(-30)
+            make.width.equalTo(80)
+            make.height.equalTo(15)
+        })
+        
+        advTrapTypeHint?.snp.makeConstraints({ (make) in
+            make.top.equalTo(cardImageView!).offset(57)
+            make.right.equalTo(cardImageView!).offset(-30)
+            make.width.height.equalTo(15)
+        })
+        
+        if SHYGOConfiguration.sharedInstance.isMagic() {
+            hideMonsterHint(hide: true)
+            hideMagicTypeHint(hide: false)
+            hideTrapTypeHint(hide: true)
+        } else if SHYGOConfiguration.sharedInstance.isTrap() {
+            hideMonsterHint(hide: true)
+            hideMagicTypeHint(hide: true)
+            hideTrapTypeHint(hide: false)
+        }
     }
 
     override func viewDidLoad() {
@@ -354,6 +418,34 @@ extension SHAttributeViewController: SHYGOMagicTypeViewDelegate {
             break
         case magicTypeView.fireButton!:
             advMagicTypeHint?.image = UIImage(named: "fire_selected")
+            break
+        default:
+            break
+        }
+    }
+    
+}
+
+extension SHAttributeViewController: SHYGOTrapTypeViewDelegate {
+    
+    func trapTypeView(trapTypeView: SHTrapTypeView, buttonClicked sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+            trapTypeWordHint?.isHidden = false
+            advTrapTypeWordHint?.isHidden = true
+            advTrapTypeHint?.isHidden = true
+        } else {
+            trapTypeWordHint?.isHidden = true
+            advTrapTypeWordHint?.isHidden = false
+            advTrapTypeHint?.isHidden = false
+            trapTypeView.unselectButton(exclude: sender)
+        }
+        switch sender {
+        case trapTypeView.antiButton!:
+            advTrapTypeHint?.image = UIImage(named: "anti_selected")
+            break
+        case trapTypeView.infButton!:
+            advTrapTypeHint?.image = UIImage(named: "inf_selected")
             break
         default:
             break

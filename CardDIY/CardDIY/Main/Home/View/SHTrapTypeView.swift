@@ -17,6 +17,22 @@ class SHTrapTypeView: SHBaseView {
     var antiButton: UIButton?
     var infButton: UIButton?
     
+    weak var delegate: SHYGOTrapTypeViewDelegate?
+    
+    func buttonAction(sender: UIButton) {
+        delegate?.trapTypeView(trapTypeView: self, buttonClicked: sender)
+    }
+    
+    func unselectButton(exclude sender: UIButton) {
+        if sender.isEqual(antiButton) {
+            antiButton?.isSelected = true
+            infButton?.isSelected = false
+        } else if sender.isEqual(infButton) {
+            antiButton?.isSelected = false
+            infButton?.isSelected = true
+        }
+    }
+    
     func initUI() {
         antiButton = ({
             let button = UIButton(type: .custom)
@@ -24,6 +40,7 @@ class SHTrapTypeView: SHBaseView {
             button.setImage(UIImage(named: "anti_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(antiButton!)
@@ -34,6 +51,7 @@ class SHTrapTypeView: SHBaseView {
             button.setImage(UIImage(named: "inf_selected"), for: .selected)
             button.layer.masksToBounds = true
             button.layer.cornerRadius = buttonCorner
+            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
             return button
         })()
         addSubview(infButton!)

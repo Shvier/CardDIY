@@ -15,6 +15,7 @@
 		C02CB2FD1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2FC1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift */; };
 		C02CB2FF1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2FE1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift */; };
 		C02CB3011F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB3001F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift */; };
+		C02CB3031F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */; };
 		C053DFAC1F0B750B00EA9A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAA1F0B750B00EA9A93 /* Main.storyboard */; };
 		C053DFAE1F0B750B00EA9A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */; };
 		C053DFB11F0B750B00EA9A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAF1F0B750B00EA9A93 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		C02CB2FC1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOAttributeViewProtocol.swift; sourceTree = "<group>"; };
 		C02CB2FE1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOMonsterLevelViewProtocol.swift; sourceTree = "<group>"; };
 		C02CB3001F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOMagicTypeViewProtcol.swift; sourceTree = "<group>"; };
+		C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOTrapTypeViewProtocol.swift; sourceTree = "<group>"; };
 		C053DFA31F0B750B00EA9A93 /* CardDIY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDIY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C053DFAB1F0B750B00EA9A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				C02CB2FC1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift */,
 				C02CB2FE1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift */,
 				C02CB3001F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift */,
+				C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				C053DFD41F0B900300EA9A93 /* SHBaseViewController.swift in Sources */,
 				C053DFDE1F0BB58E00EA9A93 /* SHEffectViewController.swift in Sources */,
 				C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */,
+				C02CB3031F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift in Sources */,
 				C053DFD21F0B8E6600EA9A93 /* SHYGOConfiguration.swift in Sources */,
 				C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */,
 				C02CB3011F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift in Sources */,
