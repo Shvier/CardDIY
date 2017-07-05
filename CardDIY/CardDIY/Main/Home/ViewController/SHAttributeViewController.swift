@@ -10,6 +10,9 @@ import UIKit
 
 class SHAttributeViewController: SHBaseViewController {
     
+    let atrributeMargin: CGFloat = 24
+    let attributeLength: CGFloat = 25
+    
     var cardContentView: UIView?
     var cardImageView: UIImageView?
     var attributeView: SHYGOAttributeView?
@@ -132,9 +135,9 @@ class SHAttributeViewController: SHBaseViewController {
         })
         
         attributeHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(5)
-            make.right.equalTo(cardImageView!).offset(-5)
-            make.width.height.equalTo(10)
+            make.top.equalTo(cardImageView!).offset(atrributeMargin)
+            make.right.equalTo(cardImageView!).offset(-atrributeMargin)
+            make.width.height.equalTo(attributeLength)
         })
         
         nextButton?.snp.makeConstraints({ (make) in
