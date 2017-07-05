@@ -10,13 +10,13 @@ import UIKit
 
 class SHAttributeViewController: SHBaseViewController {
     
+    var cardContentView: UIView?
     var cardImageView: UIImageView?
     var attributeView: SHYGOAttributeView?
     var attributeHint: UIImageView?
     var monsterLevelView: SHMonsterLevelView?
     var magicTypeView: SHMagicTypeView?
     var trapTypeView: SHTrapTypeView?
-    var monsterAttrHint: UIImageView?
     
     var nextButton: UIButton?
     var selectedAttribute: String = "a0"
@@ -24,6 +24,7 @@ class SHAttributeViewController: SHBaseViewController {
     func nextButtonAction(sender: UIButton) {
         SHYGOConfiguration.sharedInstance.attribute = selectedAttribute
         let effectVC = SHEffectViewController()
+        effectVC.cardImage = cardContentView?.currentImage()
         navigationController?.pushViewController(effectVC, animated: true)
     }
     
@@ -32,7 +33,7 @@ class SHAttributeViewController: SHBaseViewController {
         if SHYGOConfiguration.sharedInstance.isBlackMonster() {
             monsterLevelView?.configLevelType(isBlack: true)
             attributeView?.isHidden = false
-            monsterAttrHint?.isHidden = false
+            attributeHint?.isHidden = false
             monsterLevelView?.isHidden = false
             magicTypeView?.isHidden = true
             trapTypeView?.isHidden = true
@@ -40,19 +41,19 @@ class SHAttributeViewController: SHBaseViewController {
             monsterLevelView?.configLevelType(isBlack: false)
             attributeView?.isHidden = false
             monsterLevelView?.isHidden = false
-            monsterAttrHint?.isHidden = false
+            attributeHint?.isHidden = false
             magicTypeView?.isHidden = true
             trapTypeView?.isHidden = true
         } else if SHYGOConfiguration.sharedInstance.isMagic() {
             attributeView?.isHidden = true
             monsterLevelView?.isHidden = true
-            monsterAttrHint?.isHidden = true
+            attributeHint?.isHidden = true
             magicTypeView?.isHidden = false
             trapTypeView?.isHidden = true
         } else if SHYGOConfiguration.sharedInstance.isTrap() {
             attributeView?.isHidden = true
             monsterLevelView?.isHidden = true
-            monsterAttrHint?.isHidden = true
+            attributeHint?.isHidden = true
             magicTypeView?.isHidden = true
             trapTypeView?.isHidden = false
         }
@@ -60,12 +61,18 @@ class SHAttributeViewController: SHBaseViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.white
+        cardContentView = ({
+            let view = UIView()
+            return view
+        })()
+        view.addSubview(cardContentView!)
+        
         cardImageView = ({
             let imageView = UIImageView()
             imageView.image = UIImage(named: SHYGOConfiguration.sharedInstance.type!)
             return imageView
         })()
-        view.addSubview(cardImageView!)
+        cardContentView!.addSubview(cardImageView!)
         
         attributeView = ({
             let view = SHYGOAttributeView()
@@ -75,9 +82,10 @@ class SHAttributeViewController: SHBaseViewController {
         
         attributeHint = ({
             let imageView = UIImageView()
+            imageView.image = UIImage(named: "a0")
             return imageView
         })()
-        view.addSubview(attributeHint!)
+        cardContentView!.addSubview(attributeHint!)
         
         nextButton = ({
             let button = UIButton(type: .system)
@@ -107,11 +115,15 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
-        cardImageView?.snp.makeConstraints({ (make) in
+        cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(view).offset(cardMadeViewMargin)
             make.right.equalTo(view).offset(-cardMadeViewMargin)
             make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
             make.height.equalTo((cardImageView?.snp.width)!).multipliedBy(ratio)
+        })
+        
+        cardImageView?.snp.makeConstraints({ (make) in
+            make.left.top.right.bottom.equalTo(cardContentView!)
         })
         
         attributeView?.snp.makeConstraints({ (make) in
@@ -120,7 +132,9 @@ class SHAttributeViewController: SHBaseViewController {
         })
         
         attributeHint?.snp.makeConstraints({ (make) in
-            
+            make.top.equalTo(cardImageView!).offset(5)
+            make.right.equalTo(cardImageView!).offset(-5)
+            make.width.height.equalTo(10)
         })
         
         nextButton?.snp.makeConstraints({ (make) in

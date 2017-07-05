@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0576D47DD1A2DE3739C8D9FF /* Pods_CardDIY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDA44C467648069DA1BBC2B /* Pods_CardDIY.framework */; };
+		C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */; };
 		C053DFAC1F0B750B00EA9A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAA1F0B750B00EA9A93 /* Main.storyboard */; };
 		C053DFAE1F0B750B00EA9A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */; };
 		C053DFB11F0B750B00EA9A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C053DFAF1F0B750B00EA9A93 /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 		1EDA44C467648069DA1BBC2B /* Pods_CardDIY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardDIY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36063CDC88656A8658450F06 /* Pods-CardDIY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardDIY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardDIY/Pods-CardDIY.debug.xcconfig"; sourceTree = "<group>"; };
 		729E7C191DC6ED95035720E9 /* Pods-CardDIY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardDIY.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardDIY/Pods-CardDIY.release.xcconfig"; sourceTree = "<group>"; };
+		C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ScreenShot.swift"; sourceTree = "<group>"; };
 		C053DFA31F0B750B00EA9A93 /* CardDIY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDIY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C053DFAB1F0B750B00EA9A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C053DFAD1F0B750B00EA9A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C02CB2F11F0C92E8009C9A7A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		C053DF9A1F0B750B00EA9A93 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		C053DFA51F0B750B00EA9A93 /* CardDIY */ = {
 			isa = PBXGroup;
 			children = (
+				C02CB2F11F0C92E8009C9A7A /* Category */,
 				C053DFD01F0B8E5100EA9A93 /* Utility */,
 				C053DFC71F0B820100EA9A93 /* Base */,
 				C053DFC21F0B7CD500EA9A93 /* Global */,
@@ -353,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */,
 				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,
 				C053DFDC1F0BB0A300EA9A93 /* SHMonsterLevelView.swift in Sources */,
