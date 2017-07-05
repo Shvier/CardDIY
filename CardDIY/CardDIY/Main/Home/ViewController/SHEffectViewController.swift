@@ -12,6 +12,13 @@ class SHEffectViewController: SHBaseViewController {
     
     var cardImage: UIImage?
     var cardImageView: UIImageView?
+    var nameTextField: UITextField?
+    var effectTextField: UITextField?
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        nameTextField?.resignFirstResponder()
+        effectTextField?.resignFirstResponder()
+    }
     
     func initUI() {
         view.backgroundColor = UIColor.white
@@ -22,6 +29,20 @@ class SHEffectViewController: SHBaseViewController {
             return imageView
         })()
         view.addSubview(cardImageView!)
+        
+        nameTextField = ({
+            let textField = UITextField()
+            textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
+            return textField
+        })()
+        view.addSubview(nameTextField!)
+        
+        effectTextField = ({
+            let textField = UITextField()
+            textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
+            return textField
+        })()
+        view.addSubview(effectTextField!)
     }
     
     func makeConstraints() {
@@ -30,6 +51,12 @@ class SHEffectViewController: SHBaseViewController {
             make.right.equalTo(view).offset(-cardMadeViewMargin)
             make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
             make.height.equalTo((cardImageView?.snp.width)!).multipliedBy(ratio)
+        })
+        
+        nameTextField?.snp.makeConstraints({ (make) in
+            make.left.top.equalTo(cardImageView!).offset(24)
+            make.height.equalTo(24)
+            make.right.equalTo(cardImageView!).offset(-30)
         })
     }
 

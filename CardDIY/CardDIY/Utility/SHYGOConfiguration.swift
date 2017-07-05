@@ -13,6 +13,10 @@ let cardMadeViewBottomMargin: CGFloat = 150
 let hintLabelBottomMargin: CGFloat = 50
 let nextButtonTopMargin: CGFloat = 50
 let ratio: CGFloat = 1.4576
+let NumberFontFamily: String = "Book Antiqua"
+let WordFontFamily: String = "HYXiaoLiShuF"
+let NumberFontSize: CGFloat = 16
+let WordFontSize: CGFloat = 16
 
 class SHYGOConfiguration: NSObject {
     
