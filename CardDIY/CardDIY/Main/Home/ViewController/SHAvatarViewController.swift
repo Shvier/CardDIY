@@ -41,7 +41,7 @@ class SHAvatarViewController: SHBaseViewController {
     func makeConstraints() {
         hintLabel?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.bottom.equalTo((cardContentView?.snp.top)!).offset(-hintLabelBottomMargin)
+            make.bottom.equalTo(cardContentView!.snp.top).offset(-hintLabelBottomMargin)
         })
         
         cardContentView?.snp.makeConstraints({ (make) in

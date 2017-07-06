@@ -12,6 +12,7 @@ import SnapKit
 class SHHomeViewController: UIViewController {
     
     let backgroundAlpha: CGFloat = 0.5
+    let hintLabelFontSize: CGFloat = 24
     
     lazy var cards: Array<String> = {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
@@ -20,7 +21,6 @@ class SHHomeViewController: UIViewController {
     var backgroundImageView: UIImageView?
     var hintLabel: UILabel?
     var cardMadeView: UICollectionView?
-    var nextButton: UIButton?
     var pageControl: SHYGOPageControl?
     
     func selectedIndex() -> NSInteger {
@@ -31,7 +31,7 @@ class SHHomeViewController: UIViewController {
         sideMenuViewController.presentLeftMenuViewController()
     }
     
-    func nextButtonAction(sender: UIButton) {
+    func rightBarItemAction(sender: UIBarButtonItem) {
         SHYGOConfiguration.sharedInstance.type = cards[selectedIndex()]
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
@@ -58,34 +58,44 @@ class SHHomeViewController: UIViewController {
         hintLabel = ({
             let label = UILabel()
             label.text = "请选择卡牌类型"
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
         })()
         view.addSubview(hintLabel!)
         
-        nextButton = ({
-            let button = UIButton(type: .system)
-            button.setTitle("下一步", for: .normal)
-            button.addTarget(self, action: #selector(self.nextButtonAction(sender:)), for: .touchUpInside)
-            return button;
-        })()
-        view.addSubview(nextButton!)
+//        let flowLayout: UICollectionViewFlowLayout = ({
+//            let layout = UICollectionViewFlowLayout()
+//            layout.minimumLineSpacing = 0
+//            layout.minimumInteritemSpacing = 0
+//            layout.scrollDirection = .horizontal
+//            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
+//            return layout
+//        })()
         
-        let flowLayout: UICollectionViewFlowLayout = ({
-            let layout = UICollectionViewFlowLayout()
+        let flowLayout: SHYGOFlowLayout = ({
+            let layout = SHYGOFlowLayout()
             layout.minimumLineSpacing = 0
-            layout.minimumInteritemSpacing = 0
+//            layout.minimumInteritemSpacing = 60
             layout.scrollDirection = .horizontal
-            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
+//            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
+            let width = kScreenWidth-2*cardMadeViewMargin-100
+            layout.itemSize = CGSize(width: width, height: width*ratio)
+//            let width = kScreenWidth - 2*30
+//            layout.itemSize = CGSize(width: width/2, height: width-100)
+            layout.sectionInset = UIEdgeInsetsMake(0, (kScreenWidth-2*cardMadeViewMargin)/2, 0, (kScreenWidth-2*cardMadeViewMargin)/2)
             return layout
         })()
         
         cardMadeView = ({
             let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
             collectionView.register(SHYGOCardCell.self, forCellWithReuseIdentifier: SHYGOCardCellReuseIdentifier)
-            collectionView.isPagingEnabled = true
+//            collectionView.isPagingEnabled = true
             collectionView.bounces = false
             collectionView.delegate = self
             collectionView.dataSource = self
+//            collectionView.backgroundColor = UIColor.white
+            collectionView.showsHorizontalScrollIndicator = false
+            collectionView.showsVerticalScrollIndicator = false
             return collectionView
         })()
         view.addSubview(cardMadeView!)
@@ -93,25 +103,25 @@ class SHHomeViewController: UIViewController {
         pageControl = ({
             let pageControl = SHYGOPageControl()
             pageControl.delegate = self
+            pageControl.button1?.isSelected = true
             return pageControl
         })()
         view.addSubview(pageControl!)
-        
+    }
+    
+    func makeConstraints() {
         hintLabel?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.bottom.equalTo((cardMadeView?.snp.top)!).offset(-hintLabelBottomMargin)
-        })
-        
-        nextButton?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.top.equalTo((cardMadeView?.snp.bottom)!).offset(nextButtonTopMargin)
+            make.bottom.equalTo(cardMadeView!.snp.top).offset(-hintLabelBottomMargin)
         })
         
         cardMadeView?.snp.makeConstraints({ (make) in
-            make.left.equalTo(view).offset(cardMadeViewMargin)
-            make.right.equalTo(view).offset(-cardMadeViewMargin)
+//            make.left.equalTo(view).offset(cardMadeViewMargin)
+//            make.right.equalTo(view).offset(-cardMadeViewMargin)
+            make.left.right.equalTo(view)
             make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
-            make.height.equalTo((cardMadeView?.snp.width)!).multipliedBy(ratio)
+//            make.height.equalTo((cardMadeView?.snp.width)!).multipliedBy(ratio)
+            make.height.equalTo((kScreenWidth - 2*cardMadeViewMargin)*ratio)
         })
         
         pageControl?.snp.makeConstraints({ (make) in
@@ -123,21 +133,29 @@ class SHHomeViewController: UIViewController {
     func configNavi() {
         let leftBarItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(self.leftBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
+        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
+        navigationItem.rightBarButtonItem = rightBarItem
         navigationItem.title = "游戏王"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         initUI()
+        makeConstraints()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension SHHomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        pageControl?.unselected(exclude: (pageControl?.buttons[selectedIndex()])!)
+    }
+    
 }
 
 extension SHHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {

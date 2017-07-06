@@ -10,7 +10,7 @@ import UIKit
 
 let cardMadeViewMargin: CGFloat = 60
 let cardMadeViewBottomMargin: CGFloat = 150
-let hintLabelBottomMargin: CGFloat = 50
+let hintLabelBottomMargin: CGFloat = 20
 let nextButtonTopMargin: CGFloat = 50
 let ratio: CGFloat = 1.4576
 let NumberFontFamily: String = "Book Antiqua"

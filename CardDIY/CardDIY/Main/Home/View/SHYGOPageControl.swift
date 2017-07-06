@@ -10,8 +10,8 @@ import UIKit
 
 class SHYGOPageControl: SHBaseView {
     
-    let buttonLength: CGFloat = 24
-    let buttonMargin: CGFloat = 12
+    let buttonLength: CGFloat = 12
+    let buttonMargin: CGFloat = 6
     
     weak var delegate: SHYGOPageControlDelegate?
 
