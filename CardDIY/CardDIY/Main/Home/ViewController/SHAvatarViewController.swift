@@ -20,6 +20,7 @@ class SHAvatarViewController: SHBaseViewController {
         hintLabel = ({
             let label = UILabel()
             label.text = "请挑选卡牌图片"
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
         })()
         view.addSubview(hintLabel!)

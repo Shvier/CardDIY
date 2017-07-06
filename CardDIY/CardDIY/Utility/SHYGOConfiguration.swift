@@ -18,6 +18,7 @@ let WordFontFamily: String = "HYXiaoLiShuF"
 let NumberFontSize: CGFloat = 10
 let WordFontSize: CGFloat = 16
 let EffectFontSize: CGFloat = 10
+let hintLabelFontSize: CGFloat = 24
 
 class SHYGOConfiguration: NSObject {
     

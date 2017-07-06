@@ -12,7 +12,6 @@ import SnapKit
 class SHHomeViewController: UIViewController {
     
     let backgroundAlpha: CGFloat = 0.5
-    let hintLabelFontSize: CGFloat = 24
     
     lazy var cards: Array<String> = {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]

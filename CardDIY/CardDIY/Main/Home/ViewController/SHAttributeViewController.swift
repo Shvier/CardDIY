@@ -94,6 +94,7 @@ class SHAttributeViewController: SHBaseViewController {
         hintLabel = ({
             let label = UILabel()
             label.text = "请补充卡牌信息"
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
         })()
         view.addSubview(hintLabel!)
