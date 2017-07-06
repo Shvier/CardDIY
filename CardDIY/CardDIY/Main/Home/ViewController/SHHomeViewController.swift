@@ -21,6 +21,7 @@ class SHHomeViewController: UIViewController {
     var hintLabel: UILabel?
     var cardMadeView: UICollectionView?
     var nextButton: UIButton?
+    var pageControl: SHYGOPageControl?
     
     func selectedIndex() -> NSInteger {
         return NSInteger((cardMadeView?.contentOffset.x)!/(cardMadeView?.bounds.size.width)!)
@@ -38,12 +39,13 @@ class SHHomeViewController: UIViewController {
     
     func initUI() {
         configNavi()
-        
+        view.backgroundColor = UIColor.white
         backgroundImageView = ({
             let imageView = UIImageView()
-            imageView.image = UIImage(named: "ygo_background.jpg")
+            imageView.image = UIImage(named: "card_back.jpg")
             imageView.contentMode = .scaleAspectFill
             imageView.alpha = backgroundAlpha
+            imageView.isHidden = true
             return imageView
         })()
         view.addSubview(backgroundImageView!)
@@ -88,6 +90,13 @@ class SHHomeViewController: UIViewController {
         })()
         view.addSubview(cardMadeView!)
         
+        pageControl = ({
+            let pageControl = SHYGOPageControl()
+            pageControl.delegate = self
+            return pageControl
+        })()
+        view.addSubview(pageControl!)
+        
         hintLabel?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
             make.bottom.equalTo((cardMadeView?.snp.top)!).offset(-hintLabelBottomMargin)
@@ -103,6 +112,11 @@ class SHHomeViewController: UIViewController {
             make.right.equalTo(view).offset(-cardMadeViewMargin)
             make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
             make.height.equalTo((cardMadeView?.snp.width)!).multipliedBy(ratio)
+        })
+        
+        pageControl?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(cardMadeView!.snp.bottom).offset(20)
         })
     }
     
@@ -140,3 +154,38 @@ extension SHHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
 }
 
+extension SHHomeViewController: SHYGOPageControlDelegate {
+    
+    func pageControl(pageControl: SHYGOPageControl, buttonClicked sender: UIButton) {
+        pageControl.unselected(exclude: sender)
+        switch sender {
+        case pageControl.button1!:
+            cardMadeView?.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+            break
+        case pageControl.button2!:
+            cardMadeView?.setContentOffset(CGPoint(x: (cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        case pageControl.button3!:
+            cardMadeView?.setContentOffset(CGPoint(x: 2*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        case pageControl.button4!:
+            cardMadeView?.setContentOffset(CGPoint(x: 3*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        case pageControl.button5!:
+            cardMadeView?.setContentOffset(CGPoint(x: 4*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        case pageControl.button6!:
+            cardMadeView?.setContentOffset(CGPoint(x: 5*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        case pageControl.button7!:
+            cardMadeView?.setContentOffset(CGPoint(x: 6*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        case pageControl.button8!:
+            cardMadeView?.setContentOffset(CGPoint(x: 7*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
+            break
+        default:
+            break
+        }
+    }
+    
+}

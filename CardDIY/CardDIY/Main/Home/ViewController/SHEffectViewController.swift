@@ -16,15 +16,20 @@ class SHEffectViewController: SHBaseViewController {
     var cardImageView: UIImageView?
     var nameTextField: UITextField?
     var effectTextField: UITextField?
+    var atkTextField: UITextField?
+    var defTextField: UITextField?
     var nextButton: UIButton?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField?.resignFirstResponder()
         effectTextField?.resignFirstResponder()
+        atkTextField?.resignFirstResponder()
+        defTextField?.resignFirstResponder()
     }
     
     func nextButtonAction(sender: UIButton) {
         let avatarVC = SHAvatarViewController()
+        avatarVC.cardImage = cardContentView?.currentImage()
         navigationController?.pushViewController(avatarVC, animated: true)
     }
     
@@ -60,10 +65,26 @@ class SHEffectViewController: SHBaseViewController {
         
         effectTextField = ({
             let textField = UITextField()
-            textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
+            textField.font = UIFont(name: WordFontFamily, size: EffectFontSize)
             return textField
         })()
         cardContentView!.addSubview(effectTextField!)
+        
+        atkTextField = ({
+            let textField = UITextField()
+            textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
+            textField.keyboardType = .numberPad
+            return textField
+        })()
+        cardContentView!.addSubview(atkTextField!)
+        
+        defTextField = ({
+            let textField = UITextField()
+            textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
+            textField.keyboardType = .numberPad
+            return textField
+        })()
+        cardContentView!.addSubview(defTextField!)
         
         nextButton = ({
             let button = UIButton(type: .system)
@@ -95,6 +116,27 @@ class SHEffectViewController: SHBaseViewController {
             make.left.top.equalTo(cardImageView!).offset(24)
             make.height.equalTo(24)
             make.right.equalTo(cardImageView!).offset(-30)
+        })
+        
+        effectTextField?.snp.makeConstraints({ (make) in
+            make.left.equalTo(cardImageView!).offset(24)
+            make.height.equalTo(48)
+            make.right.equalTo(cardImageView!).offset(-35)
+            make.bottom.equalTo(cardImageView!).offset(-40)
+        })
+        
+        atkTextField?.snp.makeConstraints({ (make) in
+            make.right.equalTo(defTextField!).offset(-35)
+            make.bottom.equalTo(cardImageView!).offset(-20)
+            make.width.equalTo(20)
+            make.height.equalTo(10)
+        })
+        
+        defTextField?.snp.makeConstraints({ (make) in
+            make.right.equalTo(cardImageView!).offset(-35)
+            make.bottom.equalTo(cardImageView!).offset(-20)
+            make.width.equalTo(20)
+            make.height.equalTo(10)
         })
         
         nextButton?.snp.makeConstraints({ (make) in
