@@ -62,25 +62,12 @@ class SHHomeViewController: UIViewController {
         })()
         view.addSubview(hintLabel!)
         
-//        let flowLayout: UICollectionViewFlowLayout = ({
-//            let layout = UICollectionViewFlowLayout()
-//            layout.minimumLineSpacing = 0
-//            layout.minimumInteritemSpacing = 0
-//            layout.scrollDirection = .horizontal
-//            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
-//            return layout
-//        })()
-        
         let flowLayout: SHYGOFlowLayout = ({
             let layout = SHYGOFlowLayout()
             layout.minimumLineSpacing = 60
-//            layout.minimumInteritemSpacing = 60
             layout.scrollDirection = .horizontal
-//            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
             let width = kScreenWidth-2*cardMadeViewMargin-100
             layout.itemSize = CGSize(width: width, height: width*ratio)
-//            let width = kScreenWidth - 2*30
-//            layout.itemSize = CGSize(width: width/2, height: width-100)
             layout.sectionInset = UIEdgeInsetsMake(0, (kScreenWidth-2*cardMadeViewMargin)/2 - 30, 0, (kScreenWidth-2*cardMadeViewMargin)/2 - 35)
             layout.delegate = self
             return layout
@@ -89,11 +76,10 @@ class SHHomeViewController: UIViewController {
         cardMadeView = ({
             let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
             collectionView.register(SHYGOCardCell.self, forCellWithReuseIdentifier: SHYGOCardCellReuseIdentifier)
-//            collectionView.isPagingEnabled = true
             collectionView.bounces = false
             collectionView.delegate = self
             collectionView.dataSource = self
-//            collectionView.backgroundColor = UIColor.white
+            collectionView.backgroundColor = UIColor.white
             collectionView.showsHorizontalScrollIndicator = false
             collectionView.showsVerticalScrollIndicator = false
             return collectionView
@@ -102,7 +88,6 @@ class SHHomeViewController: UIViewController {
         
         pageControl = ({
             let pageControl = SHYGOPageControl()
-            pageControl.delegate = self
             pageControl.button1?.isSelected = true
             return pageControl
         })()
@@ -116,11 +101,8 @@ class SHHomeViewController: UIViewController {
         })
         
         cardMadeView?.snp.makeConstraints({ (make) in
-//            make.left.equalTo(view).offset(cardMadeViewMargin)
-//            make.right.equalTo(view).offset(-cardMadeViewMargin)
             make.left.right.equalTo(view)
             make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
-//            make.height.equalTo((cardMadeView?.snp.width)!).multipliedBy(ratio)
             make.height.equalTo((kScreenWidth - 2*cardMadeViewMargin)*ratio)
         })
         
@@ -168,14 +150,6 @@ extension SHHomeViewController: SHYGOFlowLayoutDelegate {
     
     func flowLayoutMovedTo(index: NSInteger) {
         pageControl?.unselected(exclude: index)
-    }
-    
-}
-
-extension SHHomeViewController: SHYGOPageControlDelegate {
-    
-    func pageControl(pageControl: SHYGOPageControl, buttonClicked sender: UIButton) {
-        
     }
     
 }
