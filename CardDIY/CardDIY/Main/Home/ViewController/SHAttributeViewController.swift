@@ -10,8 +10,8 @@ import UIKit
 
 class SHAttributeViewController: SHBaseViewController {
     
-    let atrributeMargin: CGFloat = 24
-    let attributeLength: CGFloat = 25
+    let atrributeMargin: CGFloat = 26
+    let attributeLength: CGFloat = 33
     
     var hintLabel: UILabel?
     var cardContentView: UIView?
