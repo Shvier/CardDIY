@@ -16,6 +16,7 @@
 		C02CB2FF1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2FE1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift */; };
 		C02CB3011F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB3001F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift */; };
 		C02CB3031F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */; };
+		C02FB9661F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02FB9651F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift */; };
 		C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */; };
 		C0417C871F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */; };
 		C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */; };
@@ -50,6 +51,7 @@
 		C02CB2FE1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOMonsterLevelViewProtocol.swift; sourceTree = "<group>"; };
 		C02CB3001F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOMagicTypeViewProtcol.swift; sourceTree = "<group>"; };
 		C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOTrapTypeViewProtocol.swift; sourceTree = "<group>"; };
+		C02FB9651F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOFlowLayoutProtocol.swift; sourceTree = "<group>"; };
 		C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControl.swift; sourceTree = "<group>"; };
 		C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControlProtocol.swift; sourceTree = "<group>"; };
 		C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOFlowLayout.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C02CB3001F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift */,
 				C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */,
 				C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */,
+				C02FB9651F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			files = (
 				C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */,
 				C02CB2FA1F0CB1DA009C9A7A /* SHAvatarViewController.swift in Sources */,
+				C02FB9661F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift in Sources */,
 				C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */,
 				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,

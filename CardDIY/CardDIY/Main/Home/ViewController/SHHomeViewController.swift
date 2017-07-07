@@ -73,7 +73,7 @@ class SHHomeViewController: UIViewController {
         
         let flowLayout: SHYGOFlowLayout = ({
             let layout = SHYGOFlowLayout()
-            layout.minimumLineSpacing = 0
+            layout.minimumLineSpacing = 60
 //            layout.minimumInteritemSpacing = 60
             layout.scrollDirection = .horizontal
 //            layout.itemSize = CGSize(width: view.frame.size.width - 2*cardMadeViewMargin, height: (view.frame.size.width - 2*cardMadeViewMargin)*ratio)
@@ -81,7 +81,8 @@ class SHHomeViewController: UIViewController {
             layout.itemSize = CGSize(width: width, height: width*ratio)
 //            let width = kScreenWidth - 2*30
 //            layout.itemSize = CGSize(width: width/2, height: width-100)
-            layout.sectionInset = UIEdgeInsetsMake(0, (kScreenWidth-2*cardMadeViewMargin)/2, 0, (kScreenWidth-2*cardMadeViewMargin)/2)
+            layout.sectionInset = UIEdgeInsetsMake(0, (kScreenWidth-2*cardMadeViewMargin)/2 - 30, 0, (kScreenWidth-2*cardMadeViewMargin)/2 - 35)
+            layout.delegate = self
             return layout
         })()
         
@@ -149,14 +150,6 @@ class SHHomeViewController: UIViewController {
 
 }
 
-extension SHHomeViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        pageControl?.unselected(exclude: (pageControl?.buttons[selectedIndex()])!)
-    }
-    
-}
-
 extension SHHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -171,38 +164,18 @@ extension SHHomeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
 }
 
+extension SHHomeViewController: SHYGOFlowLayoutDelegate {
+    
+    func flowLayoutMovedTo(index: NSInteger) {
+        pageControl?.unselected(exclude: index)
+    }
+    
+}
+
 extension SHHomeViewController: SHYGOPageControlDelegate {
     
     func pageControl(pageControl: SHYGOPageControl, buttonClicked sender: UIButton) {
-        pageControl.unselected(exclude: sender)
-        switch sender {
-        case pageControl.button1!:
-            cardMadeView?.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-            break
-        case pageControl.button2!:
-            cardMadeView?.setContentOffset(CGPoint(x: (cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        case pageControl.button3!:
-            cardMadeView?.setContentOffset(CGPoint(x: 2*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        case pageControl.button4!:
-            cardMadeView?.setContentOffset(CGPoint(x: 3*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        case pageControl.button5!:
-            cardMadeView?.setContentOffset(CGPoint(x: 4*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        case pageControl.button6!:
-            cardMadeView?.setContentOffset(CGPoint(x: 5*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        case pageControl.button7!:
-            cardMadeView?.setContentOffset(CGPoint(x: 6*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        case pageControl.button8!:
-            cardMadeView?.setContentOffset(CGPoint(x: 7*(cardMadeView?.bounds.size.width)!, y: 0), animated: true)
-            break
-        default:
-            break
-        }
+        
     }
     
 }

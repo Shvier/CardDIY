@@ -28,9 +28,10 @@ class SHYGOPageControl: SHBaseView {
     var button7: UIButton?
     var button8: UIButton?
     
-    func unselected(exclude sender: UIButton) {
-        for button in buttons {
-            if button.isEqual(sender) {
+    func unselected(exclude index: NSInteger) {
+        for i in 0..<buttons.count {
+            let button = buttons[i]
+            if i == index {
                 button.isSelected = true
             } else {
                 button.isSelected = false
