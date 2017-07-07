@@ -18,7 +18,6 @@ class SHEffectViewController: SHBaseViewController {
     var effectTextField: UITextField?
     var atkTextField: UITextField?
     var defTextField: UITextField?
-    var nextButton: UIButton?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField?.resignFirstResponder()
@@ -27,7 +26,7 @@ class SHEffectViewController: SHBaseViewController {
         defTextField?.resignFirstResponder()
     }
     
-    func nextButtonAction(sender: UIButton) {
+    func rightBarItemAction(sender: UIBarButtonItem) {
         let avatarVC = SHAvatarViewController()
         avatarVC.cardImage = cardContentView?.currentImage()
         navigationController?.pushViewController(avatarVC, animated: true)
@@ -35,6 +34,8 @@ class SHEffectViewController: SHBaseViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.white
+        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
+        navigationItem.rightBarButtonItem = rightBarItem
         
         hintLabel = ({
             let label = UILabel()
@@ -86,14 +87,6 @@ class SHEffectViewController: SHBaseViewController {
             return textField
         })()
         cardContentView!.addSubview(defTextField!)
-        
-        nextButton = ({
-            let button = UIButton(type: .system)
-            button.setTitle("下一步", for: .normal)
-            button.addTarget(self, action: #selector(self.nextButtonAction(sender:)), for: .touchUpInside)
-            return button;
-        })()
-        view.addSubview(nextButton!)
     }
     
     func makeConstraints() {
@@ -138,11 +131,6 @@ class SHEffectViewController: SHBaseViewController {
             make.bottom.equalTo(cardImageView!).offset(-20)
             make.width.equalTo(20)
             make.height.equalTo(10)
-        })
-        
-        nextButton?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.top.equalTo((cardImageView?.snp.bottom)!).offset(nextButtonTopMargin)
         })
     }
 

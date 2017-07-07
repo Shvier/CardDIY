@@ -28,10 +28,9 @@ class SHAttributeViewController: SHBaseViewController {
     var advTrapTypeWordHint: UIImageView?
     var advTrapTypeHint: UIImageView?
     
-    var nextButton: UIButton?
     var selectedAttribute: String = "a0"
-    
-    func nextButtonAction(sender: UIButton) {
+
+    func rightBarItemAction(sender: UIBarButtonItem) {
         monsterLevelView?.hideLevel()
         SHYGOConfiguration.sharedInstance.attribute = selectedAttribute
         let effectVC = SHEffectViewController()
@@ -91,6 +90,9 @@ class SHAttributeViewController: SHBaseViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.white
+        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
+        navigationItem.rightBarButtonItem = rightBarItem
+        
         hintLabel = ({
             let label = UILabel()
             label.text = "请补充卡牌信息"
@@ -125,14 +127,6 @@ class SHAttributeViewController: SHBaseViewController {
             return imageView
         })()
         cardContentView!.addSubview(attributeHint!)
-        
-        nextButton = ({
-            let button = UIButton(type: .system)
-            button.setTitle("下一步", for: .normal)
-            button.addTarget(self, action: #selector(self.nextButtonAction(sender:)), for: .touchUpInside)
-            return button;
-        })()
-        view.addSubview(nextButton!)
         
         monsterLevelView = ({
             let view = SHMonsterLevelView()
@@ -226,11 +220,6 @@ class SHAttributeViewController: SHBaseViewController {
             make.top.equalTo(cardImageView!).offset(atrributeMargin)
             make.right.equalTo(cardImageView!).offset(-atrributeMargin)
             make.width.height.equalTo(attributeLength)
-        })
-        
-        nextButton?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.top.equalTo((cardImageView?.snp.bottom)!).offset(nextButtonTopMargin)
         })
         
         monsterLevelView?.snp.makeConstraints({ (make) in
