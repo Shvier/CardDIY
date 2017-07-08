@@ -84,7 +84,7 @@ class SHAttributeViewController: SHBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if SHYGOConfiguration.sharedInstance.isBlackMonster() {
+        if SHYGOConfiguration.sharedInstance.isXyzMonster() {
             monsterLevelView?.configLevelType(isBlack: true)
             
             hideMonsterHint(hide: false)

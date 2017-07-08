@@ -12,22 +12,23 @@ let SHYGORaceCellReuseIdentifier = "SHYGORaceCellReuseIdentifier"
 
 class SHYGORaceCell: SHBaseCollectionViewCell {
 
-    var button: UIButton?
+    var imageView: UIImageView?
     
     func configImage(name: String) {
-        button?.setImage(UIImage(named: name), for: .normal)
+        imageView?.image = UIImage(named: name)
     }
     
     func initUI() {
-        button = ({
-            let button = UIButton(type: .custom)
-            return button
+        imageView = ({
+            let view = UIImageView()
+            view.contentMode = .scaleAspectFit
+            return view
         })()
-        addSubview(button!)
+        addSubview(imageView!)
     }
     
     func makeConstraints() {
-        button?.snp.makeConstraints({ (make) in
+        imageView?.snp.makeConstraints({ (make) in
             make.left.top.right.bottom.equalTo(self)
         })
     }

@@ -26,6 +26,11 @@ class SHEffectViewController: SHBaseViewController {
     let atkTextFieldHeight: CGFloat = 12
     let defTextFieldOffsetRight: CGFloat = 24
     let defTextFieldOffsetBottom: CGFloat = 25
+    let raceViewHeight: CGFloat = 70
+    
+    lazy var raceStrings: [String] = {
+        return ["水族", "兽族", "兽战士族", "创造神族", "Cyverse", "恐龙族", "幻神兽族", "龙族", "天使族", "恶魔族", "鱼族", "昆虫族", "机械组", "植物组", "念动力族", "炎族", "爬虫族", "岩石族", "海龙族", "魔法师族", "雷族", "战士族", "鸟兽族", "幻龙族", "不死族"]
+    }()
     
     var hintLabel: UILabel?
     var cardImage: UIImage?
@@ -135,6 +140,7 @@ class SHEffectViewController: SHBaseViewController {
         
         raceView = ({
             let view = SHYGORaceView()
+            view.delegate = self
             return view
         })()
         view.addSubview(raceView!)
@@ -194,9 +200,9 @@ class SHEffectViewController: SHBaseViewController {
         
         raceView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.top.equalTo(cardImageView!.snp.bottom).offset(20)
+            make.top.equalTo(cardImageView!.snp.bottom).offset(bottomViewOffsetTop)
             make.width.equalTo(cardImageView!)
-            make.height.equalTo(70)
+            make.height.equalTo(raceViewHeight)
         })
     }
 
@@ -210,4 +216,58 @@ class SHEffectViewController: SHBaseViewController {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+extension SHEffectViewController: SHYGORaceViewDelegate {
+    
+    func raceView(didClicked cell: SHYGORaceCell, atIndexPath indexPath: IndexPath) {
+        var race = "【" + raceStrings[indexPath.row]
+        if SHYGOConfiguration.sharedInstance.hasEffect {
+            switch SHYGOConfiguration.sharedInstance.type! {
+            case "b0":
+                race += "】"
+                break
+            case "b1":
+                race += "·效果】"
+            case "b2":
+                race += "/仪式/效果】"
+                break
+            case "b3":
+                race += "/融合/效果】"
+                break
+            case "b4":
+                race += "·同调/效果】"
+                break
+            case "b5":
+                race += "·超量/效果】"
+                break
+            default:
+                break
+            }
+        } else {
+            switch SHYGOConfiguration.sharedInstance.type! {
+            case "b0":
+                race += "】"
+                break
+            case "b1":
+                race += "·效果】"
+            case "b2":
+                race += "/仪式】"
+                break
+            case "b3":
+                race += "/融合】"
+                break
+            case "b4":
+                race += "·同调】"
+                break
+            case "b5":
+                race += "·超量】"
+                break
+            default:
+                break
+            }
+        }
+        raceLabel?.text = race
+    }
+    
 }

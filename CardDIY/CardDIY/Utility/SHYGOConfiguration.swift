@@ -31,10 +31,35 @@ class SHYGOConfiguration: NSObject {
     var atk: NSInteger?
     var def: NSInteger?
     var avatar: UIImage?
+    var hasEffect: Bool = true
     
     static let sharedInstance = {
         return SHYGOConfiguration()
     }()
+    
+    func isNormalMonster() -> Bool {
+        return type! == "b0"
+    }
+    
+    func isEffectMonster() -> Bool {
+        return type! == "b1"
+    }
+    
+    func isRitualMonster() -> Bool {
+        return type! == "b2"
+    }
+    
+    func isFusionMonster() -> Bool {
+        return type! == "b3"
+    }
+    
+    func isSynchroMonster() -> Bool {
+        return type! == "b4"
+    }
+    
+    func isXyzMonster() -> Bool {
+        return type! == "b5"
+    }
     
     func isMonster() -> Bool {
         return type! < "b6"
@@ -46,10 +71,6 @@ class SHYGOConfiguration: NSObject {
     
     func isTrap() -> Bool {
         return type! == "b7"
-    }
-    
-    func isBlackMonster() -> Bool {
-        return type! == "b5"
     }
 
 }

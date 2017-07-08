@@ -11,14 +11,14 @@ import UIKit
 class SHYGORaceView: SHBaseView {
 
     let buttonLength: CGFloat = 30
-    let buttonCorner: CGFloat = 15
-    let buttonMargin: CGFloat = 10
     
     lazy var races: [String] = {
         return ["aqua", "beast", "beast_warrior", "creator_god", "cyverse", "dinosaur", "divine_beast", "dragon", "fairy", "fiend", "fish", "insect", "machine", "plant", "psychic", "pyro", "reptile", "rock", "sea_serpent", "spellcaster", "thunder", "warrior", "winged_beast", "wyrm", "zombie"]
     }()
     
     var collectionView: UICollectionView?
+    
+    weak var delegate: SHYGORaceViewDelegate?
     
     func initUI() {
         let layout: UICollectionViewFlowLayout = ({
@@ -58,6 +58,11 @@ class SHYGORaceView: SHBaseView {
 }
 
 extension SHYGORaceView: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let raceCell = collectionView.cellForItem(at: indexPath) as! SHYGORaceCell
+        delegate?.raceView(didClicked: raceCell, atIndexPath: indexPath)
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let raceCell = collectionView.dequeueReusableCell(withReuseIdentifier: SHYGORaceCellReuseIdentifier, for: indexPath) as! SHYGORaceCell
