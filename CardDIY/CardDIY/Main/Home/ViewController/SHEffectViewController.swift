@@ -10,27 +10,30 @@ import UIKit
 
 class SHEffectViewController: SHBaseViewController {
     
-    let nameTextFieldOffsetLeft: CGFloat = 18
+    let nameTextFieldOffsetLeft: CGFloat = 26
     let nameTextFieldOffsetTop: CGFloat = 26
     let nameTextFieldHeight: CGFloat = 30
     let nameTextFieldOffsetRight: CGFloat = 60
-    let effectTextFieldOffsetLeft: CGFloat = 26
-    let effectTextFieldHeight: CGFloat = 46
+    let raceLabelOffsetLeft: CGFloat = 2
+    let raceLabelOffsetBottom: CGFloat = 8
+    let effectTextFieldOffsetLeft: CGFloat = 22
+    let effectTextFieldHeight: CGFloat = 57
     let effectTextFieldOffsetRight: CGFloat = 28
-    let effectTextFieldOffsetBottom: CGFloat = 42
+    let effectTextFieldOffsetBottom: CGFloat = 39
     let atkTextFieldOffsetRight: CGFloat = 61
     let atkTextFieldOffsetBottom: CGFloat = 25
     let atkTextFieldWidth: CGFloat = 34
     let atkTextFieldHeight: CGFloat = 12
-    let defTextFieldOffsetRight = 24
-    let defTextFieldOffsetBottom = 25
+    let defTextFieldOffsetRight: CGFloat = 24
+    let defTextFieldOffsetBottom: CGFloat = 25
     
     var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
-    var nameTextField: UITextField?
-    var effectTextField: UITextField?
+    var nameTextField: SHTextField?
+    var raceLabel: UILabel?
+    var effectTextField: UITextView?
     var atkTextField: UITextField?
     var defTextField: UITextField?
     
@@ -45,6 +48,17 @@ class SHEffectViewController: SHBaseViewController {
         let avatarVC = SHAvatarViewController()
         avatarVC.cardImage = cardContentView?.currentImage()
         navigationController?.pushViewController(avatarVC, animated: true)
+    }
+    
+    func configType() {
+        if !SHYGOConfiguration.sharedInstance.isMonster() {
+            hideMonster()
+        }
+    }
+    
+    func hideMonster() {
+        atkTextField?.isHidden = true
+        defTextField?.isHidden = true
     }
     
     func initUI() {
@@ -74,18 +88,28 @@ class SHEffectViewController: SHBaseViewController {
         cardContentView!.addSubview(cardImageView!)
         
         nameTextField = ({
-            let textField = UITextField()
+            let textField = SHTextField()
             textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
-            textField.borderStyle = .roundedRect
+            textField.placeholder = "点击编辑"
             return textField
         })()
         cardContentView!.addSubview(nameTextField!)
         
+        raceLabel = ({
+            let label = UILabel()
+            label.font = UIFont(name: WordFontFamily, size: 12)
+            label.textAlignment = .left
+            label.text = "【战士族】"
+            return label
+        })()
+        cardContentView!.addSubview(raceLabel!)
+        
         effectTextField = ({
-            let textField = UITextField()
-            textField.font = UIFont(name: WordFontFamily, size: EffectFontSize)
-            textField.borderStyle = .roundedRect
-            return textField
+            let textView = UITextView()
+            textView.font = UIFont(name: WordFontFamily, size: EffectFontSize)
+            textView.textAlignment = .left
+            textView.backgroundColor = UIColor.clear
+            return textView
         })()
         cardContentView!.addSubview(effectTextField!)
         
@@ -94,7 +118,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
             textField.keyboardType = .numberPad
             textField.textAlignment = .left
-            textField.borderStyle = .roundedRect
+            textField.placeholder = "编辑"
             return textField
         })()
         cardContentView!.addSubview(atkTextField!)
@@ -104,10 +128,12 @@ class SHEffectViewController: SHBaseViewController {
             textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
             textField.keyboardType = .numberPad
             textField.textAlignment = .left
-            textField.borderStyle = .roundedRect
+            textField.placeholder = "编辑"
             return textField
         })()
         cardContentView!.addSubview(defTextField!)
+        
+        configType()
     }
     
     func makeConstraints() {
@@ -134,8 +160,13 @@ class SHEffectViewController: SHBaseViewController {
             make.right.equalTo(cardImageView!).offset(-nameTextFieldOffsetRight)
         })
         
+        raceLabel?.snp.makeConstraints({ (make) in
+            make.left.equalTo(effectTextField!).offset(-raceLabelOffsetLeft)
+            make.bottom.equalTo(effectTextField!.snp.top).offset(raceLabelOffsetBottom)
+        })
+        
         effectTextField?.snp.makeConstraints({ (make) in
-            make.left.equalTo(cardImageView!).offset(effectTextFieldOffsetLeft)
+            make.left.equalTo(cardImageView!).offset(effectTextFieldOffsetLeft+1)
             make.height.equalTo(effectTextFieldHeight)
             make.right.equalTo(cardImageView!).offset(-effectTextFieldOffsetRight)
             make.bottom.equalTo(cardImageView!).offset(-effectTextFieldOffsetBottom)
