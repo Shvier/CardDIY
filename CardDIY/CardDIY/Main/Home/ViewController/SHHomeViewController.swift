@@ -28,6 +28,25 @@ class SHHomeViewController: UIViewController {
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
+        if selectedIndex <= 5 && selectedIndex >= 2 {
+            let alertController = UIAlertController(title: "选择了怪兽卡", message: "是否拥有效果", preferredStyle: .alert)
+            let nopeAction = UIAlertAction(title: "没有", style: .default, handler: { (UIAlertAction) in
+                SHYGOConfiguration.sharedInstance.hasEffect = false
+                self.pushNextController()
+            })
+            let okAction = UIAlertAction(title: "有", style: .default, handler: { (UIAlertAction) in
+                SHYGOConfiguration.sharedInstance.hasEffect = true
+                self.pushNextController()
+            })
+            alertController.addAction(nopeAction)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        } else {
+            pushNextController()
+        }
+    }
+    
+    func pushNextController() {
         SHYGOConfiguration.sharedInstance.type = cards[selectedIndex]
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
