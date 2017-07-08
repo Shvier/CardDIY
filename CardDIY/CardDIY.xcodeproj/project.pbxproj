@@ -18,6 +18,8 @@
 		C02CB3031F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */; };
 		C02FB9661F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02FB9651F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift */; };
 		C03020FE1F108719009CB6F5 /* SHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03020FD1F108719009CB6F5 /* SHTextField.swift */; };
+		C03021001F10A6BD009CB6F5 /* SHYGORaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */; };
+		C03021021F10ADD3009CB6F5 /* SHYGORaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */; };
 		C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */; };
 		C0417C871F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */; };
 		C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */; };
@@ -54,6 +56,8 @@
 		C02CB3021F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOTrapTypeViewProtocol.swift; sourceTree = "<group>"; };
 		C02FB9651F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOFlowLayoutProtocol.swift; sourceTree = "<group>"; };
 		C03020FD1F108719009CB6F5 /* SHTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTextField.swift; sourceTree = "<group>"; };
+		C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGORaceView.swift; sourceTree = "<group>"; };
+		C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGORaceCell.swift; sourceTree = "<group>"; };
 		C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControl.swift; sourceTree = "<group>"; };
 		C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControlProtocol.swift; sourceTree = "<group>"; };
 		C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOFlowLayout.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */,
 				C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */,
 				C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */,
+				C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */,
+				C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,8 +432,10 @@
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,
 				C053DFDC1F0BB0A300EA9A93 /* SHMonsterLevelView.swift in Sources */,
 				C053DFBF1F0B754400EA9A93 /* AppDelegate.swift in Sources */,
+				C03021001F10A6BD009CB6F5 /* SHYGORaceView.swift in Sources */,
 				C053DFD81F0B929900EA9A93 /* SHBaseView.swift in Sources */,
 				C053DFD41F0B900300EA9A93 /* SHBaseViewController.swift in Sources */,
+				C03021021F10ADD3009CB6F5 /* SHYGORaceCell.swift in Sources */,
 				C03020FE1F108719009CB6F5 /* SHTextField.swift in Sources */,
 				C053DFDE1F0BB58E00EA9A93 /* SHEffectViewController.swift in Sources */,
 				C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */,

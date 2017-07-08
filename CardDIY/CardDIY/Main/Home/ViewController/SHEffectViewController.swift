@@ -36,6 +36,7 @@ class SHEffectViewController: SHBaseViewController {
     var effectTextField: UITextView?
     var atkTextField: UITextField?
     var defTextField: UITextField?
+    var raceView: SHYGORaceView?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField?.resignFirstResponder()
@@ -99,7 +100,6 @@ class SHEffectViewController: SHBaseViewController {
             let label = UILabel()
             label.font = UIFont(name: WordFontFamily, size: 12)
             label.textAlignment = .left
-            label.text = "【战士族】"
             return label
         })()
         cardContentView!.addSubview(raceLabel!)
@@ -132,6 +132,12 @@ class SHEffectViewController: SHBaseViewController {
             return textField
         })()
         cardContentView!.addSubview(defTextField!)
+        
+        raceView = ({
+            let view = SHYGORaceView()
+            return view
+        })()
+        view.addSubview(raceView!)
         
         configType()
     }
@@ -184,6 +190,13 @@ class SHEffectViewController: SHBaseViewController {
             make.bottom.equalTo(cardImageView!).offset(-defTextFieldOffsetBottom)
             make.width.equalTo(atkTextFieldWidth)
             make.height.equalTo(atkTextFieldHeight)
+        })
+        
+        raceView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            make.top.equalTo(cardImageView!.snp.bottom).offset(20)
+            make.width.equalTo(cardImageView!)
+            make.height.equalTo(70)
         })
     }
 
