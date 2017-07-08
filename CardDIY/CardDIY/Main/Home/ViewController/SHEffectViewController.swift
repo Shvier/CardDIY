@@ -10,6 +10,21 @@ import UIKit
 
 class SHEffectViewController: SHBaseViewController {
     
+    let nameTextFieldOffsetLeft: CGFloat = 18
+    let nameTextFieldOffsetTop: CGFloat = 26
+    let nameTextFieldHeight: CGFloat = 30
+    let nameTextFieldOffsetRight: CGFloat = 60
+    let effectTextFieldOffsetLeft: CGFloat = 26
+    let effectTextFieldHeight: CGFloat = 46
+    let effectTextFieldOffsetRight: CGFloat = 28
+    let effectTextFieldOffsetBottom: CGFloat = 42
+    let atkTextFieldOffsetRight: CGFloat = 61
+    let atkTextFieldOffsetBottom: CGFloat = 25
+    let atkTextFieldWidth: CGFloat = 34
+    let atkTextFieldHeight: CGFloat = 12
+    let defTextFieldOffsetRight = 24
+    let defTextFieldOffsetBottom = 25
+    
     var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
@@ -61,6 +76,7 @@ class SHEffectViewController: SHBaseViewController {
         nameTextField = ({
             let textField = UITextField()
             textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
+            textField.borderStyle = .roundedRect
             return textField
         })()
         cardContentView!.addSubview(nameTextField!)
@@ -68,6 +84,7 @@ class SHEffectViewController: SHBaseViewController {
         effectTextField = ({
             let textField = UITextField()
             textField.font = UIFont(name: WordFontFamily, size: EffectFontSize)
+            textField.borderStyle = .roundedRect
             return textField
         })()
         cardContentView!.addSubview(effectTextField!)
@@ -76,6 +93,8 @@ class SHEffectViewController: SHBaseViewController {
             let textField = UITextField()
             textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
             textField.keyboardType = .numberPad
+            textField.textAlignment = .left
+            textField.borderStyle = .roundedRect
             return textField
         })()
         cardContentView!.addSubview(atkTextField!)
@@ -84,6 +103,8 @@ class SHEffectViewController: SHBaseViewController {
             let textField = UITextField()
             textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
             textField.keyboardType = .numberPad
+            textField.textAlignment = .left
+            textField.borderStyle = .roundedRect
             return textField
         })()
         cardContentView!.addSubview(defTextField!)
@@ -107,30 +128,31 @@ class SHEffectViewController: SHBaseViewController {
         })
         
         nameTextField?.snp.makeConstraints({ (make) in
-            make.left.top.equalTo(cardImageView!).offset(24)
-            make.height.equalTo(24)
-            make.right.equalTo(cardImageView!).offset(-30)
+            make.left.equalTo(cardImageView!).offset(nameTextFieldOffsetLeft)
+            make.top.equalTo(cardImageView!).offset(nameTextFieldOffsetTop)
+            make.height.equalTo(nameTextFieldHeight)
+            make.right.equalTo(cardImageView!).offset(-nameTextFieldOffsetRight)
         })
         
         effectTextField?.snp.makeConstraints({ (make) in
-            make.left.equalTo(cardImageView!).offset(24)
-            make.height.equalTo(48)
-            make.right.equalTo(cardImageView!).offset(-35)
-            make.bottom.equalTo(cardImageView!).offset(-40)
+            make.left.equalTo(cardImageView!).offset(effectTextFieldOffsetLeft)
+            make.height.equalTo(effectTextFieldHeight)
+            make.right.equalTo(cardImageView!).offset(-effectTextFieldOffsetRight)
+            make.bottom.equalTo(cardImageView!).offset(-effectTextFieldOffsetBottom)
         })
         
         atkTextField?.snp.makeConstraints({ (make) in
-            make.right.equalTo(defTextField!).offset(-35)
-            make.bottom.equalTo(cardImageView!).offset(-20)
-            make.width.equalTo(20)
-            make.height.equalTo(10)
+            make.right.equalTo(defTextField!).offset(-atkTextFieldOffsetRight)
+            make.bottom.equalTo(cardImageView!).offset(-atkTextFieldOffsetBottom)
+            make.width.equalTo(atkTextFieldWidth)
+            make.height.equalTo(atkTextFieldHeight)
         })
         
         defTextField?.snp.makeConstraints({ (make) in
-            make.right.equalTo(cardImageView!).offset(-35)
-            make.bottom.equalTo(cardImageView!).offset(-20)
-            make.width.equalTo(20)
-            make.height.equalTo(10)
+            make.right.equalTo(cardImageView!).offset(-defTextFieldOffsetRight)
+            make.bottom.equalTo(cardImageView!).offset(-defTextFieldOffsetBottom)
+            make.width.equalTo(atkTextFieldWidth)
+            make.height.equalTo(atkTextFieldHeight)
         })
     }
 
