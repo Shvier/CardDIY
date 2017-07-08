@@ -13,7 +13,17 @@ class SHAttributeViewController: SHBaseViewController {
     let atrributeMargin: CGFloat = 26
     let attributeLength: CGFloat = 31
     let monsterLevelOffsetTop: CGFloat = 63.5
-    
+    let magicTypeWordWidth: CGFloat = 92
+    let magicTypeWordHeight: CGFloat = 22
+    let magicTypeWordOffsetTop: CGFloat = 60
+    let magicTypeWordOffsetRight: CGFloat = 36
+    let advMagicTypeWordWidth: CGFloat = 110
+    let advMagicTypeHintOffsetTop: CGFloat = 65
+    let advMagicTypeHintOffsetRight: CGFloat = 40
+    let advMagicTypeHintLength: CGFloat = 18
+    let trapTypeWordWidth: CGFloat = 80
+    let advTrapTypeWordWidth: CGFloat = 98
+
     var hintLabel: UILabel?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
@@ -234,23 +244,23 @@ class SHAttributeViewController: SHBaseViewController {
         })
         
         magicTypeWordHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(57)
-            make.right.equalTo(cardImageView!).offset(-30)
-            make.width.equalTo(60)
-            make.height.equalTo(15)
+            make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+            make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+            make.width.equalTo(magicTypeWordWidth)
+            make.height.equalTo(magicTypeWordHeight)
         })
         
         advMagicTypeWordHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(57)
-            make.right.equalTo(cardImageView!).offset(-30)
-            make.width.equalTo(80)
-            make.height.equalTo(15)
+            make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+            make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+            make.width.equalTo(advMagicTypeWordWidth)
+            make.height.equalTo(magicTypeWordHeight)
         })
         
         advMagicTypeHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(57)
-            make.right.equalTo(cardImageView!).offset(-30)
-            make.width.height.equalTo(15)
+            make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTop)
+            make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRight)
+            make.width.height.equalTo(advMagicTypeHintLength)
         })
         
         trapTypeView?.snp.makeConstraints({ (make) in
@@ -259,23 +269,23 @@ class SHAttributeViewController: SHBaseViewController {
         })
         
         trapTypeWordHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(57)
-            make.right.equalTo(cardImageView!).offset(-30)
-            make.width.equalTo(60)
-            make.height.equalTo(15)
+            make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+            make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+            make.width.equalTo(trapTypeWordWidth)
+            make.height.equalTo(magicTypeWordHeight)
         })
         
         advTrapTypeWordHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(57)
-            make.right.equalTo(cardImageView!).offset(-30)
-            make.width.equalTo(80)
-            make.height.equalTo(15)
+            make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+            make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+            make.width.equalTo(advTrapTypeWordWidth)
+            make.height.equalTo(magicTypeWordHeight)
         })
         
         advTrapTypeHint?.snp.makeConstraints({ (make) in
-            make.top.equalTo(cardImageView!).offset(57)
-            make.right.equalTo(cardImageView!).offset(-30)
-            make.width.height.equalTo(15)
+            make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTop)
+            make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRight)
+            make.width.height.equalTo(advMagicTypeHintLength)
         })
         
         if SHYGOConfiguration.sharedInstance.isMagic() {

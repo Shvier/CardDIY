@@ -11,8 +11,8 @@ import UIKit
 class SHMagicTypeView: SHBaseView {
     
     let buttonMargin: CGFloat = 10
-    let buttonLength: CGFloat = 24
-    let buttonCorner: CGFloat = 12
+    let buttonLength: CGFloat = 30
+    let buttonCorner: CGFloat = 15
 
     lazy var buttons: [UIButton] = {
         return Array<UIButton>()

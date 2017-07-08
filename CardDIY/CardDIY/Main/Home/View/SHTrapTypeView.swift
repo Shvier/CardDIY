@@ -11,8 +11,8 @@ import UIKit
 class SHTrapTypeView: SHBaseView {
 
     let buttonMargin: CGFloat = 10
-    let buttonLength: CGFloat = 24
-    let buttonCorner: CGFloat = 12
+    let buttonLength: CGFloat = 30
+    let buttonCorner: CGFloat = 15
     
     var antiButton: UIButton?
     var infButton: UIButton?
