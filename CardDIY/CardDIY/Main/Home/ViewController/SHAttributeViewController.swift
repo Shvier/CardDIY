@@ -11,7 +11,8 @@ import UIKit
 class SHAttributeViewController: SHBaseViewController {
     
     let atrributeMargin: CGFloat = 26
-    let attributeLength: CGFloat = 33
+    let attributeLength: CGFloat = 31
+    let monsterLevelOffsetTop: CGFloat = 63.5
     
     var hintLabel: UILabel?
     var cardContentView: UIView?
@@ -213,7 +214,7 @@ class SHAttributeViewController: SHBaseViewController {
         
         attributeView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.bottom.equalTo(view).offset(-120)
+            make.top.equalTo(cardContentView!.snp.bottom).offset(bottomViewOffsetTop)
         })
         
         attributeHint?.snp.makeConstraints({ (make) in
@@ -224,12 +225,12 @@ class SHAttributeViewController: SHBaseViewController {
         
         monsterLevelView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardContentView!)
-            make.top.equalTo(cardImageView!).offset(57)
+            make.top.equalTo(cardImageView!).offset(monsterLevelOffsetTop)
         })
         
         magicTypeView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardImageView!)
-            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
+            make.top.equalTo(cardImageView!.snp.bottom).offset(bottomViewOffsetTop)
         })
         
         magicTypeWordHint?.snp.makeConstraints({ (make) in
@@ -254,7 +255,7 @@ class SHAttributeViewController: SHBaseViewController {
         
         trapTypeView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardImageView!)
-            make.top.equalTo((cardImageView?.snp.bottom)!).offset(30)
+            make.top.equalTo(cardImageView!.snp.bottom).offset(bottomViewOffsetTop)
         })
         
         trapTypeWordHint?.snp.makeConstraints({ (make) in

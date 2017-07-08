@@ -10,9 +10,9 @@ import UIKit
 
 class SHMonsterLevelView: SHBaseView {
     
-    let buttonMargin: CGFloat = 1
-    let buttonLength: CGFloat = 16
-    let buttonCorner: CGFloat = 8
+    let buttonMargin: CGFloat = 0.5
+    let buttonLength: CGFloat = 18
+    let buttonCorner: CGFloat = 9
 
     lazy var levelButtons: [UIButton] = {
         return Array<UIButton>()

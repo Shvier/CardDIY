@@ -19,6 +19,7 @@ let NumberFontSize: CGFloat = 10
 let WordFontSize: CGFloat = 16
 let EffectFontSize: CGFloat = 10
 let hintLabelFontSize: CGFloat = 24
+let bottomViewOffsetTop: CGFloat = 20
 
 class SHYGOConfiguration: NSObject {
     

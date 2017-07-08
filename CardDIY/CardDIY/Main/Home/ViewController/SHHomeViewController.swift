@@ -21,17 +21,14 @@ class SHHomeViewController: UIViewController {
     var hintLabel: UILabel?
     var cardMadeView: UICollectionView?
     var pageControl: SHYGOPageControl?
-    
-    func selectedIndex() -> NSInteger {
-        return NSInteger((cardMadeView?.contentOffset.x)!/(cardMadeView?.bounds.size.width)!)
-    }
+    var selectedIndex: NSInteger = 0
     
     func leftBarItemAction(sender: UIBarButtonItem) {
         sideMenuViewController.presentLeftMenuViewController()
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
-        SHYGOConfiguration.sharedInstance.type = cards[selectedIndex()]
+        SHYGOConfiguration.sharedInstance.type = cards[selectedIndex]
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
     }
@@ -108,7 +105,7 @@ class SHHomeViewController: UIViewController {
         
         pageControl?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.top.equalTo(cardMadeView!.snp.bottom).offset(20)
+            make.top.equalTo(cardMadeView!.snp.bottom).offset(bottomViewOffsetTop)
         })
     }
     
@@ -150,6 +147,7 @@ extension SHHomeViewController: SHYGOFlowLayoutDelegate {
     
     func flowLayoutMovedTo(index: NSInteger) {
         pageControl?.unselected(exclude: index)
+        selectedIndex = index
     }
     
 }
