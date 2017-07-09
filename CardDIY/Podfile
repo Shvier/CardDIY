@@ -10,5 +10,6 @@ target ‘CardDIY’ do
    # UI
    pod 'SnapKit'
    pod 'RESideMenu'
+   pod 'TOCropViewController’
 
 end

@@ -5,19 +5,22 @@ PODS:
   - RESideMenu (4.0.7)
   - SnapKit (3.2.0)
   - tingyunApp (2.5.8)
+  - TOCropViewController (2.0.12)
 
 DEPENDENCIES:
   - Bugtags
   - RESideMenu
   - SnapKit
   - tingyunApp
+  - TOCropViewController
 
 SPEC CHECKSUMS:
   Bugtags: 2ec94ad18b279ce00073ccc7a42cbd4870704882
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   tingyunApp: 17b29967694efb16b275329306f076bb7e5b7322
+  TOCropViewController: e6e31b38d785a901e5651a1e7fff71bcda6c5214
 
-PODFILE CHECKSUM: b36a7e9327ca15eeda89e11a63f952f73d9255f7
+PODFILE CHECKSUM: 4b59fa21ef29be66f51b28df82a6a4a372f3189a
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0
