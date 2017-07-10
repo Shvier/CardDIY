@@ -51,9 +51,27 @@ class SHEffectViewController: SHBaseViewController {
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
+        if nameTextField?.text == "" {
+            nameTextField?.isHidden = true
+        }
+        if atkTextField?.text == "" {
+            atkTextField?.isHidden = true
+        }
+        if defTextField?.text == "" {
+            defTextField?.isHidden = true
+        }
         let avatarVC = SHAvatarViewController()
         avatarVC.cardImage = cardContentView?.currentImage()
         navigationController?.pushViewController(avatarVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if SHYGOConfiguration.sharedInstance.isMonster() {
+            atkTextField?.isHidden = false
+            defTextField?.isHidden = false
+        }
+        nameTextField?.isHidden = false
     }
     
     func configType() {

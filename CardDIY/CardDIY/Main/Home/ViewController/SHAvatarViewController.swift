@@ -14,6 +14,11 @@ class SHAvatarViewController: SHBaseViewController {
     var cardImage: UIImage?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
+    var avatarImageView: UIImageView?
+    
+    func tapAction(tap: UITapGestureRecognizer) {
+        
+    }
     
     func initUI() {
         view.backgroundColor = UIColor.white
@@ -37,6 +42,16 @@ class SHAvatarViewController: SHBaseViewController {
             return imageView
         })()
         cardContentView!.addSubview(cardImageView!)
+        
+        avatarImageView = ({
+            let imageView = UIImageView()
+            imageView.isUserInteractionEnabled = true
+            imageView.backgroundColor = UIColor.orange
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapAction(tap:)))
+            imageView.addGestureRecognizer(tap)
+            return imageView
+        })()
+        cardContentView!.addSubview(avatarImageView!)
     }
     
     func makeConstraints() {
@@ -54,6 +69,13 @@ class SHAvatarViewController: SHBaseViewController {
         
         cardImageView?.snp.makeConstraints({ (make) in
             make.left.top.right.bottom.equalTo(cardContentView!)
+        })
+        
+        avatarImageView?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(cardContentView!)
+            make.centerY.equalTo(cardContentView!).offset(-20)
+            make.width.equalTo(210)
+            make.height.equalTo(220)
         })
     }
 
