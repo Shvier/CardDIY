@@ -10,6 +10,10 @@ import UIKit
 
 class SHAvatarViewController: SHBaseViewController {
     
+    let avatarImageViewOffsetCenterY: CGFloat = 15.5
+    let avatarImageViewWidth: CGFloat = 210
+    let avatarImageViewHeight: CGFloat = 214.5
+    
     var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
@@ -46,7 +50,6 @@ class SHAvatarViewController: SHBaseViewController {
         avatarImageView = ({
             let imageView = UIImageView()
             imageView.isUserInteractionEnabled = true
-            imageView.backgroundColor = UIColor.orange
             let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapAction(tap:)))
             imageView.addGestureRecognizer(tap)
             return imageView
@@ -73,9 +76,9 @@ class SHAvatarViewController: SHBaseViewController {
         
         avatarImageView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardContentView!)
-            make.centerY.equalTo(cardContentView!).offset(-20)
-            make.width.equalTo(210)
-            make.height.equalTo(220)
+            make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterY)
+            make.width.equalTo(avatarImageViewWidth)
+            make.height.equalTo(avatarImageViewHeight)
         })
     }
 
