@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Photos
+import MobileCoreServices
+import TOCropViewController
 
 class SHAvatarViewController: SHBaseViewController {
     
@@ -21,7 +24,34 @@ class SHAvatarViewController: SHBaseViewController {
     var avatarImageView: UIImageView?
     
     func tapAction(tap: UITapGestureRecognizer) {
-        
+        requestPhotoPermission()
+    }
+    
+    func requestPhotoPermission() {
+        let status = PHPhotoLibrary.authorizationStatus()
+        if status == .authorized || status == .notDetermined {
+            let imagePickerController = UIImagePickerController()
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                imagePickerController.sourceType = .photoLibrary
+                imagePickerController.mediaTypes = [String.init(kUTTypeImage)]
+            }
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = false
+            present(imagePickerController, animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "提示", message: "请开启相册访问权限", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "去设置", style: .default, handler: { (action) in
+                let url = URL(string: UIApplicationOpenSettingsURLString)
+                if UIApplication.shared.canOpenURL(url!) {
+                    let url = URL(string: UIApplicationOpenSettingsURLString)
+                    UIApplication.shared.openURL(url!)
+                }
+            })
+            let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     func initUI() {
@@ -92,4 +122,27 @@ class SHAvatarViewController: SHBaseViewController {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+extension SHAvatarViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let cropViewController = TOCropViewController(croppingStyle: .default, image: image)
+        cropViewController.delegate = self
+        picker.dismiss(animated: true) { 
+            self.present(cropViewController, animated: true, completion: nil)
+        }
+    }
+    
+}
+
+extension SHAvatarViewController: TOCropViewControllerDelegate {
+    
+    func cropViewController(_ cropViewController: TOCropViewController, didCropToImage image: UIImage, rect cropRect: CGRect, angle: Int) {
+        cropViewController.dismiss(animated: true, completion: {
+            self.avatarImageView?.image = image
+        })
+    }
+    
 }
