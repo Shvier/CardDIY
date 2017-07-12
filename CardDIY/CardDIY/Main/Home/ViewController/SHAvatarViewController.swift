@@ -130,6 +130,10 @@ extension SHAvatarViewController: UIImagePickerControllerDelegate, UINavigationC
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         let cropViewController = TOCropViewController(croppingStyle: .default, image: image)
         cropViewController.delegate = self
+        cropViewController.aspectRatioLockEnabled = true
+        cropViewController.customAspectRatio = CGSize(width: avatarImageViewWidth, height: avatarImageViewHeight)
+        cropViewController.aspectRatioPreset = .presetCustom
+        cropViewController.resetAspectRatioEnabled = false
         picker.dismiss(animated: true) { 
             self.present(cropViewController, animated: true, completion: nil)
         }
