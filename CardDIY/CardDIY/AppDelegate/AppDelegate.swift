@@ -8,6 +8,7 @@
 
 import UIKit
 import RESideMenu
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupFirebase()
         
         let centerVC = SHHomeViewController()
         let naviVC = UINavigationController(rootViewController: centerVC)
@@ -59,6 +62,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupUMSocial() {
         UMSocialManager.default().openLog(true)
         UMSocialManager.default().umSocialAppkey = UMAppKey
+    }
+    
+    func setupFirebase() {
+        FirebaseApp.configure()
     }
 
 }

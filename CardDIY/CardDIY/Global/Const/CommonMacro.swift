@@ -13,4 +13,5 @@ let kScreenWidth = UIScreen.main.bounds.size.width
 let kScreenHeight = UIScreen.main.bounds.size.height
 
 let UMAppKey = "59673662717c1903a50001eb"
+let AdMobID = "ca-app-pub-7779776531531575~7426958844"
 let AppUrl = ""
