@@ -21,6 +21,8 @@
 		C03021001F10A6BD009CB6F5 /* SHYGORaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */; };
 		C03021021F10ADD3009CB6F5 /* SHYGORaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */; };
 		C03021041F10B127009CB6F5 /* SHYGORaceViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03021031F10B127009CB6F5 /* SHYGORaceViewProtocol.swift */; };
+		C03706901F17C95000A6D18E /* SHShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037068F1F17C95000A6D18E /* SHShareManager.swift */; };
+		C03706931F17CA4500A6D18E /* SHShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03706921F17CA4500A6D18E /* SHShareModel.swift */; };
 		C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */; };
 		C0417C871F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */; };
 		C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */; };
@@ -60,6 +62,8 @@
 		C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGORaceView.swift; sourceTree = "<group>"; };
 		C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGORaceCell.swift; sourceTree = "<group>"; };
 		C03021031F10B127009CB6F5 /* SHYGORaceViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGORaceViewProtocol.swift; sourceTree = "<group>"; };
+		C037068F1F17C95000A6D18E /* SHShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHShareManager.swift; sourceTree = "<group>"; };
+		C03706921F17CA4500A6D18E /* SHShareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHShareModel.swift; sourceTree = "<group>"; };
 		C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControl.swift; sourceTree = "<group>"; };
 		C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControlProtocol.swift; sourceTree = "<group>"; };
 		C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOFlowLayout.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHEffectViewController.swift; sourceTree = "<group>"; };
 		C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMagicTypeView.swift; sourceTree = "<group>"; };
 		C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTrapTypeView.swift; sourceTree = "<group>"; };
+		C05D04561F17C5A300ECCE62 /* UMSocialSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UMSocialSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,31 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		C037068D1F17C93900A6D18E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C03706911F17CA3C00A6D18E /* Model */,
+				C037068E1F17C93900A6D18E /* ShareManager */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C037068E1F17C93900A6D18E /* ShareManager */ = {
+			isa = PBXGroup;
+			children = (
+				C037068F1F17C95000A6D18E /* SHShareManager.swift */,
+			);
+			path = ShareManager;
+			sourceTree = "<group>";
+		};
+		C03706911F17CA3C00A6D18E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C03706921F17CA4500A6D18E /* SHShareModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C053DF9A1F0B750B00EA9A93 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +195,7 @@
 		C053DFA51F0B750B00EA9A93 /* CardDIY */ = {
 			isa = PBXGroup;
 			children = (
+				C037068D1F17C93900A6D18E /* Service */,
 				C02CB2F11F0C92E8009C9A7A /* Category */,
 				C053DFD01F0B8E5100EA9A93 /* Utility */,
 				C053DFC71F0B820100EA9A93 /* Base */,
@@ -236,6 +267,7 @@
 		C053DFC21F0B7CD500EA9A93 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				C05D04551F17C59100ECCE62 /* PrefixHeader */,
 				C053DFC31F0B7CD500EA9A93 /* Const */,
 			);
 			path = Global;
@@ -298,6 +330,14 @@
 				C053DFD11F0B8E6600EA9A93 /* SHYGOConfiguration.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		C05D04551F17C59100ECCE62 /* PrefixHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C05D04561F17C5A300ECCE62 /* UMSocialSDK-Bridging-Header.h */,
+			);
+			path = PrefixHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +471,7 @@
 				C02CB2FA1F0CB1DA009C9A7A /* SHAvatarViewController.swift in Sources */,
 				C02FB9661F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift in Sources */,
 				C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */,
+				C03706901F17C95000A6D18E /* SHShareManager.swift in Sources */,
 				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
 				C053DFC51F0B7CE000EA9A93 /* CommonMacro.swift in Sources */,
 				C053DFDC1F0BB0A300EA9A93 /* SHMonsterLevelView.swift in Sources */,
@@ -444,6 +485,7 @@
 				C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */,
 				C02CB3031F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift in Sources */,
 				C053DFD21F0B8E6600EA9A93 /* SHYGOConfiguration.swift in Sources */,
+				C03706931F17CA4500A6D18E /* SHShareModel.swift in Sources */,
 				C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */,
 				C02CB3011F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift in Sources */,
 				C053DFCB1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift in Sources */,
@@ -586,6 +628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Shvier.CardDIY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardDIY/Global/PrefixHeader/UMSocialSDK-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -601,6 +644,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Shvier.CardDIY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardDIY/Global/PrefixHeader/UMSocialSDK-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

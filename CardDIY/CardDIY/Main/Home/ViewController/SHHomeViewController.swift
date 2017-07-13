@@ -31,11 +31,11 @@ class SHHomeViewController: UIViewController {
         if selectedIndex <= 5 && selectedIndex >= 2 {
             let alertController = UIAlertController(title: "选择了怪兽卡", message: "是否拥有效果", preferredStyle: .alert)
             let nopeAction = UIAlertAction(title: "没有", style: .default, handler: { (UIAlertAction) in
-                SHYGOConfiguration.sharedInstance.hasEffect = false
+                SHYGOConfiguration.shared.hasEffect = false
                 self.pushNextController()
             })
             let okAction = UIAlertAction(title: "有", style: .default, handler: { (UIAlertAction) in
-                SHYGOConfiguration.sharedInstance.hasEffect = true
+                SHYGOConfiguration.shared.hasEffect = true
                 self.pushNextController()
             })
             alertController.addAction(nopeAction)
@@ -47,7 +47,7 @@ class SHHomeViewController: UIViewController {
     }
     
     func pushNextController() {
-        SHYGOConfiguration.sharedInstance.type = cards[selectedIndex]
+        SHYGOConfiguration.shared.type = cards[selectedIndex]
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
     }

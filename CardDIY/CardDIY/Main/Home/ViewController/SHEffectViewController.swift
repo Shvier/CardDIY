@@ -67,7 +67,7 @@ class SHEffectViewController: SHBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if SHYGOConfiguration.sharedInstance.isMonster() {
+        if SHYGOConfiguration.shared.isMonster() {
             atkTextField?.isHidden = false
             defTextField?.isHidden = false
         }
@@ -75,7 +75,7 @@ class SHEffectViewController: SHBaseViewController {
     }
     
     func configType() {
-        if !SHYGOConfiguration.sharedInstance.isMonster() {
+        if !SHYGOConfiguration.shared.isMonster() {
             hideMonster()
         }
     }
@@ -240,8 +240,8 @@ extension SHEffectViewController: SHYGORaceViewDelegate {
     
     func raceView(didClicked cell: SHYGORaceCell, atIndexPath indexPath: IndexPath) {
         var race = "【" + raceStrings[indexPath.row]
-        if SHYGOConfiguration.sharedInstance.hasEffect {
-            switch SHYGOConfiguration.sharedInstance.type! {
+        if SHYGOConfiguration.shared.hasEffect {
+            switch SHYGOConfiguration.shared.type! {
             case "b0":
                 race += "】"
                 break
@@ -263,7 +263,7 @@ extension SHEffectViewController: SHYGORaceViewDelegate {
                 break
             }
         } else {
-            switch SHYGOConfiguration.sharedInstance.type! {
+            switch SHYGOConfiguration.shared.type! {
             case "b0":
                 race += "】"
                 break

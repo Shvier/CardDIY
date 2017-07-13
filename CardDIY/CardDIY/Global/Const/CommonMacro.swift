@@ -11,3 +11,6 @@ import UIKit
 let kNavigationAndStatusBarHeight: CGFloat = 64
 let kScreenWidth = UIScreen.main.bounds.size.width
 let kScreenHeight = UIScreen.main.bounds.size.height
+
+let UMAppKey = "59673662717c1903a50001eb"
+let AppUrl = ""

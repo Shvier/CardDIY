@@ -43,7 +43,7 @@ class SHAttributeViewController: SHBaseViewController {
 
     func rightBarItemAction(sender: UIBarButtonItem) {
         monsterLevelView?.hideLevel()
-        SHYGOConfiguration.sharedInstance.attribute = selectedAttribute
+        SHYGOConfiguration.shared.attribute = selectedAttribute
         let effectVC = SHEffectViewController()
         effectVC.cardImage = cardContentView?.currentImage()
         navigationController?.pushViewController(effectVC, animated: true)
@@ -84,13 +84,13 @@ class SHAttributeViewController: SHBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if SHYGOConfiguration.sharedInstance.isXyzMonster() {
+        if SHYGOConfiguration.shared.isXyzMonster() {
             monsterLevelView?.configLevelType(isBlack: true)
             
             hideMonsterHint(hide: false)
             hideMagicTypeHint(hide: true)
             hideTrapTypeHint(hide: true)
-        } else if SHYGOConfiguration.sharedInstance.isMonster() {
+        } else if SHYGOConfiguration.shared.isMonster() {
             monsterLevelView?.configLevelType(isBlack: false)
 
             hideMonsterHint(hide: false)
@@ -120,7 +120,7 @@ class SHAttributeViewController: SHBaseViewController {
         
         cardImageView = ({
             let imageView = UIImageView()
-            imageView.image = UIImage(named: SHYGOConfiguration.sharedInstance.type!)
+            imageView.image = UIImage(named: SHYGOConfiguration.shared.type!)
             return imageView
         })()
         cardContentView!.addSubview(cardImageView!)
@@ -288,11 +288,11 @@ class SHAttributeViewController: SHBaseViewController {
             make.width.height.equalTo(advMagicTypeHintLength)
         })
         
-        if SHYGOConfiguration.sharedInstance.isMagic() {
+        if SHYGOConfiguration.shared.isMagic() {
             hideMonsterHint(hide: true)
             hideMagicTypeHint(hide: false)
             hideTrapTypeHint(hide: true)
-        } else if SHYGOConfiguration.sharedInstance.isTrap() {
+        } else if SHYGOConfiguration.shared.isTrap() {
             hideMonsterHint(hide: true)
             hideMagicTypeHint(hide: true)
             hideTrapTypeHint(hide: false)

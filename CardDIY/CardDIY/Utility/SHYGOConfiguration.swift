@@ -33,7 +33,7 @@ class SHYGOConfiguration: NSObject {
     var avatar: UIImage?
     var hasEffect: Bool = true
     
-    static let sharedInstance = {
+    static let shared = {
         return SHYGOConfiguration()
     }()
     
