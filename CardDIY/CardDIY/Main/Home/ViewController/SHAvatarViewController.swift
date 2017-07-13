@@ -54,8 +54,25 @@ class SHAvatarViewController: SHBaseViewController {
         }
     }
     
+    func imageDidFinishSaving(image: UIImage, error: NSError?, contextInfo: UnsafeMutableRawPointer?) {
+        if error != nil {
+            
+        } else {
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    func saveBarItemAction(sender: UIBarButtonItem) {
+        UIImageWriteToSavedPhotosAlbum((cardContentView?.currentImage())!, self, #selector(imageDidFinishSaving(image:error:contextInfo:)), nil)
+    }
+    
+    func shareBarItemAction(sender: UIBarButtonItem) {
+        
+    }
+    
     func initUI() {
         view.backgroundColor = UIColor.white
+        configNavi()
         hintLabel = ({
             let label = UILabel()
             label.text = "请挑选卡牌图片"
@@ -85,6 +102,12 @@ class SHAvatarViewController: SHBaseViewController {
             return imageView
         })()
         cardContentView!.addSubview(avatarImageView!)
+    }
+    
+    func configNavi() {
+        let shareBarItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareBarItemAction(sender:)))
+        let saveBarItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "btn_download"), style: .plain, target: self, action: #selector(saveBarItemAction(sender:)))
+        navigationItem.rightBarButtonItems = [shareBarItem, saveBarItem]
     }
     
     func makeConstraints() {

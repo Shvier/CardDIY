@@ -2,25 +2,107 @@ PODS:
   - Bugtags (2.3.2):
     - Bugtags/Core (= 2.3.2)
   - Bugtags/Core (2.3.2)
+  - Firebase/AdMob (4.0.4):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.21.0)
+  - Firebase/Core (4.0.4):
+    - FirebaseAnalytics (= 4.0.2)
+    - FirebaseCore (= 4.0.4)
+  - FirebaseAnalytics (4.0.2):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.4):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - Google-Mobile-Ads-SDK (7.21.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - Masonry (1.0.2)
+  - MMPopupView (1.7.2):
+    - Masonry
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
   - RESideMenu (4.0.7)
   - SnapKit (3.2.0)
-  - tingyunApp (2.5.8)
+  - tingyunApp (2.5.9)
   - TOCropViewController (2.0.12)
+  - UMengUShare/Core (6.4.5):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.5)
+  - UMengUShare/Plugin/IDFA (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Douban (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/DropBox (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Facebook (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/GooglePlus (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Instagram (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Line (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedQQ (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Tumblr (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Twitter (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/WhatsApp (6.4.5):
+    - UMengUShare/Core
 
 DEPENDENCIES:
   - Bugtags
+  - Firebase/AdMob
+  - Firebase/Core
+  - MMPopupView
   - RESideMenu
   - SnapKit
   - tingyunApp
   - TOCropViewController
+  - UMengUShare/Plugin/IDFA
+  - UMengUShare/Social/Douban
+  - UMengUShare/Social/DropBox
+  - UMengUShare/Social/Facebook
+  - UMengUShare/Social/GooglePlus
+  - UMengUShare/Social/Instagram
+  - UMengUShare/Social/Line
+  - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/Social/Tumblr
+  - UMengUShare/Social/Twitter
+  - UMengUShare/Social/WhatsApp
 
 SPEC CHECKSUMS:
   Bugtags: 2ec94ad18b279ce00073ccc7a42cbd4870704882
+  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
+  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
+  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  Google-Mobile-Ads-SDK: 4a6f1b43c8cc0e1e95a3b59d9f52a01671c6f9f3
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
+  nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  tingyunApp: 17b29967694efb16b275329306f076bb7e5b7322
+  tingyunApp: 9213e4e826a618ffda4619618e805bc7392f98b7
   TOCropViewController: e6e31b38d785a901e5651a1e7fff71bcda6c5214
+  UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
 
-PODFILE CHECKSUM: 4b59fa21ef29be66f51b28df82a6a4a372f3189a
+PODFILE CHECKSUM: c5dbea55967df9515b369a0b7bbae1526a43d332
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
