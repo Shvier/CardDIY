@@ -10,9 +10,24 @@ import UIKit
 
 class SHMonsterLevelView: SHBaseView {
     
-    let buttonMargin: CGFloat = 0.5
-    let buttonLength: CGFloat = 18
-    let buttonCorner: CGFloat = 9
+    let buttonMargin: CGFloat = 0.6
+    
+    func buttonLength() -> CGFloat {
+        switch ScreenHeight {
+        case iPhone5Height:
+            return 12
+        case iPhone6Height:
+            return 15.5
+        case iPhone6PHeight:
+            return 18
+        default:
+            return 0
+        }
+    }
+    
+    func buttonCorner() -> CGFloat {
+        return buttonLength()/2
+    }
 
     lazy var levelButtons: [UIButton] = {
         return Array<UIButton>()
@@ -111,124 +126,60 @@ class SHMonsterLevelView: SHBaseView {
         }
     }
     
+    func createLevelButton() -> UIButton {
+        let button = UIButton(type: .custom)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = buttonCorner()
+        button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
+        return button
+    }
+    
     func initUI() {
-        level1 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level1 = createLevelButton()
         addSubview(level1!)
         levelButtons.append(level1!)
         
-        level2 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level2 = createLevelButton()
         addSubview(level2!)
         levelButtons.append(level2!)
         
-        level3 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level3 = createLevelButton()
         addSubview(level3!)
         levelButtons.append(level3!)
         
-        level4 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level4 = createLevelButton()
         addSubview(level4!)
         levelButtons.append(level4!)
         
-        level5 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level5 = createLevelButton()
         addSubview(level5!)
         levelButtons.append(level5!)
         
-        level6 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level6 = createLevelButton()
         addSubview(level6!)
         levelButtons.append(level6!)
         
-        level7 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level7 = createLevelButton()
         addSubview(level7!)
         levelButtons.append(level7!)
         
-        level8 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level8 = createLevelButton()
         addSubview(level8!)
         levelButtons.append(level8!)
         
-        level9 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level9 = createLevelButton()
         addSubview(level9!)
         levelButtons.append(level9!)
         
-        level10 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level10 = createLevelButton()
         addSubview(level10!)
         levelButtons.append(level10!)
         
-        level11 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level11 = createLevelButton()
         addSubview(level11!)
         levelButtons.append(level11!)
         
-        level12 = ({
-            let button = UIButton(type: .custom)
-            button.layer.masksToBounds = true
-            button.layer.cornerRadius = buttonCorner
-            button.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
-            return button
-        })()
+        level12 = createLevelButton()
         addSubview(level12!)
         levelButtons.append(level12!)
     }
@@ -236,73 +187,73 @@ class SHMonsterLevelView: SHBaseView {
     func makeConstraints() {
         level1?.snp.makeConstraints({ (make) in
             make.left.top.bottom.equalTo(self)
-            make.width.height.equalTo(buttonLength)
+            make.width.height.equalTo(buttonLength())
         })
         
         level2?.snp.makeConstraints({ (make) in
             make.left.equalTo((level1?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level3?.snp.makeConstraints({ (make) in
             make.left.equalTo((level2?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level4?.snp.makeConstraints({ (make) in
             make.left.equalTo((level3?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level5?.snp.makeConstraints({ (make) in
             make.left.equalTo((level4?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level6?.snp.makeConstraints({ (make) in
             make.left.equalTo((level5?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level7?.snp.makeConstraints({ (make) in
             make.left.equalTo((level6?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level8?.snp.makeConstraints({ (make) in
             make.left.equalTo((level7?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level9?.snp.makeConstraints({ (make) in
             make.left.equalTo((level8?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level10?.snp.makeConstraints({ (make) in
             make.left.equalTo((level9?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level11?.snp.makeConstraints({ (make) in
             make.left.equalTo((level10?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
         })
         
         level12?.snp.makeConstraints({ (make) in
             make.left.equalTo((level11?.snp.right)!).offset(buttonMargin)
             make.top.bottom.equalTo(level1!)
-            make.width.equalTo(buttonLength)
+            make.width.equalTo(level1!)
             make.right.equalTo(self)
         })
     }

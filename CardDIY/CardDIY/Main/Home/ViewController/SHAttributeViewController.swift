@@ -10,9 +10,20 @@ import UIKit
 
 class SHAttributeViewController: SHBaseViewController {
     
-    let atrributeMargin: CGFloat = 26
-    let attributeLength: CGFloat = 31
-    let monsterLevelOffsetTop: CGFloat = 63.5
+    let atrributeMargin: CGFloat = 26*ScreenHeight/iPhone6PHeight - 3*(ScreenHeight <= iPhone6Height ? 1 : 0)
+    let attributeLength: CGFloat = 31*ScreenHeight/iPhone6PHeight - 2*(ScreenHeight == iPhone5Height ? 1 : 0)
+    func monsterLevelOffsetTop() -> CGFloat {
+        switch ScreenHeight {
+        case iPhone5Height:
+            return 0
+        case iPhone6Height:
+            return 56
+        case iPhone6PHeight:
+            return 63.5
+        default:
+            return 0
+        }
+    }
     let magicTypeWordWidth: CGFloat = 92
     let magicTypeWordHeight: CGFloat = 22
     let magicTypeWordOffsetTop: CGFloat = 60
@@ -235,7 +246,7 @@ class SHAttributeViewController: SHBaseViewController {
         
         monsterLevelView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardContentView!)
-            make.top.equalTo(cardImageView!).offset(monsterLevelOffsetTop)
+            make.top.equalTo(cardImageView!).offset(monsterLevelOffsetTop())
         })
         
         magicTypeView?.snp.makeConstraints({ (make) in
