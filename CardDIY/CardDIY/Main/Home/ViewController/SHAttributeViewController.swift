@@ -15,7 +15,7 @@ class SHAttributeViewController: SHBaseViewController {
     func monsterLevelOffsetTop() -> CGFloat {
         switch ScreenHeight {
         case iPhone5Height:
-            return 0
+            return 44
         case iPhone6Height:
             return 56
         case iPhone6PHeight:
