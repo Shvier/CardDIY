@@ -52,7 +52,7 @@ class SHYGOFlowLayout: UICollectionViewFlowLayout {
             return false
         }
         if indexPathRow?.row == 0 {
-            if newBounds.origin.x < kScreenWidth/2 {
+            if newBounds.origin.x < ScreenWidth/2 {
                 if index != indexPathRow?.row {
                     index = 0
                     delegate?.flowLayoutMovedTo(index: index)

@@ -67,7 +67,7 @@ class SHHomeViewController: UIViewController {
         
         backgroundImageView?.snp.makeConstraints({ (make) in
             make.left.right.bottom.equalTo(view)
-            make.top.equalTo(view).offset(kNavigationAndStatusBarHeight)
+            make.top.equalTo(view).offset(NavigationAndStatusBarHeight)
         })
         
         hintLabel = ({
@@ -82,9 +82,9 @@ class SHHomeViewController: UIViewController {
             let layout = SHYGOFlowLayout()
             layout.minimumLineSpacing = 60
             layout.scrollDirection = .horizontal
-            let width = kScreenWidth-2*cardMadeViewMargin-100
+            let width = ScreenWidth-2*cardMadeViewMargin-100
             layout.itemSize = CGSize(width: width, height: width*ratio)
-            layout.sectionInset = UIEdgeInsetsMake(0, (kScreenWidth-2*cardMadeViewMargin)/2 - 30, 0, (kScreenWidth-2*cardMadeViewMargin)/2 - 35)
+            layout.sectionInset = UIEdgeInsetsMake(0, (ScreenWidth-2*cardMadeViewMargin)/2 - 30, 0, (ScreenWidth-2*cardMadeViewMargin)/2 - 35)
             layout.delegate = self
             return layout
         })()
@@ -119,7 +119,7 @@ class SHHomeViewController: UIViewController {
         cardMadeView?.snp.makeConstraints({ (make) in
             make.left.right.equalTo(view)
             make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
-            make.height.equalTo((kScreenWidth - 2*cardMadeViewMargin)*ratio)
+            make.height.equalTo((ScreenWidth - 2*cardMadeViewMargin)*ratio)
         })
         
         pageControl?.snp.makeConstraints({ (make) in
