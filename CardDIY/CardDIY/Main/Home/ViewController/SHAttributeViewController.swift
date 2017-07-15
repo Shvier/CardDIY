@@ -24,16 +24,16 @@ class SHAttributeViewController: SHBaseViewController {
             return 0
         }
     }
-    let magicTypeWordWidth: CGFloat = 92
-    let magicTypeWordHeight: CGFloat = 22
+    let magicTypeWordWidth: CGFloat = 92*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
+    let magicTypeWordHeight: CGFloat = 22*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let magicTypeWordOffsetTop: CGFloat = 60
     let magicTypeWordOffsetRight: CGFloat = 36
-    let advMagicTypeWordWidth: CGFloat = 110
+    let advMagicTypeWordWidth: CGFloat = 110*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let advMagicTypeHintOffsetTop: CGFloat = 65
     let advMagicTypeHintOffsetRight: CGFloat = 40
-    let advMagicTypeHintLength: CGFloat = 18
-    let trapTypeWordWidth: CGFloat = 80
-    let advTrapTypeWordWidth: CGFloat = 98
+    let advMagicTypeHintLength: CGFloat = 18*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
+    let trapTypeWordWidth: CGFloat = 80*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
+    let advTrapTypeWordWidth: CGFloat = 98*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
 
     var hintLabel: UILabel?
     var cardContentView: UIView?
