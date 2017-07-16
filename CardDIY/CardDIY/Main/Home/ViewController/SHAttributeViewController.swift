@@ -26,11 +26,15 @@ class SHAttributeViewController: SHBaseViewController {
     }
     let magicTypeWordWidth: CGFloat = 92*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let magicTypeWordHeight: CGFloat = 22*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
-    let magicTypeWordOffsetTop: CGFloat = 60
-    let magicTypeWordOffsetRight: CGFloat = 36
+    let magicTypeWordOffsetTop: CGFloat = 60*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 3
+
+    let magicTypeWordOffsetRight: CGFloat = 36*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 1.5
+
     let advMagicTypeWordWidth: CGFloat = 110*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
-    let advMagicTypeHintOffsetTop: CGFloat = 65
-    let advMagicTypeHintOffsetRight: CGFloat = 40
+    let advMagicTypeHintOffsetTop: CGFloat = 65*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 3
+
+    let advMagicTypeHintOffsetRight: CGFloat = 40*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 1.5
+
     let advMagicTypeHintLength: CGFloat = 18*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let trapTypeWordWidth: CGFloat = 80*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let advTrapTypeWordWidth: CGFloat = 98*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
