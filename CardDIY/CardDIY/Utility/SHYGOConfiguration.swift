@@ -15,10 +15,11 @@ let nextButtonTopMargin: CGFloat = 50
 let ratio: CGFloat = 1.45787
 let NumberFontFamily: String = "Book Antiqua"
 let WordFontFamily: String = "HYXiaoLiShuF"
-let NumberFontSize: CGFloat = 12
-let WordFontSize: CGFloat = 24
-let EffectFontSize: CGFloat = 10
-let hintLabelFontSize: CGFloat = 24
+let offsetRatio: CGFloat = (ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
+let NumberFontSize: CGFloat = 12*offsetRatio
+let WordFontSize: CGFloat = 24*offsetRatio
+let EffectFontSize: CGFloat = 10*offsetRatio
+let hintLabelFontSize: CGFloat = 24*offsetRatio
 let bottomViewOffsetTop: CGFloat = 20
 
 class SHYGOConfiguration: NSObject {

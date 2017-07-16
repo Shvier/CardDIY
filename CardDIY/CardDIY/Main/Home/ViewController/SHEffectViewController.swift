@@ -10,23 +10,42 @@ import UIKit
 
 class SHEffectViewController: SHBaseViewController {
     
-    let nameTextFieldOffsetLeft: CGFloat = 26
-    let nameTextFieldOffsetTop: CGFloat = 26
+    let nameTextFieldOffsetLeftForiPhone6P: CGFloat = 26
+    let nameTextFieldOffsetTopForiPhone6P: CGFloat = 26
     let nameTextFieldHeight: CGFloat = 30
-    let nameTextFieldOffsetRight: CGFloat = 60
-    let raceLabelOffsetLeft: CGFloat = 2
-    let raceLabelOffsetBottom: CGFloat = 8
-    let effectTextFieldOffsetLeft: CGFloat = 22
-    let effectTextFieldHeight: CGFloat = 57
-    let effectTextFieldOffsetRight: CGFloat = 28
-    let effectTextFieldOffsetBottom: CGFloat = 39
-    let atkTextFieldOffsetRight: CGFloat = 61
-    let atkTextFieldOffsetBottom: CGFloat = 25
+    let nameTextFieldOffsetRightForiPhone6P: CGFloat = 60
+    let raceLabelOffsetLeftForiPhone6P: CGFloat = 0.5
+    let effectTextFieldOffsetTopForiPhone6P: CGFloat = 3
+    let effectTextFieldOffsetLeftForiPhone6P: CGFloat = 2
+    let effectViewOffsetLeftForiPhone6P: CGFloat = 22
+    let effectViewHeightForiPhone6P: CGFloat = 59
+    let effectViewOffsetRightForiPhone6P: CGFloat = 28
+    let effectViewOffsetBottomForiPhone6P: CGFloat = 39
+    let atkTextFieldOffsetRightForiPhone6P: CGFloat = 61
+    let atkTextFieldOffsetBottomForiPhone6P: CGFloat = 25
     let atkTextFieldWidth: CGFloat = 34
     let atkTextFieldHeight: CGFloat = 12
-    let defTextFieldOffsetRight: CGFloat = 24
-    let defTextFieldOffsetBottom: CGFloat = 25
-    let raceViewHeight: CGFloat = 70
+    let defTextFieldOffsetRightForiPhone6P: CGFloat = 24
+    let defTextFieldOffsetBottomForiPhone6P: CGFloat = 25
+    let raceViewHeightForiPhone6P: CGFloat = 70
+
+    let nameTextFieldOffsetLeftForiPhone5: CGFloat = 26*offsetRatio - 2
+    let nameTextFieldOffsetTopForiPhone5: CGFloat = 26*offsetRatio - 4
+//    let nameTextFieldHeight: CGFloat = 30
+    let nameTextFieldOffsetRightForiPhone5: CGFloat = 60*offsetRatio
+    let raceLabelOffsetLeftForiPhone5: CGFloat = 2*offsetRatio + 1
+    let raceLabelOffsetBottomForiPhone5: CGFloat = 8*offsetRatio - 5
+    let effectViewOffsetLeftForiPhone5: CGFloat = 22*offsetRatio + 3
+    let effectViewHeightForiPhone5: CGFloat = 57*offsetRatio - 2
+    let effectViewOffsetRightForiPhone5: CGFloat = 28*offsetRatio
+    let effectViewOffsetBottomForiPhone5: CGFloat = 39*offsetRatio
+    let atkTextFieldOffsetRightForiPhone5: CGFloat = 61*offsetRatio - 3
+    let atkTextFieldOffsetBottomForiPhone5: CGFloat = 25*offsetRatio - 3
+//    let atkTextFieldWidth: CGFloat = 34
+//    let atkTextFieldHeight: CGFloat = 12
+    let defTextFieldOffsetRightForiPhone5: CGFloat = 24*offsetRatio - 12
+    let defTextFieldOffsetBottomForiPhone5: CGFloat = 25*offsetRatio - 3
+    let raceViewHeightForiPhone5: CGFloat = 70*offsetRatio
     
     lazy var raceStrings: [String] = {
         return ["水族", "兽族", "兽战士族", "创造神族", "Cyverse", "恐龙族", "幻神兽族", "龙族", "天使族", "恶魔族", "鱼族", "昆虫族", "机械组", "植物组", "念动力族", "炎族", "爬虫族", "岩石族", "海龙族", "魔法师族", "雷族", "战士族", "鸟兽族", "幻龙族", "不死族"]
@@ -39,6 +58,7 @@ class SHEffectViewController: SHBaseViewController {
     var nameTextField: SHTextField?
     var raceLabel: UILabel?
     var effectTextField: UITextView?
+    var effectView: UIView?
     var atkTextField: UITextField?
     var defTextField: UITextField?
     var raceView: SHYGORaceView?
@@ -119,13 +139,19 @@ class SHEffectViewController: SHBaseViewController {
         })()
         cardContentView!.addSubview(nameTextField!)
         
+        effectView = ({
+            let view = UIView()
+            return view
+        })()
+        cardContentView!.addSubview(effectView!)
+        
         raceLabel = ({
             let label = UILabel()
-            label.font = UIFont(name: WordFontFamily, size: 12)
+            label.font = UIFont(name: WordFontFamily, size: 12*offsetRatio)
             label.textAlignment = .left
             return label
         })()
-        cardContentView!.addSubview(raceLabel!)
+        effectView!.addSubview(raceLabel!)
         
         effectTextField = ({
             let textView = UITextView()
@@ -134,7 +160,7 @@ class SHEffectViewController: SHBaseViewController {
             textView.backgroundColor = UIColor.clear
             return textView
         })()
-        cardContentView!.addSubview(effectTextField!)
+        effectView!.addSubview(effectTextField!)
         
         atkTextField = ({
             let textField = UITextField()
@@ -142,6 +168,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.keyboardType = .numberPad
             textField.textAlignment = .left
             textField.placeholder = "编辑"
+            textField.delegate = self
             return textField
         })()
         cardContentView!.addSubview(atkTextField!)
@@ -152,6 +179,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.keyboardType = .numberPad
             textField.textAlignment = .left
             textField.placeholder = "编辑"
+            textField.delegate = self
             return textField
         })()
         cardContentView!.addSubview(defTextField!)
@@ -167,61 +195,79 @@ class SHEffectViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
-        hintLabel?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.bottom.equalTo(cardContentView!.snp.top).offset(-hintLabelBottomMargin)
-        })
-        
-        cardContentView?.snp.makeConstraints({ (make) in
-            make.left.equalTo(view).offset(cardMadeViewMargin)
-            make.right.equalTo(view).offset(-cardMadeViewMargin)
-            make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
-            make.height.equalTo((cardImageView?.snp.width)!).multipliedBy(ratio)
-        })
-        
-        cardImageView?.snp.makeConstraints({ (make) in
-            make.left.top.right.bottom.equalTo(cardContentView!)
-        })
-        
-        nameTextField?.snp.makeConstraints({ (make) in
-            make.left.equalTo(cardImageView!).offset(nameTextFieldOffsetLeft)
-            make.top.equalTo(cardImageView!).offset(nameTextFieldOffsetTop)
-            make.height.equalTo(nameTextFieldHeight)
-            make.right.equalTo(cardImageView!).offset(-nameTextFieldOffsetRight)
-        })
-        
-        raceLabel?.snp.makeConstraints({ (make) in
-            make.left.equalTo(effectTextField!).offset(-raceLabelOffsetLeft)
-            make.bottom.equalTo(effectTextField!.snp.top).offset(raceLabelOffsetBottom)
-        })
-        
-        effectTextField?.snp.makeConstraints({ (make) in
-            make.left.equalTo(cardImageView!).offset(effectTextFieldOffsetLeft+1)
-            make.height.equalTo(effectTextFieldHeight)
-            make.right.equalTo(cardImageView!).offset(-effectTextFieldOffsetRight)
-            make.bottom.equalTo(cardImageView!).offset(-effectTextFieldOffsetBottom)
-        })
-        
-        atkTextField?.snp.makeConstraints({ (make) in
-            make.right.equalTo(defTextField!).offset(-atkTextFieldOffsetRight)
-            make.bottom.equalTo(cardImageView!).offset(-atkTextFieldOffsetBottom)
-            make.width.equalTo(atkTextFieldWidth)
-            make.height.equalTo(atkTextFieldHeight)
-        })
-        
-        defTextField?.snp.makeConstraints({ (make) in
-            make.right.equalTo(cardImageView!).offset(-defTextFieldOffsetRight)
-            make.bottom.equalTo(cardImageView!).offset(-defTextFieldOffsetBottom)
-            make.width.equalTo(atkTextFieldWidth)
-            make.height.equalTo(atkTextFieldHeight)
-        })
-        
-        raceView?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.top.equalTo(cardImageView!.snp.bottom).offset(bottomViewOffsetTop)
-            make.width.equalTo(cardImageView!)
-            make.height.equalTo(raceViewHeight)
-        })
+        switch ScreenHeight {
+        case iPhone4Height:
+            break
+        case iPhone5Height:
+            break
+        case iPhone6Height:
+            break
+        case iPhone6PHeight:
+            self.hintLabel?.snp.makeConstraints({ (make) in
+                make.centerX.equalTo(self.view)
+                make.bottom.equalTo(self.cardContentView!.snp.top).offset(-hintLabelBottomMargin)
+            })
+            
+            self.cardContentView?.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.view).offset(cardMadeViewMargin)
+                make.right.equalTo(self.view).offset(-cardMadeViewMargin)
+                make.bottom.equalTo(self.view).offset(-cardMadeViewBottomMargin)
+                make.height.equalTo((self.cardImageView?.snp.width)!).multipliedBy(ratio)
+            })
+            
+            self.cardImageView?.snp.makeConstraints({ (make) in
+                make.left.top.right.bottom.equalTo(self.cardContentView!)
+            })
+            
+            self.nameTextField?.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.cardImageView!).offset(self.nameTextFieldOffsetLeftForiPhone6P)
+                make.top.equalTo(self.cardImageView!).offset(self.nameTextFieldOffsetTopForiPhone6P)
+                make.height.equalTo(self.nameTextFieldHeight)
+                make.right.equalTo(self.cardImageView!).offset(-self.nameTextFieldOffsetRightForiPhone6P)
+            })
+            
+            self.effectView?.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.cardImageView!).offset(self.effectViewOffsetLeftForiPhone6P)
+                make.height.equalTo(self.effectViewHeightForiPhone6P)
+                make.right.equalTo(self.cardImageView!).offset(-self.effectViewOffsetRightForiPhone6P)
+                make.bottom.equalTo(self.cardImageView!).offset(-self.effectViewOffsetBottomForiPhone6P)
+            })
+            
+            self.raceLabel?.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.effectView!).offset(-self.raceLabelOffsetLeftForiPhone6P)
+                make.top.right.equalTo(self.effectView!)
+            })
+            
+            self.effectTextField?.snp.makeConstraints({ (make) in
+                make.left.equalTo(self.effectView!).offset(self.effectTextFieldOffsetLeftForiPhone6P)
+                make.right.bottom.equalTo(self.effectView!)
+                make.top.equalTo(self.raceLabel!.snp.lastBaseline).offset(-effectTextFieldOffsetTopForiPhone6P)
+            })
+            
+            self.atkTextField?.snp.makeConstraints({ (make) in
+                make.right.equalTo(self.defTextField!).offset(-self.atkTextFieldOffsetRightForiPhone6P)
+                make.bottom.equalTo(self.cardImageView!).offset(-self.atkTextFieldOffsetBottomForiPhone6P)
+                make.width.equalTo(self.atkTextFieldWidth)
+                make.height.equalTo(self.atkTextFieldHeight)
+            })
+            
+            self.defTextField?.snp.makeConstraints({ (make) in
+                make.right.equalTo(self.cardImageView!).offset(-self.defTextFieldOffsetRightForiPhone6P)
+                make.bottom.equalTo(self.cardImageView!).offset(-self.defTextFieldOffsetBottomForiPhone6P)
+                make.width.equalTo(self.atkTextFieldWidth)
+                make.height.equalTo(self.atkTextFieldHeight)
+            })
+            
+            self.raceView?.snp.makeConstraints({ (make) in
+                make.centerX.equalTo(self.view)
+                make.top.equalTo(self.cardImageView!.snp.bottom).offset(bottomViewOffsetTop)
+                make.width.equalTo(self.cardImageView!)
+                make.height.equalTo(self.raceViewHeightForiPhone6P)
+            })
+            break
+        default:
+            break
+        }
     }
 
     override func viewDidLoad() {
@@ -286,6 +332,21 @@ extension SHEffectViewController: SHYGORaceViewDelegate {
             }
         }
         raceLabel?.text = race
+    }
+    
+}
+
+extension SHEffectViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string == "" {
+            return true
+        }
+        if (textField.text?.lengthOfBytes(using: .utf8))! > 4 {
+            return false
+        } else {
+            return true
+        }
     }
     
 }
