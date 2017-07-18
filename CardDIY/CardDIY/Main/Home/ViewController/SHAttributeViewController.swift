@@ -241,7 +241,7 @@ class SHAttributeViewController: SHBaseViewController {
         
         attributeHint?.snp.makeConstraints({ (make) in
             if IsiPhone4() {
-                make.top.equalTo(cardImageView!).offset(atrributeMargin + 5)
+                make.top.equalTo(cardImageView!).offset(atrributeMargin + 3)
                 make.right.equalTo(cardImageView!).offset(-atrributeMargin - 3)
             } else {
                 make.top.equalTo(cardImageView!).offset(atrributeMargin)

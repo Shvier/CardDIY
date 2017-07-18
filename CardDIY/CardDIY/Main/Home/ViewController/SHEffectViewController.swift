@@ -45,36 +45,36 @@ class SHEffectViewController: SHBaseViewController {
     let defTextFieldOffsetBottomForiPhone6: CGFloat = 25*offsetRatio - 1
     let raceViewHeightForiPhone6: CGFloat = 70*offsetRatio
 
-    let nameTextFieldOffsetLeftForiPhone5: CGFloat = 26*offsetRatio - 2
+    let nameTextFieldOffsetLeftForiPhone5: CGFloat = 26*offsetRatio
     let nameTextFieldOffsetTopForiPhone5: CGFloat = 26*offsetRatio - 4
     let nameTextFieldOffsetRightForiPhone5: CGFloat = 60*offsetRatio
     let raceLabelOffsetLeftForiPhone5: CGFloat = 6
     let effectTextFieldOffsetTopForiPhone5: CGFloat = 5
-    let effectTextFieldOffsetLeftForiPhone5: CGFloat = 4
-    let effectViewOffsetLeftForiPhone5: CGFloat = 22*offsetRatio + 3
+    let effectTextFieldOffsetLeftForiPhone5: CGFloat = 5
+    let effectViewOffsetLeftForiPhone5: CGFloat = 22*offsetRatio + 4
     let effectViewHeightForiPhone5: CGFloat = 57*offsetRatio - 2
     let effectViewOffsetRightForiPhone5: CGFloat = 28*offsetRatio
     let effectViewOffsetBottomForiPhone5: CGFloat = 39*offsetRatio
     let atkTextFieldOffsetRightForiPhone5: CGFloat = 61*offsetRatio - 3
-    let atkTextFieldOffsetBottomForiPhone5: CGFloat = 25*offsetRatio - 3
+    let atkTextFieldOffsetBottomForiPhone5: CGFloat = 25*offsetRatio - 3.5
     let defTextFieldOffsetRightForiPhone5: CGFloat = 24*offsetRatio - 12
-    let defTextFieldOffsetBottomForiPhone5: CGFloat = 25*offsetRatio - 3
+    let defTextFieldOffsetBottomForiPhone5: CGFloat = 25*offsetRatio - 3.5
     let raceViewHeightForiPhone5: CGFloat = 70*offsetRatio
     
-    let nameTextFieldOffsetLeftForiPhone4: CGFloat = 26*offsetRatio - 2
-    let nameTextFieldOffsetTopForiPhone4: CGFloat = 26*offsetRatio - 4
-    let nameTextFieldOffsetRightForiPhone4: CGFloat = 60*offsetRatio
+    let nameTextFieldOffsetLeftForiPhone4: CGFloat = 26*offsetRatio + 5
+    let nameTextFieldOffsetTopForiPhone4: CGFloat = 26*offsetRatio - 1
+    let nameTextFieldOffsetRightForiPhone4: CGFloat = 60*offsetRatio + 2
     let raceLabelOffsetLeftForiPhone4: CGFloat = 6
-    let effectTextFieldOffsetTopForiPhone4: CGFloat = 5
-    let effectTextFieldOffsetLeftForiPhone4: CGFloat = 4
-    let effectViewOffsetLeftForiPhone4: CGFloat = 22*offsetRatio + 3
-    let effectViewHeightForiPhone4: CGFloat = 57*offsetRatio - 2
-    let effectViewOffsetRightForiPhone4: CGFloat = 28*offsetRatio
-    let effectViewOffsetBottomForiPhone4: CGFloat = 39*offsetRatio
-    let atkTextFieldOffsetRightForiPhone4: CGFloat = 61*offsetRatio - 3
-    let atkTextFieldOffsetBottomForiPhone4: CGFloat = 25*offsetRatio - 3
-    let defTextFieldOffsetRightForiPhone4: CGFloat = 24*offsetRatio - 12
-    let defTextFieldOffsetBottomForiPhone4: CGFloat = 25*offsetRatio - 3
+    let effectTextFieldOffsetTopForiPhone4: CGFloat = 6
+    let effectTextFieldOffsetLeftForiPhone4: CGFloat = 6
+    let effectViewOffsetLeftForiPhone4: CGFloat = 22*offsetRatio + 8
+    let effectViewHeightForiPhone4: CGFloat = 57*offsetRatio + 7
+    let effectViewOffsetRightForiPhone4: CGFloat = 28*offsetRatio + 2
+    let effectViewOffsetBottomForiPhone4: CGFloat = 39*offsetRatio + 5
+    let atkTextFieldOffsetRightForiPhone4: CGFloat = 61*offsetRatio + 6
+    let atkTextFieldOffsetBottomForiPhone4: CGFloat = 25*offsetRatio
+    let defTextFieldOffsetRightForiPhone4: CGFloat = 24*offsetRatio - 9
+    let defTextFieldOffsetBottomForiPhone4: CGFloat = 25*offsetRatio
     let raceViewHeightForiPhone4: CGFloat = 70*offsetRatio
     
     lazy var raceStrings: [String] = {
@@ -157,6 +157,7 @@ class SHEffectViewController: SHBaseViewController {
             let textField = SHTextField()
             textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
             textField.placeholder = "点击编辑"
+            textField.tintColor = UIColor.clear
             return textField
         })()
         cardContentView!.addSubview(nameTextField!)
@@ -180,6 +181,7 @@ class SHEffectViewController: SHBaseViewController {
             textView.font = UIFont(name: WordFontFamily, size: EffectFontSize)
             textView.textAlignment = .left
             textView.backgroundColor = UIColor.clear
+            textView.tintColor = UIColor.clear
             return textView
         })()
         effectView!.addSubview(effectTextField!)
@@ -191,6 +193,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.textAlignment = .left
             textField.placeholder = "编辑"
             textField.delegate = self
+            textField.tintColor = UIColor.clear
             return textField
         })()
         cardContentView!.addSubview(atkTextField!)
@@ -202,6 +205,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.textAlignment = .left
             textField.placeholder = "编辑"
             textField.delegate = self
+            textField.tintColor = UIColor.clear
             return textField
         })()
         cardContentView!.addSubview(defTextField!)

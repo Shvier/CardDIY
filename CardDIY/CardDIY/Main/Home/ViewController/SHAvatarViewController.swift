@@ -14,8 +14,17 @@ import TOCropViewController
 class SHAvatarViewController: SHBaseViewController {
     
     let avatarImageViewOffsetCenterY: CGFloat = 15.5
+    let avatarImageViewOffsetCenterYForiPhone6: CGFloat = 13.5
+    let avatarImageViewOffsetCenterYForiPhone5: CGFloat = 10.5
+    let avatarImageViewOffsetCenterYForiPhone4: CGFloat = 10.5
     let avatarImageViewWidth: CGFloat = 210
-    let avatarImageViewHeight: CGFloat = 214.5
+    let avatarImageViewHeight: CGFloat = 215
+    let avatarImageViewWidthForiPhone6: CGFloat = 182
+    let avatarImageViewHeightForiPhone6: CGFloat = 186
+    let avatarImageViewWidthForiPhone5: CGFloat = 143
+    let avatarImageViewHeightForiPhone5: CGFloat = 147
+    let avatarImageViewWidthForiPhone4: CGFloat = 143
+    let avatarImageViewHeightForiPhone4: CGFloat = 147
     
     var cardImage: UIImage?
     var cardContentView: UIView?
@@ -110,9 +119,23 @@ class SHAvatarViewController: SHBaseViewController {
         
         avatarImageView?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(cardContentView!)
-            make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterY)
-            make.width.equalTo(avatarImageViewWidth)
-            make.height.equalTo(avatarImageViewHeight)
+            if IsiPhone4() {
+                make.width.equalTo(avatarImageViewWidthForiPhone4)
+                make.height.equalTo(avatarImageViewHeightForiPhone4)
+                make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterYForiPhone4)
+            } else if IsiPhone5() {
+                make.width.equalTo(avatarImageViewWidthForiPhone5)
+                make.height.equalTo(avatarImageViewHeightForiPhone5)
+                make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterYForiPhone5)
+            } else if IsiPhone6() {
+                make.width.equalTo(avatarImageViewWidthForiPhone6)
+                make.height.equalTo(avatarImageViewHeightForiPhone6)
+                make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterYForiPhone6)
+            } else {
+                make.width.equalTo(avatarImageViewWidth)
+                make.height.equalTo(avatarImageViewHeight)
+                make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterY)
+            }
         })
     }
 
