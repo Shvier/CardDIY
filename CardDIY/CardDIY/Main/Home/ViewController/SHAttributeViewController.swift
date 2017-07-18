@@ -10,7 +10,7 @@ import UIKit
 
 class SHAttributeViewController: SHBaseViewController {
     
-    let atrributeMargin: CGFloat = 26*ScreenHeight/iPhone6PHeight - 3*(ScreenHeight <= iPhone6Height ? 1 : 0)
+    let atrributeMargin: CGFloat = 26*ScreenHeight/iPhone6PHeight - 2*(ScreenHeight <= iPhone6Height ? 1 : 0)
     let attributeLength: CGFloat = 31*ScreenHeight/iPhone6PHeight - 2*(ScreenHeight == iPhone5Height ? 1 : 0)
     func monsterLevelOffsetTop() -> CGFloat {
         switch ScreenHeight {
@@ -28,14 +28,20 @@ class SHAttributeViewController: SHBaseViewController {
     }
     let magicTypeWordWidth: CGFloat = 92*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let magicTypeWordHeight: CGFloat = 22*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
-    let magicTypeWordOffsetTop: CGFloat = 64*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 3
+    let magicTypeWordOffsetTop: CGFloat = 61
+    let magicTypeWordOffsetTopForiPhone6: CGFloat = 52.5
+    let magicTypeWordOffsetTopForiPhone5: CGFloat = 41
     let magicTypeWordOffsetTopForiPhone4: CGFloat = 42
-    let magicTypeWordOffsetRight: CGFloat = 37*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 1.5
+    let magicTypeWordOffsetRight: CGFloat = 36
+    let magicTypeWordOffsetRightForiPhone6: CGFloat = 32.5
     let magicTypeWordOffsetRightForiPhone4: CGFloat = 24
     let advMagicTypeWordWidth: CGFloat = 110*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
-    let advMagicTypeHintOffsetTop: CGFloat = 69*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 3
+    let advMagicTypeHintOffsetTop: CGFloat = 66
+    let advMagicTypeHintOffsetTopForiPhone6: CGFloat = 57
+    let advMagicTypeHintOffsetTopForiPhone5: CGFloat = 44
     let advMagicTypeHintOffsetTopForiPhone4: CGFloat = 45
-    let advMagicTypeHintOffsetRight: CGFloat = 41*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin) - 1.5
+    let advMagicTypeHintOffsetRight: CGFloat = 41
+    let advMagicTypeHintOffsetRightForiPhone6: CGFloat = 35
     let advMagicTypeHintOffsetRightForiPhone4: CGFloat = 26
     let advMagicTypeHintLength: CGFloat = 18*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let trapTypeWordWidth: CGFloat = 80*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
@@ -262,9 +268,17 @@ class SHAttributeViewController: SHBaseViewController {
             if IsiPhone4() {
                 make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone4)
                 make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
+            } else if IsiPhone5() {
+                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone5)
+                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
             } else {
-                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
-                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                if IsiPhone6() {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone6)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone6)
+                } else {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                }
             }
             make.width.equalTo(magicTypeWordWidth)
             make.height.equalTo(magicTypeWordHeight)
@@ -274,9 +288,17 @@ class SHAttributeViewController: SHBaseViewController {
             if IsiPhone4() {
                 make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone4)
                 make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
+            } else if IsiPhone5() {
+                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone5)
+                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
             } else {
-                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
-                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                if IsiPhone6() {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone6)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone6)
+                } else {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                }
             }
             make.width.equalTo(advMagicTypeWordWidth)
             make.height.equalTo(magicTypeWordHeight)
@@ -286,9 +308,17 @@ class SHAttributeViewController: SHBaseViewController {
             if IsiPhone4() {
                 make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTopForiPhone4)
                 make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRightForiPhone4)
+            } else if IsiPhone5() {
+                make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTopForiPhone5)
+                make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRightForiPhone4)
             } else {
-                make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTop)
-                make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRight)
+                if IsiPhone6() {
+                    make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTopForiPhone6)
+                    make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRightForiPhone6)
+                } else {
+                    make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTop)
+                    make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRight)
+                }
             }
             make.width.height.equalTo(advMagicTypeHintLength)
         })
@@ -306,9 +336,17 @@ class SHAttributeViewController: SHBaseViewController {
             if IsiPhone4() {
                 make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone4)
                 make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
+            } else if IsiPhone5() {
+                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone5)
+                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
             } else {
-                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
-                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                if IsiPhone6() {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone6)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone6)
+                } else {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                }
             }
             make.width.equalTo(trapTypeWordWidth)
             make.height.equalTo(magicTypeWordHeight)
@@ -318,9 +356,17 @@ class SHAttributeViewController: SHBaseViewController {
             if IsiPhone4() {
                 make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone4)
                 make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
+            } else if IsiPhone5() {
+                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone5)
+                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone4)
             } else {
-                make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
-                make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                if IsiPhone6() {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTopForiPhone6)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRightForiPhone6)
+                } else {
+                    make.top.equalTo(cardImageView!).offset(magicTypeWordOffsetTop)
+                    make.right.equalTo(cardImageView!).offset(-magicTypeWordOffsetRight)
+                }
             }
             make.width.equalTo(advTrapTypeWordWidth)
             make.height.equalTo(magicTypeWordHeight)
@@ -330,9 +376,17 @@ class SHAttributeViewController: SHBaseViewController {
             if IsiPhone4() {
                 make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTopForiPhone4)
                 make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRightForiPhone4)
+            } else if IsiPhone5() {
+                make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTopForiPhone5)
+                make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRightForiPhone4)
             } else {
-                make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTop)
-                make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRight)
+                if IsiPhone6() {
+                    make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTopForiPhone6)
+                    make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRightForiPhone6)
+                } else {
+                    make.top.equalTo(cardImageView!).offset(advMagicTypeHintOffsetTop)
+                    make.right.equalTo(cardImageView!).offset(-advMagicTypeHintOffsetRight)
+                }
             }
             make.width.height.equalTo(advMagicTypeHintLength)
         })
