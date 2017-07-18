@@ -17,7 +17,6 @@ class SHAvatarViewController: SHBaseViewController {
     let avatarImageViewWidth: CGFloat = 210
     let avatarImageViewHeight: CGFloat = 214.5
     
-    var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
@@ -72,14 +71,7 @@ class SHAvatarViewController: SHBaseViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.white
-        configNavi()
-        hintLabel = ({
-            let label = UILabel()
-            label.text = "请挑选卡牌图片"
-            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
-            return label
-        })()
-        view.addSubview(hintLabel!)
+        navigationTitle = "请挑选卡牌图案"
         
         cardContentView = ({
             let view = UIView()
@@ -104,22 +96,11 @@ class SHAvatarViewController: SHBaseViewController {
         cardContentView!.addSubview(avatarImageView!)
     }
     
-    func configNavi() {
-        let shareBarItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareBarItemAction(sender:)))
-        let saveBarItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "btn_download"), style: .plain, target: self, action: #selector(saveBarItemAction(sender:)))
-        navigationItem.rightBarButtonItems = [shareBarItem, saveBarItem]
-    }
-    
     func makeConstraints() {
-        hintLabel?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(view)
-            make.bottom.equalTo(cardContentView!.snp.top).offset(-hintLabelBottomMargin)
-        })
-        
         cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(view).offset(cardMadeViewMargin)
             make.right.equalTo(view).offset(-cardMadeViewMargin)
-            make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
+            make.centerY.equalTo(view)
             make.height.equalTo((cardImageView?.snp.width)!).multipliedBy(ratio)
         })
         

@@ -10,27 +10,50 @@ import UIKit
 import SnapKit
 
 class SHBaseViewController: UIViewController {
+    
+    var navigationTitle: String {
+        set {
+            navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: hintLabelFontSize)!]
+            navigationItem.title = newValue
+        }
+        get {
+            return ""
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.sh_reset()
+    }
+    
+    func leftBarItem(barItem: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func rightBarItem(barItem: UIBarButtonItem) {
+        
+    }
+    
+    func configNavi() {
+        let leftBarItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(leftBarItem(barItem:)))
+        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(rightBarItem(barItem:)))
+        navigationItem.leftBarButtonItem = leftBarItem
+        navigationItem.rightBarButtonItem = rightBarItem
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configNavi()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

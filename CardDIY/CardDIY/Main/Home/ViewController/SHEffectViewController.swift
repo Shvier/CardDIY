@@ -10,15 +10,15 @@ import UIKit
 
 class SHEffectViewController: SHBaseViewController {
     
-    let nameTextFieldOffsetLeftForiPhone6P: CGFloat = 26
-    let nameTextFieldOffsetTopForiPhone6P: CGFloat = 26
+    let nameTextFieldOffsetLeftForiPhone6P: CGFloat = 28
+    let nameTextFieldOffsetTopForiPhone6P: CGFloat = 27
     let nameTextFieldHeight: CGFloat = 30
     let nameTextFieldOffsetRightForiPhone6P: CGFloat = 60
     let raceLabelOffsetLeftForiPhone6P: CGFloat = 0.5
     let effectTextFieldOffsetTopForiPhone6P: CGFloat = 3
     let effectTextFieldOffsetLeftForiPhone6P: CGFloat = 2
     let effectViewOffsetLeftForiPhone6P: CGFloat = 22
-    let effectViewHeightForiPhone6P: CGFloat = 59
+    let effectViewHeightForiPhone6P: CGFloat = 60
     let effectViewOffsetRightForiPhone6P: CGFloat = 28
     let effectViewOffsetBottomForiPhone6P: CGFloat = 39
     let atkTextFieldOffsetRightForiPhone6P: CGFloat = 61
@@ -81,7 +81,6 @@ class SHEffectViewController: SHBaseViewController {
         return ["水族", "兽族", "兽战士族", "创造神族", "Cyverse", "恐龙族", "幻神兽族", "龙族", "天使族", "恶魔族", "鱼族", "昆虫族", "机械组", "植物组", "念动力族", "炎族", "爬虫族", "岩石族", "海龙族", "魔法师族", "雷族", "战士族", "鸟兽族", "幻龙族", "不死族"]
     }()
     
-    var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
@@ -139,14 +138,7 @@ class SHEffectViewController: SHBaseViewController {
         view.backgroundColor = UIColor.white
         let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
-        
-        hintLabel = ({
-            let label = UILabel()
-            label.text = "请填写卡牌内容"
-            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
-            return label
-        })()
-        view.addSubview(hintLabel!)
+        navigationTitle = "请填写卡牌内容"
         
         cardContentView = ({
             let view = UIView()
@@ -225,15 +217,11 @@ class SHEffectViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
-        self.hintLabel?.snp.makeConstraints({ (make) in
-            make.centerX.equalTo(self.view)
-            make.bottom.equalTo(self.cardContentView!.snp.top).offset(-hintLabelBottomMargin)
-        })
-        
         self.cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(self.view).offset(cardMadeViewMargin)
             make.right.equalTo(self.view).offset(-cardMadeViewMargin)
-            make.bottom.equalTo(self.view).offset(-cardMadeViewBottomMargin)
+//            make.bottom.equalTo(self.view).offset(-cardMadeViewBottomMargin)
+            make.centerY.equalTo(self.view)
             make.height.equalTo((self.cardImageView?.snp.width)!).multipliedBy(ratio)
         })
         
@@ -283,7 +271,7 @@ class SHEffectViewController: SHBaseViewController {
             
             self.raceView?.snp.makeConstraints({ (make) in
                 make.centerX.equalTo(self.view)
-                make.top.equalTo(self.cardImageView!.snp.bottom).offset(bottomViewOffsetTop)
+                make.top.equalTo(self.cardImageView!.snp.bottom).offset(bottomViewoffsetTopForiPhone4)
                 make.width.equalTo(self.cardImageView!)
                 make.height.equalTo(self.raceViewHeightForiPhone4)
             })

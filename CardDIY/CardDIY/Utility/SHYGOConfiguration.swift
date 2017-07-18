@@ -23,7 +23,7 @@ let WordFontSize: CGFloat = 24*offsetRatio
 let EffectFontSize: CGFloat = 10*offsetRatio
 let hintLabelFontSize: CGFloat = 24*offsetRatio
 let bottomViewOffsetTop: CGFloat = 20
-let bottomViewoffsetTopForiPhone4: CGFloat = 20
+let bottomViewoffsetTopForiPhone4: CGFloat = 5
 
 class SHYGOConfiguration: NSObject {
     

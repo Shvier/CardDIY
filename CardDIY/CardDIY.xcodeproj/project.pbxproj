@@ -24,6 +24,7 @@
 		C03706901F17C95000A6D18E /* SHShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037068F1F17C95000A6D18E /* SHShareManager.swift */; };
 		C03706931F17CA4500A6D18E /* SHShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03706921F17CA4500A6D18E /* SHShareModel.swift */; };
 		C03706951F17CD7500A6D18E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C03706941F17CD7500A6D18E /* GoogleService-Info.plist */; };
+		C03791B81F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */; };
 		C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */; };
 		C0417C871F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */; };
 		C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */; };
@@ -66,6 +67,8 @@
 		C037068F1F17C95000A6D18E /* SHShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHShareManager.swift; sourceTree = "<group>"; };
 		C03706921F17CA4500A6D18E /* SHShareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHShareModel.swift; sourceTree = "<group>"; };
 		C03706941F17CD7500A6D18E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C03791B61F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SetNaviBarBackgroundColor.h"; sourceTree = "<group>"; };
+		C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SetNaviBarBackgroundColor.m"; sourceTree = "<group>"; };
 		C0417C841F0E09B500FFCBA7 /* SHYGOPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControl.swift; sourceTree = "<group>"; };
 		C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOPageControlProtocol.swift; sourceTree = "<group>"; };
 		C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHYGOFlowLayout.swift; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 		C02CB2F11F0C92E8009C9A7A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C03791B61F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.h */,
+				C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */,
 				C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */,
 			);
 			path = Category;
@@ -482,6 +487,7 @@
 				C053DFBF1F0B754400EA9A93 /* AppDelegate.swift in Sources */,
 				C03021001F10A6BD009CB6F5 /* SHYGORaceView.swift in Sources */,
 				C053DFD81F0B929900EA9A93 /* SHBaseView.swift in Sources */,
+				C03791B81F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m in Sources */,
 				C053DFD41F0B900300EA9A93 /* SHBaseViewController.swift in Sources */,
 				C03021021F10ADD3009CB6F5 /* SHYGORaceCell.swift in Sources */,
 				C03020FE1F108719009CB6F5 /* SHTextField.swift in Sources */,

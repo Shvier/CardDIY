@@ -11,5 +11,6 @@
 
 // U-Share核心SDK
 #import <UMSocialCore/UMSocialCore.h>
+#import "UINavigationBar+SetNaviBarBackgroundColor.h"
 
 #endif /* UMSocialSDK_Bridging_Header_h */

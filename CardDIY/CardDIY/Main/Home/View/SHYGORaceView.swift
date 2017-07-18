@@ -11,6 +11,7 @@ import UIKit
 class SHYGORaceView: SHBaseView {
 
     let buttonLength: CGFloat = 30
+    let buttonLengthForiPhone4: CGFloat = 20
     
     lazy var races: [String] = {
         return ["aqua", "beast", "beast_warrior", "creator_god", "cyverse", "dinosaur", "divine_beast", "dragon", "fairy", "fiend", "fish", "insect", "machine", "plant", "psychic", "pyro", "reptile", "rock", "sea_serpent", "spellcaster", "thunder", "warrior", "winged_beast", "wyrm", "zombie"]
@@ -23,7 +24,11 @@ class SHYGORaceView: SHBaseView {
     func initUI() {
         let layout: UICollectionViewFlowLayout = ({
             let flowLayout = UICollectionViewFlowLayout()
-            flowLayout.itemSize = CGSize(width: buttonLength, height: buttonLength)
+            if IsiPhone4() {
+                flowLayout.itemSize = CGSize(width: buttonLengthForiPhone4, height: buttonLengthForiPhone4)
+            } else {
+                flowLayout.itemSize = CGSize(width: buttonLength, height: buttonLength)
+            }
             flowLayout.scrollDirection = .vertical
             return flowLayout
         })()

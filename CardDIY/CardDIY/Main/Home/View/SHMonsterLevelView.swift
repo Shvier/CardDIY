@@ -14,6 +14,8 @@ class SHMonsterLevelView: SHBaseView {
     
     func buttonLength() -> CGFloat {
         switch ScreenHeight {
+        case iPhone4Height:
+            return 12
         case iPhone5Height:
             return 12
         case iPhone6Height:
