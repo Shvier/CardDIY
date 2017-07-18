@@ -70,14 +70,6 @@ class SHHomeViewController: UIViewController {
             make.top.equalTo(view).offset(NavigationAndStatusBarHeight)
         })
         
-        hintLabel = ({
-            let label = UILabel()
-            label.text = "请选择卡牌类型"
-            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
-            return label
-        })()
-        view.addSubview(hintLabel!)
-        
         let flowLayout: SHYGOFlowLayout = ({
             let layout = SHYGOFlowLayout()
             layout.minimumLineSpacing = 60
@@ -108,23 +100,44 @@ class SHHomeViewController: UIViewController {
             return pageControl
         })()
         view.addSubview(pageControl!)
+        
+        
+        hintLabel = ({
+            let label = UILabel()
+            label.text = "请选择卡牌类型"
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
+            return label
+        })()
+        view.addSubview(hintLabel!)
     }
     
     func makeConstraints() {
         hintLabel?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.bottom.equalTo(cardMadeView!.snp.top).offset(-hintLabelBottomMargin)
+            if IsiPhone4() {
+                make.bottom.equalTo(cardMadeView!.snp.top).offset(hintLabelBottomMarginForiPhone4)
+            } else {
+                make.bottom.equalTo(cardMadeView!.snp.top).offset(-hintLabelBottomMargin)
+            }
         })
         
         cardMadeView?.snp.makeConstraints({ (make) in
             make.left.right.equalTo(view)
-            make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
+            if IsiPhone4() {
+                make.bottom.equalTo(view).offset(-cardMadeViewBottomMarginForiPhone4)
+            } else {
+                make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
+            }
             make.height.equalTo((ScreenWidth - 2*cardMadeViewMargin)*ratio)
         })
         
         pageControl?.snp.makeConstraints({ (make) in
             make.centerX.equalTo(view)
-            make.top.equalTo(cardMadeView!.snp.bottom).offset(bottomViewOffsetTop)
+            if IsiPhone4() {
+                make.top.equalTo(cardMadeView!.snp.bottom).offset(-bottomViewoffsetTopForiPhone4)
+            } else {
+                make.top.equalTo(cardMadeView!.snp.bottom).offset(bottomViewOffsetTop)
+            }
         })
     }
     

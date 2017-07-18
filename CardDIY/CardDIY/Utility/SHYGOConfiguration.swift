@@ -10,7 +10,9 @@ import UIKit
 
 let cardMadeViewMargin: CGFloat = 60
 let cardMadeViewBottomMargin: CGFloat = 150
+let cardMadeViewBottomMarginForiPhone4: CGFloat = 75
 let hintLabelBottomMargin: CGFloat = 20
+let hintLabelBottomMarginForiPhone4: CGFloat = 30
 let nextButtonTopMargin: CGFloat = 50
 let ratio: CGFloat = 1.45787
 let NumberFontFamily: String = "Book Antiqua"
@@ -21,6 +23,7 @@ let WordFontSize: CGFloat = 24*offsetRatio
 let EffectFontSize: CGFloat = 10*offsetRatio
 let hintLabelFontSize: CGFloat = 24*offsetRatio
 let bottomViewOffsetTop: CGFloat = 20
+let bottomViewoffsetTopForiPhone4: CGFloat = 20
 
 class SHYGOConfiguration: NSObject {
     
