@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         setupFirebase()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-7779776531531575~7426958844")
         
         let centerVC = SHHomeViewController()
         let naviVC = UINavigationController(rootViewController: centerVC)

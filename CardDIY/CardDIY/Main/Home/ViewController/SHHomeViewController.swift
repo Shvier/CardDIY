@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import GoogleMobileAds
 
 class SHHomeViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class SHHomeViewController: UIViewController {
     var cardMadeView: UICollectionView?
     var pageControl: SHYGOPageControl?
     var selectedIndex: NSInteger = 0
+    
+    var bannerView: GADBannerView!
+    var interstitial: GADInterstitial!
     
     func leftBarItemAction(sender: UIBarButtonItem) {
         sideMenuViewController.presentLeftMenuViewController()
@@ -50,6 +54,10 @@ class SHHomeViewController: UIViewController {
         SHYGOConfiguration.shared.type = cards[selectedIndex]
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        print(keyPath!)
     }
     
     func initUI() {
@@ -109,6 +117,23 @@ class SHHomeViewController: UIViewController {
             return label
         })()
         view.addSubview(hintLabel!)
+        
+        bannerView = ({
+            let view = GADBannerView()
+            view.adUnitID = "ca-app-pub-7779776531531575/8669372844"
+            view.rootViewController = self
+            let request = GADRequest()
+            request.testDevices = [kGADSimulatorID]
+            view.load(request)
+            return view
+        })()
+        view.addSubview(bannerView)
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
+        addObserver(self, forKeyPath: "interstitial.isReady", options: .new, context: nil)
     }
     
     func makeConstraints() {
@@ -139,6 +164,11 @@ class SHHomeViewController: UIViewController {
                 make.top.equalTo(cardMadeView!.snp.bottom).offset(bottomViewOffsetTop)
             }
         })
+        
+        bannerView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalTo(view)
+            make.height.equalTo(80)
+        }
     }
     
     func configNavi() {
