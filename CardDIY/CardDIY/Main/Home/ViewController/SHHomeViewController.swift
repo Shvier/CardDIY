@@ -172,7 +172,7 @@ class SHHomeViewController: UIViewController {
         navigationItem.leftBarButtonItem = leftBarItem
         let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
-        navigationItem.title = "游戏王"
+        navigationItem.title = Bundle.main.localizedString(forKey: "YGO", value: "", table: nil)
     }
 
     override func viewDidLoad() {
