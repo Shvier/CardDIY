@@ -134,6 +134,23 @@ class SHEffectViewController: SHBaseViewController {
         defTextField?.isHidden = true
     }
     
+    func keyboardWillShow(notification: Notification) {
+        if self.nameTextField!.isFirstResponder {
+            return
+        }
+        let info = notification.userInfo
+        let keyboardSize = (info?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size
+        self.cardContentView?.snp.updateConstraints({ (make) in
+            make.centerY.equalTo(self.view).offset(-keyboardSize.height)
+        })
+    }
+    
+    func keyboardWillHide(notification: Notification) {
+        self.cardContentView?.snp.updateConstraints({ (make) in
+            make.centerY.equalTo(self.view)
+        })
+    }
+    
     func initUI() {
         view.backgroundColor = UIColor.white
         let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
@@ -224,7 +241,6 @@ class SHEffectViewController: SHBaseViewController {
         self.cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(self.view).offset(cardMadeViewMargin)
             make.right.equalTo(self.view).offset(-cardMadeViewMargin)
-//            make.bottom.equalTo(self.view).offset(-cardMadeViewBottomMargin)
             make.centerY.equalTo(self.view)
             make.height.equalTo((self.cardImageView?.snp.width)!).multipliedBy(ratio)
         })
@@ -430,10 +446,17 @@ class SHEffectViewController: SHBaseViewController {
         super.viewDidLoad()
         initUI()
         makeConstraints()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
 
 }

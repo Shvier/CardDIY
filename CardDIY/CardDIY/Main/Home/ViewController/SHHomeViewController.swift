@@ -56,10 +56,6 @@ class SHHomeViewController: UIViewController {
         navigationController?.pushViewController(attributeVC, animated: true)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        print(keyPath!)
-    }
-    
     func initUI() {
         configNavi()
         view.backgroundColor = UIColor.white
@@ -133,7 +129,7 @@ class SHHomeViewController: UIViewController {
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
         interstitial.load(request)
-        addObserver(self, forKeyPath: "interstitial.isReady", options: .new, context: nil)
+        interstitial.delegate = self
     }
     
     func makeConstraints() {
@@ -210,6 +206,14 @@ extension SHHomeViewController: SHYGOFlowLayoutDelegate {
     func flowLayoutMovedTo(index: NSInteger) {
         pageControl?.unselected(exclude: index)
         selectedIndex = index
+    }
+    
+}
+
+extension SHHomeViewController: GADInterstitialDelegate {
+    
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        ad.present(fromRootViewController: self)
     }
     
 }
