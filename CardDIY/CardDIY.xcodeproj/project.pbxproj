@@ -47,6 +47,7 @@
 		C053DFDE1F0BB58E00EA9A93 /* SHEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */; };
 		C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */; };
 		C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */; };
+		C0BAE6591F24D854000C4F64 /* SHParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAE6581F24D854000C4F64 /* SHParticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMagicTypeView.swift; sourceTree = "<group>"; };
 		C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTrapTypeView.swift; sourceTree = "<group>"; };
 		C05D04561F17C5A300ECCE62 /* UMSocialSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UMSocialSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		C0BAE6581F24D854000C4F64 /* SHParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHParticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 				C0417C881F0E267500FFCBA7 /* SHYGOFlowLayout.swift */,
 				C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */,
 				C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */,
+				C0BAE6581F24D854000C4F64 /* SHParticleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				C053DFCB1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift in Sources */,
 				C0417C871F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift in Sources */,
 				C053DFD61F0B91E000EA9A93 /* SHYGOAttributeView.swift in Sources */,
+				C0BAE6591F24D854000C4F64 /* SHParticleView.swift in Sources */,
 				C02CB2FD1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift in Sources */,
 				C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */,
 				C03021041F10B127009CB6F5 /* SHYGORaceViewProtocol.swift in Sources */,
