@@ -48,7 +48,7 @@ class SHParticleView: SHBaseView {
     func makeEmitterCell(contents: CGImage) -> CAEmitterCell {
         let cell = CAEmitterCell()
         cell.birthRate = 20
-        cell.lifetime = 2
+        cell.lifetime = 3
         cell.lifetimeRange = 0.3
         cell.contents = contents
         cell.color = UIColor(red:0.71, green:0.33, blue:0.17, alpha:1.00).cgColor

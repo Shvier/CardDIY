@@ -12,6 +12,11 @@ import GoogleMobileAds
 
 class SHHomeViewController: UIViewController {
     
+    let centerX = UIScreen.main.bounds.size.width/2
+    let centerY = UIScreen.main.bounds.size.height/2
+    let widthPerUnit: CGFloat = UIScreen.main.bounds.size.width/20
+    let heightPerUnit: CGFloat = UIScreen.main.bounds.size.height/35
+    
     let backgroundAlpha: CGFloat = 0.5
     
     lazy var cards: Array<String> = {
@@ -56,9 +61,81 @@ class SHHomeViewController: UIViewController {
         navigationController?.pushViewController(attributeVC, animated: true)
     }
     
+    func createBezierPath(startPoint: CGPoint, endPoint: CGPoint, controlPoint: CGPoint) -> UIBezierPath {
+        let path = UIBezierPath()
+        path.lineWidth = 5.0
+        path.lineCapStyle = .round
+        path.lineJoinStyle = .round
+        path.move(to: startPoint)
+        path.addQuadCurve(to: endPoint, controlPoint: controlPoint)
+        return path
+    }
+    
     func initUI() {
         configNavi()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.black
+        
+        // Left Top to Center
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: ScreenWidth/2, y: ScreenHeight/2), controlPoint: CGPoint(x: ScreenWidth/20*14, y: ScreenHeight/35*5))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // Center to Right Bottom
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: ScreenWidth, y: ScreenHeight), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*6, y: heightPerUnit*30))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // Right Top to Center
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: ScreenWidth, y: 0), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*19, y: heightPerUnit*10))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // Center to Left Bottom
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: 0, y: ScreenHeight), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*1, y: heightPerUnit*25))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // 2 Left to Center
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: 0, y: heightPerUnit*10), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*7, y: heightPerUnit*10))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // Center to 2 Right
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: ScreenWidth, y: heightPerUnit*25), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*13, y: heightPerUnit*25))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // 3 Left to Center
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: 0, y: heightPerUnit*20), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*5, y: heightPerUnit*17))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // Center to 3 Left
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: ScreenWidth, y: heightPerUnit*15), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*15, y: heightPerUnit*18))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // 2 Top to Center
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: widthPerUnit*13, y: 0), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*13, y: heightPerUnit*9))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        // Center to 2 Bottom
+        repeat {
+            let path = createBezierPath(startPoint: CGPoint(x: widthPerUnit*7, y: ScreenHeight), endPoint: CGPoint(x: centerX, y: centerY), controlPoint: CGPoint(x: widthPerUnit*7, y: heightPerUnit*26))
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), movePath: path.cgPath)
+            view.addSubview(particleView)
+        } while (false)
+        
         backgroundImageView = ({
             let imageView = UIImageView()
             imageView.image = UIImage(named: "card_back.jpg")
@@ -94,6 +171,7 @@ class SHHomeViewController: UIViewController {
             collectionView.backgroundColor = UIColor.white
             collectionView.showsHorizontalScrollIndicator = false
             collectionView.showsVerticalScrollIndicator = false
+            collectionView.backgroundColor = UIColor.clear
             return collectionView
         })()
         view.addSubview(cardMadeView!)
