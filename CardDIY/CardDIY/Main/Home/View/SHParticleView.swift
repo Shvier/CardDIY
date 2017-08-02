@@ -51,7 +51,9 @@ class SHParticleView: SHBaseView {
         cell.lifetime = 3
         cell.lifetimeRange = 0.3
         cell.contents = contents
-        cell.color = UIColor(red:0.71, green:0.33, blue:0.17, alpha:1.00).cgColor
+        
+//        cell.color = UIColor(red:0.71, green:0.33, blue:0.17, alpha:1.00).cgColor
+        cell.color = UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor
         cell.velocity = 15
         cell.emissionLongitude = .pi*2
         cell.emissionRange = .pi*2

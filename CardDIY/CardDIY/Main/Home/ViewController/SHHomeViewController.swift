@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import GoogleMobileAds
 
-class SHHomeViewController: UIViewController {
+class SHHomeViewController: SHBaseViewController {
     
     let centerX = UIScreen.main.bounds.size.width/2
     let centerY = UIScreen.main.bounds.size.height/2
@@ -245,12 +245,15 @@ class SHHomeViewController: UIViewController {
         }
     }
     
-    func configNavi() {
+    override func configNavi() {
         let leftBarItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(self.leftBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
         let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         navigationItem.title = Bundle.main.localizedString(forKey: "YGO", value: "", table: nil)
+//        navigationTitle = Bundle.main.localizedString(forKey: "YGO", value: "", table: nil)
     }
 
     override func viewDidLoad() {
