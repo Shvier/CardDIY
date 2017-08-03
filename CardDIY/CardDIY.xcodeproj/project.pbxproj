@@ -24,6 +24,7 @@
 		C03706901F17C95000A6D18E /* SHShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037068F1F17C95000A6D18E /* SHShareManager.swift */; };
 		C03706931F17CA4500A6D18E /* SHShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03706921F17CA4500A6D18E /* SHShareModel.swift */; };
 		C03791B81F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */; };
+		C03F56A11F32D14C00621599 /* SHWhirlpoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03F56A01F32D14C00621599 /* SHWhirlpoolView.swift */; };
 		C03FC59A1F21D34800B9E25F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C03FC59C1F21D34800B9E25F /* InfoPlist.strings */; };
 		C03FC5A11F21D3F400B9E25F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C03FC5A31F21D3F400B9E25F /* Localizable.strings */; };
 		C041750A1F1F092F006B3592 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04175091F1F092F006B3592 /* GoogleService-Info.plist */; };
@@ -72,6 +73,7 @@
 		C03706921F17CA4500A6D18E /* SHShareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHShareModel.swift; sourceTree = "<group>"; };
 		C03791B61F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SetNaviBarBackgroundColor.h"; sourceTree = "<group>"; };
 		C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SetNaviBarBackgroundColor.m"; sourceTree = "<group>"; };
+		C03F56A01F32D14C00621599 /* SHWhirlpoolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHWhirlpoolView.swift; sourceTree = "<group>"; };
 		C03FC5941F21D2EC00B9E25F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C03FC5951F21D2EC00B9E25F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C03FC5961F21D2F000B9E25F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				C03020FF1F10A6BD009CB6F5 /* SHYGORaceView.swift */,
 				C03021011F10ADD3009CB6F5 /* SHYGORaceCell.swift */,
 				C0BAE6581F24D854000C4F64 /* SHParticleView.swift */,
+				C03F56A01F32D14C00621599 /* SHWhirlpoolView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				C053DFD61F0B91E000EA9A93 /* SHYGOAttributeView.swift in Sources */,
 				C0BAE6591F24D854000C4F64 /* SHParticleView.swift in Sources */,
 				C02CB2FD1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift in Sources */,
+				C03F56A11F32D14C00621599 /* SHWhirlpoolView.swift in Sources */,
 				C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */,
 				C03021041F10B127009CB6F5 /* SHYGORaceViewProtocol.swift in Sources */,
 				C02CB2FF1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift in Sources */,

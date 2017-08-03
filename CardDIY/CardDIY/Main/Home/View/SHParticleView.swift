@@ -18,6 +18,11 @@ class SHParticleView: SHBaseView {
         configMovePath(path: movePath)
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initUI()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
