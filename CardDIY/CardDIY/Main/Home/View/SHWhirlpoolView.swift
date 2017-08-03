@@ -23,6 +23,19 @@ class SHWhirlpoolView: SHBaseView {
         return Array<CGPath>()
     }()
     
+    lazy var colors: [CGColor] = {
+        return [UIColor(red:0.67, green:0.53, blue:0.33, alpha:1.00).cgColor,
+                UIColor(red:0.68, green:0.36, blue:0.22, alpha:1.00).cgColor,
+                UIColor(red:0.25, green:0.43, blue:0.69, alpha:1.00).cgColor,
+                UIColor(red:0.46, green:0.29, blue:0.82, alpha:1.00).cgColor,
+                UIColor(red:0.84, green:0.84, blue:0.84, alpha:1.00).cgColor,
+                UIColor(red:0.42, green:0.42, blue:0.42, alpha:1.00).cgColor,
+                UIColor(red:0.21, green:0.64, blue:0.53, alpha:1.00).cgColor,
+                UIColor(red:0.69, green:0.24, blue:0.48, alpha:1.00).cgColor,
+                UIColor(red:0.94, green:0.23, blue:0.11, alpha:1.00).cgColor,
+                UIColor(red:0.86, green:0.38, blue:0.55, alpha:1.00).cgColor]
+    }()
+    
     func createBezierPath(startPoint: CGPoint, endPoint: CGPoint, controlPoint: CGPoint) -> UIBezierPath {
         let path = UIBezierPath()
         path.lineWidth = 5.0
@@ -34,8 +47,8 @@ class SHWhirlpoolView: SHBaseView {
     }
 
     func setupParticleView() {
-        for _ in 0..<10 {
-            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320))
+        for index in 0..<10 {
+            let particleView = SHParticleView(frame: CGRect(x: 0, y: 0, width: 320, height: 320), color: colors[index])
             self.addSubview(particleView)
             particleViews.append(particleView)
         }

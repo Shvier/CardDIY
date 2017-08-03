@@ -23,7 +23,8 @@ class SHHomeViewController: SHBaseViewController {
     var cardMadeView: UICollectionView?
     var pageControl: SHYGOPageControl?
     var selectedIndex: NSInteger = 0
-    var whirlpoolView: SHWhirlpoolView!
+//    var whirlpoolView: SHWhirlpoolView!
+    var gradientLayer: CAGradientLayer!
     
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
@@ -56,10 +57,36 @@ class SHHomeViewController: SHBaseViewController {
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
     }
+    
+    func animateLayer() {
+//        UIView.animate(withDuration: 5, delay: 0, animations: {
+//            self.gradientLayer.colors = [UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor, UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor]
+//        }) { (finished) in
+//            
+//        }
+        UIView.animate(withDuration: 3.5, animations: {
+            self.view.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0)
+        }) { (finished) in
+            if finished {
+                self.animateLayer()
+            }
+        }
+    }
 
     func initUI() {
         configNavi()
-        view.backgroundColor = UIColor.black
+//        view.backgroundColor = UIColor.black
+        
+//        gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = view.bounds
+//        gradientLayer.colors = [UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor, UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor]
+//        gradientLayer.locations = [NSNumber.init(value: 0), NSNumber.init(value: 0.5)]
+//        view.layer.addSublayer(gradientLayer)
+//        let timer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(animateLayer), userInfo: nil, repeats: true)
+//        timer.fire()
+        DispatchQueue.main.async { 
+            self.animateLayer()
+        }
         
         backgroundImageView = ({
             let imageView = UIImageView()
@@ -76,8 +103,8 @@ class SHHomeViewController: SHBaseViewController {
             make.top.equalTo(view).offset(NavigationAndStatusBarHeight)
         })
         
-        whirlpoolView = SHWhirlpoolView(frame: view.bounds)
-        view.addSubview(whirlpoolView)
+//        whirlpoolView = SHWhirlpoolView(frame: view.bounds)
+//        view.addSubview(whirlpoolView)
         
         let flowLayout: SHYGOFlowLayout = ({
             let layout = SHYGOFlowLayout()
@@ -132,11 +159,11 @@ class SHHomeViewController: SHBaseViewController {
         })()
         view.addSubview(bannerView)
         
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        interstitial.load(request)
-        interstitial.delegate = self
+//        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
+//        let request = GADRequest()
+//        request.testDevices = [kGADSimulatorID]
+//        interstitial.load(request)
+//        interstitial.delegate = self
     }
     
     func makeConstraints() {
@@ -182,12 +209,11 @@ class SHHomeViewController: SHBaseViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         navigationItem.title = Bundle.main.localizedString(forKey: "YGO", value: "", table: nil)
-//        navigationTitle = Bundle.main.localizedString(forKey: "YGO", value: "", table: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        whirlpoolView.startAnimation()
+//        whirlpoolView.startAnimation()
     }
 
     override func viewDidLoad() {

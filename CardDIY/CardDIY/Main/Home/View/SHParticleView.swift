@@ -18,9 +18,10 @@ class SHParticleView: SHBaseView {
         configMovePath(path: movePath)
     }
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, color: CGColor) {
         super.init(frame: frame)
         initUI()
+        configEmitter(color: color)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,10 +29,10 @@ class SHParticleView: SHBaseView {
     }
     
     func initUI() {
-        configEmitter()
+
     }
     
-    func configEmitter() {
+    func configEmitter(color: CGColor) {
         emitterLayer = CAEmitterLayer()
         self.layer.addSublayer(emitterLayer)
         emitterLayer.emitterPosition = CGPoint(x: self.bounds.size.width/2, y: self.bounds.size.height/2)
