@@ -19,6 +19,15 @@ class SHHomeViewController: SHBaseViewController {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
     }()
     
+    let colors: [UIColor] = [NormalMonsterColor,
+                             EffectMonsterColor,
+                             RitualMonsterColor,
+                             FusionMonsterColor,
+                             SynchroMonsterColor,
+                             XYZMonsterColor,
+                             MagicColor,
+                             TrapColor]
+    
     var backgroundImageView: UIImageView?
     var hintLabel: UILabel?
     var cardMadeView: UICollectionView?
@@ -71,11 +80,11 @@ class SHHomeViewController: SHBaseViewController {
     }
     
     func setupRandomColor() {
-        nextColor = UIColor.randomColor()
+        nextColor = UIColor.randomColor(colors: colors)
         if view.backgroundColor == nextColor {
             setupRandomColor()
         } else {
-            self.view.backgroundColor = UIColor.randomColor()
+            self.view.backgroundColor = nextColor
         }
     }
 

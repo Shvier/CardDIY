@@ -10,15 +10,7 @@ import UIKit
 
 extension UIColor {
     
-    static func randomColor() -> UIColor {
-        let colors: [UIColor] = [NormalMonsterColor,
-                                 EffectMonsterColor,
-                                 RitualMonsterColor,
-                                 FusionMonsterColor,
-                                 SynchroMonsterColor,
-                                 XYZMonsterColor,
-                                 MagicColor,
-                                 TrapColor]
+    static func randomColor(colors: [UIColor]) -> UIColor {
         let index = arc4random_uniform(UInt32(colors.count))
         return colors[Int(index)]
     }
