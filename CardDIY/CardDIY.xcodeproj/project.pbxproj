@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0576D47DD1A2DE3739C8D9FF /* Pods_CardDIY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDA44C467648069DA1BBC2B /* Pods_CardDIY.framework */; };
+		C01C97D11F36A994005A1EFA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C97D01F36A994005A1EFA /* UIColor+Extension.swift */; };
 		C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */; };
 		C02CB2F71F0CAD67009C9A7A /* Book Antiqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02CB2F51F0CAD67009C9A7A /* Book Antiqua.ttf */; };
 		C02CB2F81F0CAD67009C9A7A /* HYXiaoLiShuF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02CB2F61F0CAD67009C9A7A /* HYXiaoLiShuF.ttf */; };
@@ -56,6 +57,7 @@
 		1EDA44C467648069DA1BBC2B /* Pods_CardDIY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardDIY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36063CDC88656A8658450F06 /* Pods-CardDIY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardDIY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardDIY/Pods-CardDIY.debug.xcconfig"; sourceTree = "<group>"; };
 		729E7C191DC6ED95035720E9 /* Pods-CardDIY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardDIY.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardDIY/Pods-CardDIY.release.xcconfig"; sourceTree = "<group>"; };
+		C01C97D01F36A994005A1EFA /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ScreenShot.swift"; sourceTree = "<group>"; };
 		C02CB2F51F0CAD67009C9A7A /* Book Antiqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Book Antiqua.ttf"; sourceTree = "<group>"; };
 		C02CB2F61F0CAD67009C9A7A /* HYXiaoLiShuF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYXiaoLiShuF.ttf; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				C03791B61F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.h */,
 				C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */,
 				C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */,
+				C01C97D01F36A994005A1EFA /* UIColor+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				C03791B81F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m in Sources */,
 				C053DFD41F0B900300EA9A93 /* SHBaseViewController.swift in Sources */,
 				C07563F81F2613E300EEE26C /* SHBezierView.swift in Sources */,
+				C01C97D11F36A994005A1EFA /* UIColor+Extension.swift in Sources */,
 				C03021021F10ADD3009CB6F5 /* SHYGORaceCell.swift in Sources */,
 				C03020FE1F108719009CB6F5 /* SHTextField.swift in Sources */,
 				C053DFDE1F0BB58E00EA9A93 /* SHEffectViewController.swift in Sources */,

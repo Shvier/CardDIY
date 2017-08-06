@@ -13,6 +13,7 @@ import GoogleMobileAds
 class SHHomeViewController: SHBaseViewController {
     
     let backgroundAlpha: CGFloat = 0.5
+    let animateLayerDuration: TimeInterval = 3.5
     
     lazy var cards: Array<String> = {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
@@ -25,6 +26,7 @@ class SHHomeViewController: SHBaseViewController {
     var selectedIndex: NSInteger = 0
 //    var whirlpoolView: SHWhirlpoolView!
     var gradientLayer: CAGradientLayer!
+    var nextColor: UIColor!
     
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
@@ -59,31 +61,27 @@ class SHHomeViewController: SHBaseViewController {
     }
     
     func animateLayer() {
-//        UIView.animate(withDuration: 5, delay: 0, animations: {
-//            self.gradientLayer.colors = [UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor, UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor]
-//        }) { (finished) in
-//            
-//        }
-        UIView.animate(withDuration: 3.5, animations: {
-            self.view.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0)
+        UIView.animate(withDuration: animateLayerDuration, animations: {
+            self.setupRandomColor()
         }) { (finished) in
             if finished {
                 self.animateLayer()
             }
         }
     }
+    
+    func setupRandomColor() {
+        nextColor = UIColor.randomColor()
+        if view.backgroundColor == nextColor {
+            setupRandomColor()
+        } else {
+            self.view.backgroundColor = UIColor.randomColor()
+        }
+    }
 
     func initUI() {
         configNavi()
-//        view.backgroundColor = UIColor.black
         
-//        gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = view.bounds
-//        gradientLayer.colors = [UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor, UIColor(red: CGFloat(arc4random_uniform(256))/255.0, green: CGFloat(arc4random_uniform(256))/255.0, blue: CGFloat(arc4random_uniform(256))/255.0, alpha: 1.0).cgColor]
-//        gradientLayer.locations = [NSNumber.init(value: 0), NSNumber.init(value: 0.5)]
-//        view.layer.addSublayer(gradientLayer)
-//        let timer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(animateLayer), userInfo: nil, repeats: true)
-//        timer.fire()
         DispatchQueue.main.async { 
             self.animateLayer()
         }
@@ -137,7 +135,6 @@ class SHHomeViewController: SHBaseViewController {
             return pageControl
         })()
         view.addSubview(pageControl!)
-        
         
         hintLabel = ({
             let label = UILabel()
