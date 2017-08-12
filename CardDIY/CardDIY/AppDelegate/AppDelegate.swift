@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let centerVC = SHHomeViewController()
         let naviVC = UINavigationController(rootViewController: centerVC)
-        let leftVC = UIViewController()
+        let leftVC = SHLeftMenuViewController()
         let rightVC = UIViewController()
         
         let sideMenuVC = RESideMenu(contentViewController: naviVC, leftMenuViewController: leftVC, rightMenuViewController: rightVC)

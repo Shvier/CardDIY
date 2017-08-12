@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0576D47DD1A2DE3739C8D9FF /* Pods_CardDIY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDA44C467648069DA1BBC2B /* Pods_CardDIY.framework */; };
+		C013C2581F3F3774001388D2 /* SHLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013C2571F3F3774001388D2 /* SHLeftMenuViewController.swift */; };
 		C01C97D11F36A994005A1EFA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C97D01F36A994005A1EFA /* UIColor+Extension.swift */; };
 		C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */; };
 		C02CB2F71F0CAD67009C9A7A /* Book Antiqua.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C02CB2F51F0CAD67009C9A7A /* Book Antiqua.ttf */; };
@@ -57,6 +58,7 @@
 		1EDA44C467648069DA1BBC2B /* Pods_CardDIY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardDIY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36063CDC88656A8658450F06 /* Pods-CardDIY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardDIY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardDIY/Pods-CardDIY.debug.xcconfig"; sourceTree = "<group>"; };
 		729E7C191DC6ED95035720E9 /* Pods-CardDIY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardDIY.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardDIY/Pods-CardDIY.release.xcconfig"; sourceTree = "<group>"; };
+		C013C2571F3F3774001388D2 /* SHLeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHLeftMenuViewController.swift; sourceTree = "<group>"; };
 		C01C97D01F36A994005A1EFA /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C02CB2F21F0C92FC009C9A7A /* UIView+ScreenShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ScreenShot.swift"; sourceTree = "<group>"; };
 		C02CB2F51F0CAD67009C9A7A /* Book Antiqua.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Book Antiqua.ttf"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */,
 				C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */,
 				C02CB2F91F0CB1DA009C9A7A /* SHAvatarViewController.swift */,
+				C013C2571F3F3774001388D2 /* SHLeftMenuViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */,
 				C02CB2FA1F0CB1DA009C9A7A /* SHAvatarViewController.swift in Sources */,
 				C02FB9661F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift in Sources */,
+				C013C2581F3F3774001388D2 /* SHLeftMenuViewController.swift in Sources */,
 				C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */,
 				C03706901F17C95000A6D18E /* SHShareManager.swift in Sources */,
 				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
