@@ -8,6 +8,8 @@
 
 import UIKit
 
+let LeftMenuTableViewCellReuseIdentifier = "LeftMenuTableViewCellReuseIdentifier"
+
 class SHLeftMenuViewController: UIViewController {
 
     var tableView: UITableView!
@@ -15,6 +17,9 @@ class SHLeftMenuViewController: UIViewController {
     func initUI() {
         tableView = {
             let tableView = UITableView(frame: CGRect.zero, style: .plain)
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: LeftMenuTableViewCellReuseIdentifier)
+            tableView.delegate = self
+            tableView.dataSource = self
             return tableView
         }()
         view.addSubview(tableView)
@@ -22,7 +27,10 @@ class SHLeftMenuViewController: UIViewController {
     
     func makeContraints() {
         tableView.snp.makeConstraints { (make) in
-            make.left.top.right.bottom.equalTo(view)
+            make.left.equalTo(view)
+            make.centerY.equalTo(view)
+            make.width.equalTo(200)
+            make.height.equalTo(120)
         }
     }
     
@@ -36,4 +44,17 @@ class SHLeftMenuViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+extension SHLeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuTableViewCellReuseIdentifier, for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
 }
