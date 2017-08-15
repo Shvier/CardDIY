@@ -12,6 +12,7 @@ let LeftMenuTableViewCellReuseIdentifier = "LeftMenuTableViewCellReuseIdentifier
 
 class SHLeftMenuViewController: UIViewController {
 
+    let menuTitles: [String] = ["点赞", "推荐给好友", "反馈", "当前版本", "关于"]
     var tableView: UITableView!
     
     func initUI() {
@@ -54,7 +55,7 @@ extension SHLeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return menuTitles.count
     }
     
 }
