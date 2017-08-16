@@ -26,6 +26,9 @@
 		C03706931F17CA4500A6D18E /* SHShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03706921F17CA4500A6D18E /* SHShareModel.swift */; };
 		C03791B81F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */; };
 		C03F56A11F32D14C00621599 /* SHWhirlpoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03F56A01F32D14C00621599 /* SHWhirlpoolView.swift */; };
+		C03F58D41F441D1F00D99BFD /* SHAnimationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03F58D31F441D1F00D99BFD /* SHAnimationGroup.swift */; };
+		C03F58D81F44226E00D99BFD /* SHMenuViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03F58D71F44226E00D99BFD /* SHMenuViewProtocol.swift */; };
+		C03F58DA1F4464C800D99BFD /* SHMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03F58D91F4464C800D99BFD /* SHMenuView.swift */; };
 		C03FC59A1F21D34800B9E25F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C03FC59C1F21D34800B9E25F /* InfoPlist.strings */; };
 		C03FC5A11F21D3F400B9E25F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C03FC5A31F21D3F400B9E25F /* Localizable.strings */; };
 		C041750A1F1F092F006B3592 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04175091F1F092F006B3592 /* GoogleService-Info.plist */; };
@@ -76,6 +79,9 @@
 		C03791B61F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+SetNaviBarBackgroundColor.h"; sourceTree = "<group>"; };
 		C03791B71F1DECCD00B901F9 /* UINavigationBar+SetNaviBarBackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+SetNaviBarBackgroundColor.m"; sourceTree = "<group>"; };
 		C03F56A01F32D14C00621599 /* SHWhirlpoolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHWhirlpoolView.swift; sourceTree = "<group>"; };
+		C03F58D31F441D1F00D99BFD /* SHAnimationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHAnimationGroup.swift; sourceTree = "<group>"; };
+		C03F58D71F44226E00D99BFD /* SHMenuViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMenuViewProtocol.swift; sourceTree = "<group>"; };
+		C03F58D91F4464C800D99BFD /* SHMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMenuView.swift; sourceTree = "<group>"; };
 		C03FC5941F21D2EC00B9E25F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C03FC5951F21D2EC00B9E25F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C03FC5961F21D2F000B9E25F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 				C0417C861F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift */,
 				C02FB9651F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift */,
 				C03021031F10B127009CB6F5 /* SHYGORaceViewProtocol.swift */,
+				C03F58D71F44226E00D99BFD /* SHMenuViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -206,6 +213,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C03F58D21F441CED00D99BFD /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C03F58D31F441D1F00D99BFD /* SHAnimationGroup.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		C053DF9A1F0B750B00EA9A93 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +242,7 @@
 		C053DFA51F0B750B00EA9A93 /* CardDIY */ = {
 			isa = PBXGroup;
 			children = (
+				C03F58D21F441CED00D99BFD /* Animation */,
 				C037068D1F17C93900A6D18E /* Service */,
 				C02CB2F11F0C92E8009C9A7A /* Category */,
 				C053DFD01F0B8E5100EA9A93 /* Utility */,
@@ -319,6 +335,7 @@
 		C053DFC61F0B81F200EA9A93 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C03F58D91F4464C800D99BFD /* SHMenuView.swift */,
 				C07563F71F2613E300EEE26C /* SHBezierView.swift */,
 				C053DFCC1F0B822C00EA9A93 /* SHYGOCardCell.swift */,
 				C053DFD51F0B91E000EA9A93 /* SHYGOAttributeView.swift */,
@@ -553,17 +570,20 @@
 				C053DFCF1F0B8E0F00EA9A93 /* SHAttributeViewController.swift in Sources */,
 				C02CB3031F0CD15D009C9A7A /* SHYGOTrapTypeViewProtocol.swift in Sources */,
 				C053DFD21F0B8E6600EA9A93 /* SHYGOConfiguration.swift in Sources */,
+				C03F58D41F441D1F00D99BFD /* SHAnimationGroup.swift in Sources */,
 				C03706931F17CA4500A6D18E /* SHShareModel.swift in Sources */,
 				C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */,
 				C02CB3011F0CC7A4009C9A7A /* SHYGOMagicTypeViewProtcol.swift in Sources */,
 				C053DFCB1F0B821400EA9A93 /* SHBaseCollectionViewCell.swift in Sources */,
 				C0417C871F0E0D6300FFCBA7 /* SHYGOPageControlProtocol.swift in Sources */,
+				C03F58DA1F4464C800D99BFD /* SHMenuView.swift in Sources */,
 				C053DFD61F0B91E000EA9A93 /* SHYGOAttributeView.swift in Sources */,
 				C0BAE6591F24D854000C4F64 /* SHParticleView.swift in Sources */,
 				C02CB2FD1F0CB3BA009C9A7A /* SHYGOAttributeViewProtocol.swift in Sources */,
 				C03F56A11F32D14C00621599 /* SHWhirlpoolView.swift in Sources */,
 				C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */,
 				C03021041F10B127009CB6F5 /* SHYGORaceViewProtocol.swift in Sources */,
+				C03F58D81F44226E00D99BFD /* SHMenuViewProtocol.swift in Sources */,
 				C02CB2FF1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift in Sources */,
 				C053DFCD1F0B822C00EA9A93 /* SHYGOCardCell.swift in Sources */,
 				C053DFBC1F0B753A00EA9A93 /* SHHomeViewController.swift in Sources */,

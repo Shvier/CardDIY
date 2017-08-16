@@ -40,8 +40,10 @@ class SHHomeViewController: SHBaseViewController {
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
     
+    var menuView: SHMenuView?
+    
     func leftBarItemAction(sender: UIBarButtonItem) {
-        
+        menuView?.toggle()
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
@@ -165,6 +167,12 @@ class SHHomeViewController: SHBaseViewController {
         })()
         view.addSubview(bannerView)
         
+        menuView = {
+            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: 0, y: 0), delegate: self)
+            return menuView
+        }()
+        view.addSubview(menuView!)
+        
 //        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
 //        let request = GADRequest()
 //        request.testDevices = [kGADSimulatorID]
@@ -261,6 +269,30 @@ extension SHHomeViewController: GADInterstitialDelegate {
     
     func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         ad.present(fromRootViewController: self)
+    }
+    
+}
+
+extension SHHomeViewController: SHMenuViewDelegate {
+    
+    func menuViewDidEvaluateButtonClicked(_ menuView: SHMenuView) {
+
+    }
+    
+    func menuViewDidRecommendButtonClicked(_ menuView: SHMenuView) {
+        
+    }
+    
+    func menuViewDidFeedbackButtonClicked(_ menuView: SHMenuView) {
+        
+    }
+    
+    func menuViewDidVersionButtonClicked(_ menuView: SHMenuView) {
+        
+    }
+    
+    func menuViewDidAboutButtonClicked(_ menuView: SHMenuView) {
+        
     }
     
 }
