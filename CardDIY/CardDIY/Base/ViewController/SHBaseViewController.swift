@@ -11,6 +11,18 @@ import SnapKit
 
 class SHBaseViewController: UIViewController {
     
+    let animateLayerDuration: TimeInterval = 3.5
+    let colors: [UIColor] = [NormalMonsterColor,
+                             EffectMonsterColor,
+                             RitualMonsterColor,
+                             FusionMonsterColor,
+                             SynchroMonsterColor,
+                             XYZMonsterColor,
+                             MagicColor,
+                             TrapColor]
+    
+    var nextColor: UIColor!
+    
     var navigationTitle: String {
         set {
             navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: hintLabelFontSize)!]
@@ -21,10 +33,32 @@ class SHBaseViewController: UIViewController {
         }
     }
     
+    func setupRandomColor() {
+        nextColor = UIColor.randomColor(colors: colors)
+        if view.backgroundColor == nextColor {
+            setupRandomColor()
+        } else {
+            self.view.backgroundColor = nextColor
+        }
+    }
+    
+    func animateLayer() {
+        UIView.animate(withDuration: animateLayerDuration, animations: {
+            self.setupRandomColor()
+        }) { (finished) in
+            if finished {
+                self.animateLayer()
+            }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
         navigationController?.navigationBar.shadowImage = UIImage()
+        DispatchQueue.main.async {
+            self.animateLayer()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

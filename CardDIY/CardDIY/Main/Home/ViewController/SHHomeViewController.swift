@@ -13,20 +13,10 @@ import GoogleMobileAds
 class SHHomeViewController: SHBaseViewController {
     
     let backgroundAlpha: CGFloat = 0.5
-    let animateLayerDuration: TimeInterval = 3.5
     
     lazy var cards: Array<String> = {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
     }()
-    
-    let colors: [UIColor] = [NormalMonsterColor,
-                             EffectMonsterColor,
-                             RitualMonsterColor,
-                             FusionMonsterColor,
-                             SynchroMonsterColor,
-                             XYZMonsterColor,
-                             MagicColor,
-                             TrapColor]
     
     var backgroundImageView: UIImageView?
     var hintLabel: UILabel?
@@ -35,7 +25,6 @@ class SHHomeViewController: SHBaseViewController {
     var selectedIndex: NSInteger = 0
 //    var whirlpoolView: SHWhirlpoolView!
     var gradientLayer: CAGradientLayer!
-    var nextColor: UIColor!
     
     var bannerView: GADBannerView!
     var interstitial: GADInterstitial!
@@ -70,32 +59,9 @@ class SHHomeViewController: SHBaseViewController {
         let attributeVC = SHAttributeViewController()
         navigationController?.pushViewController(attributeVC, animated: true)
     }
-    
-    func animateLayer() {
-        UIView.animate(withDuration: animateLayerDuration, animations: {
-            self.setupRandomColor()
-        }) { (finished) in
-            if finished {
-                self.animateLayer()
-            }
-        }
-    }
-    
-    func setupRandomColor() {
-        nextColor = UIColor.randomColor(colors: colors)
-        if view.backgroundColor == nextColor {
-            setupRandomColor()
-        } else {
-            self.view.backgroundColor = nextColor
-        }
-    }
 
     func initUI() {
         configNavi()
-        
-        DispatchQueue.main.async { 
-            self.animateLayer()
-        }
         
         backgroundImageView = ({
             let imageView = UIImageView()
