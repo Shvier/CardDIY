@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sideMenuVC = RESideMenu(contentViewController: naviVC, leftMenuViewController: leftVC, rightMenuViewController: rightVC)
         window?.rootViewController = sideMenuVC
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
 
