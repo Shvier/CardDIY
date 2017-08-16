@@ -54,7 +54,7 @@ extension SHLeftMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuTableViewCellReuseIdentifier, for: indexPath)
-        cell.textLabel?.text = menuTitles[indexPath.row]git 
+        cell.textLabel?.text = menuTitles[indexPath.row]
         return cell
     }
     
