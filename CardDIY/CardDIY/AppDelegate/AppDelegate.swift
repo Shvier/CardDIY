@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RESideMenu
 import Firebase
 
 @UIApplicationMain
@@ -22,13 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupFirebase()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-7779776531531575~7426958844")
         
-        let centerVC = SHHomeViewController()
-        let naviVC = UINavigationController(rootViewController: centerVC)
-        let leftVC = SHLeftMenuViewController()
-        let rightVC = UIViewController()
+        let homeViewController = SHHomeViewController()
+        let naviViewController = UINavigationController(rootViewController: homeViewController)
         
-        let sideMenuVC = RESideMenu(contentViewController: naviVC, leftMenuViewController: leftVC, rightMenuViewController: rightVC)
-        window?.rootViewController = sideMenuVC
+        window?.rootViewController = naviViewController
         
         UIApplication.shared.statusBarStyle = .lightContent
         

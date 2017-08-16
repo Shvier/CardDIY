@@ -41,7 +41,7 @@ class SHHomeViewController: SHBaseViewController {
     var interstitial: GADInterstitial!
     
     func leftBarItemAction(sender: UIBarButtonItem) {
-        sideMenuViewController.presentLeftMenuViewController()
+        
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
