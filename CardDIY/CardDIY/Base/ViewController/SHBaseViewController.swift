@@ -44,7 +44,7 @@ class SHBaseViewController: UIViewController {
     }
     
     func animateLayer() {
-        UIView.animate(withDuration: animateLayerDuration, animations: {
+        UIView.animate(withDuration: animateLayerDuration, delay: 0, options: .allowUserInteraction, animations: { 
             self.setupRandomColor()
         }) { (finished) in
             if finished {
@@ -57,19 +57,18 @@ class SHBaseViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
         navigationController?.navigationBar.shadowImage = UIImage()
-//        animateOperation = BlockOperation(block: { 
-//            self.animateLayer()
-//        })
-//        OperationQueue.main.addOperation(animateOperation)
-//        DispatchQueue.main.async {
-//        }
+        animateOperation = BlockOperation(block: {
+            self.animateLayer()
+        })
+        let queue = OperationQueue()
+        queue.addOperation(animateOperation)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.sh_reset()
-//        animateOperation.cancel()
-//        animateOperation = nil
+        animateOperation.cancel()
+        animateOperation = nil
     }
     
     func leftBarItem(barItem: UIBarButtonItem) {
