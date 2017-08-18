@@ -79,7 +79,6 @@ class SHAvatarViewController: SHBaseViewController {
     }
     
     func initUI() {
-        view.backgroundColor = UIColor.white
         navigationTitle = "请挑选卡牌图案"
         
         cardContentView = ({

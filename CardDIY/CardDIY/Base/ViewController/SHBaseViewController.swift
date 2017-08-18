@@ -22,6 +22,7 @@ class SHBaseViewController: UIViewController {
                              TrapColor]
     
     var nextColor: UIColor!
+    var animateOperation: Operation!
     
     var navigationTitle: String {
         set {
@@ -56,14 +57,19 @@ class SHBaseViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
         navigationController?.navigationBar.shadowImage = UIImage()
-        DispatchQueue.main.async {
-            self.animateLayer()
-        }
+//        animateOperation = BlockOperation(block: { 
+//            self.animateLayer()
+//        })
+//        OperationQueue.main.addOperation(animateOperation)
+//        DispatchQueue.main.async {
+//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.sh_reset()
+//        animateOperation.cancel()
+//        animateOperation = nil
     }
     
     func leftBarItem(barItem: UIBarButtonItem) {
@@ -83,6 +89,7 @@ class SHBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.randomColor(colors: colors)
         configNavi()
     }
 

@@ -36,7 +36,7 @@ class SHYGORaceView: SHBaseView {
         collectionView = ({
             let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
             collectionView.register(SHYGORaceCell.self, forCellWithReuseIdentifier: SHYGORaceCellReuseIdentifier)
-            collectionView.backgroundColor = UIColor.white
+            collectionView.backgroundColor = UIColor.clear
             collectionView.delegate = self
             collectionView.dataSource = self
             return collectionView

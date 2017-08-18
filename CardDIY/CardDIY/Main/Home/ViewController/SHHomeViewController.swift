@@ -134,16 +134,18 @@ class SHHomeViewController: SHBaseViewController {
         view.addSubview(bannerView)
         
         menuView = {
-            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: 0, y: 0), delegate: self)
+            let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
+            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
+            menuView.isHidden = true
             return menuView
         }()
         view.addSubview(menuView!)
         
-//        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
-//        let request = GADRequest()
-//        request.testDevices = [kGADSimulatorID]
-//        interstitial.load(request)
-//        interstitial.delegate = self
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
+        interstitial.delegate = self
     }
     
     func makeConstraints() {
