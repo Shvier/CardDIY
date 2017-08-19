@@ -184,7 +184,7 @@ class SHHomeViewController: SHBaseViewController {
     }
     
     override func configNavi() {
-        let leftBarItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(self.leftBarItemAction(sender:)))
+        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_left_bar_menu")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
         let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
