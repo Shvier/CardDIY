@@ -132,6 +132,7 @@ class SHEffectViewController: SHBaseViewController {
     func hideMonster() {
         atkTextField?.isHidden = true
         defTextField?.isHidden = true
+        raceView?.isHidden = true
     }
     
     func keyboardWillShow(notification: Notification) {
