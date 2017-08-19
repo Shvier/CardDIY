@@ -26,7 +26,7 @@ class SHBaseViewController: UIViewController {
     
     var navigationTitle: String {
         set {
-            navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: hintLabelFontSize)!]
+            navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: hintLabelFontSize)!, NSForegroundColorAttributeName: UIColor.white]
             navigationItem.title = newValue
         }
         get {
@@ -89,6 +89,7 @@ class SHBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.randomColor(colors: colors)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
         configNavi()
     }
 
@@ -96,4 +97,8 @@ class SHBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+extension SHBaseViewController: UIGestureRecognizerDelegate {
+    
 }
