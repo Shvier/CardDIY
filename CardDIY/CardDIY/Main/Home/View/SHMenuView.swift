@@ -10,7 +10,8 @@ import UIKit
 
 class SHMenuView: SHBaseView {
     
-    let buttonLength: CGFloat = 50
+    let buttonLength: CGFloat = 35
+    let buttonFontSize: CGFloat = 12
     let menuRadius: Double = 150
     let menuButtonCount: NSInteger = 5
     let openAnimationDuration: CFTimeInterval = 0.3
@@ -52,11 +53,20 @@ class SHMenuView: SHBaseView {
         return CGPoint(x: ordinate.x, y: ordinate.y)
     }
     
-    func createButton(image: UIImage, title: String, isEnable: Bool) -> UIButton {
+    func createButton(image: UIImage?, title: String?, isEnable: Bool) -> UIButton {
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 200, y: 200, width: buttonLength, height: buttonLength)
-//        button.setImage(image, for: .normal)
-        button.setTitle(title, for: .normal)
+        if (image != nil) {
+            button.setImage(image, for: .normal)
+        }
+        if (title != nil) {
+            button.setTitle(title, for: .normal)
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: buttonFontSize)
+            button.layer.masksToBounds = true
+            button.layer.cornerRadius = buttonLength/2
+            button.layer.backgroundColor = UIColor(red:0.47, green:0.21, blue:0.98, alpha:1.00).cgColor
+        }
         button.isEnabled = isEnable
         button.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
         return button
@@ -68,15 +78,15 @@ class SHMenuView: SHBaseView {
         effectView.frame = self.bounds
         addSubview(effectView)
         
-        evaluateButton = createButton(image: UIImage(named: "a4")!, title: "去评价", isEnable: true)
+        evaluateButton = createButton(image: UIImage(named: "btn_star")!, title: nil, isEnable: true)
         addSubview(evaluateButton!)
-        recommendButton = createButton(image: UIImage(named: "a4")!, title: "推荐给好友", isEnable: true)
+        recommendButton = createButton(image: UIImage(named: "btn_recommend")!, title: nil, isEnable: true)
         addSubview(recommendButton!)
-        feedbackButton = createButton(image: UIImage(named: "a4")!, title: "反馈", isEnable: true)
+        feedbackButton = createButton(image: UIImage(named: "btn_feedback")!, title: nil, isEnable: true)
         addSubview(feedbackButton!)
-        versionButton = createButton(image: UIImage(named: "a4")!, title: "当前版本", isEnable: false)
+        versionButton = createButton(image: nil, title: "v" + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String), isEnable: false)
         addSubview(versionButton!)
-        aboutButton = createButton(image: UIImage(named: "a4")!, title: "关于", isEnable: true)
+        aboutButton = createButton(image: UIImage(named: "btn_about")!, title: nil, isEnable: true)
         addSubview(aboutButton!)
     }
     
