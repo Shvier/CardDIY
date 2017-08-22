@@ -92,17 +92,17 @@ class SHMenuView: SHBaseView {
     
     func toggle() {
         if isOpen {
-            closeAnimation()
+            dismiss(completion: nil)
             isOpen = false
             isHidden = true
         } else {
-            openAnimation()
+            present(completion: nil)
             isOpen = true
             isHidden = false
         }
     }
     
-    func openAnimation() {
+    func present(completion: (() -> Void)?) {
         let tangent0: Double = tan(0)
         let tangent1 = tan(Double.pi/2/Double(menuButtonCount - 1))
         let tangent2 = tan(Double.pi/2/Double(menuButtonCount - 1)*2)
@@ -120,9 +120,13 @@ class SHMenuView: SHBaseView {
         feedbackButton?.layer.add(SHAnimationGroup.animateView(feedbackButton!, fromPoint: anchorPoint, toPoint: CGPoint(x: anchorPoint.x - ordinate2.x, y: anchorPoint.y - ordinate2.y), duration: openAnimationDuration), forKey: nil)
         versionButton?.layer.add(SHAnimationGroup.animateView(versionButton!, fromPoint: anchorPoint, toPoint: CGPoint(x: anchorPoint.x - ordinate3.x, y: anchorPoint.y - ordinate3.y), duration: openAnimationDuration), forKey: nil)
         aboutButton?.layer.add(SHAnimationGroup.animateView(aboutButton!, fromPoint: anchorPoint, toPoint: CGPoint(x: anchorPoint.x - ordinate4.x, y: anchorPoint.y - ordinate4.y), duration: openAnimationDuration), forKey: nil)
+        
+        if (completion != nil) {
+            completion!()
+        }
     }
     
-    func closeAnimation() {
+    func dismiss(completion: (() -> Void)?) {
         let tangent0: Double = tan(0)
         let tangent1 = tan(Double.pi/2/Double(menuButtonCount - 1))
         let tangent2 = tan(Double.pi/2/Double(menuButtonCount - 1)*2)
@@ -138,8 +142,12 @@ class SHMenuView: SHBaseView {
         evaluateButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: evaluateButton!, fromPoint: CGPoint(x: anchorPoint.x - ordinate0.x, y: anchorPoint.y), toPoint: anchorPoint, duration: closeAnimationDuration), forKey: nil)
         recommendButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: recommendButton!, fromPoint: CGPoint(x: anchorPoint.x - ordinate1.x, y: anchorPoint.y - ordinate1.y), toPoint: anchorPoint, duration: closeAnimationDuration), forKey: nil)
         feedbackButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: feedbackButton!, fromPoint: CGPoint(x: anchorPoint.x - ordinate2.x, y: anchorPoint.y - ordinate2.y), toPoint: anchorPoint, duration: closeAnimationDuration), forKey: nil)
-        versionButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: versionButton!, fromPoint: CGPoint(x: anchorPoint.x - ordinate3.x, y: anchorPoint.y - ordinate3.y), toPoint: anchorPoint, duration: openAnimationDuration), forKey: nil)
+        versionButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: versionButton!, fromPoint: CGPoint(x: anchorPoint.x - ordinate3.x, y: anchorPoint.y - ordinate3.y), toPoint: anchorPoint, duration: closeAnimationDuration), forKey: nil)
         aboutButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: aboutButton!, fromPoint: CGPoint(x: anchorPoint.x, y: anchorPoint.y - ordinate4.y), toPoint: anchorPoint, duration: closeAnimationDuration), forKey: nil)
+        
+        if completion != nil {
+            completion!()
+        }
     }
     
     init(frame: CGRect, anchorPoint: CGPoint, delegate: SHMenuViewDelegate) {

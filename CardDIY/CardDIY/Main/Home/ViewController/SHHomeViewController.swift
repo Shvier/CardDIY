@@ -32,7 +32,8 @@ class SHHomeViewController: SHBaseViewController {
     var menuView: SHMenuView?
     
     func leftBarItemAction(sender: UIBarButtonItem) {
-        menuView?.toggle()
+//        menuView?.toggle()
+        SHMenuWindow.show()
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
@@ -133,13 +134,13 @@ class SHHomeViewController: SHBaseViewController {
         })()
         view.addSubview(bannerView)
         
-        menuView = {
-            let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
-            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
-            menuView.isHidden = true
-            return menuView
-        }()
-        view.addSubview(menuView!)
+//        menuView = {
+//            let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
+//            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
+//            menuView.isHidden = true
+//            return menuView
+//        }()
+//        view.addSubview(menuView!)
         
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
         let request = GADRequest()
