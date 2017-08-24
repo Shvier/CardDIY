@@ -83,7 +83,11 @@ class SHMenuWindow: NSObject {
     
     static let shared = SHMenuWindow()
     
-    var viewController: SHMenuViewController!
+    lazy var viewController: SHMenuViewController = {
+        let menuViewController = SHMenuViewController()
+        menuViewController.delegate = self
+        return menuViewController
+    }()
     var containerWindow: UIWindow!
         
     static func show() {
@@ -95,10 +99,6 @@ class SHMenuWindow: NSObject {
     }
     
     func show() {
-        if viewController == nil {
-            viewController = SHMenuViewController()
-            viewController.delegate = self
-        }
         if containerWindow == nil {
             containerWindow = UIWindow(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
             let naviController = UINavigationController(rootViewController: viewController)
@@ -108,11 +108,10 @@ class SHMenuWindow: NSObject {
     }
     
     func hide() {
-        if containerWindow == nil || viewController == nil{
+        if containerWindow == nil {
             return
         }
         containerWindow.isHidden = true
-        viewController = nil
     }
 
 }

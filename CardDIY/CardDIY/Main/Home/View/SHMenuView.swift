@@ -122,7 +122,9 @@ class SHMenuView: SHBaseView {
         aboutButton?.layer.add(SHAnimationGroup.animateView(aboutButton!, fromPoint: anchorPoint, toPoint: CGPoint(x: anchorPoint.x - ordinate4.x, y: anchorPoint.y - ordinate4.y), duration: openAnimationDuration), forKey: nil)
         
         if (completion != nil) {
-            completion!()
+            DispatchQueue.main.asyncAfter(deadline: .now() + openAnimationDuration, execute: {
+                completion!()
+            })
         }
     }
     
@@ -146,7 +148,9 @@ class SHMenuView: SHBaseView {
         aboutButton?.layer.add(SHAnimationGroup.reversingAnimateView(view: aboutButton!, fromPoint: CGPoint(x: anchorPoint.x, y: anchorPoint.y - ordinate4.y), toPoint: anchorPoint, duration: closeAnimationDuration), forKey: nil)
         
         if completion != nil {
-            completion!()
+            DispatchQueue.main.asyncAfter(deadline: .now() + closeAnimationDuration, execute: { 
+                completion!()
+            })
         }
     }
     
