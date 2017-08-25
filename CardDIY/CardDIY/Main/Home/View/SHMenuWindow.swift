@@ -81,39 +81,28 @@ extension SHMenuViewController: SHMenuViewDelegate {
 
 class SHMenuWindow: NSObject {
     
-    static let shared = SHMenuWindow()
-    
-    lazy var viewController: SHMenuViewController = {
-        let menuViewController = SHMenuViewController()
-        menuViewController.delegate = self
-        return menuViewController
-    }()
+    var viewController: SHMenuViewController!
     var containerWindow: UIWindow!
         
-    static func show() {
-        shared.show()
-    }
-    
-    static func hide() {
-        shared.hide()
+    static func show() -> SHMenuWindow {
+        let menuWindow = SHMenuWindow()
+        menuWindow.show()
+        return menuWindow
     }
     
     func show() {
-        if containerWindow == nil {
-            containerWindow = UIWindow(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
-            let naviController = UINavigationController(rootViewController: viewController)
-            containerWindow.rootViewController = naviController
-        }
+        viewController = SHMenuViewController()
+        viewController.delegate = self
+        containerWindow = UIWindow(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight))
+        let naviController = UINavigationController(rootViewController: viewController)
+        containerWindow.rootViewController = naviController
         containerWindow.isHidden = false;
     }
     
     func hide() {
-        if containerWindow == nil {
-            return
-        }
         containerWindow.isHidden = true
     }
-
+    
 }
 
 extension SHMenuWindow: SHMenuViewControllerDelegate {

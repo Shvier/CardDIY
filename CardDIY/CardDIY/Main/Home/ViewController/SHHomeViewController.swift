@@ -18,6 +18,10 @@ class SHHomeViewController: SHBaseViewController {
         return ["b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7"]
     }()
     
+    lazy var menuWindow: SHMenuWindow = {
+        return SHMenuWindow()
+    }()
+    
     var backgroundImageView: UIImageView?
     var hintLabel: UILabel?
     var cardMadeView: UICollectionView?
@@ -33,7 +37,7 @@ class SHHomeViewController: SHBaseViewController {
     
     func leftBarItemAction(sender: UIBarButtonItem) {
 //        menuView?.toggle()
-        SHMenuWindow.show()
+        menuWindow.show()
     }
     
     func rightBarItemAction(sender: UIBarButtonItem) {
