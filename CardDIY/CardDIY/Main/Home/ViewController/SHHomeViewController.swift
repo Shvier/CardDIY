@@ -36,7 +36,6 @@ class SHHomeViewController: SHBaseViewController {
     var menuView: SHMenuView?
     
     func leftBarItemAction(sender: UIBarButtonItem) {
-//        menuView?.toggle()
         menuWindow.show()
     }
     
@@ -189,7 +188,7 @@ class SHHomeViewController: SHBaseViewController {
     }
     
     override func configNavi() {
-        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_left_bar_menu")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(sender:)))
+        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_left_bar_menu_visible")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
         let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem

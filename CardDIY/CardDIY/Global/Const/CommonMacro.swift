@@ -20,7 +20,8 @@ let iPhone6PHeight: CGFloat = 736
 
 let UMAppKey = "59673662717c1903a50001eb"
 let AdMobID = "ca-app-pub-7779776531531575~7426958844"
-let AppUrl = ""
+let AppStoreURL = ""
+let FeedbackEmail = "Shvier@icloud.com"
 
 let NormalMonsterColor  = UIColor(red:0.68, green:0.55, blue:0.38, alpha:1.00)
 let EffectMonsterColor  = UIColor(red:0.68, green:0.37, blue:0.25, alpha:1.00)

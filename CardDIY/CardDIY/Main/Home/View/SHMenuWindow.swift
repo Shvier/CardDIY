@@ -36,7 +36,7 @@ class SHMenuViewController: UIViewController {
     }
     
     func configNavi() {
-        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_left_bar_menu")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(sender:)))
+        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_left_bar_menu_invisible")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
         
         navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
@@ -58,7 +58,7 @@ class SHMenuViewController: UIViewController {
 extension SHMenuViewController: SHMenuViewDelegate {
     
     func menuViewDidEvaluateButtonClicked(_ menuView: SHMenuView) {
-        
+        UIApplication.shared.openURL(URL(string: AppStoreURL)!)
     }
     
     func menuViewDidRecommendButtonClicked(_ menuView: SHMenuView) {
@@ -66,7 +66,9 @@ extension SHMenuViewController: SHMenuViewDelegate {
     }
     
     func menuViewDidFeedbackButtonClicked(_ menuView: SHMenuView) {
-        
+        let subject = "Feedback"
+        let url = URL(string: "mailto:\(FeedbackEmail)?subject=\(subject)")
+        UIApplication.shared.openURL(url!)
     }
     
     func menuViewDidVersionButtonClicked(_ menuView: SHMenuView) {
