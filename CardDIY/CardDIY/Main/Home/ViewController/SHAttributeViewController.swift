@@ -63,7 +63,7 @@ class SHAttributeViewController: SHBaseViewController {
     
     var selectedAttribute: String = "a0"
     
-    override func rightBarItem(barItem: UIBarButtonItem) {
+    override func rightBarItemAction(sender: UIBarButtonItem) {
         monsterLevelView?.hideLevel()
         SHYGOConfiguration.shared.attribute = selectedAttribute
         let effectVC = SHEffectViewController()

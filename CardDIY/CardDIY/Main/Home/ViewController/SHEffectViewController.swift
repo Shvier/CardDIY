@@ -99,7 +99,7 @@ class SHEffectViewController: SHBaseViewController {
         defTextField?.resignFirstResponder()
     }
     
-    func rightBarItemAction(sender: UIBarButtonItem) {
+    override func rightBarItemAction(sender: UIBarButtonItem) {
         if nameTextField?.text == "" {
             nameTextField?.isHidden = true
         }
@@ -154,7 +154,7 @@ class SHEffectViewController: SHBaseViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.white
-        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
+        let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
         navigationTitle = "请填写卡牌内容"
         

@@ -39,7 +39,7 @@ class SHHomeViewController: SHBaseViewController {
         menuWindow.show()
     }
     
-    func rightBarItemAction(sender: UIBarButtonItem) {
+    override func rightBarItemAction(sender: UIBarButtonItem) {
         if selectedIndex <= 5 && selectedIndex >= 2 {
             let alertController = UIAlertController(title: "选择了怪兽卡", message: "是否拥有效果", preferredStyle: .alert)
             let nopeAction = UIAlertAction(title: "没有", style: .default, handler: { (UIAlertAction) in
@@ -190,7 +190,7 @@ class SHHomeViewController: SHBaseViewController {
     override func configNavi() {
         let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_left_bar_menu_visible")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
-        let rightBarItem = UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(self.rightBarItemAction(sender:)))
+        let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
         
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.white]
