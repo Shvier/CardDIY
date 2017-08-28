@@ -19,7 +19,11 @@ let iPhone6Height: CGFloat = 667
 let iPhone6PHeight: CGFloat = 736
 
 let UMAppKey = "59673662717c1903a50001eb"
-let AdMobID = "ca-app-pub-7779776531531575~7426958844"
+let AdMobLaunchID = "ca-app-pub-7779776531531575/8390171246"
+let AdMobBannerHomeID = "ca-app-pub-7779776531531575/4587247709"
+let AdMobBannerAttributeID = "ca-app-pub-7779776531531575/5708757688"
+let AdMobBannerEffectID = "ca-app-pub-7779776531531575/9759683338"
+let AdMobBannerAvatarID = "ca-app-pub-7779776531531575/7451771118"
 let AppStoreURL = ""
 let FeedbackEmail = "Shvier@icloud.com"
 

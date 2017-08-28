@@ -128,7 +128,7 @@ class SHHomeViewController: SHBaseViewController {
         
         bannerView = ({
             let view = GADBannerView()
-            view.adUnitID = "ca-app-pub-7779776531531575/8669372844"
+            view.adUnitID = AdMobBannerHomeID
             view.rootViewController = self
             let request = GADRequest()
             request.testDevices = [kGADSimulatorID]
@@ -145,7 +145,7 @@ class SHHomeViewController: SHBaseViewController {
 //        }()
 //        view.addSubview(menuView!)
         
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-7779776531531575/8390171246")
+        interstitial = GADInterstitial(adUnitID: AdMobLaunchID)
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
         interstitial.load(request)
