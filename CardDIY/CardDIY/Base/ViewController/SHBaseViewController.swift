@@ -80,7 +80,7 @@ class SHBaseViewController: UIViewController {
     }
     
     func configNavi() {
-        let leftBarItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(leftBarItem(barItem:)))
+        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_cancel")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItem(barItem:)))
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.leftBarButtonItem = leftBarItem
         navigationItem.rightBarButtonItem = rightBarItem
