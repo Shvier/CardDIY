@@ -14,7 +14,31 @@ class SHYGORaceView: SHBaseView {
     let buttonLengthForiPhone4: CGFloat = 20
     
     lazy var races: [String] = {
-        return ["aqua", "beast", "beast_warrior", "creator_god", "cyverse", "dinosaur", "divine_beast", "dragon", "fairy", "fiend", "fish", "insect", "machine", "plant", "psychic", "pyro", "reptile", "rock", "sea_serpent", "spellcaster", "thunder", "warrior", "winged_beast", "wyrm", "zombie"]
+        return ["aqua",
+                "beast",
+                "beast_warrior",
+//                "creator_god",
+//                "cyberse",
+                "dinosaur",
+                "divine_beast",
+                "dragon",
+                "fairy",
+                "fiend",
+                "fish",
+                "insect",
+                "machine",
+                "plant",
+                "psychic",
+                "pyro",
+                "reptile",
+                "rock",
+                "sea_serpent",
+                "spellcaster",
+                "thunder",
+                "warrior",
+                "winged_beast",
+//                "wyrm",
+                "zombie"]
     }()
     
     var collectionView: UICollectionView?
