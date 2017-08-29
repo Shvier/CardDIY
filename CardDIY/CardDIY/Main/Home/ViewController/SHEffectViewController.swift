@@ -78,7 +78,31 @@ class SHEffectViewController: SHBaseViewController {
     let raceViewHeightForiPhone4: CGFloat = 70*offsetRatio
     
     lazy var raceStrings: [String] = {
-        return ["水族", "兽族", "兽战士族", "创造神族", "Cyverse", "恐龙族", "幻神兽族", "龙族", "天使族", "恶魔族", "鱼族", "昆虫族", "机械组", "植物组", "念动力族", "炎族", "爬虫族", "岩石族", "海龙族", "魔法师族", "雷族", "战士族", "鸟兽族", "幻龙族", "不死族"]
+        return [LocalizedString(key: "Aqua"),
+                LocalizedString(key: "Beast"),
+                LocalizedString(key: "Beast-Warrior"),
+//              LocalizedString(key: "Creator-God"),
+//              LocalizedString(key: "Cyberse"),
+                LocalizedString(key: "Dinosaur"),
+                LocalizedString(key: "Divine-Beast"),
+                LocalizedString(key: "Dragon"),
+                LocalizedString(key: "Fairy"),
+                LocalizedString(key: "Fiend"),
+                LocalizedString(key: "Fish"),
+                LocalizedString(key: "Insect"),
+                LocalizedString(key: "Machine"),
+                LocalizedString(key: "Plant"),
+                LocalizedString(key: "Psychic"),
+                LocalizedString(key: "Pyro"),
+                LocalizedString(key: "Reptile"),
+                LocalizedString(key: "Rock"),
+                LocalizedString(key: "Sea-Serpent"),
+                LocalizedString(key: "Spellcaster"),
+                LocalizedString(key: "Thunder"),
+                LocalizedString(key: "Warrior"),
+                LocalizedString(key: "Winged-Beast"),
+//              LocalizedString(key: "Wyrm"),
+                LocalizedString(key: "Zombie")]
     }()
     
     var cardImage: UIImage?
@@ -155,7 +179,7 @@ class SHEffectViewController: SHBaseViewController {
     func initUI() {
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
-        navigationTitle = "请填写卡牌内容"
+        navigationTitle = LocalizedString(key: "Please Fill Informations of Card")
         
         cardContentView = ({
             let view = UIView()
@@ -173,7 +197,7 @@ class SHEffectViewController: SHBaseViewController {
         nameTextField = ({
             let textField = SHTextField()
             textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
-            textField.placeholder = "点击编辑"
+            textField.placeholder = LocalizedString(key: "Tap to Edit")
             textField.tintColor = UIColor.clear
             return textField
         })()
@@ -208,7 +232,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
             textField.keyboardType = .numberPad
             textField.textAlignment = .left
-            textField.placeholder = "编辑"
+            textField.placeholder = LocalizedString(key: "Edit")
             textField.delegate = self
             textField.tintColor = UIColor.clear
             return textField
@@ -220,7 +244,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.font = UIFont(name: NumberFontFamily, size: NumberFontSize)
             textField.keyboardType = .numberPad
             textField.textAlignment = .left
-            textField.placeholder = "编辑"
+            textField.placeholder = LocalizedString(key: "Edit")
             textField.delegate = self
             textField.tintColor = UIColor.clear
             return textField
@@ -471,18 +495,18 @@ extension SHEffectViewController: SHYGORaceViewDelegate {
                 race += "】"
                 break
             case "b1":
-                race += "·效果】"
+                race += "·" + LocalizedString(key: "Effect") + "】"
             case "b2":
-                race += "/仪式/效果】"
+                race += "/" + LocalizedString(key: "Ritual") + "/" + LocalizedString(key: "Effect") + "】"
                 break
             case "b3":
-                race += "/融合/效果】"
+                race += "/" + LocalizedString(key: "Fusion") + "/" + LocalizedString(key: "Effect") + "】"
                 break
             case "b4":
-                race += "·同调/效果】"
+                race +=  "/" + LocalizedString(key: "Synchro") + "/" + LocalizedString(key: "Effect") + "】"
                 break
             case "b5":
-                race += "·超量/效果】"
+                race +=  "/" + LocalizedString(key: "Xyz") + "/" + LocalizedString(key: "Effect") + "】"
                 break
             default:
                 break
@@ -493,18 +517,18 @@ extension SHEffectViewController: SHYGORaceViewDelegate {
                 race += "】"
                 break
             case "b1":
-                race += "·效果】"
+                race += "·" + LocalizedString(key: "Effect") + "】"
             case "b2":
-                race += "/仪式】"
+                race += "/" + LocalizedString(key: "Ritual") + "】"
                 break
             case "b3":
-                race += "/融合】"
+                race += "/" + LocalizedString(key: "Fusion") + "】"
                 break
             case "b4":
-                race += "·同调】"
+                race += "/" + LocalizedString(key: "Synchro") + "】"
                 break
             case "b5":
-                race += "·超量】"
+                race += "/" + LocalizedString(key: "Xyz") + "】"
                 break
             default:
                 break

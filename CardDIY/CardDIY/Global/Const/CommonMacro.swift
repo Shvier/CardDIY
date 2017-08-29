@@ -51,3 +51,7 @@ func IsiPhone6() -> Bool {
 func IsiPhone6P() -> Bool {
     return ScreenHeight == iPhone6PHeight
 }
+
+func LocalizedString(key: String) -> String {
+    return Bundle.main.localizedString(forKey: key, value: "", table: nil)
+}

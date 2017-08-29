@@ -122,7 +122,7 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func initUI() {
-        navigationTitle = "请补充卡牌信息"
+        navigationTitle = LocalizedString(key: "Please Fill Blanks of Card")
         
         cardContentView = ({
             let view = UIView()

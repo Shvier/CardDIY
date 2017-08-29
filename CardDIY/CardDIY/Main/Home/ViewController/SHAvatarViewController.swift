@@ -48,15 +48,15 @@ class SHAvatarViewController: SHBaseViewController {
             present(imagePickerController, animated: true, completion: nil)
             UIApplication.shared.setStatusBarStyle(.default, animated: false)
         } else {
-            let alertController = UIAlertController(title: "提示", message: "请开启相册访问权限", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "去设置", style: .default, handler: { (action) in
+            let alertController = UIAlertController(title: LocalizedString(key: "Hint"), message: LocalizedString(key: "Please Allow the Access to Album"), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: LocalizedString(key: "Setting"), style: .default, handler: { (action) in
                 let url = URL(string: UIApplicationOpenSettingsURLString)
                 if UIApplication.shared.canOpenURL(url!) {
                     let url = URL(string: UIApplicationOpenSettingsURLString)
                     UIApplication.shared.openURL(url!)
                 }
             })
-            let cancelAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+            let cancelAction = UIAlertAction(title: LocalizedString(key: "Cancel"), style: .default, handler: nil)
             alertController.addAction(okAction)
             alertController.addAction(cancelAction)
             present(alertController, animated: true, completion: nil)
@@ -84,7 +84,7 @@ class SHAvatarViewController: SHBaseViewController {
     }
     
     func initUI() {
-        navigationTitle = "请挑选卡牌图案"
+        navigationTitle = LocalizedString(key: "Please Set Picture of Card")
         
         cardContentView = ({
             let view = UIView()

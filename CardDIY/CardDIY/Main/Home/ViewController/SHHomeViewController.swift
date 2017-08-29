@@ -41,12 +41,12 @@ class SHHomeViewController: SHBaseViewController {
     
     override func rightBarItemAction(sender: UIBarButtonItem) {
         if selectedIndex <= 5 && selectedIndex >= 2 {
-            let alertController = UIAlertController(title: "选择了怪兽卡", message: "是否拥有效果", preferredStyle: .alert)
-            let nopeAction = UIAlertAction(title: "没有", style: .default, handler: { (UIAlertAction) in
+            let alertController = UIAlertController(title: LocalizedString(key: "Monster Card Selected"), message: LocalizedString(key: "Has effections?"), preferredStyle: .alert)
+            let nopeAction = UIAlertAction(title: LocalizedString(key: "No"), style: .default, handler: { (UIAlertAction) in
                 SHYGOConfiguration.shared.hasEffect = false
                 self.pushNextController()
             })
-            let okAction = UIAlertAction(title: "有", style: .default, handler: { (UIAlertAction) in
+            let okAction = UIAlertAction(title: LocalizedString(key: "Yes"), style: .default, handler: { (UIAlertAction) in
                 SHYGOConfiguration.shared.hasEffect = true
                 self.pushNextController()
             })
@@ -119,7 +119,7 @@ class SHHomeViewController: SHBaseViewController {
         
         hintLabel = ({
             let label = UILabel()
-            label.text = "请选择卡牌类型"
+            label.text = LocalizedString(key: "Please Select a Type of Card")
             label.textColor = UIColor.white
             label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
@@ -194,7 +194,7 @@ class SHHomeViewController: SHBaseViewController {
         navigationItem.rightBarButtonItem = rightBarItem
         
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.white]
-        navigationItem.title = Bundle.main.localizedString(forKey: "YGO", value: "", table: nil)
+        navigationItem.title = LocalizedString(key: "YuGiOh")
     }
     
     override func viewWillAppear(_ animated: Bool) {

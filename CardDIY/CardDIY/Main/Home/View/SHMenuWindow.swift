@@ -66,7 +66,7 @@ extension SHMenuViewController: SHMenuViewDelegate {
     }
     
     func menuViewDidFeedbackButtonClicked(_ menuView: SHMenuView) {
-        let subject = "Feedback"
+        let subject = LocalizedString(key: "Feedback")
         let url = URL(string: "mailto:\(FeedbackEmail)?subject=\(subject)")
         UIApplication.shared.openURL(url!)
     }
