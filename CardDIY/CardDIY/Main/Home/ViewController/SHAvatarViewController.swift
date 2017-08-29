@@ -71,6 +71,10 @@ class SHAvatarViewController: SHBaseViewController {
         }
     }
     
+    func leftBarItemAction(barItem: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func saveBarItemAction(sender: UIBarButtonItem) {
         UIImageWriteToSavedPhotosAlbum((cardContentView?.currentImage())!, self, #selector(imageDidFinishSaving(image:error:contextInfo:)), nil)
     }
@@ -103,6 +107,14 @@ class SHAvatarViewController: SHBaseViewController {
             return imageView
         })()
         cardContentView!.addSubview(avatarImageView!)
+    }
+    
+    override func configNavi() {
+        let leftBarItem = UIBarButtonItem(image: UIImage(named: "btn_cancel")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(leftBarItemAction(barItem:)))
+        navigationItem.leftBarButtonItem = leftBarItem
+        let shareBarItem = UIBarButtonItem(image: UIImage(named: "btn_share_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(shareBarItemAction(sender:)))
+        let saveBarItem = UIBarButtonItem(image: UIImage(named: "btn_save_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(saveBarItemAction(sender:)))
+        navigationItem.rightBarButtonItems = [shareBarItem, saveBarItem]
     }
     
     func makeConstraints() {
@@ -141,6 +153,7 @@ class SHAvatarViewController: SHBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        configNavi()
         initUI()
         makeConstraints()
     }
