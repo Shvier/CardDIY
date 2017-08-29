@@ -6,6 +6,51 @@
   Copyright © 2017 Shvier. All rights reserved.
 */
 
-"YuGiOh" = "游戏王";
-"Yes" = "有";
-"No" = "没有";
+"YuGiOh"                            = "游戏王";
+// Hint
+"Yes"                               = "有";
+"No"                                = "没有";
+"Monster Card Selected"             = "选择了怪兽卡";
+"Has effections?"                   = "是否拥有效果?";
+"Please Select a Type of Card"      = "请选择卡牌类型";
+"Please Fill Blanks of Card"        = "请补充卡牌信息";
+"Please Fill Informations of Card"  = "请填写卡牌信息";
+"Please Allow the Access to Album"  = "请开启相册访问权限";
+"Please Set Picture of Card"        = "请挑选卡牌图案";
+"Tap to Edit"                       = "点击编辑";
+"Edit"                              = "编辑";
+"Hint"                              = "提示";
+"Setting"                           = "设置";
+"Cancel"                            = "取消";
+"Feeback"                           = "反馈";
+// Race
+"Aqua"                              = "水族";
+"Beast"                             = "兽族";
+"Beast-Warrior"                     = "兽战士族";
+"Creator-God"                       = "创造神族";
+"Dinosaur"                          = "恐龙族";
+"Divine-Beast"                      = "幻兽神族";
+"Dragon"                            = "龙族";
+"Fairy"                             = "天使族";
+"Fiend"                             = "恶魔族";
+"Fish"                              = "鱼族";
+"Insect"                            = "昆虫族";
+"Machine"                           = "机械族";
+"Plant"                             = "植物族";
+"Psychic"                           = "念动力族";
+"Pyro"                              = "炎族";
+"Reptile"                           = "爬虫族";
+"Rock"                              = "岩石族";
+"Sea-Serpent"                       = "海龙族";
+"Spellcaster"                       = "魔法师族";
+"Thunder"                           = "雷族";
+"Warrior"                           = "战士族";
+"Winged-Beast"                      = "鸟兽族";
+"Wyrm"                              = "幻龙族";
+"Zombie"                            = "不死族";
+// Type
+"Effect"                            = "效果";
+"Ritual"                            = "仪式";
+"Fusion"                            = "融合";
+"Synchro"                           = "同调";
+"Xyz"                               = "超量";

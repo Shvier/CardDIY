@@ -6,6 +6,51 @@
   Copyright © 2017 Shvier. All rights reserved.
 */
 
-"YuGiOh" = "ゲーム王";
-"Yes" = "ある";
-"No" = "ない";
+"YuGiOh"                            = "ゲーム王";
+// Hint
+"Yes"                               = "ある";
+"No"                                = "ない";
+"Monster Card Selected"             = "モンスターカードを選ぶ";
+"Has effections?"                   = "効果があるかどうか?";
+"Please Select a Type of Card"      = "カードの種類を選択してください";
+"Please Fill Blanks of Card"        = "カード情報を追加してください";
+"Please Fill Informations of Card"  = "カード情報を記入してください";
+"Please Allow the Access to Album"  = "アルバムへのアクセスを開いてください";
+"Please Set Picture of Card"        = "カードのパターンを選んでください";
+"Tap to Edit"                       = "編集をクリックします";
+"Edit"                              = "編集";
+"Hint"                              = "ヒント";
+"Setting"                           = "セットアップ";
+"Cancel"                            = "キャンセル";
+"Feeback"                           = "フィードバック";
+// Race
+"Aqua"                              = "水族";
+"Beast"                             = "獣族";
+"Beast-Warrior"                     = "獣戦士族";
+"Creator-God"                       = "創造神族";
+"Dinosaur"                          = "恐竜族";
+"Divine-Beast"                      = "幻神獣族";
+"Dragon"                            = "竜族";
+"Fairy"                             = "天使族";
+"Fiend"                             = "悪魔族";
+"Fish"                              = "魚族";
+"Insect"                            = "昆虫族";
+"Machine"                           = "機械族";
+"Plant"                             = "植物族";
+"Psychic"                           = "サイキック族";
+"Pyro"                              = "爬虫類族";
+"Reptile"                           = "炎族";
+"Rock"                              = "岩石族";
+"Sea-Serpent"                       = "海竜族";
+"Spellcaster"                       = "魔法使い族";
+"Thunder"                           = "雷族";
+"Warrior"                           = "戦士族";
+"Winged-Beast"                      = "鳥獣族";
+"Wyrm"                              = "幻竜族";
+"Zombie"                            = "アンデット族";
+// Type
+"Effect"                            = "効果";
+"Ritual"                            = "儀式";
+"Fusion"                            = "ゆうごう";
+"Synchro"                           = "シンクロ";
+"Xyz"                               = "エクシーズ";
