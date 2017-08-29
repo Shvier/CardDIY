@@ -46,6 +46,7 @@ class SHAvatarViewController: SHBaseViewController {
             imagePickerController.delegate = self
             imagePickerController.allowsEditing = false
             present(imagePickerController, animated: true, completion: nil)
+            UIApplication.shared.setStatusBarStyle(.default, animated: false)
         } else {
             let alertController = UIAlertController(title: "提示", message: "请开启相册访问权限", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "去设置", style: .default, handler: { (action) in
@@ -171,6 +172,7 @@ extension SHAvatarViewController: TOCropViewControllerDelegate {
     
     func cropViewController(_ cropViewController: TOCropViewController, didCropToImage image: UIImage, rect cropRect: CGRect, angle: Int) {
         cropViewController.dismiss(animated: true, completion: {
+            UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
             self.avatarImageView?.image = image
         })
     }

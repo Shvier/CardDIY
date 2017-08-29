@@ -58,6 +58,7 @@ class SHBaseViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
         navigationController?.navigationBar.shadowImage = UIImage()
+        UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
 //        animateOperation = BlockOperation(block: { [unowned self] in
 //            self.animateLayer()
 //        })
