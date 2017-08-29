@@ -13,22 +13,22 @@ target ‘CardDIY’ do
    pod 'MMPopupView'
 
    # UMeng
-   pod ‘UMengUShare/Social/ReducedWeChat'
-   pod ‘UMengUShare/Social/ReducedQQ'
-   pod ‘UMengUShare/Social/ReducedSina'
-   pod ‘UMengUShare/Social/Douban'
-   pod ‘UMengUShare/Social/Facebook'
-   pod ‘UMengUShare/Social/Twitter'
-   pod ‘UMengUShare/Social/Tumblr'
-   pod ‘UMengUShare/Social/Instagram'
-   pod ‘UMengUShare/Social/Line'
-   pod ‘UMengUShare/Social/WhatsApp'
-   pod ‘UMengUShare/Social/GooglePlus'
-   pod ‘UMengUShare/Social/DropBox'
-   pod ‘UMengUShare/Plugin/IDFA'
+   #pod ‘UMengUShare/Social/ReducedWeChat'
+   #pod ‘UMengUShare/Social/ReducedQQ'
+   #pod ‘UMengUShare/Social/ReducedSina'
+   #pod ‘UMengUShare/Social/Douban'
+   #pod ‘UMengUShare/Social/Facebook'
+   #pod ‘UMengUShare/Social/Twitter'
+   #pod ‘UMengUShare/Social/Tumblr'
+   #pod ‘UMengUShare/Social/Instagram'
+   #pod ‘UMengUShare/Social/Line'
+   #pod ‘UMengUShare/Social/WhatsApp'
+   #pod ‘UMengUShare/Social/GooglePlus'
+   #pod ‘UMengUShare/Social/DropBox'
+   #pod ‘UMengUShare/Plugin/IDFA'
 
    # ADMob
-   pod 'Firebase/Core'
-   pod 'Firebase/AdMob'
+   #pod 'Firebase/Core'
+   #pod 'Firebase/AdMob'
 
 end

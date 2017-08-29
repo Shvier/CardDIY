@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import GoogleMobileAds
+//import GoogleMobileAds
 
 class SHHomeViewController: SHBaseViewController {
     
@@ -30,8 +30,8 @@ class SHHomeViewController: SHBaseViewController {
 //    var whirlpoolView: SHWhirlpoolView!
     var gradientLayer: CAGradientLayer!
     
-    var bannerView: GADBannerView!
-    var interstitial: GADInterstitial!
+//    var bannerView: GADBannerView!
+//    var interstitial: GADInterstitial!
     
     var menuView: SHMenuView?
     
@@ -237,13 +237,13 @@ extension SHHomeViewController: SHYGOFlowLayoutDelegate {
     
 }
 
-extension SHHomeViewController: GADInterstitialDelegate {
-    
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        ad.present(fromRootViewController: self)
-    }
-    
-}
+//extension SHHomeViewController: GADInterstitialDelegate {
+//    
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//        ad.present(fromRootViewController: self)
+//    }
+//    
+//}
 
 extension SHHomeViewController: SHMenuViewDelegate {
     

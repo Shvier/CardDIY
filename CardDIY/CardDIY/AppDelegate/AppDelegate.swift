@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        setupUMSocial()
+//        setupUMSocial()
 //        setupFirebase()
 //        GADMobileAds.configure(withApplicationID: "ca-app-pub-7779776531531575~7426958844")
         
@@ -54,18 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        let result = UMSocialManager.default().handleOpen(url)
-        return result
-    }
+//    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+//        let result = UMSocialManager.default().handleOpen(url)
+//        return result
+//    }
     
-    func setupUMSocial() {
-        UMSocialManager.default().openLog(true)
-        UMSocialManager.default().umSocialAppkey = UMAppKey
-    }
-    
-    func setupFirebase() {
-        FirebaseApp.configure()
-    }
+//    func setupUMSocial() {
+//        UMSocialManager.default().openLog(true)
+//        UMSocialManager.default().umSocialAppkey = UMAppKey
+//    }
+//    
+//    func setupFirebase() {
+//        FirebaseApp.configure()
+//    }
 
 }
