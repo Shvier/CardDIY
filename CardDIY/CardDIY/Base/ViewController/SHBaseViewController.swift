@@ -11,7 +11,7 @@ import SnapKit
 
 class SHBaseViewController: UIViewController {
     
-    let animateLayerDuration: TimeInterval = 3.5
+    let animateLayerDuration: TimeInterval = 0.5
     let colors: [UIColor] = [NormalMonsterColor,
                              EffectMonsterColor,
                              RitualMonsterColor,
@@ -23,6 +23,7 @@ class SHBaseViewController: UIViewController {
     
     var nextColor: UIColor!
     var animateOperation: Operation!
+    var operationQueue: OperationQueue!
     
     var navigationTitle: String {
         set {
@@ -57,18 +58,18 @@ class SHBaseViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.sh_setBackgroundColor(UIColor.clear)
         navigationController?.navigationBar.shadowImage = UIImage()
-        animateOperation = BlockOperation(block: {
-            self.animateLayer()
-        })
-        let queue = OperationQueue()
-        queue.addOperation(animateOperation)
+//        animateOperation = BlockOperation(block: { [unowned self] in
+//            self.animateLayer()
+//        })
+//        operationQueue = OperationQueue()
+//        operationQueue.addOperation(animateOperation)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.sh_reset()
-        animateOperation.cancel()
-        animateOperation = nil
+//        animateOperation.cancel()
+//        operationQueue.cancelAllOperations()
     }
     
     func leftBarItem(barItem: UIBarButtonItem) {
@@ -88,13 +89,18 @@ class SHBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.randomColor(colors: colors)
+//        view.backgroundColor = UIColor.randomColor(colors: colors)
+        view.backgroundColor = UIColor.black
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         configNavi()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    deinit {
+        print("deinit")
     }
 
 }

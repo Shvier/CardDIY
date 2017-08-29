@@ -122,7 +122,6 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func initUI() {
-        view.backgroundColor = UIColor.white
         navigationTitle = "请补充卡牌信息"
         
         cardContentView = ({

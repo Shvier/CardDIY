@@ -153,7 +153,6 @@ class SHEffectViewController: SHBaseViewController {
     }
     
     func initUI() {
-        view.backgroundColor = UIColor.white
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
         navigationTitle = "请填写卡牌内容"
