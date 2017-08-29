@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        setupFirebase()
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-7779776531531575~7426958844")
+        setupUMSocial()
+//        setupFirebase()
+//        GADMobileAds.configure(withApplicationID: "ca-app-pub-7779776531531575~7426958844")
         
         let homeViewController = SHHomeViewController()
         let naviViewController = UINavigationController(rootViewController: homeViewController)

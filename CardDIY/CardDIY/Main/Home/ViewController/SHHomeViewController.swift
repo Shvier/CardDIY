@@ -126,16 +126,16 @@ class SHHomeViewController: SHBaseViewController {
         })()
         view.addSubview(hintLabel!)
         
-        bannerView = ({
-            let view = GADBannerView()
-            view.adUnitID = AdMobBannerHomeID
-            view.rootViewController = self
-            let request = GADRequest()
-            request.testDevices = [kGADSimulatorID]
-            view.load(request)
-            return view
-        })()
-        view.addSubview(bannerView)
+//        bannerView = ({
+//            let view = GADBannerView()
+//            view.adUnitID = AdMobBannerHomeID
+//            view.rootViewController = self
+//            let request = GADRequest()
+//            request.testDevices = [kGADSimulatorID]
+//            view.load(request)
+//            return view
+//        })()
+//        view.addSubview(bannerView)
         
 //        menuView = {
 //            let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
@@ -145,11 +145,11 @@ class SHHomeViewController: SHBaseViewController {
 //        }()
 //        view.addSubview(menuView!)
         
-        interstitial = GADInterstitial(adUnitID: AdMobLaunchID)
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        interstitial.load(request)
-        interstitial.delegate = self
+//        interstitial = GADInterstitial(adUnitID: AdMobLaunchID)
+//        let request = GADRequest()
+//        request.testDevices = [kGADSimulatorID]
+//        interstitial.load(request)
+//        interstitial.delegate = self
     }
     
     func makeConstraints() {
@@ -181,10 +181,10 @@ class SHHomeViewController: SHBaseViewController {
             }
         })
         
-        bannerView.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalTo(view)
-            make.height.equalTo(80)
-        }
+//        bannerView.snp.makeConstraints { (make) in
+//            make.left.right.bottom.equalTo(view)
+//            make.height.equalTo(80)
+//        }
     }
     
     override func configNavi() {
