@@ -76,5 +76,13 @@ class SHYGOConfiguration: NSObject {
     func isTrap() -> Bool {
         return type! == "b7"
     }
+    
+    func wordFontFamily() -> String {
+        if Locale.preferredLanguages.first! == "ja" {
+            return "PingFangSC-Semibold"
+        } else {
+            return WordFontFamily
+        }
+    }
 
 }

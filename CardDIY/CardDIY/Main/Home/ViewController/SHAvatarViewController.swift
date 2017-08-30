@@ -26,6 +26,7 @@ class SHAvatarViewController: SHBaseViewController {
     let avatarImageViewWidthForiPhone4: CGFloat = 143
     let avatarImageViewHeightForiPhone4: CGFloat = 147
     
+    var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
@@ -89,7 +90,16 @@ class SHAvatarViewController: SHBaseViewController {
     }
     
     func initUI() {
-        navigationTitle = LocalizedString(key: "Please Set Picture of Card")
+        navigationTitle = LocalizedString(key: "YuGiOh")
+        
+        hintLabel = ({
+            let label = UILabel()
+            label.text = LocalizedString(key: "Please Set Picture of Card")
+            label.textColor = UIColor.white
+            label.font = UIFont(name: SHYGOConfiguration.shared.wordFontFamily(), size: hintLabelFontSize)
+            return label
+        })()
+        view.addSubview(hintLabel!)
         
         cardContentView = ({
             let view = UIView()
@@ -123,6 +133,15 @@ class SHAvatarViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
+        hintLabel?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            if IsiPhone4() {
+                make.bottom.equalTo(cardContentView!.snp.top).offset(hintLabelBottomMarginForiPhone4)
+            } else {
+                make.bottom.equalTo(cardContentView!.snp.top).offset(-hintLabelBottomMargin)
+            }
+        })
+        
         cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(view).offset(cardMadeViewMargin)
             make.right.equalTo(view).offset(-cardMadeViewMargin)

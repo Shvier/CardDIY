@@ -47,6 +47,7 @@ class SHAttributeViewController: SHBaseViewController {
     let trapTypeWordWidth: CGFloat = 80*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
     let advTrapTypeWordWidth: CGFloat = 98*(ScreenHeight - 2*cardMadeViewMargin)/(iPhone6PHeight - 2*cardMadeViewMargin)
 
+    var hintLabel: UILabel?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
     var attributeView: SHYGOAttributeView?
@@ -122,7 +123,16 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func initUI() {
-        navigationTitle = LocalizedString(key: "Please Fill Blanks of Card")
+        navigationTitle = LocalizedString(key: "YuGiOh")
+        
+        hintLabel = ({
+            let label = UILabel()
+            label.text = LocalizedString(key: "Please Fill Blanks of Card")
+            label.textColor = UIColor.white
+            label.font = UIFont(name: SHYGOConfiguration.shared.wordFontFamily(), size: hintLabelFontSize)
+            return label
+        })()
+        view.addSubview(hintLabel!)
         
         cardContentView = ({
             let view = UIView()
@@ -218,6 +228,15 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
+        hintLabel?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            if IsiPhone4() {
+                make.bottom.equalTo(cardContentView!.snp.top).offset(hintLabelBottomMarginForiPhone4)
+            } else {
+                make.bottom.equalTo(cardContentView!.snp.top).offset(-hintLabelBottomMargin)
+            }
+        })
+        
         cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(view).offset(cardMadeViewMargin)
             make.right.equalTo(view).offset(-cardMadeViewMargin)

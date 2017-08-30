@@ -105,6 +105,7 @@ class SHEffectViewController: SHBaseViewController {
                 LocalizedString(key: "Zombie")]
     }()
     
+    var hintLabel: UILabel?
     var cardImage: UIImage?
     var cardContentView: UIView?
     var cardImageView: UIImageView?
@@ -179,7 +180,16 @@ class SHEffectViewController: SHBaseViewController {
     func initUI() {
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
-        navigationTitle = LocalizedString(key: "Please Fill Informations of Card")
+        navigationTitle = LocalizedString(key: "YuGiOh")
+        
+        hintLabel = ({
+            let label = UILabel()
+            label.text = LocalizedString(key: "Please Fill Informations of Card")
+            label.textColor = UIColor.white
+            label.font = UIFont(name: SHYGOConfiguration.shared.wordFontFamily(), size: hintLabelFontSize)
+            return label
+        })()
+        view.addSubview(hintLabel!)
         
         cardContentView = ({
             let view = UIView()
@@ -262,6 +272,15 @@ class SHEffectViewController: SHBaseViewController {
     }
     
     func makeConstraints() {
+        hintLabel?.snp.makeConstraints({ (make) in
+            make.centerX.equalTo(view)
+            if IsiPhone4() {
+                make.bottom.equalTo(cardContentView!.snp.top).offset(hintLabelBottomMarginForiPhone4)
+            } else {
+                make.bottom.equalTo(cardContentView!.snp.top).offset(-hintLabelBottomMargin)
+            }
+        })
+        
         self.cardContentView?.snp.makeConstraints({ (make) in
             make.left.equalTo(self.view).offset(cardMadeViewMargin)
             make.right.equalTo(self.view).offset(-cardMadeViewMargin)
