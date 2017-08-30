@@ -10,8 +10,8 @@
 // Hint
 "Yes"                                                   = "有";
 "No"                                                    = "没有";
-"Monster Card Selected"                                 = "选择了怪兽卡";
-"Has effections?"                                       = "是否拥有效果?";
+"Monster Card Selected"                                 = "選擇了怪獸卡";
+"Has effections?"                                       = "是否擁有效果?";
 "Please Select a Type of Card"                          = "请选择卡牌类型";
 "Please Fill Blanks of Card"                            = "请补充卡牌信息";
 "Please Fill Informations of Card"                      = "请填写卡牌信息";
