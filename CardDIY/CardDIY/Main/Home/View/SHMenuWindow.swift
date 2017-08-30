@@ -81,7 +81,9 @@ extension SHMenuViewController: SHMenuViewDelegate {
     }
     
     func menuViewDidAboutButtonClicked(_ menuView: SHMenuView) {
-        
+        let aboutViewController = SHAboutViewController()
+        let naviController = UINavigationController(rootViewController: aboutViewController)
+        present(naviController, animated: true, completion: nil)
     }
     
 }

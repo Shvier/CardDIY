@@ -54,6 +54,9 @@
 		C053DFE01F0BB5FE00EA9A93 /* SHMagicTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFDF1F0BB5FE00EA9A93 /* SHMagicTypeView.swift */; };
 		C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */; };
 		C07563F81F2613E300EEE26C /* SHBezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07563F71F2613E300EEE26C /* SHBezierView.swift */; };
+		C09754971F56639A00CC9B2B /* SHIntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09754961F56639A00CC9B2B /* SHIntroTableViewCell.swift */; };
+		C0B16BDC1F55A68E00EA4244 /* SHAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B16BDB1F55A68E00EA4244 /* SHAboutViewController.swift */; };
+		C0B16BDE1F55C75500EA4244 /* DHSDKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B16BDD1F55C75500EA4244 /* DHSDKTableViewCell.swift */; };
 		C0BAE6591F24D854000C4F64 /* SHParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BAE6581F24D854000C4F64 /* SHParticleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +126,9 @@
 		C053DFE11F0BB66700EA9A93 /* SHTrapTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHTrapTypeView.swift; sourceTree = "<group>"; };
 		C05D04561F17C5A300ECCE62 /* UMSocialSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UMSocialSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		C07563F71F2613E300EEE26C /* SHBezierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHBezierView.swift; sourceTree = "<group>"; };
+		C09754961F56639A00CC9B2B /* SHIntroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHIntroTableViewCell.swift; sourceTree = "<group>"; };
+		C0B16BDB1F55A68E00EA4244 /* SHAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHAboutViewController.swift; sourceTree = "<group>"; };
+		C0B16BDD1F55C75500EA4244 /* DHSDKTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHSDKTableViewCell.swift; sourceTree = "<group>"; };
 		C0BAE6581F24D854000C4F64 /* SHParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHParticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +289,7 @@
 				C053DFCE1F0B8E0F00EA9A93 /* SHAttributeViewController.swift */,
 				C053DFDD1F0BB58E00EA9A93 /* SHEffectViewController.swift */,
 				C02CB2F91F0CB1DA009C9A7A /* SHAvatarViewController.swift */,
+				C0B16BDB1F55A68E00EA4244 /* SHAboutViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -351,6 +358,8 @@
 				C0BAE6581F24D854000C4F64 /* SHParticleView.swift */,
 				C03F56A01F32D14C00621599 /* SHWhirlpoolView.swift */,
 				C048F6151F4ABFEA00DB6BA7 /* SHMenuWindow.swift */,
+				C0B16BDD1F55C75500EA4244 /* DHSDKTableViewCell.swift */,
+				C09754961F56639A00CC9B2B /* SHIntroTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,6 +558,7 @@
 				C0417C891F0E267500FFCBA7 /* SHYGOFlowLayout.swift in Sources */,
 				C02CB2FA1F0CB1DA009C9A7A /* SHAvatarViewController.swift in Sources */,
 				C02FB9661F0F7F0C00A8CD8D /* SHYGOFlowLayoutProtocol.swift in Sources */,
+				C0B16BDC1F55A68E00EA4244 /* SHAboutViewController.swift in Sources */,
 				C02CB2F31F0C92FC009C9A7A /* UIView+ScreenShot.swift in Sources */,
 				C03706901F17C95000A6D18E /* SHShareManager.swift in Sources */,
 				C053DFE21F0BB66700EA9A93 /* SHTrapTypeView.swift in Sources */,
@@ -582,7 +592,9 @@
 				C0417C851F0E09B500FFCBA7 /* SHYGOPageControl.swift in Sources */,
 				C03021041F10B127009CB6F5 /* SHYGORaceViewProtocol.swift in Sources */,
 				C03F58D81F44226E00D99BFD /* SHMenuViewProtocol.swift in Sources */,
+				C0B16BDE1F55C75500EA4244 /* DHSDKTableViewCell.swift in Sources */,
 				C02CB2FF1F0CB830009C9A7A /* SHYGOMonsterLevelViewProtocol.swift in Sources */,
+				C09754971F56639A00CC9B2B /* SHIntroTableViewCell.swift in Sources */,
 				C053DFCD1F0B822C00EA9A93 /* SHYGOCardCell.swift in Sources */,
 				C053DFBC1F0B753A00EA9A93 /* SHHomeViewController.swift in Sources */,
 			);
