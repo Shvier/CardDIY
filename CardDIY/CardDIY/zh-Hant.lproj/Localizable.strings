@@ -26,6 +26,10 @@
 "YuGiOh Card Maker"                                     = "游戏王卡牌DIY";
 "I made my own YuGiOh Card. Come on and have a look."   = "我制作了一张自定义的游戏王卡牌。你也来试试吧~";
 "About"                                                 = "关于";
+"Introduction"                                          = "说明";
+"Open Source Projects"                                  = "开源项目";
+"Hello and welcome. Hope you can make your own YuGiOh Card and have fun with it. Please contact with me as soon as possible if you have any suggestions. Some features haven't been added yet, and will be added in the future. Thanks for purchasing!"
+                                                        = "欢迎使用游戏王卡牌制作工具。希望你能发挥想象力制作出喜爱的卡牌并乐在其中。如果有任何意见和建议请及时与我联系。在未来的版本中会有一些新的特性加入，敬请期待。感谢购买！";
 // Race
 "Aqua"                                                  = "水族";
 "Beast"                                                 = "兽族";

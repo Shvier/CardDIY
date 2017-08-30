@@ -186,7 +186,7 @@ class SHEffectViewController: SHBaseViewController {
             let label = UILabel()
             label.text = LocalizedString(key: "Please Fill Informations of Card")
             label.textColor = UIColor.white
-            label.font = UIFont(name: SHYGOConfiguration.shared.wordFontFamily(), size: hintLabelFontSize)
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
         })()
         view.addSubview(hintLabel!)

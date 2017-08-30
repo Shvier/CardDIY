@@ -66,7 +66,6 @@ class SHHomeViewController: SHBaseViewController {
 
     func initUI() {
         configNavi()
-        print(Locale.preferredLanguages.first!)
         backgroundImageView = ({
             let imageView = UIImageView()
             imageView.image = UIImage(named: "card_back.jpg")
@@ -121,7 +120,7 @@ class SHHomeViewController: SHBaseViewController {
             let label = UILabel()
             label.text = LocalizedString(key: "Please Select a Type of Card")
             label.textColor = UIColor.white
-            label.font = UIFont(name: SHYGOConfiguration.shared.wordFontFamily(), size: hintLabelFontSize)
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
         })()
         view.addSubview(hintLabel!)

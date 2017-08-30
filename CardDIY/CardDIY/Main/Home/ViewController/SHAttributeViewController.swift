@@ -129,7 +129,7 @@ class SHAttributeViewController: SHBaseViewController {
             let label = UILabel()
             label.text = LocalizedString(key: "Please Fill Blanks of Card")
             label.textColor = UIColor.white
-            label.font = UIFont(name: SHYGOConfiguration.shared.wordFontFamily(), size: hintLabelFontSize)
+            label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
             return label
         })()
         view.addSubview(hintLabel!)

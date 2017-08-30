@@ -10,21 +10,26 @@
 // Hint
 "Yes"                                                   = "ある";
 "No"                                                    = "ない";
-"Monster Card Selected"                                 = "モンスターカードを選ぶ";
+"Monster Card Selected"                                 = "モンスターカードを选ぶ";
 "Has effections?"                                       = "効果があるかどうか?";
-"Please Select a Type of Card"                          = "カードの種類を選択してください";
-"Please Fill Blanks of Card"                            = "カード情報を追加してください";
-"Please Fill Informations of Card"                      = "カード情報を記入してください";
+"Please Select a Type of Card"                          = "カードの种类を选择してください";
+"Please Fill Blanks of Card"                            = "カード情报を追加してください";
+"Please Fill Informations of Card"                      = "カード情报を记入してください";
 "Please Allow the Access to Album"                      = "アルバムへのアクセスを開いてください";
 "Please Set Picture of Card"                            = "カードのパターンを選んでください";
-"Tap to Edit"                                           = "編集をクリックします";
+"Tap to Edit"                                           = "编集";
 "Edit"                                                  = "編集";
 "Hint"                                                  = "ヒント";
 "Setting"                                               = "セットアップ";
 "Cancel"                                                = "キャンセル";
 "Feeback"                                               = "フィードバック";
-"YuGiOh Card Maker"                                     = "游戏王卡牌DIY";
-"I made my own YuGiOh Card. Come on and have a look."   = "我制作了一张自定义的游戏王卡牌。你也来试试吧~";
+"YuGiOh Card Maker"                                     = "ゲームカードDIY";
+"I made my own YuGiOh Card. Come on and have a look."   = "私はカスタムゲームカードを作った。あなたはそれを试さなければならない~";
+"About"                                                 = "について";
+"Introduction"                                          = "说明する";
+"Open Source Projects"                                  = "オープンソースプロジェクト";
+"Hello and welcome. Hope you can make your own YuGiOh Card and have fun with it. Please contact with me as soon as possible if you have any suggestions. Some features haven't been added yet, and will be added in the future. Thanks for purchasing!"
+                                                        = "ゲームキングカードの生产ツールへようこそ。私はあなたが好きなカードを作り、それを乐しむために想像力を发挥できることを愿っています。ご意见やご提案があれば、时间通りに私に联络してください。将来のバージョンでは、参加する新しい机能がいくつかあります，乐しみにしてください。购入をありがとう！";
 // Race
 "Aqua"                                                  = "みず族";
 "Beast"                                                 = "けもの族";
