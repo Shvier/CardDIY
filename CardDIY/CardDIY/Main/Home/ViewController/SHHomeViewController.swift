@@ -237,7 +237,7 @@ extension SHHomeViewController: SHYGOFlowLayoutDelegate {
 }
 
 //extension SHHomeViewController: GADInterstitialDelegate {
-//    
+//
 //    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
 //        ad.present(fromRootViewController: self)
 //    }
@@ -245,6 +245,11 @@ extension SHHomeViewController: SHYGOFlowLayoutDelegate {
 //}
 
 extension SHHomeViewController: SHMenuViewDelegate {
+    
+    func menuViewShouldDismiss(_ menuView: SHMenuView) {
+        
+    }
+
     
     func menuViewDidEvaluateButtonClicked(_ menuView: SHMenuView) {
 

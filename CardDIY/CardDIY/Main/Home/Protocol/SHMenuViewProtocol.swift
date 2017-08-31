@@ -15,5 +15,6 @@ protocol SHMenuViewDelegate: class {
     func menuViewDidFeedbackButtonClicked(_ menuView: SHMenuView)
     func menuViewDidVersionButtonClicked(_ menuView: SHMenuView)
     func menuViewDidAboutButtonClicked(_ menuView: SHMenuView)
+    func menuViewShouldDismiss(_ menuView: SHMenuView)
     
 }

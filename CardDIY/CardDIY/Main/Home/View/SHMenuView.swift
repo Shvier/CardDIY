@@ -26,6 +26,7 @@ class SHMenuView: SHBaseView {
     var feedbackButton: UIButton?
     var versionButton: UIButton?
     var aboutButton: UIButton?
+    var hotSpace: UIView!
     
     var anchorPoint: CGPoint!
     
@@ -41,6 +42,10 @@ class SHMenuView: SHBaseView {
         } else if sender.isEqual(aboutButton) {
             delegate?.menuViewDidAboutButtonClicked(self)
         }
+    }
+    
+    func tapAction(tap: UITapGestureRecognizer) {
+        delegate?.menuViewShouldDismiss(self)
     }
     
     func ordinate(tangent: Double) -> (x: CGFloat, y: CGFloat) {
@@ -77,6 +82,15 @@ class SHMenuView: SHBaseView {
         let effectView = UIVisualEffectView(effect: blurEffect)
         effectView.frame = self.bounds
         addSubview(effectView)
+        
+        hotSpace = {
+            let view = UIView(frame: self.bounds)
+            view.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction(tap:)))
+            view.addGestureRecognizer(tap)
+            return view
+        }()
+        addSubview(hotSpace)
         
         evaluateButton = createButton(image: UIImage(named: "btn_star")!, title: nil, isEnable: true)
         addSubview(evaluateButton!)

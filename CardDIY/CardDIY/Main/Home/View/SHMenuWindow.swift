@@ -26,6 +26,7 @@ class SHMenuViewController: UIViewController {
     
     func initUI() {
         view.backgroundColor = UIColor.clear
+        
         menuView = {
             let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
             let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
@@ -84,6 +85,10 @@ extension SHMenuViewController: SHMenuViewDelegate {
         let aboutViewController = SHAboutViewController()
         let naviController = UINavigationController(rootViewController: aboutViewController)
         present(naviController, animated: true, completion: nil)
+    }
+    
+    func menuViewShouldDismiss(_ menuView: SHMenuView) {
+        delegate?.menuViewControllerDidLeftBarItemClicked()
     }
     
 }

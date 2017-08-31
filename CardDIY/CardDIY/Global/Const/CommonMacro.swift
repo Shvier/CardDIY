@@ -24,7 +24,7 @@ let AdMobBannerHomeID = "ca-app-pub-7779776531531575/4587247709"
 let AdMobBannerAttributeID = "ca-app-pub-7779776531531575/5708757688"
 let AdMobBannerEffectID = "ca-app-pub-7779776531531575/9759683338"
 let AdMobBannerAvatarID = "ca-app-pub-7779776531531575/7451771118"
-let AppStoreURL = ""
+let AppStoreURL = "https://itunes.apple.com/us/app/yugioh-card-maker/id1277547428?l=zh&ls=1&mt=8"
 let FeedbackEmail = "Shvier@icloud.com"
 
 let NormalMonsterColor  = UIColor(red:0.68, green:0.55, blue:0.38, alpha:1.00)
