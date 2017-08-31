@@ -7,425 +7,340 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03131182FAC71B92B6331C1CE886AA72 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E86332F42454FA091D4E6A07ECF730 /* ConstraintView+Extensions.swift */; };
-		04A7D6AADAB213CE7D26F8EAD2F87536 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 967F4CE0040AC64FA1D9905D4A468FA5 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		068EF598E554EC57038ACFB89CC2C47A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F376E5BED27C646602331642FC8C9C5 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0747F84737BAB616BB84F77407D93131 /* TOCropOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 42A74D9A56AE28A015F603420D628A36 /* TOCropOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		091D17D5D8F832D28546A72B788CF0AE /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9BD6149B82BC14CEB46BA48D5491AB /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F3DF5C3BEFCC9838B53C37735B414BE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1420220012DAD005D8A8E96C4D1B6F9 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		0FDB2B4F75591851F0F119EAE70B3F63 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9D1B91971280DD9512B82460E7E017 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10B30981F815F7CED708588E5D599FD0 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 81CEDC8433C510BE5191D64CFA447C9C /* da.lproj */; };
-		16DD3CD6B4C69290AE1A24C782FA9397 /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB97D46A5C89707FDD3B6C41B2D48E4 /* TOCroppedImageAttributes.m */; };
-		1A45C8E89DFC153DB791EC9B22F3360E /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6DDCEEC853749249EA85CDA71AB0524F /* ko.lproj */; };
-		1E6173EE2F74F093DD360A6ACD928CB2 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E07531C3ABB9F8515E72B8191A785B37 /* vi.lproj */; };
-		1F9E9DF10ACED88C41603E96620F599B /* Pods-CardDIY-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 847952D7AEF6BC34E1B9F132D40B5291 /* Pods-CardDIY-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2033E271693E91904F297C70057C5164 /* MMPopupItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EC169C6DD128CD76110C118C39EA3C /* MMPopupItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25D818D57DDE92EA31F334F3F3719604 /* MMPopupWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A2953FD849814DFD36F79042B21180D2 /* MMPopupWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26AC1C8363A491192FB4034249A06AC0 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 84ED5A05B84335FCB09DB4675D16FC8E /* es.lproj */; };
-		277644A0087460A40ED80E664F6679DE /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 88DFD9433B64ACC18145C3103663F467 /* ar.lproj */; };
-		2854C9B1086758BD2B6681206B6759B4 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 299FC0D977ACB418CA953D72FFCE00E2 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29FC04528A0C805FF200589E26D8EC20 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75704980065261E50A9AC564BADCAB3C /* ConstraintMaker.swift */; };
-		2AFEC4F48DCE07BFD9065BA476A7B079 /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A380FE817D6036B6EE59C8383539A82 /* TOActivityCroppedImageProvider.m */; };
-		2BC0DA79472458A731A685BBA57A3ABF /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BF3B8F5966AFBE5F60712857671510 /* ConstraintView.swift */; };
-		2D1291B64F1680D1446A988C1482B04F /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B7524FD75D176C0720C0CEDE2881F /* ConstraintLayoutGuideDSL.swift */; };
-		326DBAF9CAE56B1A2A937ADCABE76236 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 47A92A83E65383376CB0ABBC479FAAAD /* it.lproj */; };
-		3293C10AF77950E32EFCBEFEECC22046 /* MMAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8155BAAAFC7802444B90E850F466C63 /* MMAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32FF04EDA1C14040A403565EA4F96DE4 /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = E7021915203C7FECA71B1964437206BD /* TOCropViewControllerTransitioning.m */; };
-		33FE5ED87A7D2B4FFEED9FAB3A843FED /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D01E4BC168DA5256BC8B8386B50901 /* ConstraintConstantTarget.swift */; };
-		35D0691CC90C3A7926BD21905EA7379E /* TOCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA30E8B4438FF4A7A732886949535974 /* TOCropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38E0CD63021889EE46E1A6B9FA0415F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC31C30AA1B843123575E6EBA38993C /* UIKit.framework */; };
-		3DBD7E6FC6A8A2C1E6A9CB96CB90C83B /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AE4976F306EA6805F2853072CDA0894E /* ru.lproj */; };
-		3E391AF5E058C61A9741F16E0A3E9305 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1E2F7ECE10F201E671A7391A1F793D51 /* en.lproj */; };
-		3F039138A94E1538EC393BA2C8C28272 /* TOCropScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 985582FD062A609AF8104E3FB15598FF /* TOCropScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42B0AD3227FA046A6E2C0825378EB2CA /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A3F81BB429197D4EAEF7026B315A01AA /* Base.lproj */; };
-		432FA22864D148EBD4CB22F55AB68004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A22C69638D55424736A7E57530671 /* Foundation.framework */; };
-		445E6AEA7A43EB490A4A1C966737524F /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897F291E072D0B2152EC4EE8E210752 /* ConstraintLayoutSupportDSL.swift */; };
-		45571455DA9368F54F0DFD2F7FCC5797 /* MMPopupView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1378087D8558EF3372AE9CA285865636 /* MMPopupView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		457ACF9150DCF9AF445B129CC9678FB6 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 570036DF6D29DEC44809FCD74893DFBF /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4754915F784361AEC316DD28FF8523DC /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BF1D4F5A0F39FC31C696DA4923917497 /* zh-Hans.lproj */; };
-		49401579D08DEF24A166EE38122D97D5 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB709ED335243B63CB93B2D61BD9DA61 /* ConstraintDescription.swift */; };
-		49A0CD5B839726EA7FE5780A1162A703 /* UIImage+CropRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 24FCBED30C9606187F32C0F87ABD61A4 /* UIImage+CropRotate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D4F2050654580FE1F1D5F4F82CEDDB8 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDB0EDF43E0E373EBC868FE7A4D07EE /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E2D081400D2494E1966EDBB1C0382C3 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E69ECFD8604403BBE95321D7E4B99FC7 /* nl.lproj */; };
-		5121ADB75E35DC18CF1E1AA9CF6F41D5 /* TOCropViewControllerBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 760EFC366AE93F63BC64DF5304939916 /* TOCropViewControllerBundle.bundle */; };
-		51E0D1534E525AA8BC521278947D52C3 /* MMPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E7825E585D437FFF6620A9575D47C /* MMPopupView.m */; };
-		52EFE3B4DF8C0DF9B7EA67709FF0D634 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 385C3F2156E5B7C0D7DE9C10F1DDEFF4 /* ja.lproj */; };
-		53BDF81D0A52EA526D597A5C5B139D7F /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9481CD3BBE0A60713E4D6FC92A914 /* MASCompositeConstraint.m */; };
-		54AA34680137F1D694A53A939E140713 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345450CCF60B5FBCF009E7F3B2290CFE /* ConstraintAttributes.swift */; };
-		590B29C0C76D4134E57FEAB9715AC585 /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26963EA3E1BDA10B9883DC55E8E43741 /* UIImage+CropRotate.m */; };
-		595E0B9B362955BED3AAD7EA17AE2E3E /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 22E052F650ED26F1351CF578FC200D80 /* zh-Hant.lproj */; };
-		59B94CF3FD4B2ACAE2A45AE944A06DF0 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56328D92F47BE2D407CB54BC09398C88 /* LayoutConstraintItem.swift */; };
-		59D842B4796870186CA5CA7C9895BFD3 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE795C4A394D6D1B43DA329B138A94C /* ConstraintLayoutGuide+Extensions.swift */; };
-		59F81DE0305CC2AC448D2A3C6B3280A2 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E9A19F5F752947C84D6AB431AD1958 /* MASConstraint.m */; };
-		5E2675F2BD4E2731A4BBFA219171F56E /* MMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F864C93109D9DB3DCECE38F0C8BA609 /* MMAlertView.m */; };
-		636BBA734C1A17A734761D674FAE8800 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C64AA5CD6BE310A9AB7398FBF1A0CEC /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64C01BD21DDD4B276AFEE8B31EA33F64 /* MMPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = E19FDBDC177E09BA18139CBE38B9FCD2 /* MMPopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68DC66104878CEE582F284D6884DAA4C /* Pods-CardDIY-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE61DEDBF7A9CA44F787F78356BA194 /* Pods-CardDIY-dummy.m */; };
-		6949DBD2BF0EAACCD36F963456479373 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A742E7C3DC7DB5DC93D2AF2CA7EA71 /* ConstraintRelation.swift */; };
-		6C23BBF56ED4DCC10CA1765A6736D1F8 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F77D49288B3C2E913F5E02C29504B0F /* MASLayoutConstraint.m */; };
-		6C3C7E18D4CDD513831C7B32BC5D88D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A22C69638D55424736A7E57530671 /* Foundation.framework */; };
-		70ACB047B047AD4AB7E986AE06BE2CBC /* TOActivityCroppedImageProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC814CB0741DBA21BB5755AC4D18245 /* TOActivityCroppedImageProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70FA5B093EEED76177EA09BB20ACC9CD /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B182BB6E53BAE09CA34135209443A865 /* pl.lproj */; };
-		73BBDACC22CCA36A6DAAA167AD780BAF /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B36D7CE43873592B691D3A2796C89FA7 /* MASConstraintMaker.m */; };
-		73E6DDEDC02CC2C51FB6A9F3E3306664 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A25DFAEBA8E4DCBC4742B0BCF680C /* ConstraintMakerExtendable.swift */; };
-		752EC0F661AB5C71D69A8149C9474255 /* TOCropToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 77819FF1F96D9FC50C61AC68E28756B4 /* TOCropToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7557550B63CAAB89E006B13052951E85 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C64598C61926AF2F899AC069024C0A /* ConstraintInsetTarget.swift */; };
-		756DF24546C7D91459DCADC8F1C98660 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5B871883A978EC0A65742BB33F8354 /* MASViewConstraint.m */; };
-		78CF4362D6ECE8FC7A55C2E871FFFFD6 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5367C847AC2ABB15A64242E5D67A8EAC /* ConstraintConfig.swift */; };
-		799D35A9F0FF20FC99D144FA96AB46E0 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB8786071A1E24F824F53EF4113365 /* Constraint.swift */; };
-		79A69D9CF7887520E017DD7F2385E994 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5983C1021C677ED3B5619642773A42AD /* LayoutConstraint.swift */; };
-		7C17BEA6034027310D1D205DB2008CA5 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 82B3736B732ED609F18CB71171888B96 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C43F6872E6FC62ECEC0D200B912FA6B /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0062729C38BFCE9623F1C4E86203331E /* Debugging.swift */; };
-		7F3ED3C0D1526C6041D00A6B5607AD3C /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ED7BB56F75993D5B58D131377EBEE94 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83ED8092D4AD39509157F0DCA1563DD5 /* MMPopupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DAA63868A188163855CDB2FEB260B5 /* MMPopupItem.m */; };
-		88DE7BAB1F4999A5F4B617F44E5FD1D3 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 508F9AB79E94C2CA225B5F21F126FD22 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A6EEF68E7625AB66A3A8DED1594F88F /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7165D578FABBCB873ED48A653CC7B92A /* ViewController+MASAdditions.m */; };
-		8BF9E338DCA562BE41FB19E65CF507B9 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB750E83A0BE4A8931F2402E5631AC /* SnapKit-dummy.m */; };
-		8CD45B754192DE834B642975E85257AB /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E6FC8E50FB67B7E5FAB0E95155313F /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D66D910610BD24F01E05D16FB861E8E /* MMPopupCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 126A8F5E36242AB972C8BF74DD40B644 /* MMPopupCategory.m */; };
-		8E1B72D95DD89C3743E6A7AEB8F82795 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5C194143D1C4E59B9EA0CE0388D7E683 /* tr.lproj */; };
-		92839245449E3ABCBF44790C0873FCBB /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C571ECFFF093CAF7E9C4DC625C8F0 /* TOCropScrollView.m */; };
-		966DAC6B301281ACA0B7A3F3110563F9 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B9C6046EFEF8D840D289B41C663CD /* ConstraintInsets.swift */; };
-		9801B5B1703463B20F22E1D2911E3D89 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDAB600E62748FF0D093F8E343D7C93 /* ConstraintLayoutGuide.swift */; };
-		9A6F1C9D98277F633127F5D41E962997 /* TOCropViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8155BCCBA428CBEAC6094F9706EFB2A3 /* TOCropViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D377F3CBC02E574AC5FCD49D9ED9C6B /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB067B8019D49D7FEDE175AD2512DC /* UILayoutSupport+Extensions.swift */; };
-		9D92098045A8B09E9B5F554D6A2BA6DD /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC39B1571BDD27891FDB94CD6479E7A /* TOCropToolbar.m */; };
-		A08A8AB356264E248D01F1BC0EF08166 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7758DC68E4054E00978E36405446D5 /* Masonry-dummy.m */; };
-		A43E247EAA3585979274233DE6800402 /* TOCropViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E135A2A63FECAD8675BFDDADD2373C4B /* TOCropViewController-dummy.m */; };
-		A5130EA3AB1086729B0F364CB29A70B2 /* MMPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A5B0874F7301E966770092EDB2C537 /* MMPopupWindow.m */; };
-		A7370CE9231F9A4927142D79021879EC /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BD21BE1921F1C4D7CE6ED110977C2 /* MASViewAttribute.m */; };
-		A8F167EEDF633C773263DBC8FC5DAA78 /* MMPopupCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = F0C550709034D34DC2E32E54F82C8649 /* MMPopupCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9B008A23077EDD60C14433CEE17BD0C /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9D4867077602ACF7356ABA50C2D166C7 /* de.lproj */; };
-		AB7291E023AEC6F1AA940A96E859F179 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A22C69638D55424736A7E57530671 /* Foundation.framework */; };
-		ADB57CA66D9ADEEBB0529EAA5FD650F4 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B699803D3E8E335F0296705555E1B4D /* ConstraintPriority.swift */; };
-		AEFACD297218F423F886A17334670D4D /* TOCropViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B71A51CECAF4AAD8D8BEC1BB969B838 /* TOCropViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B07205FD54818F7644784D08D52BAA9A /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = E725F5C2FFF413F5F56B67DA483B99B3 /* TOCropView.m */; };
-		B220BB5D1513D4D82C9B449CCFE8764E /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F99669E9DC947F5FD477CD1E874EAD15 /* pt.lproj */; };
-		B38F596EFB1EE413736793BE6395EE90 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352FB870BA55159F4B868A7F680C4810 /* ConstraintMultiplierTarget.swift */; };
-		B44383A3FA435C1E986942C817339302 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2C2B65A7F8F353E086931FCECF8C66 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BECC5336BB4952633D16ED559DDF6B24 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580750E8180B00DDB392A1AEF19D2B59 /* ConstraintViewDSL.swift */; };
-		C0A16E00B4BC2D88A7833D5DAED62942 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0A48B36EE9C82561FFCD09D488A408A /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0AD7F1F2C46B25CA4F77547575297C6 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CC171890CEDD19B936DA765B14620EB8 /* fr.lproj */; };
-		C2AD3ED8B36EAFC733D9654CAE3FDC63 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304029BD67AA47C5DAE65EF09488240 /* ConstraintMakerRelatable.swift */; };
-		C314CC894CE6F000C59DCA556DAA14C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A22C69638D55424736A7E57530671 /* Foundation.framework */; };
-		C36471FA740F83A472C5144053B5A2CD /* TOCropViewControllerTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D476B5972474D0C59B70F2CB47A208 /* TOCropViewControllerTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4683A91794D14339530F1EF0FCFAF22 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F9043D2414FC2E556AC1EDC7F9AB4B /* ConstraintMakerEditable.swift */; };
-		C56077A1901E8D254E217FE6343156F6 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587D155F30FC32A7EC19533E1E0830BD /* ConstraintDSL.swift */; };
-		C6B3FB0EC23380154EF6BF6ACBC5B19C /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F7B459A4388A377182240D48C56B6F2A /* id.lproj */; };
-		C8DF22EAFFC2F81B0426E2165AC93E44 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A52ECC76C9AFA0826E688F07CF5CE280 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB045BABCC4717A0B3BFF325C758BA5B /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C702B1BE23956F56D802ADE406554BCA /* TOCropViewController.m */; };
-		CC8F9B4A1AC4E276EA8AA4C6F2BF3CD4 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 56EA5ADA11D76117412457587A2386D7 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D235CF2F117F1C656177AEEE4C4F92C8 /* MMPopupView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9C5B698DD2D986582E0FC0D5B1F22 /* MMPopupView-dummy.m */; };
-		D377C41BB87137A57D1E4639DCA359BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A22C69638D55424736A7E57530671 /* Foundation.framework */; };
-		D4049BC36CD770BCEBA63C05574442A8 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE27DB43C2C91E9B30E4F57A6436870 /* ConstraintItem.swift */; };
-		D7D65329FDEE60462B87E9BD7CC44AC4 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27A95EB98A8A1A1903D866693BA3FFB /* ConstraintMakerPriortizable.swift */; };
-		D8B1525CB3DFCBD8E5032680530413D9 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EF924509A89766BE28970D85D2A74110 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9201E9AD79D2563CB50E5100F7E150 /* TOCroppedImageAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 686F6FA501DF283296F7594A97DB60E6 /* TOCroppedImageAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF47B45751D4E23DC13A3E3E4915D23D /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A913871F0BB40D1DCB4F500B7D6BB4B /* ConstraintOffsetTarget.swift */; };
-		E175950F5C063D152129E693796FACAE /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF35C23E029BF10AE1D3595169AFBCF /* Masonry.framework */; };
-		E72EDE323AC9F92EC8A00A93AC186093 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54295F09C5381B476DB8C17D5CD29 /* NSArray+MASAdditions.m */; };
-		E74A884691E2E70BB61088175879F05E /* MMSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D94715FACAB35A784349E42A2747FD /* MMSheetView.m */; };
-		E76732EE614B346665E1A10405CC6D81 /* MMSheetView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D257BC91F1A7400904C3078561A9EB8 /* MMSheetView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB356FEF6C97058C127BDF56598CFF31 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8DA47B91FBF858562399657401CCE /* ConstraintMakerFinalizable.swift */; };
-		EC458470BF89E73E8A56BEAFDD251C6D /* TOCropViewController-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A6EC9E99A1793BD70B9DB57F8F086D /* TOCropViewController-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F22A302F43377E80C7DD48D65D0DC32C /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0826D29CB3D09EE622E605E4F9109 /* TOCropOverlayView.m */; };
-		F4B3E44D5D2F6508BC1BB35A9FBDEC70 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3F39F7233CBB5D329C7A82186FF660 /* View+MASAdditions.m */; };
-		FB1946D54F7E11094AF9D04C9B08412F /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE441A2F081944B485D2942B54C7CE /* ConstraintLayoutSupport.swift */; };
-		FC52E2E838FD387077FB095B1D0BD5EE /* MMPopupDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6D6B2F28A2FA271F0CA0FE05E01E0E /* MMPopupDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCB15A664C84704FC799C215238B86A5 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886AC70B00F9498B33138FBEC77FA3B3 /* ConstraintPriorityTarget.swift */; };
-		FD853D5ED376B8CF7C558C3D4280E565 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F7178204AC44DD6DF42D54181150F /* ConstraintRelatableTarget.swift */; };
+		01CCDA5C872A682DB5E499CEB8C0929B /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8DB63A3FE29F7511C57D9F738D495C /* ConstraintMakerExtendable.swift */; };
+		033B5A0623576EB745F19CD0F6EC4124 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1AA358F258D1BF94BBB4CB0A7B41D /* ConstraintConfig.swift */; };
+		078EA41C47F55097D179A44108E0B9BE /* Pods-CardDIY-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 847952D7AEF6BC34E1B9F132D40B5291 /* Pods-CardDIY-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A984F967DDA24974AE75C93CAD4FF48 /* TOCroppedImageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BC4FBC7379D792D8E3FF04283295BD /* TOCroppedImageAttributes.m */; };
+		0BD7956D8D2A5B8B0163C43EC608B6FC /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 913B36DF55A51B7CFF5A430A94AC0F16 /* it.lproj */; };
+		159342A73343DBA3602229656CA5EA94 /* TOCropViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 077769775C6373D54999EDC292EABE65 /* TOCropViewController-dummy.m */; };
+		15B46018C4992A80B2B4E58E8F6ACFFE /* TOCropViewControllerTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 77069FEB712B8E2CA1D5CD8C2BFC8D5E /* TOCropViewControllerTransitioning.m */; };
+		15D2ED1366290685455407DA9B4006DE /* UIImage+CropRotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5232370A128E69AA10786085FB26511B /* UIImage+CropRotate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198FB4E168E2B2777AAEA1F47BD90BB5 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F535B9031DA83C0C299005B71517824 /* LayoutConstraintItem.swift */; };
+		1BDEE9331DB53C5E53AD42073BB01E7E /* TOCropViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C331E8363823AAAC97C640CA9F1A0E /* TOCropViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C27D8B79DAAFC87070E60BED05E8014 /* Pods-CardDIY-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE61DEDBF7A9CA44F787F78356BA194 /* Pods-CardDIY-dummy.m */; };
+		1D326B01749DBFE03E55130C27DF5B1E /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6387F8E22D87D2AA93DB707EC2DFC42A /* nl.lproj */; };
+		21F247843971F8A0AE98BF314BD3922C /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 57727D5DF98538934972EC92627EA2CE /* Base.lproj */; };
+		21FDAC3078BF3194D457609DE49C0A94 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F73029AAA5C29F1D0C06BC79A8B4BD /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		227083E3D31E87671A8EAF1AD17B03F5 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB8E6AA547587FD8B88D4C5839 /* ConstraintMakerEditable.swift */; };
+		23209FF443204A8BC3867248B28274A7 /* TOCropToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = A0529A59793C8DF9FD5C195F42BDD819 /* TOCropToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		233D34CB10F5EBF4BDE9F224B76FC491 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476D8B83E1D7B2DA5C29CD3001E3057 /* ConstraintInsets.swift */; };
+		264687FFBCD6F0DADFDD1762138AA5FF /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 80CEC6B30C4C13236BA9CF115C731571 /* zh-Hans.lproj */; };
+		28CF5ED99FEE144E7EAC49312F493916 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2E8EA63B707F143B73F36D9E889A5AB5 /* pt.lproj */; };
+		2CDAC3574B503CA4B7892C8C6789FBDC /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0E2AAA8311E0144468CCB7A8638136A7 /* ar.lproj */; };
+		2D094735C5B62CF3182B89A07659890A /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD20D83614A68C0002C370283206D3 /* Debugging.swift */; };
+		2E7AD3A27A2C7090E46ADA4508DE7300 /* TOCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB6154364A8A661C8D163AA9E7A7643 /* TOCropViewController.m */; };
+		2E7E8EC015250DB7418A8CD2EBAAF0F1 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D50141A964ABD9F5A8B7A02BBDA7944 /* TOCropToolbar.m */; };
+		3180ABF7495C18FE565EF3C912152F62 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D669AC65CDF409FFD4D4B040430785A /* ConstraintMaker.swift */; };
+		3824E38D9A2BFADECB33662729F9D1D5 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DECD7B8D3CE3BF0CCCCEF7EAB7AB21C /* LayoutConstraint.swift */; };
+		3E524982B5877591502957DF33EEF2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3F829CD1F93DC23D6707AB667C728EC7 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56484DB10D9011842EE7BBEADC6BC713 /* ConstraintLayoutSupport.swift */; };
+		41892E39BE7551F07E7635C0A068EBBD /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F568F42D53DAAEBE0B6C6891BECCAFD4 /* ru.lproj */; };
+		430D4C2E649AA3118484348620B7F9DB /* TOCropViewControllerTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = ADD9D4697D756D71F2DCC11DBDD42053 /* TOCropViewControllerTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43BE6E192B1F86AFC0FC9EC10745A69E /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9551C56AA11169034A25CEF045CA0A /* ConstraintMakerPriortizable.swift */; };
+		46167AEBB9B5E3AC4A30C0796824E553 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B4951ACF4B3B534A717C294D47A004 /* SnapKit-dummy.m */; };
+		4E716379DBBA4CBD2E35C5EFA6AD19A0 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF56E7FE04A046721CB6A5852978E35 /* ConstraintView+Extensions.swift */; };
+		5095197629D6297DC1DD3A94C739D99D /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737205CC10528ADD57A24B897B7CF01 /* ConstraintPriorityTarget.swift */; };
+		5387C7B305E422F831E1FE9C62481D87 /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A3CAB7BCC66555753FE4E60D34A2E1 /* UIImage+CropRotate.m */; };
+		55204E8A15C55254426B8BB9EE2213C8 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2EB471D2DEA7F6FF20F7E5E9448CB4E0 /* zh-Hant.lproj */; };
+		5AF0AA7299CC04A93711A4F26C2FBF77 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6260E1A1D19C9F97F8209F8B1C31D0 /* ConstraintItem.swift */; };
+		5B661FC46EE4EFE87C903285B66AD74A /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18FF145D7F05474B4B8A0C2DD1835D2 /* ConstraintOffsetTarget.swift */; };
+		5D73D96C487704C7A64C01CB6C73CA9B /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D221EB18703A318EDBB1964D69724 /* ConstraintDSL.swift */; };
+		5E50D581DC05605BA56830F86F8098E0 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959B93B099A139C708AF06E5A8207D3 /* ConstraintRelation.swift */; };
+		60701451720AD66DFDA63B9840713E30 /* TOCropViewControllerBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A2030987E7F96B20FD7326A5C4452FE1 /* TOCropViewControllerBundle.bundle */; };
+		64051ECA48DEFB7720D0F093FB32DA7A /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B0CACD961F26F115149D8F15DCE44E /* ConstraintLayoutSupportDSL.swift */; };
+		665A1EF595DF559846321ED005910D64 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECDF19503CCF53030F95DC63F67CAE /* ConstraintInsetTarget.swift */; };
+		754977184732D14EAFB62335C52D6F8C /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F93FA96C4C4119B5E02303F48514C6 /* ConstraintDescription.swift */; };
+		78E4A1CAD600C478BC1B54B6A61FEFCE /* TOCropOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = C38648F8F612E974EB4AB1EAA171F4CA /* TOCropOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7964A60A2B2DDCD5B779D8A1B5451DDE /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB20D4EEE79B8E02FA60E4E922FA2B /* UILayoutSupport+Extensions.swift */; };
+		86E5B0C86F9D7973B3D0F413C4250C36 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F68DA7C50EFB4B4C82A68CF0BB7A8F /* ConstraintMakerFinalizable.swift */; };
+		8A091A27F751CD27A738937F84E3F422 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9E4587D95C107BE4BDB55FFC7BD3BEAE /* de.lproj */; };
+		94CB97A921D1545D0F9469699119123A /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 182CC0BD4138AC9E75E518053C1DD3D3 /* en.lproj */; };
+		95224DAE7662A066AAF732074D5D153A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		960444A9681A644FD8ECE5634155E2FA /* TOCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = 583251FEEA1D76CBDBA4EDD495D27F9B /* TOCropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C91B797F0F112A2A6CD15CCCC4543C8 /* TOCropViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DED5ABFE8BF5A26AC4D48970DB941ECB /* TOCropViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FDB224875F337E68B4B742552545378 /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FC827B926CDC716484B8250C0A152779 /* ko.lproj */; };
+		A00EDB8C5ED5D8DF4811181F6FB09EF6 /* TOCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EE77787B82FEFABAA8EF3965A86C23 /* TOCropView.m */; };
+		AAEE341835EA9EA229A507A18BE13ECA /* TOActivityCroppedImageProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = C390A44A1A5040F0BBDA3DF1C267BAF4 /* TOActivityCroppedImageProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD8209E52189EF5AE11599C2EA0BB522 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF096EE1E5C05613CC1111C541D74580 /* ConstraintMultiplierTarget.swift */; };
+		B0C5A19178CBFCFDBC7E0AEB9D9EF436 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32461026AE387C3F6D869C7B7C666857 /* ConstraintViewDSL.swift */; };
+		B1B39B41FD703FDF2680B12AEF8ADC78 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989259CBDCE57C768EF71159DFF3E81 /* ConstraintLayoutGuideDSL.swift */; };
+		B4CC6D0D19FBBD1F57A20B8C23D2E524 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0B1D9FFA6A0E4B2EC71ECF512B98F6 /* ConstraintConstantTarget.swift */; };
+		B4D79EC72F0BBE1165A75F190CEC78E0 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE1A7CB064D6AF912438FA84B7E5F9 /* ConstraintMakerRelatable.swift */; };
+		B6238E7201401A9E2E84420B76F3EEEC /* TOCropScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A28E53F8DCBEE5D34486843C469C2F6 /* TOCropScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B82AB167C726704A6547AAC635865EFB /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD19B85C33A5C2538D0FF32AFCCFECD7 /* TOCropOverlayView.m */; };
+		B9738EC7AEA58EB39AD4C4754AB9D9CE /* TOCropScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6902FECFFF89CED2FDC03CE26AFEFE37 /* TOCropScrollView.m */; };
+		BA7EF2F74E6D9F88CC878A06C5072894 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AAC00964734C41EE6BEC3020C649CFFB /* ja.lproj */; };
+		BD3BBC1ECB85963D741289697ACC11D0 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBA7770013D4DE2921920097B830F11 /* ConstraintPriority.swift */; };
+		C2D664CA5E83AF13FF35750EE5DDD16F /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9610D3A265CF4F0E90316D8F89DF4C79 /* ConstraintAttributes.swift */; };
+		C3D839ACBC114B04E6BD7A3E17E29CDC /* TOCropViewController-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E26B16335FBAE58C17B8D6E4085E2D /* TOCropViewController-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9EAB6D6640C002EC930D699C61892B2 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A0F545145E5EA2217F28CE3DC567223C /* es.lproj */; };
+		CFE4B51597BBB49708DA8E0C08D9BEA4 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7E907A3D9890F84F213E7A0F465678A8 /* tr.lproj */; };
+		E00B1C075E692B76045D27E09096ADBE /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6173872DAE1AEDAC7F52AFB21CA748 /* ConstraintView.swift */; };
+		E4DD4263F00DD3E5A7A3309F953BAC53 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EBDFC6B7B440ED0574BC7D12032F60 /* ConstraintRelatableTarget.swift */; };
+		E9CCBB21EF57366118BFEDEE4D94C828 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EA77CA00006D38A0078B213BA3FD3E23 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945F502A9F21654BFDBB8618B51A4A8F /* ConstraintLayoutGuide+Extensions.swift */; };
+		EACE29DCADC27E57B3796C0E281DA72E /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670F7CB68A4EDAAD467914E670C6632F /* ConstraintLayoutGuide.swift */; };
+		EB33AA4F1A0434728E0A8C57E5E28FE9 /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A005661C2D9ADED9CABD242DD4D9F5 /* TOActivityCroppedImageProvider.m */; };
+		EB74A850F6E1CE73E728F24C37721686 /* TOCroppedImageAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 575F9533AE3ED55F36A7BBF25B7A764C /* TOCroppedImageAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC735A7D343DFAF4848E970CDEF35A6B /* id.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E2E797F113A7B9A216E00EE772BC6994 /* id.lproj */; };
+		EC744331086D1D8F1C4490C28108788F /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E4F85A5964398EEEA9B6C5971433677A /* pl.lproj */; };
+		F0168261AAEB4D53CB61491ACA742997 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5F3154F6223E06CBD9E9D578C40B4A30 /* vi.lproj */; };
+		F69CC445AA274BC16701C9DE105864F0 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CD85E3073C8A3F5DEA9268CC0D306DF8 /* fr.lproj */; };
+		FC3219ABC53A0EF45D4FEB15FCF2A732 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C27DE40B057FD81C419C99B89031421 /* Constraint.swift */; };
+		FD4B050232E234FC6B6117A679D29085 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFD79562CDE7B4D3A4BA61A84744DD /* da.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		57591F66CA96280C8ABB7CC59A4784ED /* PBXContainerItemProxy */ = {
+		6FBD1F9C6490581819D11F3D11C9943B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3157298F96E45DABE3F80FA882460082;
-			remoteInfo = "TOCropViewController-TOCropViewControllerBundle";
-		};
-		8C58C5E93D799EB3261BE5DF1D6A5076 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E11804B2123A2D2D5B550C73FF7F33DE;
-			remoteInfo = TOCropViewController;
-		};
-		9A998498995115AE2982EC3D55237C32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D52144DE9D7255DE912490FF5A806573;
-			remoteInfo = Masonry;
-		};
-		B062EB89E61EE7D39D0A32C06B446A0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A1B2168B8DD91555EBB1722C8D6D847A;
-			remoteInfo = MMPopupView;
-		};
-		C5C8580407A2B3C9F1C8E4FF3ABCE3B1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 892FD92FC871504822E7848556F762CE;
+			remoteGlobalIDString = FC949E23AADE689FDBDC79D614C2D214;
 			remoteInfo = SnapKit;
 		};
-		FCE2F95B708C2A8A974FB468C9402878 /* PBXContainerItemProxy */ = {
+		827FFBEA21536CBCCE7A0C7D2EF368B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D52144DE9D7255DE912490FF5A806573;
-			remoteInfo = Masonry;
+			remoteGlobalIDString = DDF791A68B7654734E8D63D17EFE8ED6;
+			remoteInfo = "TOCropViewController-TOCropViewControllerBundle";
+		};
+		E58D0DFE1B51E39407DB881C51D9B953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41B1DB127490F7069C2609DF886D75E1;
+			remoteInfo = TOCropViewController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0062729C38BFCE9623F1C4E86203331E /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		013C571ECFFF093CAF7E9C4DC625C8F0 /* TOCropScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = TOCropViewController/Views/TOCropScrollView.m; sourceTree = "<group>"; };
-		03DAA63868A188163855CDB2FEB260B5 /* MMPopupItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMPopupItem.m; path = Classes/MMPopupItem.m; sourceTree = "<group>"; };
-		094BD21BE1921F1C4D7CE6ED110977C2 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		0AF54295F09C5381B476DB8C17D5CD29 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		0B699803D3E8E335F0296705555E1B4D /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		0DBE130A033AE4C7C89C7764AE270EAB /* MMPopupView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MMPopupView.modulemap; sourceTree = "<group>"; };
-		0DC31C30AA1B843123575E6EBA38993C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		0EC9C5B698DD2D986582E0FC0D5B1F22 /* MMPopupView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMPopupView-dummy.m"; sourceTree = "<group>"; };
-		0F6D6B2F28A2FA271F0CA0FE05E01E0E /* MMPopupDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMPopupDefine.h; path = Classes/MMPopupDefine.h; sourceTree = "<group>"; };
-		126A8F5E36242AB972C8BF74DD40B644 /* MMPopupCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMPopupCategory.m; path = Classes/MMPopupCategory.m; sourceTree = "<group>"; };
-		1378087D8558EF3372AE9CA285865636 /* MMPopupView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMPopupView-umbrella.h"; sourceTree = "<group>"; };
-		1E2F7ECE10F201E671A7391A1F793D51 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = TOCropViewController/en.lproj; sourceTree = "<group>"; };
-		1F77D49288B3C2E913F5E02C29504B0F /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		22E052F650ED26F1351CF578FC200D80 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "TOCropViewController/zh-Hant.lproj"; sourceTree = "<group>"; };
-		24FCBED30C9606187F32C0F87ABD61A4 /* UIImage+CropRotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropRotate.h"; path = "TOCropViewController/Models/UIImage+CropRotate.h"; sourceTree = "<group>"; };
-		262B9C6046EFEF8D840D289B41C663CD /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		26963EA3E1BDA10B9883DC55E8E43741 /* UIImage+CropRotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropRotate.m"; path = "TOCropViewController/Models/UIImage+CropRotate.m"; sourceTree = "<group>"; };
-		26FB8786071A1E24F824F53EF4113365 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		27F9043D2414FC2E556AC1EDC7F9AB4B /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		299FC0D977ACB418CA953D72FFCE00E2 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		2CAB750E83A0BE4A8931F2402E5631AC /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
-		2D7758DC68E4054E00978E36405446D5 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		30EC169C6DD128CD76110C118C39EA3C /* MMPopupItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMPopupItem.h; path = Classes/MMPopupItem.h; sourceTree = "<group>"; };
-		322431FF1C92C9BB1B0B13B977197FDE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32D94715FACAB35A784349E42A2747FD /* MMSheetView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMSheetView.m; path = Classes/MMSheetView.m; sourceTree = "<group>"; };
-		345450CCF60B5FBCF009E7F3B2290CFE /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		352FB870BA55159F4B868A7F680C4810 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		37A742E7C3DC7DB5DC93D2AF2CA7EA71 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		385C3F2156E5B7C0D7DE9C10F1DDEFF4 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = TOCropViewController/ja.lproj; sourceTree = "<group>"; };
-		3AB97606DE21277B78AA84B9240284FD /* MMPopupView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMPopupView-prefix.pch"; sourceTree = "<group>"; };
-		3B9BD6149B82BC14CEB46BA48D5491AB /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		3ED7BB56F75993D5B58D131377EBEE94 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		42A74D9A56AE28A015F603420D628A36 /* TOCropOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = TOCropViewController/Views/TOCropOverlayView.h; sourceTree = "<group>"; };
-		47A92A83E65383376CB0ABBC479FAAAD /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = TOCropViewController/it.lproj; sourceTree = "<group>"; };
-		48E86332F42454FA091D4E6A07ECF730 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		4A380FE817D6036B6EE59C8383539A82 /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = TOCropViewController/Models/TOActivityCroppedImageProvider.m; sourceTree = "<group>"; };
-		4AA0826D29CB3D09EE622E605E4F9109 /* TOCropOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = TOCropViewController/Views/TOCropOverlayView.m; sourceTree = "<group>"; };
-		4D46EB660446159F1BA6C5DEB951385B /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		4D4B7524FD75D176C0720C0CEDE2881F /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		4ECE441A2F081944B485D2942B54C7CE /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		4F864C93109D9DB3DCECE38F0C8BA609 /* MMAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMAlertView.m; path = Classes/MMAlertView.m; sourceTree = "<group>"; };
-		508F9AB79E94C2CA225B5F21F126FD22 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		52758E4A28069F71D1433B1FB846205C /* TOCropViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOCropViewController.xcconfig; sourceTree = "<group>"; };
-		52E6FC8E50FB67B7E5FAB0E95155313F /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
-		536055A68AFED375D61BAE2C1FB9FBA0 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		5367C847AC2ABB15A64242E5D67A8EAC /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		56328D92F47BE2D407CB54BC09398C88 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		5644ABDD3B7823B8AB6658EA840D55C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56EA5ADA11D76117412457587A2386D7 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		570036DF6D29DEC44809FCD74893DFBF /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
-		580750E8180B00DDB392A1AEF19D2B59 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		587D155F30FC32A7EC19533E1E0830BD /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
-		5897F291E072D0B2152EC4EE8E210752 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		5983C1021C677ED3B5619642773A42AD /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		5C194143D1C4E59B9EA0CE0388D7E683 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = TOCropViewController/tr.lproj; sourceTree = "<group>"; };
+		00E524F7E317AE4CDC8D0A8E3BEB9D53 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TOCropViewControllerBundle-Info.plist"; sourceTree = "<group>"; };
+		02E1AA358F258D1BF94BBB4CB0A7B41D /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		06386A0A97E56C449581B73FD7D412F2 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
+		0737205CC10528ADD57A24B897B7CF01 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		077769775C6373D54999EDC292EABE65 /* TOCropViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOCropViewController-dummy.m"; sourceTree = "<group>"; };
+		07B0CACD961F26F115149D8F15DCE44E /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		08BC4FBC7379D792D8E3FF04283295BD /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCroppedImageAttributes.m; path = TOCropViewController/Models/TOCroppedImageAttributes.m; sourceTree = "<group>"; };
+		0E2AAA8311E0144468CCB7A8638136A7 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = TOCropViewController/ar.lproj; sourceTree = "<group>"; };
+		0F3AE5CE958B85C19873A9AB2B64F435 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		182CC0BD4138AC9E75E518053C1DD3D3 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = TOCropViewController/en.lproj; sourceTree = "<group>"; };
+		1895188BD7176CDD11B714B05F0E813C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D9551C56AA11169034A25CEF045CA0A /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		2CDFD79562CDE7B4D3A4BA61A84744DD /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = TOCropViewController/da.lproj; sourceTree = "<group>"; };
+		2E8EA63B707F143B73F36D9E889A5AB5 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = TOCropViewController/pt.lproj; sourceTree = "<group>"; };
+		2EB471D2DEA7F6FF20F7E5E9448CB4E0 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "TOCropViewController/zh-Hant.lproj"; sourceTree = "<group>"; };
+		2EED4159037AFDCC2CE8875E795E3F66 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		2EFB20D4EEE79B8E02FA60E4E922FA2B /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		32461026AE387C3F6D869C7B7C666857 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		37A702AE86E2E3B4B208B04C690FD39D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39ABA910173A26C06700E78B1064CB73 /* TOCropViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TOCropViewController.modulemap; sourceTree = "<group>"; };
+		449A20E2871D3446A6A9F03B11E7BFF4 /* BTGConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTGConstants.h; path = Bugtags.framework/Versions/A/Headers/BTGConstants.h; sourceTree = "<group>"; };
+		4DECD7B8D3CE3BF0CCCCEF7EAB7AB21C /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		4EB7AA123944AD6D17C499E5279E627C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5232370A128E69AA10786085FB26511B /* UIImage+CropRotate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropRotate.h"; path = "TOCropViewController/Models/UIImage+CropRotate.h"; sourceTree = "<group>"; };
+		5588B72127175176DB19F05E581CD0A1 /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOCropViewController.framework; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56484DB10D9011842EE7BBEADC6BC713 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		575F9533AE3ED55F36A7BBF25B7A764C /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCroppedImageAttributes.h; path = TOCropViewController/Models/TOCroppedImageAttributes.h; sourceTree = "<group>"; };
+		57727D5DF98538934972EC92627EA2CE /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = TOCropViewController/Base.lproj; sourceTree = "<group>"; };
+		583251FEEA1D76CBDBA4EDD495D27F9B /* TOCropView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = TOCropViewController/Views/TOCropView.h; sourceTree = "<group>"; };
+		585DE7735788AC460A044214E80037E2 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		5C5F549F7491CC50203B47EFCBEB991B /* Pods-CardDIY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardDIY.debug.xcconfig"; sourceTree = "<group>"; };
-		5F2F7178204AC44DD6DF42D54181150F /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		5F5BFDFC62DBB16BA66C76565C19AA2B /* TOCropViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-prefix.pch"; sourceTree = "<group>"; };
-		60E9A19F5F752947C84D6AB431AD1958 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		6304029BD67AA47C5DAE65EF09488240 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		5D50141A964ABD9F5A8B7A02BBDA7944 /* TOCropToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = TOCropViewController/Views/TOCropToolbar.m; sourceTree = "<group>"; };
+		5D669AC65CDF409FFD4D4B040430785A /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		5DBE1A7CB064D6AF912438FA84B7E5F9 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		5F3154F6223E06CBD9E9D578C40B4A30 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = TOCropViewController/vi.lproj; sourceTree = "<group>"; };
+		60CED611F38F7143E0295E0EC7793332 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		624AA7F1DCE4A95898B8D9D92FEBD1DC /* TOCropViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-prefix.pch"; sourceTree = "<group>"; };
+		62B0C4461E5D7DFC6494B3217C4C68D9 /* Pods_CardDIY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CardDIY.framework; path = "Pods-CardDIY.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6387F8E22D87D2AA93DB707EC2DFC42A /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = TOCropViewController/nl.lproj; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		668C4B33B090423B53905696842849A4 /* Pods-CardDIY-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardDIY-resources.sh"; sourceTree = "<group>"; };
-		686F6FA501DF283296F7594A97DB60E6 /* TOCroppedImageAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCroppedImageAttributes.h; path = TOCropViewController/Models/TOCroppedImageAttributes.h; sourceTree = "<group>"; };
-		69CAFD1DEFA678209D9BE03C8017A671 /* Bugtags.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bugtags.h; path = Bugtags.framework/Versions/A/Headers/Bugtags.h; sourceTree = "<group>"; };
-		6B71A51CECAF4AAD8D8BEC1BB969B838 /* TOCropViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-umbrella.h"; sourceTree = "<group>"; };
-		6BF35C23E029BF10AE1D3595169AFBCF /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DDCEEC853749249EA85CDA71AB0524F /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = TOCropViewController/ko.lproj; sourceTree = "<group>"; };
-		7165D578FABBCB873ED48A653CC7B92A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		75704980065261E50A9AC564BADCAB3C /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		760EFC366AE93F63BC64DF5304939916 /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TOCropViewControllerBundle.bundle; path = TOCropViewControllerBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		77819FF1F96D9FC50C61AC68E28756B4 /* TOCropToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = TOCropViewController/Views/TOCropToolbar.h; sourceTree = "<group>"; };
-		7CB97D46A5C89707FDD3B6C41B2D48E4 /* TOCroppedImageAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCroppedImageAttributes.m; path = TOCropViewController/Models/TOCroppedImageAttributes.m; sourceTree = "<group>"; };
-		7CC39B1571BDD27891FDB94CD6479E7A /* TOCropToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropToolbar.m; path = TOCropViewController/Views/TOCropToolbar.m; sourceTree = "<group>"; };
-		7DC864B9A460AB0C61993926AC13D9FB /* Bugtags.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Bugtags.bundle; sourceTree = "<group>"; };
-		7ED58FE139F5ABA72330D297DB87F980 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Masonry.modulemap; sourceTree = "<group>"; };
-		8155BCCBA428CBEAC6094F9706EFB2A3 /* TOCropViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewController.h; path = TOCropViewController/TOCropViewController.h; sourceTree = "<group>"; };
-		81CEDC8433C510BE5191D64CFA447C9C /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = TOCropViewController/da.lproj; sourceTree = "<group>"; };
-		82A5B0874F7301E966770092EDB2C537 /* MMPopupWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMPopupWindow.m; path = Classes/MMPopupWindow.m; sourceTree = "<group>"; };
-		82B3736B732ED609F18CB71171888B96 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		670F7CB68A4EDAAD467914E670C6632F /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		687D221EB18703A318EDBB1964D69724 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
+		6902FECFFF89CED2FDC03CE26AFEFE37 /* TOCropScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = TOCropViewController/Views/TOCropScrollView.m; sourceTree = "<group>"; };
+		6989259CBDCE57C768EF71159DFF3E81 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
+		6BB6154364A8A661C8D163AA9E7A7643 /* TOCropViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewController.m; path = TOCropViewController/TOCropViewController.m; sourceTree = "<group>"; };
+		6E0B1D9FFA6A0E4B2EC71ECF512B98F6 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		6EED532141973867F08E0A3B46261A1B /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		72EBDFC6B7B440ED0574BC7D12032F60 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		73A3CAB7BCC66555753FE4E60D34A2E1 /* UIImage+CropRotate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropRotate.m"; path = "TOCropViewController/Models/UIImage+CropRotate.m"; sourceTree = "<group>"; };
+		73C96AC97C75452AF09745112E39C2D3 /* Bugtags.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bugtags.h; path = Bugtags.framework/Versions/A/Headers/Bugtags.h; sourceTree = "<group>"; };
+		76F73029AAA5C29F1D0C06BC79A8B4BD /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		77069FEB712B8E2CA1D5CD8C2BFC8D5E /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = TOCropViewController/Models/TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
+		7A28E53F8DCBEE5D34486843C469C2F6 /* TOCropScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = TOCropViewController/Views/TOCropScrollView.h; sourceTree = "<group>"; };
+		7C27DE40B057FD81C419C99B89031421 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		7CF56E7FE04A046721CB6A5852978E35 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		7E907A3D9890F84F213E7A0F465678A8 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = TOCropViewController/tr.lproj; sourceTree = "<group>"; };
+		7F535B9031DA83C0C299005B71517824 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		80CEC6B30C4C13236BA9CF115C731571 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "TOCropViewController/zh-Hans.lproj"; sourceTree = "<group>"; };
+		836725CB8E6AA547587FD8B88D4C5839 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		8459A8D413F892CD2D28883758E2A6AB /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		847952D7AEF6BC34E1B9F132D40B5291 /* Pods-CardDIY-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CardDIY-umbrella.h"; sourceTree = "<group>"; };
-		848A22C69638D55424736A7E57530671 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		84ED5A05B84335FCB09DB4675D16FC8E /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = TOCropViewController/es.lproj; sourceTree = "<group>"; };
-		886AC70B00F9498B33138FBEC77FA3B3 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		88DFD9433B64ACC18145C3103663F467 /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = TOCropViewController/ar.lproj; sourceTree = "<group>"; };
+		88A005661C2D9ADED9CABD242DD4D9F5 /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = TOCropViewController/Models/TOActivityCroppedImageProvider.m; sourceTree = "<group>"; };
 		89DE5E07620C164D9C11586D5D9F32D1 /* Pods-CardDIY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardDIY.release.xcconfig"; sourceTree = "<group>"; };
-		89F7BD27B0168F3A4CBF79315B2980E7 /* MMPopupView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MMPopupView.framework; path = MMPopupView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A2C2B65A7F8F353E086931FCECF8C66 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		8A913871F0BB40D1DCB4F500B7D6BB4B /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		8B735EE71CE5CE703D450B571F62AD6D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB883108FA0002E464FF8534F999E87 /* Pods-CardDIY.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CardDIY.modulemap"; sourceTree = "<group>"; };
-		8D257BC91F1A7400904C3078561A9EB8 /* MMSheetView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMSheetView.h; path = Classes/MMSheetView.h; sourceTree = "<group>"; };
-		8DDB067B8019D49D7FEDE175AD2512DC /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		91C64598C61926AF2F899AC069024C0A /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		913B36DF55A51B7CFF5A430A94AC0F16 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = TOCropViewController/it.lproj; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93C331E8363823AAAC97C640CA9F1A0E /* TOCropViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewController.h; path = TOCropViewController/TOCropViewController.h; sourceTree = "<group>"; };
+		945F502A9F21654BFDBB8618B51A4A8F /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		94C2714CC4E1F3B948892C46B536F649 /* Pods-CardDIY-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardDIY-acknowledgements.plist"; sourceTree = "<group>"; };
-		961DF1FA40509617236AED3EE7032D70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		967F4CE0040AC64FA1D9905D4A468FA5 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		96BF3B8F5966AFBE5F60712857671510 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		985582FD062A609AF8104E3FB15598FF /* TOCropScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = TOCropViewController/Views/TOCropScrollView.h; sourceTree = "<group>"; };
-		9BDAB600E62748FF0D093F8E343D7C93 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		9C64AA5CD6BE310A9AB7398FBF1A0CEC /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		9D4867077602ACF7356ABA50C2D166C7 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = TOCropViewController/de.lproj; sourceTree = "<group>"; };
-		9E48867F78F4B64A785A77758287F0DC /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOCropViewController.framework; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EE27DB43C2C91E9B30E4F57A6436870 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		9F376E5BED27C646602331642FC8C9C5 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		A2953FD849814DFD36F79042B21180D2 /* MMPopupWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMPopupWindow.h; path = Classes/MMPopupWindow.h; sourceTree = "<group>"; };
-		A3F81BB429197D4EAEF7026B315A01AA /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = TOCropViewController/Base.lproj; sourceTree = "<group>"; };
-		A52ECC76C9AFA0826E688F07CF5CE280 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		AA9D1B91971280DD9512B82460E7E017 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		ABC814CB0741DBA21BB5755AC4D18245 /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOActivityCroppedImageProvider.h; path = TOCropViewController/Models/TOActivityCroppedImageProvider.h; sourceTree = "<group>"; };
-		ABE795C4A394D6D1B43DA329B138A94C /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		AE4976F306EA6805F2853072CDA0894E /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = TOCropViewController/ru.lproj; sourceTree = "<group>"; };
-		B0A48B36EE9C82561FFCD09D488A408A /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		B182BB6E53BAE09CA34135209443A865 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = TOCropViewController/pl.lproj; sourceTree = "<group>"; };
-		B2D01E4BC168DA5256BC8B8386B50901 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		B36D7CE43873592B691D3A2796C89FA7 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		B72A25DFAEBA8E4DCBC4742B0BCF680C /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		B77B5D2D9C80BE8F20CE7A90CC265CAD /* MMPopupView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMPopupView.xcconfig; sourceTree = "<group>"; };
-		BA3F39F7233CBB5D329C7A82186FF660 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		9610D3A265CF4F0E90316D8F89DF4C79 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		999F00D7258F5E5A120FF413A7529224 /* TOCropViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOCropViewController.xcconfig; sourceTree = "<group>"; };
+		9B6260E1A1D19C9F97F8209F8B1C31D0 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
+		9E4587D95C107BE4BDB55FFC7BD3BEAE /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = TOCropViewController/de.lproj; sourceTree = "<group>"; };
+		A0529A59793C8DF9FD5C195F42BDD819 /* TOCropToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = TOCropViewController/Views/TOCropToolbar.h; sourceTree = "<group>"; };
+		A0F545145E5EA2217F28CE3DC567223C /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = TOCropViewController/es.lproj; sourceTree = "<group>"; };
+		A1BDFBDE83FD303AEA66D25F808879BA /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		A1F68DA7C50EFB4B4C82A68CF0BB7A8F /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		A2030987E7F96B20FD7326A5C4452FE1 /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TOCropViewControllerBundle.bundle; path = TOCropViewControllerBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A476D8B83E1D7B2DA5C29CD3001E3057 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
+		AAC00964734C41EE6BEC3020C649CFFB /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = TOCropViewController/ja.lproj; sourceTree = "<group>"; };
+		ACBBA12C628CF54D94D206AC2A5E5710 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		ADD9D4697D756D71F2DCC11DBDD42053 /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = TOCropViewController/Models/TOCropViewControllerTransitioning.h; sourceTree = "<group>"; };
+		B5ED98FA636507967F1B672DC4DAE3FA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		BAAB83250EAA7CDEED2FF7D8BC6AE21A /* Pods-CardDIY-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CardDIY-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC5B871883A978EC0A65742BB33F8354 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		BD7CA2435018F0FEDEE0BED831CBA76F /* Pods_CardDIY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CardDIY.framework; path = "Pods-CardDIY.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBAB5528DAE9474241EA85E43AC0431B /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		BDE61DEDBF7A9CA44F787F78356BA194 /* Pods-CardDIY-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CardDIY-dummy.m"; sourceTree = "<group>"; };
-		BE328E0A4BB6E8D2061E4A54102979E2 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		BF1D4F5A0F39FC31C696DA4923917497 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "TOCropViewController/zh-Hans.lproj"; sourceTree = "<group>"; };
-		BFDB0EDF43E0E373EBC868FE7A4D07EE /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		C702B1BE23956F56D802ADE406554BCA /* TOCropViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewController.m; path = TOCropViewController/TOCropViewController.m; sourceTree = "<group>"; };
-		C8C8AD3C7E8D5827CED77C8C8DC8F6CA /* NBSAppAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBSAppAgent.h; path = "nbs-newlens-ios-2.5.9/tingyunApp.framework/Versions/A/Headers/NBSAppAgent.h"; sourceTree = "<group>"; };
-		CC171890CEDD19B936DA765B14620EB8 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = TOCropViewController/fr.lproj; sourceTree = "<group>"; };
-		CDD8DA47B91FBF858562399657401CCE /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		D03062550097DFACA661A92E61F2A822 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
-		D27D8B85322686C28B53FB25451A6D7B /* BTGConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTGConstants.h; path = Bugtags.framework/Versions/A/Headers/BTGConstants.h; sourceTree = "<group>"; };
-		D2A1E260B22A5B6C70CDF67CC935BCE4 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TOCropViewControllerBundle-Info.plist"; sourceTree = "<group>"; };
-		D3E790B989B3886C72848365DA847F23 /* TOCropViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TOCropViewController.modulemap; sourceTree = "<group>"; };
-		D5D476B5972474D0C59B70F2CB47A208 /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = TOCropViewController/Models/TOCropViewControllerTransitioning.h; sourceTree = "<group>"; };
-		DA30E8B4438FF4A7A732886949535974 /* TOCropView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = TOCropViewController/Views/TOCropView.h; sourceTree = "<group>"; };
-		DB709ED335243B63CB93B2D61BD9DA61 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		DD13F08F988029731BC3153419B043FD /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
-		DDC2E97C513DCF834C08EAA7A7EDBD30 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE0E7825E585D437FFF6620A9575D47C /* MMPopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMPopupView.m; path = Classes/MMPopupView.m; sourceTree = "<group>"; };
-		DE91A7D9E32A18FA1F4DD6E846BE9419 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E07531C3ABB9F8515E72B8191A785B37 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = TOCropViewController/vi.lproj; sourceTree = "<group>"; };
-		E135A2A63FECAD8675BFDDADD2373C4B /* TOCropViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOCropViewController-dummy.m"; sourceTree = "<group>"; };
-		E19FDBDC177E09BA18139CBE38B9FCD2 /* MMPopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMPopupView.h; path = Classes/MMPopupView.h; sourceTree = "<group>"; };
-		E27A95EB98A8A1A1903D866693BA3FFB /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		E2A6EC9E99A1793BD70B9DB57F8F086D /* TOCropViewController-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TOCropViewController-Bridging-Header.h"; path = "TOCropViewController/TOCropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
-		E69ECFD8604403BBE95321D7E4B99FC7 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = TOCropViewController/nl.lproj; sourceTree = "<group>"; };
-		E7021915203C7FECA71B1964437206BD /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = TOCropViewController/Models/TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
-		E725F5C2FFF413F5F56B67DA483B99B3 /* TOCropView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropView.m; path = TOCropViewController/Views/TOCropView.m; sourceTree = "<group>"; };
-		E8155BAAAFC7802444B90E850F466C63 /* MMAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMAlertView.h; path = Classes/MMAlertView.h; sourceTree = "<group>"; };
-		EF924509A89766BE28970D85D2A74110 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		F0C550709034D34DC2E32E54F82C8649 /* MMPopupCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMPopupCategory.h; path = Classes/MMPopupCategory.h; sourceTree = "<group>"; };
-		F1420220012DAD005D8A8E96C4D1B6F9 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		F6C9481CD3BBE0A60713E4D6FC92A914 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		F7B459A4388A377182240D48C56B6F2A /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = TOCropViewController/id.lproj; sourceTree = "<group>"; };
-		F99669E9DC947F5FD477CD1E874EAD15 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = TOCropViewController/pt.lproj; sourceTree = "<group>"; };
-		FD58785DA10BA1D7F793AB895C066FAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B4951ACF4B3B534A717C294D47A004 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		C38648F8F612E974EB4AB1EAA171F4CA /* TOCropOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = TOCropViewController/Views/TOCropOverlayView.h; sourceTree = "<group>"; };
+		C390A44A1A5040F0BBDA3DF1C267BAF4 /* TOActivityCroppedImageProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOActivityCroppedImageProvider.h; path = TOCropViewController/Models/TOActivityCroppedImageProvider.h; sourceTree = "<group>"; };
+		C959B93B099A139C708AF06E5A8207D3 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		C9EE77787B82FEFABAA8EF3965A86C23 /* TOCropView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropView.m; path = TOCropViewController/Views/TOCropView.m; sourceTree = "<group>"; };
+		CD19B85C33A5C2538D0FF32AFCCFECD7 /* TOCropOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = TOCropViewController/Views/TOCropOverlayView.m; sourceTree = "<group>"; };
+		CD85E3073C8A3F5DEA9268CC0D306DF8 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = TOCropViewController/fr.lproj; sourceTree = "<group>"; };
+		CE5E0ECBDBB56A9C20249E95325FD60C /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		CEECDF19503CCF53030F95DC63F67CAE /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		D4F93FA96C4C4119B5E02303F48514C6 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		D645F78E5CF84FAFEEEB5A23180FDAF7 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		DB6173872DAE1AEDAC7F52AFB21CA748 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		DCBA7770013D4DE2921920097B830F11 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
+		DDFB64D9252C878528F39CA196BC2453 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		DED5ABFE8BF5A26AC4D48970DB941ECB /* TOCropViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-umbrella.h"; sourceTree = "<group>"; };
+		E18FF145D7F05474B4B8A0C2DD1835D2 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		E2E797F113A7B9A216E00EE772BC6994 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = TOCropViewController/id.lproj; sourceTree = "<group>"; };
+		E4F85A5964398EEEA9B6C5971433677A /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = TOCropViewController/pl.lproj; sourceTree = "<group>"; };
+		EC8DB63A3FE29F7511C57D9F738D495C /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		EFAD20D83614A68C0002C370283206D3 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		F3469477AB0DBF15DE39C5823B95045A /* Bugtags.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Bugtags.bundle; sourceTree = "<group>"; };
+		F3E26B16335FBAE58C17B8D6E4085E2D /* TOCropViewController-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TOCropViewController-Bridging-Header.h"; path = "TOCropViewController/TOCropViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		F568F42D53DAAEBE0B6C6891BECCAFD4 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = TOCropViewController/ru.lproj; sourceTree = "<group>"; };
+		FC827B926CDC716484B8250C0A152779 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = TOCropViewController/ko.lproj; sourceTree = "<group>"; };
 		FEA8EC3E710E7A9EF77E30C3A471F450 /* Pods-CardDIY-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardDIY-frameworks.sh"; sourceTree = "<group>"; };
+		FF096EE1E5C05613CC1111C541D74580 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0960720C6836804A8FD9D5E3B1A4415A /* Frameworks */ = {
+		1C2602A6014CEF5100E8D3728F6D085E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3C7E18D4CDD513831C7B32BC5D88D3 /* Foundation.framework in Frameworks */,
+				E9CCBB21EF57366118BFEDEE4D94C828 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2365766A3E8FFA5AE0D3923EA7AA7B77 /* Frameworks */ = {
+		A8E98C55987D2619C7B58C9DB0851C34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7291E023AEC6F1AA940A96E859F179 /* Foundation.framework in Frameworks */,
+				3E524982B5877591502957DF33EEF2A6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50C48608F0A48DE06BA997C9B1119BE7 /* Frameworks */ = {
+		DEC3A8D348C2677BB8DBF1B70723B8B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95224DAE7662A066AAF732074D5D153A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		784B1E657E28D879869AA36E3A580511 /* Frameworks */ = {
+		EB583CA90121CFA6EEE9EB0204B1CF46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C314CC894CE6F000C59DCA556DAA14C4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6EC657AC5A7BEE9A3D288B582F4C5E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				432FA22864D148EBD4CB22F55AB68004 /* Foundation.framework in Frameworks */,
-				38E0CD63021889EE46E1A6B9FA0415F5 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDFC5D0F0FFC4A0909C7B6AC52E96958 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D377C41BB87137A57D1E4639DCA359BB /* Foundation.framework in Frameworks */,
-				E175950F5C063D152129E693796FACAE /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02971564CB21B24493DC017C21397E46 /* Core */ = {
+		07E45C8C3A9852AFEFC227ADAFDE8747 /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
-				D27D8B85322686C28B53FB25451A6D7B /* BTGConstants.h */,
-				69CAFD1DEFA678209D9BE03C8017A671 /* Bugtags.h */,
-				37FE0CE1014A3548112809D6CD7B7054 /* Resources */,
+				7C27DE40B057FD81C419C99B89031421 /* Constraint.swift */,
+				9610D3A265CF4F0E90316D8F89DF4C79 /* ConstraintAttributes.swift */,
+				02E1AA358F258D1BF94BBB4CB0A7B41D /* ConstraintConfig.swift */,
+				6E0B1D9FFA6A0E4B2EC71ECF512B98F6 /* ConstraintConstantTarget.swift */,
+				D4F93FA96C4C4119B5E02303F48514C6 /* ConstraintDescription.swift */,
+				687D221EB18703A318EDBB1964D69724 /* ConstraintDSL.swift */,
+				A476D8B83E1D7B2DA5C29CD3001E3057 /* ConstraintInsets.swift */,
+				CEECDF19503CCF53030F95DC63F67CAE /* ConstraintInsetTarget.swift */,
+				9B6260E1A1D19C9F97F8209F8B1C31D0 /* ConstraintItem.swift */,
+				670F7CB68A4EDAAD467914E670C6632F /* ConstraintLayoutGuide.swift */,
+				945F502A9F21654BFDBB8618B51A4A8F /* ConstraintLayoutGuide+Extensions.swift */,
+				6989259CBDCE57C768EF71159DFF3E81 /* ConstraintLayoutGuideDSL.swift */,
+				56484DB10D9011842EE7BBEADC6BC713 /* ConstraintLayoutSupport.swift */,
+				07B0CACD961F26F115149D8F15DCE44E /* ConstraintLayoutSupportDSL.swift */,
+				5D669AC65CDF409FFD4D4B040430785A /* ConstraintMaker.swift */,
+				836725CB8E6AA547587FD8B88D4C5839 /* ConstraintMakerEditable.swift */,
+				EC8DB63A3FE29F7511C57D9F738D495C /* ConstraintMakerExtendable.swift */,
+				A1F68DA7C50EFB4B4C82A68CF0BB7A8F /* ConstraintMakerFinalizable.swift */,
+				1D9551C56AA11169034A25CEF045CA0A /* ConstraintMakerPriortizable.swift */,
+				5DBE1A7CB064D6AF912438FA84B7E5F9 /* ConstraintMakerRelatable.swift */,
+				FF096EE1E5C05613CC1111C541D74580 /* ConstraintMultiplierTarget.swift */,
+				E18FF145D7F05474B4B8A0C2DD1835D2 /* ConstraintOffsetTarget.swift */,
+				DCBA7770013D4DE2921920097B830F11 /* ConstraintPriority.swift */,
+				0737205CC10528ADD57A24B897B7CF01 /* ConstraintPriorityTarget.swift */,
+				72EBDFC6B7B440ED0574BC7D12032F60 /* ConstraintRelatableTarget.swift */,
+				C959B93B099A139C708AF06E5A8207D3 /* ConstraintRelation.swift */,
+				DB6173872DAE1AEDAC7F52AFB21CA748 /* ConstraintView.swift */,
+				7CF56E7FE04A046721CB6A5852978E35 /* ConstraintView+Extensions.swift */,
+				32461026AE387C3F6D869C7B7C666857 /* ConstraintViewDSL.swift */,
+				EFAD20D83614A68C0002C370283206D3 /* Debugging.swift */,
+				4DECD7B8D3CE3BF0CCCCEF7EAB7AB21C /* LayoutConstraint.swift */,
+				7F535B9031DA83C0C299005B71517824 /* LayoutConstraintItem.swift */,
+				2EFB20D4EEE79B8E02FA60E4E922FA2B /* UILayoutSupport+Extensions.swift */,
+				13630A69DE2C819F533BD1162F6AC65B /* Support Files */,
 			);
-			name = Core;
+			name = SnapKit;
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
-		0D66C49C2E9E8242932E817863E79E78 /* Bugtags */ = {
+		0EE7DB4E784B9FF137F0F1777EB0395E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				02971564CB21B24493DC017C21397E46 /* Core */,
+				2A3FCEE2CC2AC24B264E7664E76FD469 /* Bugtags */,
+				6827949747004EA6A5BFC8D91F5415EC /* Crashlytics */,
+				A4A7B439C04343F9A6912553B46DBDBD /* Fabric */,
+				07E45C8C3A9852AFEFC227ADAFDE8747 /* SnapKit */,
+				B1EA9C05790BCCC4C46966DAAFD553F2 /* TOCropViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		13630A69DE2C819F533BD1162F6AC65B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EB7AA123944AD6D17C499E5279E627C /* Info.plist */,
+				ACBBA12C628CF54D94D206AC2A5E5710 /* SnapKit.modulemap */,
+				06386A0A97E56C449581B73FD7D412F2 /* SnapKit.xcconfig */,
+				C1B4951ACF4B3B534A717C294D47A004 /* SnapKit-dummy.m */,
+				6EED532141973867F08E0A3B46261A1B /* SnapKit-prefix.pch */,
+				76F73029AAA5C29F1D0C06BC79A8B4BD /* SnapKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapKit";
+			sourceTree = "<group>";
+		};
+		2A3FCEE2CC2AC24B264E7664E76FD469 /* Bugtags */ = {
+			isa = PBXGroup;
+			children = (
+				E3690B52A009154A3388EBB14B0AEE55 /* Core */,
 			);
 			name = Bugtags;
 			path = Bugtags;
-			sourceTree = "<group>";
-		};
-		1978DAAF07AF8F2F305BA29CC893FD38 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5644ABDD3B7823B8AB6658EA840D55C7 /* Info.plist */,
-				7ED58FE139F5ABA72330D297DB87F980 /* Masonry.modulemap */,
-				DD13F08F988029731BC3153419B043FD /* Masonry.xcconfig */,
-				2D7758DC68E4054E00978E36405446D5 /* Masonry-dummy.m */,
-				BE328E0A4BB6E8D2061E4A54102979E2 /* Masonry-prefix.pch */,
-				570036DF6D29DEC44809FCD74893DFBF /* Masonry-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
 		3019A0A32F3A9BDD3218B939B6CDC3E7 /* Pods-CardDIY */ = {
@@ -446,71 +361,6 @@
 			path = "Target Support Files/Pods-CardDIY";
 			sourceTree = "<group>";
 		};
-		37C0AB88BA397E5060852C585CAE5BB1 /* MMPopupView */ = {
-			isa = PBXGroup;
-			children = (
-				E8155BAAAFC7802444B90E850F466C63 /* MMAlertView.h */,
-				4F864C93109D9DB3DCECE38F0C8BA609 /* MMAlertView.m */,
-				F0C550709034D34DC2E32E54F82C8649 /* MMPopupCategory.h */,
-				126A8F5E36242AB972C8BF74DD40B644 /* MMPopupCategory.m */,
-				0F6D6B2F28A2FA271F0CA0FE05E01E0E /* MMPopupDefine.h */,
-				30EC169C6DD128CD76110C118C39EA3C /* MMPopupItem.h */,
-				03DAA63868A188163855CDB2FEB260B5 /* MMPopupItem.m */,
-				E19FDBDC177E09BA18139CBE38B9FCD2 /* MMPopupView.h */,
-				DE0E7825E585D437FFF6620A9575D47C /* MMPopupView.m */,
-				A2953FD849814DFD36F79042B21180D2 /* MMPopupWindow.h */,
-				82A5B0874F7301E966770092EDB2C537 /* MMPopupWindow.m */,
-				8D257BC91F1A7400904C3078561A9EB8 /* MMSheetView.h */,
-				32D94715FACAB35A784349E42A2747FD /* MMSheetView.m */,
-				CE2B78612764369816CC0EE412B6A591 /* Support Files */,
-			);
-			name = MMPopupView;
-			path = MMPopupView;
-			sourceTree = "<group>";
-		};
-		37FE0CE1014A3548112809D6CD7B7054 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7DC864B9A460AB0C61993926AC13D9FB /* Bugtags.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		3978473C03270A71A08CE0F2FF5EE415 /* tingyunApp */ = {
-			isa = PBXGroup;
-			children = (
-				C8C8AD3C7E8D5827CED77C8C8DC8F6CA /* NBSAppAgent.h */,
-			);
-			name = tingyunApp;
-			path = tingyunApp;
-			sourceTree = "<group>";
-		};
-		3B068B2BE761027C81F1941D5E74384E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				88DFD9433B64ACC18145C3103663F467 /* ar.lproj */,
-				A3F81BB429197D4EAEF7026B315A01AA /* Base.lproj */,
-				81CEDC8433C510BE5191D64CFA447C9C /* da.lproj */,
-				9D4867077602ACF7356ABA50C2D166C7 /* de.lproj */,
-				1E2F7ECE10F201E671A7391A1F793D51 /* en.lproj */,
-				84ED5A05B84335FCB09DB4675D16FC8E /* es.lproj */,
-				CC171890CEDD19B936DA765B14620EB8 /* fr.lproj */,
-				F7B459A4388A377182240D48C56B6F2A /* id.lproj */,
-				47A92A83E65383376CB0ABBC479FAAAD /* it.lproj */,
-				385C3F2156E5B7C0D7DE9C10F1DDEFF4 /* ja.lproj */,
-				6DDCEEC853749249EA85CDA71AB0524F /* ko.lproj */,
-				E69ECFD8604403BBE95321D7E4B99FC7 /* nl.lproj */,
-				B182BB6E53BAE09CA34135209443A865 /* pl.lproj */,
-				F99669E9DC947F5FD477CD1E874EAD15 /* pt.lproj */,
-				AE4976F306EA6805F2853072CDA0894E /* ru.lproj */,
-				5C194143D1C4E59B9EA0CE0388D7E683 /* tr.lproj */,
-				E07531C3ABB9F8515E72B8191A785B37 /* vi.lproj */,
-				BF1D4F5A0F39FC31C696DA4923917497 /* zh-Hans.lproj */,
-				22E052F650ED26F1351CF578FC200D80 /* zh-Hant.lproj */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		42CCBAD1C1A8350A1A20651D82F34DCB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,294 +369,260 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		59511511C2B4BC905C933DCC67E365C4 /* Frameworks */ = {
+		49661199F1C08F555D2A86CB12856AA6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6BF35C23E029BF10AE1D3595169AFBCF /* Masonry.framework */,
-				AB02C94D765D376FFAFCAF1BEEEEE566 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6398CB08D4526518B0E827D1ED0AACDC /* TOCropViewController */ = {
-			isa = PBXGroup;
-			children = (
-				ABC814CB0741DBA21BB5755AC4D18245 /* TOActivityCroppedImageProvider.h */,
-				4A380FE817D6036B6EE59C8383539A82 /* TOActivityCroppedImageProvider.m */,
-				42A74D9A56AE28A015F603420D628A36 /* TOCropOverlayView.h */,
-				4AA0826D29CB3D09EE622E605E4F9109 /* TOCropOverlayView.m */,
-				686F6FA501DF283296F7594A97DB60E6 /* TOCroppedImageAttributes.h */,
-				7CB97D46A5C89707FDD3B6C41B2D48E4 /* TOCroppedImageAttributes.m */,
-				985582FD062A609AF8104E3FB15598FF /* TOCropScrollView.h */,
-				013C571ECFFF093CAF7E9C4DC625C8F0 /* TOCropScrollView.m */,
-				77819FF1F96D9FC50C61AC68E28756B4 /* TOCropToolbar.h */,
-				7CC39B1571BDD27891FDB94CD6479E7A /* TOCropToolbar.m */,
-				DA30E8B4438FF4A7A732886949535974 /* TOCropView.h */,
-				E725F5C2FFF413F5F56B67DA483B99B3 /* TOCropView.m */,
-				8155BCCBA428CBEAC6094F9706EFB2A3 /* TOCropViewController.h */,
-				C702B1BE23956F56D802ADE406554BCA /* TOCropViewController.m */,
-				E2A6EC9E99A1793BD70B9DB57F8F086D /* TOCropViewController-Bridging-Header.h */,
-				D5D476B5972474D0C59B70F2CB47A208 /* TOCropViewControllerTransitioning.h */,
-				E7021915203C7FECA71B1964437206BD /* TOCropViewControllerTransitioning.m */,
-				24FCBED30C9606187F32C0F87ABD61A4 /* UIImage+CropRotate.h */,
-				26963EA3E1BDA10B9883DC55E8E43741 /* UIImage+CropRotate.m */,
-				3B068B2BE761027C81F1941D5E74384E /* Resources */,
-				F6E7B766A7ECFA9FB7E0E75B958CD243 /* Support Files */,
-			);
-			name = TOCropViewController;
-			path = TOCropViewController;
-			sourceTree = "<group>";
-		};
-		640FFB0F3C376BFFE3E8945F99A93547 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				322431FF1C92C9BB1B0B13B977197FDE /* Info.plist */,
-				4D46EB660446159F1BA6C5DEB951385B /* SnapKit.modulemap */,
-				D03062550097DFACA661A92E61F2A822 /* SnapKit.xcconfig */,
-				2CAB750E83A0BE4A8931F2402E5631AC /* SnapKit-dummy.m */,
-				536055A68AFED375D61BAE2C1FB9FBA0 /* SnapKit-prefix.pch */,
-				3ED7BB56F75993D5B58D131377EBEE94 /* SnapKit-umbrella.h */,
+				1895188BD7176CDD11B714B05F0E813C /* Info.plist */,
+				00E524F7E317AE4CDC8D0A8E3BEB9D53 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */,
+				39ABA910173A26C06700E78B1064CB73 /* TOCropViewController.modulemap */,
+				999F00D7258F5E5A120FF413A7529224 /* TOCropViewController.xcconfig */,
+				077769775C6373D54999EDC292EABE65 /* TOCropViewController-dummy.m */,
+				624AA7F1DCE4A95898B8D9D92FEBD1DC /* TOCropViewController-prefix.pch */,
+				DED5ABFE8BF5A26AC4D48970DB941ECB /* TOCropViewController-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SnapKit";
+			path = "../Target Support Files/TOCropViewController";
 			sourceTree = "<group>";
 		};
-		6E37CB87D713A8D89BD7A4F8A20D7A13 /* Pods */ = {
+		6827949747004EA6A5BFC8D91F5415EC /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				0D66C49C2E9E8242932E817863E79E78 /* Bugtags */,
-				D3D54438AB1D68297F8DBB4592B42446 /* Masonry */,
-				37C0AB88BA397E5060852C585CAE5BB1 /* MMPopupView */,
-				FFCF94C082F76A70A75FECBCFC218776 /* SnapKit */,
-				3978473C03270A71A08CE0F2FF5EE415 /* tingyunApp */,
-				6398CB08D4526518B0E827D1ED0AACDC /* TOCropViewController */,
+				8459A8D413F892CD2D28883758E2A6AB /* ANSCompatibility.h */,
+				60CED611F38F7143E0295E0EC7793332 /* Answers.h */,
+				CE5E0ECBDBB56A9C20249E95325FD60C /* CLSAttributes.h */,
+				585DE7735788AC460A044214E80037E2 /* CLSLogging.h */,
+				BBAB5528DAE9474241EA85E43AC0431B /* CLSReport.h */,
+				A1BDFBDE83FD303AEA66D25F808879BA /* CLSStackFrame.h */,
+				D645F78E5CF84FAFEEEB5A23180FDAF7 /* Crashlytics.h */,
+				ADA8B73B073C8D442B141E4E473D702D /* Frameworks */,
 			);
-			name = Pods;
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		69CCCC65CCC0874B113C52DC609E809E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62B0C4461E5D7DFC6494B3217C4C68D9 /* Pods_CardDIY.framework */,
+				37A702AE86E2E3B4B208B04C690FD39D /* SnapKit.framework */,
+				5588B72127175176DB19F05E581CD0A1 /* TOCropViewController.framework */,
+				A2030987E7F96B20FD7326A5C4452FE1 /* TOCropViewControllerBundle.bundle */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				59511511C2B4BC905C933DCC67E365C4 /* Frameworks */,
-				6E37CB87D713A8D89BD7A4F8A20D7A13 /* Pods */,
-				8F531E69A78902AC2C976C1A2B5F0DBC /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0EE7DB4E784B9FF137F0F1777EB0395E /* Pods */,
+				69CCCC65CCC0874B113C52DC609E809E /* Products */,
 				42CCBAD1C1A8350A1A20651D82F34DCB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F531E69A78902AC2C976C1A2B5F0DBC /* Products */ = {
+		A4A7B439C04343F9A6912553B46DBDBD /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				DDC2E97C513DCF834C08EAA7A7EDBD30 /* Masonry.framework */,
-				89F7BD27B0168F3A4CBF79315B2980E7 /* MMPopupView.framework */,
-				BD7CA2435018F0FEDEE0BED831CBA76F /* Pods_CardDIY.framework */,
-				DE91A7D9E32A18FA1F4DD6E846BE9419 /* SnapKit.framework */,
-				9E48867F78F4B64A785A77758287F0DC /* TOCropViewController.framework */,
-				760EFC366AE93F63BC64DF5304939916 /* TOCropViewControllerBundle.bundle */,
+				2EED4159037AFDCC2CE8875E795E3F66 /* FABAttributes.h */,
+				DDFB64D9252C878528F39CA196BC2453 /* Fabric.h */,
+				A7B5DA66F2C8912AE4687992E1D0CE38 /* Frameworks */,
 			);
-			name = Products;
+			name = Fabric;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		AB02C94D765D376FFAFCAF1BEEEEE566 /* iOS */ = {
+		A7B5DA66F2C8912AE4687992E1D0CE38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				848A22C69638D55424736A7E57530671 /* Foundation.framework */,
-				0DC31C30AA1B843123575E6EBA38993C /* UIKit.framework */,
+				0F3AE5CE958B85C19873A9AB2B64F435 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABEAC26698E792C6F34CE5FAF1ED5338 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E2AAA8311E0144468CCB7A8638136A7 /* ar.lproj */,
+				57727D5DF98538934972EC92627EA2CE /* Base.lproj */,
+				2CDFD79562CDE7B4D3A4BA61A84744DD /* da.lproj */,
+				9E4587D95C107BE4BDB55FFC7BD3BEAE /* de.lproj */,
+				182CC0BD4138AC9E75E518053C1DD3D3 /* en.lproj */,
+				A0F545145E5EA2217F28CE3DC567223C /* es.lproj */,
+				CD85E3073C8A3F5DEA9268CC0D306DF8 /* fr.lproj */,
+				E2E797F113A7B9A216E00EE772BC6994 /* id.lproj */,
+				913B36DF55A51B7CFF5A430A94AC0F16 /* it.lproj */,
+				AAC00964734C41EE6BEC3020C649CFFB /* ja.lproj */,
+				FC827B926CDC716484B8250C0A152779 /* ko.lproj */,
+				6387F8E22D87D2AA93DB707EC2DFC42A /* nl.lproj */,
+				E4F85A5964398EEEA9B6C5971433677A /* pl.lproj */,
+				2E8EA63B707F143B73F36D9E889A5AB5 /* pt.lproj */,
+				F568F42D53DAAEBE0B6C6891BECCAFD4 /* ru.lproj */,
+				7E907A3D9890F84F213E7A0F465678A8 /* tr.lproj */,
+				5F3154F6223E06CBD9E9D578C40B4A30 /* vi.lproj */,
+				80CEC6B30C4C13236BA9CF115C731571 /* zh-Hans.lproj */,
+				2EB471D2DEA7F6FF20F7E5E9448CB4E0 /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ADA8B73B073C8D442B141E4E473D702D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5ED98FA636507967F1B672DC4DAE3FA /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1EA9C05790BCCC4C46966DAAFD553F2 /* TOCropViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C390A44A1A5040F0BBDA3DF1C267BAF4 /* TOActivityCroppedImageProvider.h */,
+				88A005661C2D9ADED9CABD242DD4D9F5 /* TOActivityCroppedImageProvider.m */,
+				C38648F8F612E974EB4AB1EAA171F4CA /* TOCropOverlayView.h */,
+				CD19B85C33A5C2538D0FF32AFCCFECD7 /* TOCropOverlayView.m */,
+				575F9533AE3ED55F36A7BBF25B7A764C /* TOCroppedImageAttributes.h */,
+				08BC4FBC7379D792D8E3FF04283295BD /* TOCroppedImageAttributes.m */,
+				7A28E53F8DCBEE5D34486843C469C2F6 /* TOCropScrollView.h */,
+				6902FECFFF89CED2FDC03CE26AFEFE37 /* TOCropScrollView.m */,
+				A0529A59793C8DF9FD5C195F42BDD819 /* TOCropToolbar.h */,
+				5D50141A964ABD9F5A8B7A02BBDA7944 /* TOCropToolbar.m */,
+				583251FEEA1D76CBDBA4EDD495D27F9B /* TOCropView.h */,
+				C9EE77787B82FEFABAA8EF3965A86C23 /* TOCropView.m */,
+				93C331E8363823AAAC97C640CA9F1A0E /* TOCropViewController.h */,
+				6BB6154364A8A661C8D163AA9E7A7643 /* TOCropViewController.m */,
+				F3E26B16335FBAE58C17B8D6E4085E2D /* TOCropViewController-Bridging-Header.h */,
+				ADD9D4697D756D71F2DCC11DBDD42053 /* TOCropViewControllerTransitioning.h */,
+				77069FEB712B8E2CA1D5CD8C2BFC8D5E /* TOCropViewControllerTransitioning.m */,
+				5232370A128E69AA10786085FB26511B /* UIImage+CropRotate.h */,
+				73A3CAB7BCC66555753FE4E60D34A2E1 /* UIImage+CropRotate.m */,
+				ABEAC26698E792C6F34CE5FAF1ED5338 /* Resources */,
+				49661199F1C08F555D2A86CB12856AA6 /* Support Files */,
+			);
+			name = TOCropViewController;
+			path = TOCropViewController;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CE2B78612764369816CC0EE412B6A591 /* Support Files */ = {
+		E3690B52A009154A3388EBB14B0AEE55 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				961DF1FA40509617236AED3EE7032D70 /* Info.plist */,
-				0DBE130A033AE4C7C89C7764AE270EAB /* MMPopupView.modulemap */,
-				B77B5D2D9C80BE8F20CE7A90CC265CAD /* MMPopupView.xcconfig */,
-				0EC9C5B698DD2D986582E0FC0D5B1F22 /* MMPopupView-dummy.m */,
-				3AB97606DE21277B78AA84B9240284FD /* MMPopupView-prefix.pch */,
-				1378087D8558EF3372AE9CA285865636 /* MMPopupView-umbrella.h */,
+				449A20E2871D3446A6A9F03B11E7BFF4 /* BTGConstants.h */,
+				73C96AC97C75452AF09745112E39C2D3 /* Bugtags.h */,
+				E98B072590674BB0AF8A24D2AED500BE /* Resources */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MMPopupView";
+			name = Core;
 			sourceTree = "<group>";
 		};
-		D3D54438AB1D68297F8DBB4592B42446 /* Masonry */ = {
+		E98B072590674BB0AF8A24D2AED500BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				52E6FC8E50FB67B7E5FAB0E95155313F /* MASCompositeConstraint.h */,
-				F6C9481CD3BBE0A60713E4D6FC92A914 /* MASCompositeConstraint.m */,
-				A52ECC76C9AFA0826E688F07CF5CE280 /* MASConstraint.h */,
-				60E9A19F5F752947C84D6AB431AD1958 /* MASConstraint.m */,
-				BFDB0EDF43E0E373EBC868FE7A4D07EE /* MASConstraint+Private.h */,
-				508F9AB79E94C2CA225B5F21F126FD22 /* MASConstraintMaker.h */,
-				B36D7CE43873592B691D3A2796C89FA7 /* MASConstraintMaker.m */,
-				82B3736B732ED609F18CB71171888B96 /* MASLayoutConstraint.h */,
-				1F77D49288B3C2E913F5E02C29504B0F /* MASLayoutConstraint.m */,
-				56EA5ADA11D76117412457587A2386D7 /* Masonry.h */,
-				967F4CE0040AC64FA1D9905D4A468FA5 /* MASUtilities.h */,
-				9C64AA5CD6BE310A9AB7398FBF1A0CEC /* MASViewAttribute.h */,
-				094BD21BE1921F1C4D7CE6ED110977C2 /* MASViewAttribute.m */,
-				3B9BD6149B82BC14CEB46BA48D5491AB /* MASViewConstraint.h */,
-				BC5B871883A978EC0A65742BB33F8354 /* MASViewConstraint.m */,
-				B0A48B36EE9C82561FFCD09D488A408A /* NSArray+MASAdditions.h */,
-				0AF54295F09C5381B476DB8C17D5CD29 /* NSArray+MASAdditions.m */,
-				EF924509A89766BE28970D85D2A74110 /* NSArray+MASShorthandAdditions.h */,
-				AA9D1B91971280DD9512B82460E7E017 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				F1420220012DAD005D8A8E96C4D1B6F9 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				9F376E5BED27C646602331642FC8C9C5 /* View+MASAdditions.h */,
-				BA3F39F7233CBB5D329C7A82186FF660 /* View+MASAdditions.m */,
-				8A2C2B65A7F8F353E086931FCECF8C66 /* View+MASShorthandAdditions.h */,
-				299FC0D977ACB418CA953D72FFCE00E2 /* ViewController+MASAdditions.h */,
-				7165D578FABBCB873ED48A653CC7B92A /* ViewController+MASAdditions.m */,
-				1978DAAF07AF8F2F305BA29CC893FD38 /* Support Files */,
+				F3469477AB0DBF15DE39C5823B95045A /* Bugtags.bundle */,
 			);
-			name = Masonry;
-			path = Masonry;
-			sourceTree = "<group>";
-		};
-		F6E7B766A7ECFA9FB7E0E75B958CD243 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FD58785DA10BA1D7F793AB895C066FAD /* Info.plist */,
-				D2A1E260B22A5B6C70CDF67CC935BCE4 /* ResourceBundle-TOCropViewControllerBundle-Info.plist */,
-				D3E790B989B3886C72848365DA847F23 /* TOCropViewController.modulemap */,
-				52758E4A28069F71D1433B1FB846205C /* TOCropViewController.xcconfig */,
-				E135A2A63FECAD8675BFDDADD2373C4B /* TOCropViewController-dummy.m */,
-				5F5BFDFC62DBB16BA66C76565C19AA2B /* TOCropViewController-prefix.pch */,
-				6B71A51CECAF4AAD8D8BEC1BB969B838 /* TOCropViewController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TOCropViewController";
-			sourceTree = "<group>";
-		};
-		FFCF94C082F76A70A75FECBCFC218776 /* SnapKit */ = {
-			isa = PBXGroup;
-			children = (
-				26FB8786071A1E24F824F53EF4113365 /* Constraint.swift */,
-				345450CCF60B5FBCF009E7F3B2290CFE /* ConstraintAttributes.swift */,
-				5367C847AC2ABB15A64242E5D67A8EAC /* ConstraintConfig.swift */,
-				B2D01E4BC168DA5256BC8B8386B50901 /* ConstraintConstantTarget.swift */,
-				DB709ED335243B63CB93B2D61BD9DA61 /* ConstraintDescription.swift */,
-				587D155F30FC32A7EC19533E1E0830BD /* ConstraintDSL.swift */,
-				262B9C6046EFEF8D840D289B41C663CD /* ConstraintInsets.swift */,
-				91C64598C61926AF2F899AC069024C0A /* ConstraintInsetTarget.swift */,
-				9EE27DB43C2C91E9B30E4F57A6436870 /* ConstraintItem.swift */,
-				9BDAB600E62748FF0D093F8E343D7C93 /* ConstraintLayoutGuide.swift */,
-				ABE795C4A394D6D1B43DA329B138A94C /* ConstraintLayoutGuide+Extensions.swift */,
-				4D4B7524FD75D176C0720C0CEDE2881F /* ConstraintLayoutGuideDSL.swift */,
-				4ECE441A2F081944B485D2942B54C7CE /* ConstraintLayoutSupport.swift */,
-				5897F291E072D0B2152EC4EE8E210752 /* ConstraintLayoutSupportDSL.swift */,
-				75704980065261E50A9AC564BADCAB3C /* ConstraintMaker.swift */,
-				27F9043D2414FC2E556AC1EDC7F9AB4B /* ConstraintMakerEditable.swift */,
-				B72A25DFAEBA8E4DCBC4742B0BCF680C /* ConstraintMakerExtendable.swift */,
-				CDD8DA47B91FBF858562399657401CCE /* ConstraintMakerFinalizable.swift */,
-				E27A95EB98A8A1A1903D866693BA3FFB /* ConstraintMakerPriortizable.swift */,
-				6304029BD67AA47C5DAE65EF09488240 /* ConstraintMakerRelatable.swift */,
-				352FB870BA55159F4B868A7F680C4810 /* ConstraintMultiplierTarget.swift */,
-				8A913871F0BB40D1DCB4F500B7D6BB4B /* ConstraintOffsetTarget.swift */,
-				0B699803D3E8E335F0296705555E1B4D /* ConstraintPriority.swift */,
-				886AC70B00F9498B33138FBEC77FA3B3 /* ConstraintPriorityTarget.swift */,
-				5F2F7178204AC44DD6DF42D54181150F /* ConstraintRelatableTarget.swift */,
-				37A742E7C3DC7DB5DC93D2AF2CA7EA71 /* ConstraintRelation.swift */,
-				96BF3B8F5966AFBE5F60712857671510 /* ConstraintView.swift */,
-				48E86332F42454FA091D4E6A07ECF730 /* ConstraintView+Extensions.swift */,
-				580750E8180B00DDB392A1AEF19D2B59 /* ConstraintViewDSL.swift */,
-				0062729C38BFCE9623F1C4E86203331E /* Debugging.swift */,
-				5983C1021C677ED3B5619642773A42AD /* LayoutConstraint.swift */,
-				56328D92F47BE2D407CB54BC09398C88 /* LayoutConstraintItem.swift */,
-				8DDB067B8019D49D7FEDE175AD2512DC /* UILayoutSupport+Extensions.swift */,
-				640FFB0F3C376BFFE3E8945F99A93547 /* Support Files */,
-			);
-			name = SnapKit;
-			path = SnapKit;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B70933A19A32A9566590B24EBA0628B /* Headers */ = {
+		3849319A104B939A505DCFFF9C107869 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70ACB047B047AD4AB7E986AE06BE2CBC /* TOActivityCroppedImageProvider.h in Headers */,
-				0747F84737BAB616BB84F77407D93131 /* TOCropOverlayView.h in Headers */,
-				DB9201E9AD79D2563CB50E5100F7E150 /* TOCroppedImageAttributes.h in Headers */,
-				3F039138A94E1538EC393BA2C8C28272 /* TOCropScrollView.h in Headers */,
-				752EC0F661AB5C71D69A8149C9474255 /* TOCropToolbar.h in Headers */,
-				35D0691CC90C3A7926BD21905EA7379E /* TOCropView.h in Headers */,
-				EC458470BF89E73E8A56BEAFDD251C6D /* TOCropViewController-Bridging-Header.h in Headers */,
-				AEFACD297218F423F886A17334670D4D /* TOCropViewController-umbrella.h in Headers */,
-				9A6F1C9D98277F633127F5D41E962997 /* TOCropViewController.h in Headers */,
-				C36471FA740F83A472C5144053B5A2CD /* TOCropViewControllerTransitioning.h in Headers */,
-				49A0CD5B839726EA7FE5780A1162A703 /* UIImage+CropRotate.h in Headers */,
+				078EA41C47F55097D179A44108E0B9BE /* Pods-CardDIY-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E307B05376A61A2A808F0BD5567D6CF /* Headers */ = {
+		48D8E8BB6DB3E662D301ACEC74E2B971 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3293C10AF77950E32EFCBEFEECC22046 /* MMAlertView.h in Headers */,
-				A8F167EEDF633C773263DBC8FC5DAA78 /* MMPopupCategory.h in Headers */,
-				FC52E2E838FD387077FB095B1D0BD5EE /* MMPopupDefine.h in Headers */,
-				2033E271693E91904F297C70057C5164 /* MMPopupItem.h in Headers */,
-				45571455DA9368F54F0DFD2F7FCC5797 /* MMPopupView-umbrella.h in Headers */,
-				64C01BD21DDD4B276AFEE8B31EA33F64 /* MMPopupView.h in Headers */,
-				25D818D57DDE92EA31F334F3F3719604 /* MMPopupWindow.h in Headers */,
-				E76732EE614B346665E1A10405CC6D81 /* MMSheetView.h in Headers */,
+				21FDAC3078BF3194D457609DE49C0A94 /* SnapKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		772518F9244A4BD4968764B390542E3E /* Headers */ = {
+		A056E67AB354DEB8C681F2D11978122D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F3ED3C0D1526C6041D00A6B5607AD3C /* SnapKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD1A78CF6FD8E6C70971B85CC3E5DA79 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F9E9DF10ACED88C41603E96620F599B /* Pods-CardDIY-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3E9930C736C01D12F5733EFD1F0A948 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8CD45B754192DE834B642975E85257AB /* MASCompositeConstraint.h in Headers */,
-				4D4F2050654580FE1F1D5F4F82CEDDB8 /* MASConstraint+Private.h in Headers */,
-				C8DF22EAFFC2F81B0426E2165AC93E44 /* MASConstraint.h in Headers */,
-				88DE7BAB1F4999A5F4B617F44E5FD1D3 /* MASConstraintMaker.h in Headers */,
-				7C17BEA6034027310D1D205DB2008CA5 /* MASLayoutConstraint.h in Headers */,
-				457ACF9150DCF9AF445B129CC9678FB6 /* Masonry-umbrella.h in Headers */,
-				CC8F9B4A1AC4E276EA8AA4C6F2BF3CD4 /* Masonry.h in Headers */,
-				04A7D6AADAB213CE7D26F8EAD2F87536 /* MASUtilities.h in Headers */,
-				636BBA734C1A17A734761D674FAE8800 /* MASViewAttribute.h in Headers */,
-				091D17D5D8F832D28546A72B788CF0AE /* MASViewConstraint.h in Headers */,
-				C0A16E00B4BC2D88A7833D5DAED62942 /* NSArray+MASAdditions.h in Headers */,
-				D8B1525CB3DFCBD8E5032680530413D9 /* NSArray+MASShorthandAdditions.h in Headers */,
-				0FDB2B4F75591851F0F119EAE70B3F63 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				068EF598E554EC57038ACFB89CC2C47A /* View+MASAdditions.h in Headers */,
-				B44383A3FA435C1E986942C817339302 /* View+MASShorthandAdditions.h in Headers */,
-				2854C9B1086758BD2B6681206B6759B4 /* ViewController+MASAdditions.h in Headers */,
+				AAEE341835EA9EA229A507A18BE13ECA /* TOActivityCroppedImageProvider.h in Headers */,
+				78E4A1CAD600C478BC1B54B6A61FEFCE /* TOCropOverlayView.h in Headers */,
+				EB74A850F6E1CE73E728F24C37721686 /* TOCroppedImageAttributes.h in Headers */,
+				B6238E7201401A9E2E84420B76F3EEEC /* TOCropScrollView.h in Headers */,
+				23209FF443204A8BC3867248B28274A7 /* TOCropToolbar.h in Headers */,
+				960444A9681A644FD8ECE5634155E2FA /* TOCropView.h in Headers */,
+				C3D839ACBC114B04E6BD7A3E17E29CDC /* TOCropViewController-Bridging-Header.h in Headers */,
+				9C91B797F0F112A2A6CD15CCCC4543C8 /* TOCropViewController-umbrella.h in Headers */,
+				1BDEE9331DB53C5E53AD42073BB01E7E /* TOCropViewController.h in Headers */,
+				430D4C2E649AA3118484348620B7F9DB /* TOCropViewControllerTransitioning.h in Headers */,
+				15D2ED1366290685455407DA9B4006DE /* UIImage+CropRotate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3157298F96E45DABE3F80FA882460082 /* TOCropViewController-TOCropViewControllerBundle */ = {
+		10CCA47844F541F46FEBD3615E6787BE /* Pods-CardDIY */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2422453BE07BF4B1CB6C05E78694F80A /* Build configuration list for PBXNativeTarget "TOCropViewController-TOCropViewControllerBundle" */;
+			buildConfigurationList = AA6907A3FEE299367447F378A4A3059C /* Build configuration list for PBXNativeTarget "Pods-CardDIY" */;
 			buildPhases = (
-				DCCF9ADD9A13356317C2F508BB49125E /* Sources */,
-				50C48608F0A48DE06BA997C9B1119BE7 /* Frameworks */,
-				4428ADF63D697E5CCFB5C3D4328A4F4D /* Resources */,
+				DF6838D7879BBB28E28582D83C48863E /* Sources */,
+				DEC3A8D348C2677BB8DBF1B70723B8B8 /* Frameworks */,
+				3849319A104B939A505DCFFF9C107869 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E233CF9452F0F57B36FF851A4EB1C9D9 /* PBXTargetDependency */,
+				4B82E41EDBF3AFDDB8FDBEFBFC3A23D8 /* PBXTargetDependency */,
+			);
+			name = "Pods-CardDIY";
+			productName = "Pods-CardDIY";
+			productReference = 62B0C4461E5D7DFC6494B3217C4C68D9 /* Pods_CardDIY.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41B1DB127490F7069C2609DF886D75E1 /* TOCropViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1441118698F72B379992716A68769BEF /* Build configuration list for PBXNativeTarget "TOCropViewController" */;
+			buildPhases = (
+				F51CE9925D2660CE6B94CDC8B2524CE1 /* Sources */,
+				1C2602A6014CEF5100E8D3728F6D085E /* Frameworks */,
+				2158785A2EE5CF369D5EE6308C789723 /* Resources */,
+				A056E67AB354DEB8C681F2D11978122D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C81D71FCF80CAB666A1360E6714A5039 /* PBXTargetDependency */,
+			);
+			name = TOCropViewController;
+			productName = TOCropViewController;
+			productReference = 5588B72127175176DB19F05E581CD0A1 /* TOCropViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DDF791A68B7654734E8D63D17EFE8ED6 /* TOCropViewController-TOCropViewControllerBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3670C4993D8BB4343435456C87055DC2 /* Build configuration list for PBXNativeTarget "TOCropViewController-TOCropViewControllerBundle" */;
+			buildPhases = (
+				C7D2AF0E6C5842445818AD7BD7FDEAD8 /* Sources */,
+				EB583CA90121CFA6EEE9EB0204B1CF46 /* Frameworks */,
+				87C3608DFB3E8E8C2F9783322DA30C01 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -814,16 +630,16 @@
 			);
 			name = "TOCropViewController-TOCropViewControllerBundle";
 			productName = "TOCropViewController-TOCropViewControllerBundle";
-			productReference = 760EFC366AE93F63BC64DF5304939916 /* TOCropViewControllerBundle.bundle */;
+			productReference = A2030987E7F96B20FD7326A5C4452FE1 /* TOCropViewControllerBundle.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		892FD92FC871504822E7848556F762CE /* SnapKit */ = {
+		FC949E23AADE689FDBDC79D614C2D214 /* SnapKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F336705E26802124A2693A55883AB08 /* Build configuration list for PBXNativeTarget "SnapKit" */;
+			buildConfigurationList = 7C4DCB6698781CCBB99C08162F2EFCC5 /* Build configuration list for PBXNativeTarget "SnapKit" */;
 			buildPhases = (
-				35E88FF13F8B2180ABB5086A78F0490B /* Sources */,
-				0960720C6836804A8FD9D5E3B1A4415A /* Frameworks */,
-				772518F9244A4BD4968764B390542E3E /* Headers */,
+				EA348DED1B008549086779C79885B2BA /* Sources */,
+				A8E98C55987D2619C7B58C9DB0851C34 /* Frameworks */,
+				48D8E8BB6DB3E662D301ACEC74E2B971 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -831,82 +647,7 @@
 			);
 			name = SnapKit;
 			productName = SnapKit;
-			productReference = DE91A7D9E32A18FA1F4DD6E846BE9419 /* SnapKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A1B2168B8DD91555EBB1722C8D6D847A /* MMPopupView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9FD35FE21BE860C6496EB6B08FAFB870 /* Build configuration list for PBXNativeTarget "MMPopupView" */;
-			buildPhases = (
-				B1BF18AC5961EB1EB42412B6FAEA8EA9 /* Sources */,
-				FDFC5D0F0FFC4A0909C7B6AC52E96958 /* Frameworks */,
-				1E307B05376A61A2A808F0BD5567D6CF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2D4F1ED54F29DA3F93A00F00394C4A1 /* PBXTargetDependency */,
-			);
-			name = MMPopupView;
-			productName = MMPopupView;
-			productReference = 89F7BD27B0168F3A4CBF79315B2980E7 /* MMPopupView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BA862189BB2B39F96835BF43708F308F /* Pods-CardDIY */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0C03A36AFE43A7FD7FB220FA9C3F952F /* Build configuration list for PBXNativeTarget "Pods-CardDIY" */;
-			buildPhases = (
-				32BDFDAA58AE3BFC26304D183E449148 /* Sources */,
-				2365766A3E8FFA5AE0D3923EA7AA7B77 /* Frameworks */,
-				DD1A78CF6FD8E6C70971B85CC3E5DA79 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09F688B50679A8D1319B9C250972B0D3 /* PBXTargetDependency */,
-				32D6C66B01A5FEA038649EED370FCAD3 /* PBXTargetDependency */,
-				48E1702B9CCDEB801B2173640ED86AC5 /* PBXTargetDependency */,
-				6C17B48BC4BDFF470619047E12812AEF /* PBXTargetDependency */,
-			);
-			name = "Pods-CardDIY";
-			productName = "Pods-CardDIY";
-			productReference = BD7CA2435018F0FEDEE0BED831CBA76F /* Pods_CardDIY.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D52144DE9D7255DE912490FF5A806573 /* Masonry */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02D024184BD368B565F3B6257DF3C605 /* Build configuration list for PBXNativeTarget "Masonry" */;
-			buildPhases = (
-				00A62ED60FF8A98AB74C8F2CECD850BA /* Sources */,
-				F6EC657AC5A7BEE9A3D288B582F4C5E9 /* Frameworks */,
-				F3E9930C736C01D12F5733EFD1F0A948 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Masonry;
-			productName = Masonry;
-			productReference = DDC2E97C513DCF834C08EAA7A7EDBD30 /* Masonry.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E11804B2123A2D2D5B550C73FF7F33DE /* TOCropViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DAB1419FE15048D29DC038D3E2840ABC /* Build configuration list for PBXNativeTarget "TOCropViewController" */;
-			buildPhases = (
-				3F13DE1CAB977FCBED49A974020F0E18 /* Sources */,
-				784B1E657E28D879869AA36E3A580511 /* Frameworks */,
-				49EA3904F2E6E5FD8A75E0F2C0297945 /* Resources */,
-				0B70933A19A32A9566590B24EBA0628B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7C193C1A1ABF5B4C85FDCAF916C55F8 /* PBXTargetDependency */,
-			);
-			name = TOCropViewController;
-			productName = TOCropViewController;
-			productReference = 9E48867F78F4B64A785A77758287F0DC /* TOCropViewController.framework */;
+			productReference = 37A702AE86E2E3B4B208B04C690FD39D /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -926,308 +667,153 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8F531E69A78902AC2C976C1A2B5F0DBC /* Products */;
+			productRefGroup = 69CCCC65CCC0874B113C52DC609E809E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D52144DE9D7255DE912490FF5A806573 /* Masonry */,
-				A1B2168B8DD91555EBB1722C8D6D847A /* MMPopupView */,
-				BA862189BB2B39F96835BF43708F308F /* Pods-CardDIY */,
-				892FD92FC871504822E7848556F762CE /* SnapKit */,
-				E11804B2123A2D2D5B550C73FF7F33DE /* TOCropViewController */,
-				3157298F96E45DABE3F80FA882460082 /* TOCropViewController-TOCropViewControllerBundle */,
+				10CCA47844F541F46FEBD3615E6787BE /* Pods-CardDIY */,
+				FC949E23AADE689FDBDC79D614C2D214 /* SnapKit */,
+				41B1DB127490F7069C2609DF886D75E1 /* TOCropViewController */,
+				DDF791A68B7654734E8D63D17EFE8ED6 /* TOCropViewController-TOCropViewControllerBundle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4428ADF63D697E5CCFB5C3D4328A4F4D /* Resources */ = {
+		2158785A2EE5CF369D5EE6308C789723 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				277644A0087460A40ED80E664F6679DE /* ar.lproj in Resources */,
-				42B0AD3227FA046A6E2C0825378EB2CA /* Base.lproj in Resources */,
-				10B30981F815F7CED708588E5D599FD0 /* da.lproj in Resources */,
-				A9B008A23077EDD60C14433CEE17BD0C /* de.lproj in Resources */,
-				3E391AF5E058C61A9741F16E0A3E9305 /* en.lproj in Resources */,
-				26AC1C8363A491192FB4034249A06AC0 /* es.lproj in Resources */,
-				C0AD7F1F2C46B25CA4F77547575297C6 /* fr.lproj in Resources */,
-				C6B3FB0EC23380154EF6BF6ACBC5B19C /* id.lproj in Resources */,
-				326DBAF9CAE56B1A2A937ADCABE76236 /* it.lproj in Resources */,
-				52EFE3B4DF8C0DF9B7EA67709FF0D634 /* ja.lproj in Resources */,
-				1A45C8E89DFC153DB791EC9B22F3360E /* ko.lproj in Resources */,
-				4E2D081400D2494E1966EDBB1C0382C3 /* nl.lproj in Resources */,
-				70FA5B093EEED76177EA09BB20ACC9CD /* pl.lproj in Resources */,
-				B220BB5D1513D4D82C9B449CCFE8764E /* pt.lproj in Resources */,
-				3DBD7E6FC6A8A2C1E6A9CB96CB90C83B /* ru.lproj in Resources */,
-				8E1B72D95DD89C3743E6A7AEB8F82795 /* tr.lproj in Resources */,
-				1E6173EE2F74F093DD360A6ACD928CB2 /* vi.lproj in Resources */,
-				4754915F784361AEC316DD28FF8523DC /* zh-Hans.lproj in Resources */,
-				595E0B9B362955BED3AAD7EA17AE2E3E /* zh-Hant.lproj in Resources */,
+				60701451720AD66DFDA63B9840713E30 /* TOCropViewControllerBundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49EA3904F2E6E5FD8A75E0F2C0297945 /* Resources */ = {
+		87C3608DFB3E8E8C2F9783322DA30C01 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5121ADB75E35DC18CF1E1AA9CF6F41D5 /* TOCropViewControllerBundle.bundle in Resources */,
+				2CDAC3574B503CA4B7892C8C6789FBDC /* ar.lproj in Resources */,
+				21F247843971F8A0AE98BF314BD3922C /* Base.lproj in Resources */,
+				FD4B050232E234FC6B6117A679D29085 /* da.lproj in Resources */,
+				8A091A27F751CD27A738937F84E3F422 /* de.lproj in Resources */,
+				94CB97A921D1545D0F9469699119123A /* en.lproj in Resources */,
+				C9EAB6D6640C002EC930D699C61892B2 /* es.lproj in Resources */,
+				F69CC445AA274BC16701C9DE105864F0 /* fr.lproj in Resources */,
+				EC735A7D343DFAF4848E970CDEF35A6B /* id.lproj in Resources */,
+				0BD7956D8D2A5B8B0163C43EC608B6FC /* it.lproj in Resources */,
+				BA7EF2F74E6D9F88CC878A06C5072894 /* ja.lproj in Resources */,
+				9FDB224875F337E68B4B742552545378 /* ko.lproj in Resources */,
+				1D326B01749DBFE03E55130C27DF5B1E /* nl.lproj in Resources */,
+				EC744331086D1D8F1C4490C28108788F /* pl.lproj in Resources */,
+				28CF5ED99FEE144E7EAC49312F493916 /* pt.lproj in Resources */,
+				41892E39BE7551F07E7635C0A068EBBD /* ru.lproj in Resources */,
+				CFE4B51597BBB49708DA8E0C08D9BEA4 /* tr.lproj in Resources */,
+				F0168261AAEB4D53CB61491ACA742997 /* vi.lproj in Resources */,
+				264687FFBCD6F0DADFDD1762138AA5FF /* zh-Hans.lproj in Resources */,
+				55204E8A15C55254426B8BB9EE2213C8 /* zh-Hant.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00A62ED60FF8A98AB74C8F2CECD850BA /* Sources */ = {
+		C7D2AF0E6C5842445818AD7BD7FDEAD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53BDF81D0A52EA526D597A5C5B139D7F /* MASCompositeConstraint.m in Sources */,
-				59F81DE0305CC2AC448D2A3C6B3280A2 /* MASConstraint.m in Sources */,
-				73BBDACC22CCA36A6DAAA167AD780BAF /* MASConstraintMaker.m in Sources */,
-				6C23BBF56ED4DCC10CA1765A6736D1F8 /* MASLayoutConstraint.m in Sources */,
-				A08A8AB356264E248D01F1BC0EF08166 /* Masonry-dummy.m in Sources */,
-				A7370CE9231F9A4927142D79021879EC /* MASViewAttribute.m in Sources */,
-				756DF24546C7D91459DCADC8F1C98660 /* MASViewConstraint.m in Sources */,
-				E72EDE323AC9F92EC8A00A93AC186093 /* NSArray+MASAdditions.m in Sources */,
-				0F3DF5C3BEFCC9838B53C37735B414BE /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				F4B3E44D5D2F6508BC1BB35A9FBDEC70 /* View+MASAdditions.m in Sources */,
-				8A6EEF68E7625AB66A3A8DED1594F88F /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32BDFDAA58AE3BFC26304D183E449148 /* Sources */ = {
+		DF6838D7879BBB28E28582D83C48863E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68DC66104878CEE582F284D6884DAA4C /* Pods-CardDIY-dummy.m in Sources */,
+				1C27D8B79DAAFC87070E60BED05E8014 /* Pods-CardDIY-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35E88FF13F8B2180ABB5086A78F0490B /* Sources */ = {
+		EA348DED1B008549086779C79885B2BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				799D35A9F0FF20FC99D144FA96AB46E0 /* Constraint.swift in Sources */,
-				54AA34680137F1D694A53A939E140713 /* ConstraintAttributes.swift in Sources */,
-				78CF4362D6ECE8FC7A55C2E871FFFFD6 /* ConstraintConfig.swift in Sources */,
-				33FE5ED87A7D2B4FFEED9FAB3A843FED /* ConstraintConstantTarget.swift in Sources */,
-				49401579D08DEF24A166EE38122D97D5 /* ConstraintDescription.swift in Sources */,
-				C56077A1901E8D254E217FE6343156F6 /* ConstraintDSL.swift in Sources */,
-				966DAC6B301281ACA0B7A3F3110563F9 /* ConstraintInsets.swift in Sources */,
-				7557550B63CAAB89E006B13052951E85 /* ConstraintInsetTarget.swift in Sources */,
-				D4049BC36CD770BCEBA63C05574442A8 /* ConstraintItem.swift in Sources */,
-				59D842B4796870186CA5CA7C9895BFD3 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				9801B5B1703463B20F22E1D2911E3D89 /* ConstraintLayoutGuide.swift in Sources */,
-				2D1291B64F1680D1446A988C1482B04F /* ConstraintLayoutGuideDSL.swift in Sources */,
-				FB1946D54F7E11094AF9D04C9B08412F /* ConstraintLayoutSupport.swift in Sources */,
-				445E6AEA7A43EB490A4A1C966737524F /* ConstraintLayoutSupportDSL.swift in Sources */,
-				29FC04528A0C805FF200589E26D8EC20 /* ConstraintMaker.swift in Sources */,
-				C4683A91794D14339530F1EF0FCFAF22 /* ConstraintMakerEditable.swift in Sources */,
-				73E6DDEDC02CC2C51FB6A9F3E3306664 /* ConstraintMakerExtendable.swift in Sources */,
-				EB356FEF6C97058C127BDF56598CFF31 /* ConstraintMakerFinalizable.swift in Sources */,
-				D7D65329FDEE60462B87E9BD7CC44AC4 /* ConstraintMakerPriortizable.swift in Sources */,
-				C2AD3ED8B36EAFC733D9654CAE3FDC63 /* ConstraintMakerRelatable.swift in Sources */,
-				B38F596EFB1EE413736793BE6395EE90 /* ConstraintMultiplierTarget.swift in Sources */,
-				DF47B45751D4E23DC13A3E3E4915D23D /* ConstraintOffsetTarget.swift in Sources */,
-				ADB57CA66D9ADEEBB0529EAA5FD650F4 /* ConstraintPriority.swift in Sources */,
-				FCB15A664C84704FC799C215238B86A5 /* ConstraintPriorityTarget.swift in Sources */,
-				FD853D5ED376B8CF7C558C3D4280E565 /* ConstraintRelatableTarget.swift in Sources */,
-				6949DBD2BF0EAACCD36F963456479373 /* ConstraintRelation.swift in Sources */,
-				03131182FAC71B92B6331C1CE886AA72 /* ConstraintView+Extensions.swift in Sources */,
-				2BC0DA79472458A731A685BBA57A3ABF /* ConstraintView.swift in Sources */,
-				BECC5336BB4952633D16ED559DDF6B24 /* ConstraintViewDSL.swift in Sources */,
-				7C43F6872E6FC62ECEC0D200B912FA6B /* Debugging.swift in Sources */,
-				79A69D9CF7887520E017DD7F2385E994 /* LayoutConstraint.swift in Sources */,
-				59B94CF3FD4B2ACAE2A45AE944A06DF0 /* LayoutConstraintItem.swift in Sources */,
-				8BF9E338DCA562BE41FB19E65CF507B9 /* SnapKit-dummy.m in Sources */,
-				9D377F3CBC02E574AC5FCD49D9ED9C6B /* UILayoutSupport+Extensions.swift in Sources */,
+				FC3219ABC53A0EF45D4FEB15FCF2A732 /* Constraint.swift in Sources */,
+				C2D664CA5E83AF13FF35750EE5DDD16F /* ConstraintAttributes.swift in Sources */,
+				033B5A0623576EB745F19CD0F6EC4124 /* ConstraintConfig.swift in Sources */,
+				B4CC6D0D19FBBD1F57A20B8C23D2E524 /* ConstraintConstantTarget.swift in Sources */,
+				754977184732D14EAFB62335C52D6F8C /* ConstraintDescription.swift in Sources */,
+				5D73D96C487704C7A64C01CB6C73CA9B /* ConstraintDSL.swift in Sources */,
+				233D34CB10F5EBF4BDE9F224B76FC491 /* ConstraintInsets.swift in Sources */,
+				665A1EF595DF559846321ED005910D64 /* ConstraintInsetTarget.swift in Sources */,
+				5AF0AA7299CC04A93711A4F26C2FBF77 /* ConstraintItem.swift in Sources */,
+				EA77CA00006D38A0078B213BA3FD3E23 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				EACE29DCADC27E57B3796C0E281DA72E /* ConstraintLayoutGuide.swift in Sources */,
+				B1B39B41FD703FDF2680B12AEF8ADC78 /* ConstraintLayoutGuideDSL.swift in Sources */,
+				3F829CD1F93DC23D6707AB667C728EC7 /* ConstraintLayoutSupport.swift in Sources */,
+				64051ECA48DEFB7720D0F093FB32DA7A /* ConstraintLayoutSupportDSL.swift in Sources */,
+				3180ABF7495C18FE565EF3C912152F62 /* ConstraintMaker.swift in Sources */,
+				227083E3D31E87671A8EAF1AD17B03F5 /* ConstraintMakerEditable.swift in Sources */,
+				01CCDA5C872A682DB5E499CEB8C0929B /* ConstraintMakerExtendable.swift in Sources */,
+				86E5B0C86F9D7973B3D0F413C4250C36 /* ConstraintMakerFinalizable.swift in Sources */,
+				43BE6E192B1F86AFC0FC9EC10745A69E /* ConstraintMakerPriortizable.swift in Sources */,
+				B4D79EC72F0BBE1165A75F190CEC78E0 /* ConstraintMakerRelatable.swift in Sources */,
+				AD8209E52189EF5AE11599C2EA0BB522 /* ConstraintMultiplierTarget.swift in Sources */,
+				5B661FC46EE4EFE87C903285B66AD74A /* ConstraintOffsetTarget.swift in Sources */,
+				BD3BBC1ECB85963D741289697ACC11D0 /* ConstraintPriority.swift in Sources */,
+				5095197629D6297DC1DD3A94C739D99D /* ConstraintPriorityTarget.swift in Sources */,
+				E4DD4263F00DD3E5A7A3309F953BAC53 /* ConstraintRelatableTarget.swift in Sources */,
+				5E50D581DC05605BA56830F86F8098E0 /* ConstraintRelation.swift in Sources */,
+				4E716379DBBA4CBD2E35C5EFA6AD19A0 /* ConstraintView+Extensions.swift in Sources */,
+				E00B1C075E692B76045D27E09096ADBE /* ConstraintView.swift in Sources */,
+				B0C5A19178CBFCFDBC7E0AEB9D9EF436 /* ConstraintViewDSL.swift in Sources */,
+				2D094735C5B62CF3182B89A07659890A /* Debugging.swift in Sources */,
+				3824E38D9A2BFADECB33662729F9D1D5 /* LayoutConstraint.swift in Sources */,
+				198FB4E168E2B2777AAEA1F47BD90BB5 /* LayoutConstraintItem.swift in Sources */,
+				46167AEBB9B5E3AC4A30C0796824E553 /* SnapKit-dummy.m in Sources */,
+				7964A60A2B2DDCD5B779D8A1B5451DDE /* UILayoutSupport+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F13DE1CAB977FCBED49A974020F0E18 /* Sources */ = {
+		F51CE9925D2660CE6B94CDC8B2524CE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AFEC4F48DCE07BFD9065BA476A7B079 /* TOActivityCroppedImageProvider.m in Sources */,
-				F22A302F43377E80C7DD48D65D0DC32C /* TOCropOverlayView.m in Sources */,
-				16DD3CD6B4C69290AE1A24C782FA9397 /* TOCroppedImageAttributes.m in Sources */,
-				92839245449E3ABCBF44790C0873FCBB /* TOCropScrollView.m in Sources */,
-				9D92098045A8B09E9B5F554D6A2BA6DD /* TOCropToolbar.m in Sources */,
-				B07205FD54818F7644784D08D52BAA9A /* TOCropView.m in Sources */,
-				A43E247EAA3585979274233DE6800402 /* TOCropViewController-dummy.m in Sources */,
-				CB045BABCC4717A0B3BFF325C758BA5B /* TOCropViewController.m in Sources */,
-				32FF04EDA1C14040A403565EA4F96DE4 /* TOCropViewControllerTransitioning.m in Sources */,
-				590B29C0C76D4134E57FEAB9715AC585 /* UIImage+CropRotate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1BF18AC5961EB1EB42412B6FAEA8EA9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E2675F2BD4E2731A4BBFA219171F56E /* MMAlertView.m in Sources */,
-				8D66D910610BD24F01E05D16FB861E8E /* MMPopupCategory.m in Sources */,
-				83ED8092D4AD39509157F0DCA1563DD5 /* MMPopupItem.m in Sources */,
-				D235CF2F117F1C656177AEEE4C4F92C8 /* MMPopupView-dummy.m in Sources */,
-				51E0D1534E525AA8BC521278947D52C3 /* MMPopupView.m in Sources */,
-				A5130EA3AB1086729B0F364CB29A70B2 /* MMPopupWindow.m in Sources */,
-				E74A884691E2E70BB61088175879F05E /* MMSheetView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCCF9ADD9A13356317C2F508BB49125E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EB33AA4F1A0434728E0A8C57E5E28FE9 /* TOActivityCroppedImageProvider.m in Sources */,
+				B82AB167C726704A6547AAC635865EFB /* TOCropOverlayView.m in Sources */,
+				0A984F967DDA24974AE75C93CAD4FF48 /* TOCroppedImageAttributes.m in Sources */,
+				B9738EC7AEA58EB39AD4C4754AB9D9CE /* TOCropScrollView.m in Sources */,
+				2E7E8EC015250DB7418A8CD2EBAAF0F1 /* TOCropToolbar.m in Sources */,
+				A00EDB8C5ED5D8DF4811181F6FB09EF6 /* TOCropView.m in Sources */,
+				159342A73343DBA3602229656CA5EA94 /* TOCropViewController-dummy.m in Sources */,
+				2E7AD3A27A2C7090E46ADA4508DE7300 /* TOCropViewController.m in Sources */,
+				15B46018C4992A80B2B4E58E8F6ACFFE /* TOCropViewControllerTransitioning.m in Sources */,
+				5387C7B305E422F831E1FE9C62481D87 /* UIImage+CropRotate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		09F688B50679A8D1319B9C250972B0D3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MMPopupView;
-			target = A1B2168B8DD91555EBB1722C8D6D847A /* MMPopupView */;
-			targetProxy = B062EB89E61EE7D39D0A32C06B446A0C /* PBXContainerItemProxy */;
-		};
-		32D6C66B01A5FEA038649EED370FCAD3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = D52144DE9D7255DE912490FF5A806573 /* Masonry */;
-			targetProxy = FCE2F95B708C2A8A974FB468C9402878 /* PBXContainerItemProxy */;
-		};
-		48E1702B9CCDEB801B2173640ED86AC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 892FD92FC871504822E7848556F762CE /* SnapKit */;
-			targetProxy = C5C8580407A2B3C9F1C8E4FF3ABCE3B1 /* PBXContainerItemProxy */;
-		};
-		6C17B48BC4BDFF470619047E12812AEF /* PBXTargetDependency */ = {
+		4B82E41EDBF3AFDDB8FDBEFBFC3A23D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TOCropViewController;
-			target = E11804B2123A2D2D5B550C73FF7F33DE /* TOCropViewController */;
-			targetProxy = 8C58C5E93D799EB3261BE5DF1D6A5076 /* PBXContainerItemProxy */;
+			target = 41B1DB127490F7069C2609DF886D75E1 /* TOCropViewController */;
+			targetProxy = E58D0DFE1B51E39407DB881C51D9B953 /* PBXContainerItemProxy */;
 		};
-		D2D4F1ED54F29DA3F93A00F00394C4A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = D52144DE9D7255DE912490FF5A806573 /* Masonry */;
-			targetProxy = 9A998498995115AE2982EC3D55237C32 /* PBXContainerItemProxy */;
-		};
-		D7C193C1A1ABF5B4C85FDCAF916C55F8 /* PBXTargetDependency */ = {
+		C81D71FCF80CAB666A1360E6714A5039 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "TOCropViewController-TOCropViewControllerBundle";
-			target = 3157298F96E45DABE3F80FA882460082 /* TOCropViewController-TOCropViewControllerBundle */;
-			targetProxy = 57591F66CA96280C8ABB7CC59A4784ED /* PBXContainerItemProxy */;
+			target = DDF791A68B7654734E8D63D17EFE8ED6 /* TOCropViewController-TOCropViewControllerBundle */;
+			targetProxy = 827FFBEA21536CBCCE7A0C7D2EF368B4 /* PBXContainerItemProxy */;
+		};
+		E233CF9452F0F57B36FF851A4EB1C9D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			target = FC949E23AADE689FDBDC79D614C2D214 /* SnapKit */;
+			targetProxy = 6FBD1F9C6490581819D11F3D11C9943B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05B9C2229E592915BFF1A450F68DE5CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D03062550097DFACA661A92E61F2A822 /* SnapKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		08427B90AFFDC10E422EB699A1601269 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52758E4A28069F71D1433B1FB846205C /* TOCropViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TOCropViewController/TOCropViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TOCropViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TOCropViewController/TOCropViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = TOCropViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		16FCD7D4BB7D4BFCE0FB1E2CA6322546 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B77B5D2D9C80BE8F20CE7A90CC265CAD /* MMPopupView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMPopupView/MMPopupView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MMPopupView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MMPopupView/MMPopupView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MMPopupView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1277,9 +863,9 @@
 			};
 			name = Debug;
 		};
-		2539C952AE911729C6822D6A88E6CC30 /* Debug */ = {
+		2C3412D20E964773556B3523DDC3FD5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD13F08F988029731BC3153419B043FD /* Masonry.xcconfig */;
+			baseConfigurationReference = 999F00D7258F5E5A120FF413A7529224 /* TOCropViewController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1293,14 +879,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TOCropViewController/TOCropViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TOCropViewController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				MODULEMAP_FILE = "Target Support Files/TOCropViewController/TOCropViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Masonry;
+				PRODUCT_NAME = TOCropViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1311,9 +897,48 @@
 			};
 			name = Debug;
 		};
-		2C0427EF5803A8B185FA40B8171A51FC /* Release */ = {
+		2EB4F11D8E604F86F76042283EB00378 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52758E4A28069F71D1433B1FB846205C /* TOCropViewController.xcconfig */;
+			baseConfigurationReference = 5C5F549F7491CC50203B47EFCBEB991B /* Pods-CardDIY.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CardDIY/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CardDIY/Pods-CardDIY.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CardDIY;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		325884962AC8B293F9E0C3631A78901A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DE5E07620C164D9C11586D5D9F32D1 /* Pods-CardDIY.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1327,17 +952,21 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TOCropViewController/TOCropViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TOCropViewController/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-CardDIY/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TOCropViewController/TOCropViewController.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CardDIY/Pods-CardDIY.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TOCropViewController;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CardDIY;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1389,81 +1018,43 @@
 			};
 			name = Release;
 		};
-		74C360186D3C5516FB88AD2A1A8C4943 /* Release */ = {
+		6056959DFF9E8E31D9F6653FBC8FF558 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89DE5E07620C164D9C11586D5D9F32D1 /* Pods-CardDIY.release.xcconfig */;
+			baseConfigurationReference = 999F00D7258F5E5A120FF413A7529224 /* TOCropViewController.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TOCropViewController";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CardDIY/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = "Target Support Files/TOCropViewController/ResourceBundle-TOCropViewControllerBundle-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CardDIY/Pods-CardDIY.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CardDIY;
+				PRODUCT_NAME = TOCropViewControllerBundle;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		73CEB2F9DBF692953B90B9CCFB035D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999F00D7258F5E5A120FF413A7529224 /* TOCropViewController.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TOCropViewController";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/TOCropViewController/ResourceBundle-TOCropViewControllerBundle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = TOCropViewControllerBundle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		76DB6FAAC81D1842702F46F123E0AB57 /* Release */ = {
+		94CCEA85A24505F0E280F35C622257D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD13F08F988029731BC3153419B043FD /* Masonry.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7CEACB6A63505BC94DF17FD5FE4090F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D03062550097DFACA661A92E61F2A822 /* SnapKit.xcconfig */;
+			baseConfigurationReference = 06386A0A97E56C449581B73FD7D412F2 /* SnapKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1496,77 +1087,9 @@
 			};
 			name = Release;
 		};
-		935E0A25DB1EC7AC2B2B3868BC78B8AA /* Release */ = {
+		CE20695308B095131BBFBD6CD3091F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52758E4A28069F71D1433B1FB846205C /* TOCropViewController.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TOCropViewController";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TOCropViewController/ResourceBundle-TOCropViewControllerBundle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = TOCropViewControllerBundle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		A91F3225CB3090CE7E9564E27A231B47 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52758E4A28069F71D1433B1FB846205C /* TOCropViewController.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TOCropViewController";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/TOCropViewController/ResourceBundle-TOCropViewControllerBundle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = TOCropViewControllerBundle;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		AB703D65C13D56C32153D773D5023989 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B77B5D2D9C80BE8F20CE7A90CC265CAD /* MMPopupView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMPopupView/MMPopupView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MMPopupView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MMPopupView/MMPopupView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MMPopupView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C057D4CB0004137E3BECD4BBFBC455F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C5F549F7491CC50203B47EFCBEB991B /* Pods-CardDIY.debug.xcconfig */;
+			baseConfigurationReference = 06386A0A97E56C449581B73FD7D412F2 /* SnapKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1580,21 +1103,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CardDIY/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CardDIY/Pods-CardDIY.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CardDIY;
+				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1603,32 +1122,48 @@
 			};
 			name = Debug;
 		};
+		E02158FB31DBBC4E108A0C7AD870080D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999F00D7258F5E5A120FF413A7529224 /* TOCropViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TOCropViewController/TOCropViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TOCropViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TOCropViewController/TOCropViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TOCropViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02D024184BD368B565F3B6257DF3C605 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+		1441118698F72B379992716A68769BEF /* Build configuration list for PBXNativeTarget "TOCropViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2539C952AE911729C6822D6A88E6CC30 /* Debug */,
-				76DB6FAAC81D1842702F46F123E0AB57 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0C03A36AFE43A7FD7FB220FA9C3F952F /* Build configuration list for PBXNativeTarget "Pods-CardDIY" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C057D4CB0004137E3BECD4BBFBC455F4 /* Debug */,
-				74C360186D3C5516FB88AD2A1A8C4943 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2422453BE07BF4B1CB6C05E78694F80A /* Build configuration list for PBXNativeTarget "TOCropViewController-TOCropViewControllerBundle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A91F3225CB3090CE7E9564E27A231B47 /* Debug */,
-				935E0A25DB1EC7AC2B2B3868BC78B8AA /* Release */,
+				2C3412D20E964773556B3523DDC3FD5A /* Debug */,
+				E02158FB31DBBC4E108A0C7AD870080D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1642,29 +1177,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F336705E26802124A2693A55883AB08 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
+		3670C4993D8BB4343435456C87055DC2 /* Build configuration list for PBXNativeTarget "TOCropViewController-TOCropViewControllerBundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05B9C2229E592915BFF1A450F68DE5CE /* Debug */,
-				7CEACB6A63505BC94DF17FD5FE4090F7 /* Release */,
+				6056959DFF9E8E31D9F6653FBC8FF558 /* Debug */,
+				73CEB2F9DBF692953B90B9CCFB035D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FD35FE21BE860C6496EB6B08FAFB870 /* Build configuration list for PBXNativeTarget "MMPopupView" */ = {
+		7C4DCB6698781CCBB99C08162F2EFCC5 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16FCD7D4BB7D4BFCE0FB1E2CA6322546 /* Debug */,
-				AB703D65C13D56C32153D773D5023989 /* Release */,
+				CE20695308B095131BBFBD6CD3091F21 /* Debug */,
+				94CCEA85A24505F0E280F35C622257D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAB1419FE15048D29DC038D3E2840ABC /* Build configuration list for PBXNativeTarget "TOCropViewController" */ = {
+		AA6907A3FEE299367447F378A4A3059C /* Build configuration list for PBXNativeTarget "Pods-CardDIY" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08427B90AFFDC10E422EB699A1601269 /* Debug */,
-				2C0427EF5803A8B185FA40B8171A51FC /* Release */,
+				2EB4F11D8E604F86F76042283EB00378 /* Debug */,
+				325884962AC8B293F9E0C3631A78901A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

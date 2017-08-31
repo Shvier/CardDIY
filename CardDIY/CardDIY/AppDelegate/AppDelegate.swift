@@ -8,6 +8,8 @@
 
 import UIKit
 //import Firebase
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        setupUMSocial()
 //        setupFirebase()
 //        GADMobileAds.configure(withApplicationID: "ca-app-pub-7779776531531575~7426958844")
-        
+        Fabric.with([Crashlytics.self])
         let homeViewController = SHHomeViewController()
         let naviViewController = UINavigationController(rootViewController: homeViewController)
         

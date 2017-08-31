@@ -209,6 +209,7 @@ class SHEffectViewController: SHBaseViewController {
             textField.font = UIFont(name: WordFontFamily, size: WordFontSize)
             textField.placeholder = LocalizedString(key: "Tap to Edit")
             textField.tintColor = UIColor.clear
+            textField.delegate = self
             return textField
         })()
         cardContentView!.addSubview(nameTextField!)
@@ -561,6 +562,9 @@ extension SHEffectViewController: SHYGORaceViewDelegate {
 extension SHEffectViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.isEqual(nameTextField) {
+            return true
+        }
         if string == "" {
             return true
         }
@@ -568,6 +572,12 @@ extension SHEffectViewController: UITextFieldDelegate {
             return false
         } else {
             return true
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.isEqual(nameTextField) && Locale.preferredLanguages.first! == "ja" {
+            textField.attributedText = NSAttributedString(string: textField.text!, attributes: [NSFontAttributeName: UIFont(name: WordFontFamily, size: WordFontSize)!, NSKernAttributeName: -5])
         }
     }
     

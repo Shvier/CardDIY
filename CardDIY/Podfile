@@ -5,12 +5,14 @@ target ‘CardDIY’ do
 
    # Debug
    pod 'Bugtags'
-   pod ‘tingyunApp’
+   pod ‘Crashlytics’
+   pod ‘Fabric’
+   #pod ‘tingyunApp’
 
    # UI
    pod 'SnapKit'
    pod 'TOCropViewController’
-   pod 'MMPopupView'
+   #pod 'MMPopupView'
 
    # UMeng
    #pod ‘UMengUShare/Social/ReducedWeChat'

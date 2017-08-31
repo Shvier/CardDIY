@@ -2,28 +2,26 @@ PODS:
   - Bugtags (2.3.2):
     - Bugtags/Core (= 2.3.2)
   - Bugtags/Core (2.3.2)
-  - Masonry (1.0.2)
-  - MMPopupView (1.7.2):
-    - Masonry
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.12)
   - SnapKit (3.2.0)
-  - tingyunApp (2.5.9)
   - TOCropViewController (2.0.12)
 
 DEPENDENCIES:
   - Bugtags
-  - MMPopupView
+  - Crashlytics
+  - Fabric
   - SnapKit
-  - tingyunApp
   - TOCropViewController
 
 SPEC CHECKSUMS:
   Bugtags: 2ec94ad18b279ce00073ccc7a42cbd4870704882
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  MMPopupView: fe1dd010824029dfb632fdf1a531db5dd5386020
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  tingyunApp: 9213e4e826a618ffda4619618e805bc7392f98b7
   TOCropViewController: e6e31b38d785a901e5651a1e7fff71bcda6c5214
 
-PODFILE CHECKSUM: f3f28f69df64d48217c7e8b6aa355085eedccead
+PODFILE CHECKSUM: c6ad71770e234248b6c1dba745b706c111fa53ca
 
 COCOAPODS: 1.3.1
