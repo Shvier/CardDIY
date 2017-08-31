@@ -7,4 +7,4 @@
 */
 
 CFBundleDisplayName = "遊戲王卡牌DIY";
-"Help Me Open Photo Library to Complete Card Making" = "需要訪問圖片庫來完成卡牌制作";
+"NSPhotoLibraryUsageDescription" = "需要訪問圖片庫來完成卡牌制作";

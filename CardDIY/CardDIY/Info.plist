@@ -26,7 +26,7 @@
 		<true/>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Help me open Photo Library to complete Card</string>
+	<string>Help Me Open Photo Library to Complete Card Making</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>HYXiaoLiShuF.ttf</string>

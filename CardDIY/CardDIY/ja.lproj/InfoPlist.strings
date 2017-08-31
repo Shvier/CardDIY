@@ -7,4 +7,4 @@
 */
 
 CFBundleDisplayName = "ゲーム王カードDIY";
-"Help me open Photo Library to complete Card" = "";
+"NSPhotoLibraryUsageDescription" = "カードの生産を完了するために写真ライブラリにアクセスする必要がある";
