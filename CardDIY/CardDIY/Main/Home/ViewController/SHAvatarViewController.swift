@@ -81,8 +81,8 @@ class SHAvatarViewController: SHBaseViewController {
     }
     
     func shareBarItemAction(sender: UIBarButtonItem) {
-        let title = LocalizedString(key: "YuGiOh Card Maker")
-        let content = LocalizedString(key: "I made my own YuGiOh Card. Come on and have a look.")
+        let title = LocalizedString(key: "YGO Card Maker")
+        let content = LocalizedString(key: "I made my own YGO Card. Come on and have a look.")
         let url = URL(string: AppStoreURL)!
         let image = (cardContentView?.currentImage())!
         let activityViewController = UIActivityViewController(activityItems: [title, content, url, image], applicationActivities: nil)
@@ -90,7 +90,7 @@ class SHAvatarViewController: SHBaseViewController {
     }
     
     func initUI() {
-        navigationTitle = LocalizedString(key: "YuGiOh")
+        navigationTitle = LocalizedString(key: "Card Maker")
         
         hintLabel = ({
             let label = UILabel()

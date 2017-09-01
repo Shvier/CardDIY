@@ -180,7 +180,7 @@ class SHEffectViewController: SHBaseViewController {
     func initUI() {
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
-        navigationTitle = LocalizedString(key: "YuGiOh")
+        navigationTitle = LocalizedString(key: "Card Maker")
         
         hintLabel = ({
             let label = UILabel()

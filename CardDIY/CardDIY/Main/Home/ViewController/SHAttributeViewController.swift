@@ -123,7 +123,7 @@ class SHAttributeViewController: SHBaseViewController {
     }
     
     func initUI() {
-        navigationTitle = LocalizedString(key: "YuGiOh")
+        navigationTitle = LocalizedString(key: "Card Maker")
         
         hintLabel = ({
             let label = UILabel()

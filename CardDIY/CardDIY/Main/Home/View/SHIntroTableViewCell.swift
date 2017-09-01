@@ -31,7 +31,7 @@ class SHIntroTableViewCell: UITableViewCell {
             label.font = UIFont(name: WordFontFamily, size: contentLabelFontSize)
             label.textAlignment = .left
             label.preferredMaxLayoutWidth = ScreenWidth
-            label.text = LocalizedString(key: "Hello and welcome. Hope you can make your own YuGiOh Card and have fun with it. Please contact with me as soon as possible if you have any suggestions. Some features haven't been added yet, and will be added in the future. Thanks for purchasing!")
+            label.text = LocalizedString(key: "Hello and welcome. Hope you can make your own YGO Card and have fun with it. Please contact with me as soon as possible if you have any suggestions. Some features haven't been added yet, and will be added in the future. Thanks for purchasing!")
             label.numberOfLines = 0
             label.lineBreakMode = .byWordWrapping
             return label

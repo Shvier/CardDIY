@@ -193,7 +193,7 @@ class SHHomeViewController: SHBaseViewController {
         navigationItem.rightBarButtonItem = rightBarItem
         
         navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.white]
-        navigationItem.title = LocalizedString(key: "YuGiOh")
+        navigationItem.title = LocalizedString(key: "Card Maker")
     }
     
     override func viewWillAppear(_ animated: Bool) {
