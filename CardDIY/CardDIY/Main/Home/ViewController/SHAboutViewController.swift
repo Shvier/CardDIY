@@ -30,7 +30,7 @@ class SHAboutViewController: UIViewController {
     var closeButton: UIButton!
     var tableView: UITableView!
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         if sender.isEqual(closeButton) {
             dismiss(animated: true, completion: nil)
         }
@@ -38,7 +38,7 @@ class SHAboutViewController: UIViewController {
     
     func createSectionHeaderView(title: String) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: SectionHeaderViewHeight))
-        view.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.1)
+        view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.1)
         let label = UILabel(frame: CGRect.zero)
         label.font = UIFont(name: WordFontFamily, size: SectionHeaderTitleFontSize)
         label.textColor = UIColor.black
@@ -54,7 +54,7 @@ class SHAboutViewController: UIViewController {
     }
 
     func configNavi() {
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: WordFontFamily, size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.black]
         navigationItem.title = LocalizedString(key: "About")
     }
     

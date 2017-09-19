@@ -36,7 +36,7 @@ class SHMagicTypeView: SHBaseView {
         }
     }
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         delegate?.magicTypeView(magicTypeView: self, buttonClicked: sender)
     }
     

@@ -32,7 +32,7 @@ class SHAvatarViewController: SHBaseViewController {
     var cardImageView: UIImageView?
     var avatarImageView: UIImageView?
     
-    func tapAction(tap: UITapGestureRecognizer) {
+    @objc func tapAction(tap: UITapGestureRecognizer) {
         requestPhotoPermission()
     }
     
@@ -64,7 +64,7 @@ class SHAvatarViewController: SHBaseViewController {
         }
     }
     
-    func imageDidFinishSaving(image: UIImage, error: NSError?, contextInfo: UnsafeMutableRawPointer?) {
+    @objc func imageDidFinishSaving(image: UIImage, error: NSError?, contextInfo: UnsafeMutableRawPointer?) {
         if error != nil {
             
         } else {
@@ -72,15 +72,15 @@ class SHAvatarViewController: SHBaseViewController {
         }
     }
     
-    func leftBarItemAction(barItem: UIBarButtonItem) {
+    @objc func leftBarItemAction(barItem: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
     
-    func saveBarItemAction(sender: UIBarButtonItem) {
+    @objc func saveBarItemAction(sender: UIBarButtonItem) {
         UIImageWriteToSavedPhotosAlbum((cardContentView?.currentImage())!, self, #selector(imageDidFinishSaving(image:error:contextInfo:)), nil)
     }
     
-    func shareBarItemAction(sender: UIBarButtonItem) {
+    @objc func shareBarItemAction(sender: UIBarButtonItem) {
         let title = LocalizedString(key: "YGO Card Maker")
         let content = LocalizedString(key: "I made my own YGO Card. Come on and have a look.")
         let url = URL(string: AppStoreURL)!

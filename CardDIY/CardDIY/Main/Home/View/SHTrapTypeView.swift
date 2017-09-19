@@ -19,7 +19,7 @@ class SHTrapTypeView: SHBaseView {
     
     weak var delegate: SHYGOTrapTypeViewDelegate?
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         delegate?.trapTypeView(trapTypeView: self, buttonClicked: sender)
     }
     

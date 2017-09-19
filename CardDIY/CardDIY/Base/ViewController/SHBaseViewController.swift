@@ -27,7 +27,7 @@ class SHBaseViewController: UIViewController {
     
     var navigationTitle: String {
         set {
-            navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: hintLabelFontSize)!, NSForegroundColorAttributeName: UIColor.white]
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: WordFontFamily, size: hintLabelFontSize)!, NSAttributedStringKey.foregroundColor: UIColor.white]
             navigationItem.title = newValue
         }
         get {
@@ -73,11 +73,11 @@ class SHBaseViewController: UIViewController {
 //        operationQueue.cancelAllOperations()
     }
     
-    func leftBarItem(barItem: UIBarButtonItem) {
+    @objc func leftBarItem(barItem: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
     
-    func rightBarItemAction(sender: UIBarButtonItem) {
+    @objc func rightBarItemAction(sender: UIBarButtonItem) {
         
     }
     

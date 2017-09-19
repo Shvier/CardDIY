@@ -24,7 +24,7 @@ class SHYGOAttributeView: SHBaseView {
     
     weak var delegate: SHYGOAttributeViewDelegate?
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         delegate?.attributeView(attributeView: self, buttonClicked: sender)
     }
     

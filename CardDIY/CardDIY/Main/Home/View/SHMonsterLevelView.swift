@@ -52,7 +52,7 @@ class SHMonsterLevelView: SHBaseView {
     var level11: UIButton?
     var level12: UIButton?
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         delegate?.monsterLevelView(monsterLevelView: self, buttonClicked: sender)
     }
     

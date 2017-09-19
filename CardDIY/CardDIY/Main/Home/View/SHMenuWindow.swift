@@ -20,7 +20,7 @@ class SHMenuViewController: UIViewController {
     
     var menuView: SHMenuView!
     
-    func leftBarItemAction(sender: UIBarButtonItem) {
+    @objc func leftBarItemAction(sender: UIBarButtonItem) {
         delegate?.menuViewControllerDidLeftBarItemClicked()
     }
     

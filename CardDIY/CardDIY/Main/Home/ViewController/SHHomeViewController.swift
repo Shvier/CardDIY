@@ -35,7 +35,7 @@ class SHHomeViewController: SHBaseViewController {
     
     var menuView: SHMenuView?
     
-    func leftBarItemAction(sender: UIBarButtonItem) {
+    @objc func leftBarItemAction(sender: UIBarButtonItem) {
         menuWindow.show()
     }
     
@@ -192,7 +192,7 @@ class SHHomeViewController: SHBaseViewController {
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "btn_right_bar_item")?.withRenderingMode(.alwaysOriginal), style: .done, target: self, action: #selector(rightBarItemAction(sender:)))
         navigationItem.rightBarButtonItem = rightBarItem
         
-        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: WordFontFamily, size: 20)!, NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: WordFontFamily, size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationItem.title = LocalizedString(key: "Card Maker")
     }
     

@@ -39,7 +39,7 @@ class SHYGOPageControl: SHBaseView {
         }
     }
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         delegate?.pageControl(pageControl: self, buttonClicked: sender)
     }
     

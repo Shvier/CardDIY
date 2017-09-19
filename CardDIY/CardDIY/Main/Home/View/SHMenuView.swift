@@ -30,7 +30,7 @@ class SHMenuView: SHBaseView {
     
     var anchorPoint: CGPoint!
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(sender: UIButton) {
         if sender.isEqual(evaluateButton) {
             delegate?.menuViewDidEvaluateButtonClicked(self)
         } else if sender.isEqual(recommendButton) {
@@ -44,7 +44,7 @@ class SHMenuView: SHBaseView {
         }
     }
     
-    func tapAction(tap: UITapGestureRecognizer) {
+    @objc func tapAction(tap: UITapGestureRecognizer) {
         delegate?.menuViewShouldDismiss(self)
     }
     

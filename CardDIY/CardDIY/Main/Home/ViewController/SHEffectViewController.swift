@@ -160,7 +160,7 @@ class SHEffectViewController: SHBaseViewController {
         raceView?.isHidden = true
     }
     
-    func keyboardWillShow(notification: Notification) {
+    @objc func keyboardWillShow(notification: Notification) {
         if self.nameTextField!.isFirstResponder {
             return
         }
@@ -171,7 +171,7 @@ class SHEffectViewController: SHBaseViewController {
         })
     }
     
-    func keyboardWillHide(notification: Notification) {
+    @objc func keyboardWillHide(notification: Notification) {
         self.cardContentView?.snp.updateConstraints({ (make) in
             make.centerY.equalTo(self.view)
         })
@@ -577,7 +577,7 @@ extension SHEffectViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.isEqual(nameTextField) && Locale.preferredLanguages.first! == "ja" {
-            textField.attributedText = NSAttributedString(string: textField.text!, attributes: [NSFontAttributeName: UIFont(name: WordFontFamily, size: WordFontSize)!, NSKernAttributeName: -5])
+            textField.attributedText = NSAttributedString(string: textField.text!, attributes: [NSAttributedStringKey.font: UIFont(name: WordFontFamily, size: WordFontSize)!, NSAttributedStringKey.kern: -5])
         }
     }
     
