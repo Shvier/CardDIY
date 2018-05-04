@@ -1,12 +1,12 @@
 PODS:
-  - Bugtags (2.3.2):
-    - Bugtags/Core (= 2.3.2)
-  - Bugtags/Core (2.3.2)
-  - Crashlytics (3.8.6):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.13)
+  - Bugtags (3.0.1):
+    - Bugtags/Core (= 3.0.1)
+  - Bugtags/Core (3.0.1)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
+  - Fabric (1.7.6)
   - SnapKit (4.0.0)
-  - TOCropViewController (2.1.0)
+  - TOCropViewController (2.3.6)
 
 DEPENDENCIES:
   - Bugtags
@@ -16,12 +16,12 @@ DEPENDENCIES:
   - TOCropViewController
 
 SPEC CHECKSUMS:
-  Bugtags: 2ec94ad18b279ce00073ccc7a42cbd4870704882
-  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
-  Fabric: 2fb5676bc811af011a04513451f463dac6803206
+  Bugtags: 3115fa971bc3901828bb204c62cd1523173dbc97
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  TOCropViewController: f88194a084f6afe1fd6f21a3f0edda7dd097e38b
+  TOCropViewController: 6d972f2c609372312648f96758e13a7f689efbc0
 
 PODFILE CHECKSUM: c6ad71770e234248b6c1dba745b706c111fa53ca
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0.beta.2
