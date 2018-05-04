@@ -22,6 +22,8 @@ class SHMonsterLevelView: SHBaseView {
             return 15.5
         case iPhone6PHeight:
             return 18
+        case iPhoneXHeight:
+            return 15.5
         default:
             return 0
         }

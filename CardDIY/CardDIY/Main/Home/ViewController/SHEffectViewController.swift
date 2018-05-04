@@ -387,7 +387,7 @@ class SHEffectViewController: SHBaseViewController {
                 make.height.equalTo(self.raceViewHeightForiPhone5)
             })
             break
-        case iPhone6Height:
+        case iPhone6Height, iPhoneXHeight:
             self.nameTextField?.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.cardImageView!).offset(self.nameTextFieldOffsetLeftForiPhone6)
                 make.top.equalTo(self.cardImageView!).offset(self.nameTextFieldOffsetTopForiPhone6)

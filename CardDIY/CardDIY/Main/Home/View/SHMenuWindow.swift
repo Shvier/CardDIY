@@ -29,7 +29,7 @@ class SHMenuViewController: UIViewController {
         
         menuView = {
             let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
-            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
+            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: 30, y: 30 + StatusBarHeight), delegate: self)
             return menuView
         }()
         view.addSubview(menuView)

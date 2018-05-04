@@ -8,6 +8,7 @@
 
 import UIKit
 
+let iPhoneXStatusBarIncrement: CGFloat = 24
 let StatusBarHeight: CGFloat = 20
 let NavigationAndStatusBarHeight: CGFloat = 64
 let ScreenWidth = UIScreen.main.bounds.size.width
@@ -17,6 +18,8 @@ let iPhone4Height: CGFloat = 480
 let iPhone5Height: CGFloat = 568
 let iPhone6Height: CGFloat = 667
 let iPhone6PHeight: CGFloat = 736
+let iPhoneXHeight: CGFloat = 812
+let HeightBetweeniPhonePAndX = iPhoneXHeight - iPhone6PHeight
 
 let UMAppKey = "59673662717c1903a50001eb"
 let AdMobLaunchID = "ca-app-pub-7779776531531575/8390171246"
@@ -50,6 +53,18 @@ func IsiPhone6() -> Bool {
 
 func IsiPhone6P() -> Bool {
     return ScreenHeight == iPhone6PHeight
+}
+
+func IsiPhoneX() -> Bool {
+    return ScreenHeight == iPhoneXHeight
+}
+
+func screenHeight() -> CGFloat {
+    if ScreenHeight == iPhoneXHeight {
+        return iPhone6Height
+    } else {
+        return ScreenHeight
+    }
 }
 
 func LocalizedString(key: String) -> String {

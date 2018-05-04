@@ -27,11 +27,8 @@ class SHHomeViewController: SHBaseViewController {
     var cardMadeView: UICollectionView?
     var pageControl: SHYGOPageControl?
     var selectedIndex: NSInteger = 0
-//    var whirlpoolView: SHWhirlpoolView!
+    var whirlpoolView: SHWhirlpoolView!
     var gradientLayer: CAGradientLayer!
-    
-//    var bannerView: GADBannerView!
-//    var interstitial: GADInterstitial!
     
     var menuView: SHMenuView?
     
@@ -121,34 +118,12 @@ class SHHomeViewController: SHBaseViewController {
             label.text = LocalizedString(key: "Please Select a Type of Card")
             label.textColor = UIColor.white
             label.font = UIFont(name: WordFontFamily, size: hintLabelFontSize)
+            label.numberOfLines = 0
+            label.lineBreakMode = .byWordWrapping
+            label.preferredMaxLayoutWidth = ScreenWidth
             return label
         })()
         view.addSubview(hintLabel!)
-        
-//        bannerView = ({
-//            let view = GADBannerView()
-//            view.adUnitID = AdMobBannerHomeID
-//            view.rootViewController = self
-//            let request = GADRequest()
-//            request.testDevices = [kGADSimulatorID]
-//            view.load(request)
-//            return view
-//        })()
-//        view.addSubview(bannerView)
-        
-//        menuView = {
-//            let view = navigationItem.leftBarButtonItem?.value(forKey: "view") as? UIView
-//            let menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
-//            menuView.isHidden = true
-//            return menuView
-//        }()
-//        view.addSubview(menuView!)
-        
-//        interstitial = GADInterstitial(adUnitID: AdMobLaunchID)
-//        let request = GADRequest()
-//        request.testDevices = [kGADSimulatorID]
-//        interstitial.load(request)
-//        interstitial.delegate = self
     }
     
     func makeConstraints() {
@@ -165,6 +140,8 @@ class SHHomeViewController: SHBaseViewController {
             make.left.right.equalTo(view)
             if IsiPhone4() {
                 make.bottom.equalTo(view).offset(-cardMadeViewBottomMarginForiPhone4)
+            } else if IsiPhoneX() {
+                make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin - HeightBetweeniPhonePAndX)
             } else {
                 make.bottom.equalTo(view).offset(-cardMadeViewBottomMargin)
             }
@@ -199,6 +176,24 @@ class SHHomeViewController: SHBaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        whirlpoolView.startAnimation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if self.menuView == nil {
+            self.menuView = {
+                let view = navigationItem.leftBarButtonItem!.value(forKey: "view") as? UIView
+                var menuView: SHMenuView
+                if IsiPhoneX() {
+                    menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight + iPhoneXStatusBarIncrement), delegate: self)
+                } else {
+                    menuView = SHMenuView(frame: self.view.bounds, anchorPoint: CGPoint(x: (view?.center.x)!, y: (view?.center.y)! + StatusBarHeight), delegate: self)
+                }
+                menuView.isHidden = true
+                return menuView
+            }()
+            view.addSubview(menuView!)
+        }
     }
 
     override func viewDidLoad() {

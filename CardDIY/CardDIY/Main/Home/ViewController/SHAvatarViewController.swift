@@ -163,7 +163,7 @@ class SHAvatarViewController: SHBaseViewController {
                 make.width.equalTo(avatarImageViewWidthForiPhone5)
                 make.height.equalTo(avatarImageViewHeightForiPhone5)
                 make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterYForiPhone5)
-            } else if IsiPhone6() {
+            } else if IsiPhone6() || IsiPhoneX() {
                 make.width.equalTo(avatarImageViewWidthForiPhone6)
                 make.height.equalTo(avatarImageViewHeightForiPhone6)
                 make.centerY.equalTo(cardContentView!).offset(-avatarImageViewOffsetCenterYForiPhone6)
